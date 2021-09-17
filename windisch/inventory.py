@@ -251,8 +251,6 @@ class InventoryCalculation:
                         "The CSV file that contains fleet composition could not be found."
                     )
 
-
-
         else:
             self.fleet = None
 

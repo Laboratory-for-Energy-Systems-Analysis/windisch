@@ -1,5 +1,7 @@
 import pandas as pd
+
 from . import DATA_DIR
+
 
 def data_to_dict(csv_list):
     """

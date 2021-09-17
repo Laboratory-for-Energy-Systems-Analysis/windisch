@@ -96,11 +96,14 @@ class WindTurbineModel:
 
         # we remove wind turbines that are unlikely to exist
 
-
         self.array.loc[
             dict(
-                size=[s for s in self.array.coords["size"].values if s in ["100kW", "500kW"]],
-                application="offshore"
+                size=[
+                    s
+                    for s in self.array.coords["size"].values
+                    if s in ["100kW", "500kW"]
+                ],
+                application="offshore",
             )
         ] = 0
 

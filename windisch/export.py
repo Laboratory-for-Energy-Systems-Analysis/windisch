@@ -1571,9 +1571,7 @@ class ExportInventory:
         headers = [
             "{SimaPro 9.1.1.1}",
             "{processes}",
-            "{Project: windisch import"
-            + f"{datetime.datetime.today():%d.%m.%Y}"
-            + "}",
+            "{Project: windisch import" + f"{datetime.datetime.today():%d.%m.%Y}" + "}",
             "{CSV Format version: 9.0.0}",
             "{CSV separator: Semicolon}",
             "{Decimal separator: .}",

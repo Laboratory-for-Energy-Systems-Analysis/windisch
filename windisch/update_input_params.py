@@ -1,6 +1,8 @@
-import pandas as pd
 import json
+
 import numpy as np
+import pandas as pd
+
 from . import DATA_DIR
 
 FILEPATH_TO_INPUT_DATA = DATA_DIR / "Input data.xlsx"
@@ -88,5 +90,5 @@ def update_input_parameters():
 
                     count += 1
 
-    with open(DATA_DIR / "default_parameters.json", 'w') as fp:
-            json.dump(d, fp, indent=4)
+    with open(DATA_DIR / "default_parameters.json", "w") as fp:
+        json.dump(d, fp, indent=4)
