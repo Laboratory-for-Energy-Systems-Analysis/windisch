@@ -1,2 +1,53 @@
-# windisch
- Life cycle assessment tool for wind turbines
+# ``windisch``
+
+<p align="center">
+  <a href="https://badge.fury.io/py/windisch" target="_blank"><img src="https://badge.fury.io/py/windisch.svg"></a>
+  <a href="https://github.com/romainsacchi/windisch" target="_blank"><img src="https://github.com/romainsacchi/windisch/actions/workflows/main.yml/badge.svg?branch=master"></a>
+  <a href="https://ci.appveyor.com/project/romainsacchi/windisch" target="_blank"><img src="https://ci.appveyor.com/api/projects/status/github/romainsacchi/windisch?svg=true"></a>
+  <a href="https://coveralls.io/github/romainsacchi/windisch" target="_blank"><img src="https://coveralls.io/repos/github/romainsacchi/windisch/badge.svg"></a>
+  <a href="https://windisch.readthedocs.io/en/latest/" target="_blank"><img src="https://readthedocs.org/projects/windisch/badge/?version=latest"></a>
+  <a href="https://doi.org/10.5281/zenodo.3778259"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.3778259.svg" alt="DOI"></a>
+</p>
+
+Life cycle assessment for wind turbines.
+
+A fully parameterized Python model developed in  
+[Sacchi et al. 2019](https://doi.org/10.1016/j.renene.2018.09.020) to perform life cycle assessments (LCA) of wind turbines.
+
+
+See [the documentation](https://windisch.readthedocs.io/en/latest/index.html) for more detail, validation, etc.
+
+## Install
+
+``windisch`` is at an early stage of development and is subject to continuous change and improvement.
+Two ways of installing ``windisch`` are suggested.
+
+We recommend the installation on **Python 3.7 or above**.
+
+### Installation of the latest version, using conda
+
+    conda install -c romainsacchi windisch
+
+### Installation of a stable release (1.3.1) from Pypi
+
+    pip install windisch
+
+## As a Web app
+
+``windisch`` has been used [here](http://viewer.webservice-energy.org/lca-wind-dk/) for fast comparisons of wind turbines in Denmark.
+
+## Support
+
+Do not hesitate to contact the development team at [romain.sacchi@psi.ch](mailto:romain.sacchi@psi.ch).
+
+## Maintainer(s)
+
+* [Romain Sacchi](https://github.com/romainsacchi)
+
+## Contributing
+
+See [contributing](https://github.com/romainsacchi/windisch/blob/master/CONTRIBUTING.md).
+
+## License
+
+[BSD-3-Clause](https://github.com/romainsacchi/windisch/blob/master/LICENSE). Copyright 2020 Paul Scherrer Institut.

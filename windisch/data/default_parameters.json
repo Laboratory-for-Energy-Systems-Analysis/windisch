@@ -1,0 +1,6956 @@
+{
+    "0-2000-rated power": {
+        "amount": 100,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW"
+        ],
+        "year": 2000,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 100
+    },
+    "1-2010-rated power": {
+        "amount": 100,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW"
+        ],
+        "year": 2010,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 100
+    },
+    "2-2020-rated power": {
+        "amount": 100,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW"
+        ],
+        "year": 2020,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 100
+    },
+    "3-2030-rated power": {
+        "amount": 100,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW"
+        ],
+        "year": 2030,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 100
+    },
+    "4-2040-rated power": {
+        "amount": 100,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW"
+        ],
+        "year": 2040,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 100
+    },
+    "5-2050-rated power": {
+        "amount": 100,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW"
+        ],
+        "year": 2050,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 100
+    },
+    "6-2000-rated power": {
+        "amount": 500,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "500kW"
+        ],
+        "year": 2000,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 500
+    },
+    "7-2010-rated power": {
+        "amount": 500,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "500kW"
+        ],
+        "year": 2010,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 500
+    },
+    "8-2020-rated power": {
+        "amount": 500,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "500kW"
+        ],
+        "year": 2020,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 500
+    },
+    "9-2030-rated power": {
+        "amount": 500,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "500kW"
+        ],
+        "year": 2030,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 500
+    },
+    "10-2040-rated power": {
+        "amount": 500,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "500kW"
+        ],
+        "year": 2040,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 500
+    },
+    "11-2050-rated power": {
+        "amount": 500,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "500kW"
+        ],
+        "year": 2050,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 500
+    },
+    "12-2000-rated power": {
+        "amount": 1000,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "1000kW"
+        ],
+        "year": 2000,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1000
+    },
+    "13-2010-rated power": {
+        "amount": 1000,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "1000kW"
+        ],
+        "year": 2010,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1000
+    },
+    "14-2020-rated power": {
+        "amount": 1000,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "1000kW"
+        ],
+        "year": 2020,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1000
+    },
+    "15-2030-rated power": {
+        "amount": 1000,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "1000kW"
+        ],
+        "year": 2030,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1000
+    },
+    "16-2040-rated power": {
+        "amount": 1000,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "1000kW"
+        ],
+        "year": 2040,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1000
+    },
+    "17-2050-rated power": {
+        "amount": 1000,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "1000kW"
+        ],
+        "year": 2050,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1000
+    },
+    "18-2000-rated power": {
+        "amount": 3000,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "3000kW"
+        ],
+        "year": 2000,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 3000
+    },
+    "19-2010-rated power": {
+        "amount": 3000,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "3000kW"
+        ],
+        "year": 2010,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 3000
+    },
+    "20-2020-rated power": {
+        "amount": 3000,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "3000kW"
+        ],
+        "year": 2020,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 3000
+    },
+    "21-2030-rated power": {
+        "amount": 3000,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "3000kW"
+        ],
+        "year": 2030,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 3000
+    },
+    "22-2040-rated power": {
+        "amount": 3000,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "3000kW"
+        ],
+        "year": 2040,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 3000
+    },
+    "23-2050-rated power": {
+        "amount": 3000,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "3000kW"
+        ],
+        "year": 2050,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 3000
+    },
+    "24-2000-rated power": {
+        "amount": 8000,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 8000
+    },
+    "25-2010-rated power": {
+        "amount": 8000,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 8000
+    },
+    "26-2020-rated power": {
+        "amount": 8000,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 8000
+    },
+    "27-2030-rated power": {
+        "amount": 8000,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 8000
+    },
+    "28-2040-rated power": {
+        "amount": 8000,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 8000
+    },
+    "29-2050-rated power": {
+        "amount": 8000,
+        "category": "Power",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "rated power",
+        "unit": "kW",
+        "importance": "critical",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 8000
+    },
+    "30-2000-turbines per farm": {
+        "amount": 30,
+        "category": "Operation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "turbines per farm",
+        "unit": "unit",
+        "importance": "moderate",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 30,
+        "minimum": 25,
+        "maximum": 35
+    },
+    "31-2010-turbines per farm": {
+        "amount": 30,
+        "category": "Operation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "turbines per farm",
+        "unit": "unit",
+        "importance": "moderate",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 30,
+        "minimum": 25,
+        "maximum": 35
+    },
+    "32-2020-turbines per farm": {
+        "amount": 30,
+        "category": "Operation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "turbines per farm",
+        "unit": "unit",
+        "importance": "moderate",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 30,
+        "minimum": 25,
+        "maximum": 35
+    },
+    "33-2030-turbines per farm": {
+        "amount": 30,
+        "category": "Operation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "turbines per farm",
+        "unit": "unit",
+        "importance": "moderate",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 30,
+        "minimum": 25,
+        "maximum": 35
+    },
+    "34-2040-turbines per farm": {
+        "amount": 30,
+        "category": "Operation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "turbines per farm",
+        "unit": "unit",
+        "importance": "moderate",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 30,
+        "minimum": 25,
+        "maximum": 35
+    },
+    "35-2050-turbines per farm": {
+        "amount": 30,
+        "category": "Operation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "turbines per farm",
+        "unit": "unit",
+        "importance": "moderate",
+        "source": "",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 30,
+        "minimum": 25,
+        "maximum": 35
+    },
+    "36-2000-nacelle transport to site": {
+        "amount": 1025,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "nacelle transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 1025,
+        "minimum": 820,
+        "maximum": 1230
+    },
+    "37-2010-nacelle transport to site": {
+        "amount": 1025,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "nacelle transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 1025,
+        "minimum": 820,
+        "maximum": 1230
+    },
+    "38-2020-nacelle transport to site": {
+        "amount": 1025,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "nacelle transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 1025,
+        "minimum": 820,
+        "maximum": 1230
+    },
+    "39-2030-nacelle transport to site": {
+        "amount": 1025,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "nacelle transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 1025,
+        "minimum": 820,
+        "maximum": 1230
+    },
+    "40-2040-nacelle transport to site": {
+        "amount": 1025,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "nacelle transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 1025,
+        "minimum": 820,
+        "maximum": 1230
+    },
+    "41-2050-nacelle transport to site": {
+        "amount": 1025,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "nacelle transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 1025,
+        "minimum": 820,
+        "maximum": 1230
+    },
+    "42-2000-rotor transport to site": {
+        "amount": 600,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "rotor transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 600,
+        "minimum": 480,
+        "maximum": 720
+    },
+    "43-2010-rotor transport to site": {
+        "amount": 600,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "rotor transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 600,
+        "minimum": 480,
+        "maximum": 720
+    },
+    "44-2020-rotor transport to site": {
+        "amount": 600,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "rotor transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 600,
+        "minimum": 480,
+        "maximum": 720
+    },
+    "45-2030-rotor transport to site": {
+        "amount": 600,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "rotor transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 600,
+        "minimum": 480,
+        "maximum": 720
+    },
+    "46-2040-rotor transport to site": {
+        "amount": 600,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "rotor transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 600,
+        "minimum": 480,
+        "maximum": 720
+    },
+    "47-2050-rotor transport to site": {
+        "amount": 600,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "rotor transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 600,
+        "minimum": 480,
+        "maximum": 720
+    },
+    "48-2000-tower transport to site": {
+        "amount": 1100,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "tower transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 1100,
+        "minimum": 880,
+        "maximum": 1320
+    },
+    "49-2010-tower transport to site": {
+        "amount": 1100,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "tower transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 1100,
+        "minimum": 880,
+        "maximum": 1320
+    },
+    "50-2020-tower transport to site": {
+        "amount": 1100,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "tower transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 1100,
+        "minimum": 880,
+        "maximum": 1320
+    },
+    "51-2030-tower transport to site": {
+        "amount": 1100,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "tower transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 1100,
+        "minimum": 880,
+        "maximum": 1320
+    },
+    "52-2040-tower transport to site": {
+        "amount": 1100,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "tower transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 1100,
+        "minimum": 880,
+        "maximum": 1320
+    },
+    "53-2050-tower transport to site": {
+        "amount": 1100,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "tower transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 1100,
+        "minimum": 880,
+        "maximum": 1320
+    },
+    "54-2000-foundation transport to site": {
+        "amount": 50,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "foundation transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 40,
+        "maximum": 60
+    },
+    "55-2010-foundation transport to site": {
+        "amount": 50,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "foundation transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 40,
+        "maximum": 60
+    },
+    "56-2020-foundation transport to site": {
+        "amount": 50,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "foundation transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 40,
+        "maximum": 60
+    },
+    "57-2030-foundation transport to site": {
+        "amount": 50,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "foundation transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 40,
+        "maximum": 60
+    },
+    "58-2040-foundation transport to site": {
+        "amount": 50,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "foundation transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 40,
+        "maximum": 60
+    },
+    "59-2050-foundation transport to site": {
+        "amount": 50,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "foundation transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 40,
+        "maximum": 60
+    },
+    "60-2000-nacelle transport to site": {
+        "amount": 400,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "nacelle transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 400,
+        "minimum": 320,
+        "maximum": 480
+    },
+    "61-2010-nacelle transport to site": {
+        "amount": 400,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "nacelle transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 400,
+        "minimum": 320,
+        "maximum": 480
+    },
+    "62-2020-nacelle transport to site": {
+        "amount": 400,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "nacelle transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 400,
+        "minimum": 320,
+        "maximum": 480
+    },
+    "63-2030-nacelle transport to site": {
+        "amount": 400,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "nacelle transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 400,
+        "minimum": 320,
+        "maximum": 480
+    },
+    "64-2040-nacelle transport to site": {
+        "amount": 400,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "nacelle transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 400,
+        "minimum": 320,
+        "maximum": 480
+    },
+    "65-2050-nacelle transport to site": {
+        "amount": 400,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "nacelle transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 400,
+        "minimum": 320,
+        "maximum": 480
+    },
+    "66-2000-rotor transport to site": {
+        "amount": 400,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "rotor transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 400,
+        "minimum": 320,
+        "maximum": 480
+    },
+    "67-2010-rotor transport to site": {
+        "amount": 400,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "rotor transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 400,
+        "minimum": 320,
+        "maximum": 480
+    },
+    "68-2020-rotor transport to site": {
+        "amount": 400,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "rotor transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 400,
+        "minimum": 320,
+        "maximum": 480
+    },
+    "69-2030-rotor transport to site": {
+        "amount": 400,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "rotor transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 400,
+        "minimum": 320,
+        "maximum": 480
+    },
+    "70-2040-rotor transport to site": {
+        "amount": 400,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "rotor transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 400,
+        "minimum": 320,
+        "maximum": 480
+    },
+    "71-2050-rotor transport to site": {
+        "amount": 400,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "rotor transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 400,
+        "minimum": 320,
+        "maximum": 480
+    },
+    "72-2000-tower transport to site": {
+        "amount": 400,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "tower transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 400,
+        "minimum": 320,
+        "maximum": 480
+    },
+    "73-2010-tower transport to site": {
+        "amount": 400,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "tower transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 400,
+        "minimum": 320,
+        "maximum": 480
+    },
+    "74-2020-tower transport to site": {
+        "amount": 400,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "tower transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 400,
+        "minimum": 320,
+        "maximum": 480
+    },
+    "75-2030-tower transport to site": {
+        "amount": 400,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "tower transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 400,
+        "minimum": 320,
+        "maximum": 480
+    },
+    "76-2040-tower transport to site": {
+        "amount": 400,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "tower transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 400,
+        "minimum": 320,
+        "maximum": 480
+    },
+    "77-2050-tower transport to site": {
+        "amount": 400,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "tower transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 400,
+        "minimum": 320,
+        "maximum": 480
+    },
+    "78-2000-foundation transport to site": {
+        "amount": 50,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "foundation transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 40,
+        "maximum": 60
+    },
+    "79-2010-foundation transport to site": {
+        "amount": 50,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "foundation transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 40,
+        "maximum": 60
+    },
+    "80-2020-foundation transport to site": {
+        "amount": 50,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "foundation transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 40,
+        "maximum": 60
+    },
+    "81-2030-foundation transport to site": {
+        "amount": 50,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "foundation transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 40,
+        "maximum": 60
+    },
+    "82-2040-foundation transport to site": {
+        "amount": 50,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "foundation transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 40,
+        "maximum": 60
+    },
+    "83-2050-foundation transport to site": {
+        "amount": 50,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "foundation transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 40,
+        "maximum": 60
+    },
+    "84-2000-share nacelle transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "share nacelle transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "85-2010-share nacelle transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "share nacelle transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "86-2020-share nacelle transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "share nacelle transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "87-2030-share nacelle transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "share nacelle transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "88-2040-share nacelle transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "share nacelle transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "89-2050-share nacelle transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "share nacelle transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "90-2000-share nacelle transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "share nacelle transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "91-2010-share nacelle transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "share nacelle transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "92-2020-share nacelle transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "share nacelle transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "93-2030-share nacelle transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "share nacelle transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "94-2040-share nacelle transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "share nacelle transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "95-2050-share nacelle transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "share nacelle transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "96-2000-share rotor transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "share rotor transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "97-2010-share rotor transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "share rotor transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "98-2020-share rotor transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "share rotor transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "99-2030-share rotor transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "share rotor transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "100-2040-share rotor transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "share rotor transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "101-2050-share rotor transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "share rotor transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "102-2000-share rotor transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "share rotor transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "103-2010-share rotor transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "share rotor transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "104-2020-share rotor transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "share rotor transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "105-2030-share rotor transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "share rotor transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "106-2040-share rotor transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "share rotor transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "107-2050-share rotor transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "share rotor transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "108-2000-share tower transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "share tower transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "109-2010-share tower transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "share tower transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "110-2020-share tower transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "share tower transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "111-2030-share tower transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "share tower transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "112-2040-share tower transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "share tower transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "113-2050-share tower transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "share tower transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "114-2000-share tower transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "share tower transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "115-2010-share tower transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "share tower transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "116-2020-share tower transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "share tower transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "117-2030-share tower transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "share tower transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "118-2040-share tower transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "share tower transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "119-2050-share tower transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "share tower transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "120-2000-share foundation transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "share foundation transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "121-2010-share foundation transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "share foundation transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "122-2020-share foundation transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "share foundation transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "123-2030-share foundation transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "share foundation transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "124-2040-share foundation transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "share foundation transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "125-2050-share foundation transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "share foundation transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "126-2000-share foundation transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "share foundation transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "127-2010-share foundation transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "share foundation transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "128-2020-share foundation transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "share foundation transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "129-2030-share foundation transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "share foundation transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "130-2040-share foundation transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "share foundation transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "131-2050-share foundation transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "share foundation transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "132-2000-share nacelle transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "share nacelle transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "133-2010-share nacelle transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "share nacelle transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "134-2020-share nacelle transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "share nacelle transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "135-2030-share nacelle transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "share nacelle transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "136-2040-share nacelle transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "share nacelle transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "137-2050-share nacelle transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "share nacelle transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "138-2000-share nacelle transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "share nacelle transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "139-2010-share nacelle transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "share nacelle transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "140-2020-share nacelle transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "share nacelle transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "141-2030-share nacelle transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "share nacelle transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "142-2040-share nacelle transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "share nacelle transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "143-2050-share nacelle transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "share nacelle transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "144-2000-share rotor transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "share rotor transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "145-2010-share rotor transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "share rotor transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "146-2020-share rotor transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "share rotor transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "147-2030-share rotor transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "share rotor transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "148-2040-share rotor transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "share rotor transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "149-2050-share rotor transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "share rotor transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "150-2000-share rotor transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "share rotor transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "151-2010-share rotor transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "share rotor transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "152-2020-share rotor transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "share rotor transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "153-2030-share rotor transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "share rotor transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "154-2040-share rotor transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "share rotor transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "155-2050-share rotor transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "share rotor transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "156-2000-share tower transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "share tower transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "157-2010-share tower transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "share tower transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "158-2020-share tower transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "share tower transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "159-2030-share tower transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "share tower transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "160-2040-share tower transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "share tower transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "161-2050-share tower transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "share tower transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "162-2000-share tower transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "share tower transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "163-2010-share tower transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "share tower transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "164-2020-share tower transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "share tower transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "165-2030-share tower transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "share tower transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "166-2040-share tower transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "share tower transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "167-2050-share tower transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "share tower transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "168-2000-share foundation transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "share foundation transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "169-2010-share foundation transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "share foundation transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "170-2020-share foundation transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "share foundation transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "171-2030-share foundation transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "share foundation transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "172-2040-share foundation transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "share foundation transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "173-2050-share foundation transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "share foundation transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "174-2000-share foundation transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "share foundation transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "175-2010-share foundation transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "share foundation transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "176-2020-share foundation transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "share foundation transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "177-2030-share foundation transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "share foundation transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "178-2040-share foundation transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "share foundation transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "179-2050-share foundation transport by sea": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "share foundation transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "180-2000-transport to waste facility": {
+        "amount": 50,
+        "category": "Disposal",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "transport to waste facility",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 40,
+        "maximum": 60
+    },
+    "181-2010-transport to waste facility": {
+        "amount": 50,
+        "category": "Disposal",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "transport to waste facility",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 40,
+        "maximum": 60
+    },
+    "182-2020-transport to waste facility": {
+        "amount": 50,
+        "category": "Disposal",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "transport to waste facility",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 40,
+        "maximum": 60
+    },
+    "183-2030-transport to waste facility": {
+        "amount": 50,
+        "category": "Disposal",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "transport to waste facility",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 40,
+        "maximum": 60
+    },
+    "184-2040-transport to waste facility": {
+        "amount": 50,
+        "category": "Disposal",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "transport to waste facility",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 40,
+        "maximum": 60
+    },
+    "185-2050-transport to waste facility": {
+        "amount": 50,
+        "category": "Disposal",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "transport to waste facility",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 40,
+        "maximum": 60
+    },
+    "186-2000-transport to waste facility": {
+        "amount": 50,
+        "category": "Disposal",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "transport to waste facility",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 40,
+        "maximum": 60
+    },
+    "187-2010-transport to waste facility": {
+        "amount": 50,
+        "category": "Disposal",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "transport to waste facility",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 40,
+        "maximum": 60
+    },
+    "188-2020-transport to waste facility": {
+        "amount": 50,
+        "category": "Disposal",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "transport to waste facility",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 40,
+        "maximum": 60
+    },
+    "189-2030-transport to waste facility": {
+        "amount": 50,
+        "category": "Disposal",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "transport to waste facility",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 40,
+        "maximum": 60
+    },
+    "190-2040-transport to waste facility": {
+        "amount": 50,
+        "category": "Disposal",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "transport to waste facility",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 40,
+        "maximum": 60
+    },
+    "191-2050-transport to waste facility": {
+        "amount": 50,
+        "category": "Disposal",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "transport to waste facility",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 40,
+        "maximum": 60
+    },
+    "192-2000-transport for maintenance per year": {
+        "amount": 72,
+        "category": "Maintenance",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "transport for maintenance per year",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 72,
+        "minimum": 57.6,
+        "maximum": 86.39999999999999
+    },
+    "193-2010-transport for maintenance per year": {
+        "amount": 72,
+        "category": "Maintenance",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "transport for maintenance per year",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 72,
+        "minimum": 57.6,
+        "maximum": 86.39999999999999
+    },
+    "194-2020-transport for maintenance per year": {
+        "amount": 72,
+        "category": "Maintenance",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "transport for maintenance per year",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 72,
+        "minimum": 57.6,
+        "maximum": 86.39999999999999
+    },
+    "195-2030-transport for maintenance per year": {
+        "amount": 72,
+        "category": "Maintenance",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "transport for maintenance per year",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 72,
+        "minimum": 57.6,
+        "maximum": 86.39999999999999
+    },
+    "196-2040-transport for maintenance per year": {
+        "amount": 72,
+        "category": "Maintenance",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "transport for maintenance per year",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 72,
+        "minimum": 57.6,
+        "maximum": 86.39999999999999
+    },
+    "197-2050-transport for maintenance per year": {
+        "amount": 72,
+        "category": "Maintenance",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "transport for maintenance per year",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 72,
+        "minimum": 57.6,
+        "maximum": 86.39999999999999
+    },
+    "198-2000-transport for maintenance per year": {
+        "amount": 600,
+        "category": "Maintenance",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "transport for maintenance per year",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 600,
+        "minimum": 480,
+        "maximum": 720
+    },
+    "199-2010-transport for maintenance per year": {
+        "amount": 2160,
+        "category": "Maintenance",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "transport for maintenance per year",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 2160,
+        "minimum": 1728,
+        "maximum": 2592
+    },
+    "200-2020-transport for maintenance per year": {
+        "amount": 2160,
+        "category": "Maintenance",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "transport for maintenance per year",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 2160,
+        "minimum": 1728,
+        "maximum": 2592
+    },
+    "201-2030-transport for maintenance per year": {
+        "amount": 2160,
+        "category": "Maintenance",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "transport for maintenance per year",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 2160,
+        "minimum": 1728,
+        "maximum": 2592
+    },
+    "202-2040-transport for maintenance per year": {
+        "amount": 2160,
+        "category": "Maintenance",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "transport for maintenance per year",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 2160,
+        "minimum": 1728,
+        "maximum": 2592
+    },
+    "203-2050-transport for maintenance per year": {
+        "amount": 2160,
+        "category": "Maintenance",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "transport for maintenance per year",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 2160,
+        "minimum": 1728,
+        "maximum": 2592
+    },
+    "204-2000-share maintenance transport by rail": {
+        "amount": 0,
+        "category": "Maintenance",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "share maintenance transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "205-2010-share maintenance transport by rail": {
+        "amount": 0,
+        "category": "Maintenance",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "share maintenance transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "206-2020-share maintenance transport by rail": {
+        "amount": 0,
+        "category": "Maintenance",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "share maintenance transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "207-2030-share maintenance transport by rail": {
+        "amount": 0,
+        "category": "Maintenance",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "share maintenance transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "208-2040-share maintenance transport by rail": {
+        "amount": 0,
+        "category": "Maintenance",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "share maintenance transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "209-2050-share maintenance transport by rail": {
+        "amount": 0,
+        "category": "Maintenance",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "share maintenance transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "210-2000-share maintenance transport by sea": {
+        "amount": 0,
+        "category": "Maintenance",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "share maintenance transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "211-2010-share maintenance transport by sea": {
+        "amount": 0,
+        "category": "Maintenance",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "share maintenance transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "212-2020-share maintenance transport by sea": {
+        "amount": 0,
+        "category": "Maintenance",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "share maintenance transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "213-2030-share maintenance transport by sea": {
+        "amount": 0,
+        "category": "Maintenance",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "share maintenance transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "214-2040-share maintenance transport by sea": {
+        "amount": 0,
+        "category": "Maintenance",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "share maintenance transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "215-2050-share maintenance transport by sea": {
+        "amount": 0,
+        "category": "Maintenance",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "share maintenance transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "216-2000-share maintenance transport by rail": {
+        "amount": 0,
+        "category": "Maintenance",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "share maintenance transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "217-2010-share maintenance transport by rail": {
+        "amount": 0,
+        "category": "Maintenance",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "share maintenance transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "218-2020-share maintenance transport by rail": {
+        "amount": 0,
+        "category": "Maintenance",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "share maintenance transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "219-2030-share maintenance transport by rail": {
+        "amount": 0,
+        "category": "Maintenance",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "share maintenance transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "220-2040-share maintenance transport by rail": {
+        "amount": 0,
+        "category": "Maintenance",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "share maintenance transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "221-2050-share maintenance transport by rail": {
+        "amount": 0,
+        "category": "Maintenance",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "share maintenance transport by rail",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "222-2000-share maintenance transport by sea": {
+        "amount": 1,
+        "category": "Maintenance",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "share maintenance transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "223-2010-share maintenance transport by sea": {
+        "amount": 1,
+        "category": "Maintenance",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "share maintenance transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "224-2020-share maintenance transport by sea": {
+        "amount": 1,
+        "category": "Maintenance",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "share maintenance transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "225-2030-share maintenance transport by sea": {
+        "amount": 1,
+        "category": "Maintenance",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "share maintenance transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "226-2040-share maintenance transport by sea": {
+        "amount": 1,
+        "category": "Maintenance",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "share maintenance transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "227-2050-share maintenance transport by sea": {
+        "amount": 1,
+        "category": "Maintenance",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "share maintenance transport by sea",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "228-2000-concrete density": {
+        "amount": 2400,
+        "category": "Components",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "concrete density",
+        "unit": "kg/m3",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 2400,
+        "minimum": 2160,
+        "maximum": 2640
+    },
+    "229-2010-concrete density": {
+        "amount": 2400,
+        "category": "Components",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "concrete density",
+        "unit": "kg/m3",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 2400,
+        "minimum": 2160,
+        "maximum": 2640
+    },
+    "230-2020-concrete density": {
+        "amount": 2400,
+        "category": "Components",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "concrete density",
+        "unit": "kg/m3",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 2400,
+        "minimum": 2160,
+        "maximum": 2640
+    },
+    "231-2030-concrete density": {
+        "amount": 2400,
+        "category": "Components",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "concrete density",
+        "unit": "kg/m3",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 2400,
+        "minimum": 2160,
+        "maximum": 2640
+    },
+    "232-2040-concrete density": {
+        "amount": 2400,
+        "category": "Components",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "concrete density",
+        "unit": "kg/m3",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 2400,
+        "minimum": 2160,
+        "maximum": 2640
+    },
+    "233-2050-concrete density": {
+        "amount": 2400,
+        "category": "Components",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "concrete density",
+        "unit": "kg/m3",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 2400,
+        "minimum": 2160,
+        "maximum": 2640
+    },
+    "234-2000-copper density": {
+        "amount": 8960,
+        "category": "Components",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "copper density",
+        "unit": "kg/m3",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 8960,
+        "minimum": 8064,
+        "maximum": 9856
+    },
+    "235-2010-copper density": {
+        "amount": 8960,
+        "category": "Components",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "copper density",
+        "unit": "kg/m3",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 8960,
+        "minimum": 8064,
+        "maximum": 9856
+    },
+    "236-2020-copper density": {
+        "amount": 8960,
+        "category": "Components",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "copper density",
+        "unit": "kg/m3",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 8960,
+        "minimum": 8064,
+        "maximum": 9856
+    },
+    "237-2030-copper density": {
+        "amount": 8960,
+        "category": "Components",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "copper density",
+        "unit": "kg/m3",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 8960,
+        "minimum": 8064,
+        "maximum": 9856
+    },
+    "238-2040-copper density": {
+        "amount": 8960,
+        "category": "Components",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "copper density",
+        "unit": "kg/m3",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 8960,
+        "minimum": 8064,
+        "maximum": 9856
+    },
+    "239-2050-copper density": {
+        "amount": 8960,
+        "category": "Components",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "copper density",
+        "unit": "kg/m3",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 8960,
+        "minimum": 8064,
+        "maximum": 9856
+    },
+    "240-2000-offshore farm cable cross-section": {
+        "amount": 300,
+        "category": "Components",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "offshore farm cable cross-section",
+        "unit": "mm2",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 300,
+        "minimum": 270,
+        "maximum": 330
+    },
+    "241-2010-offshore farm cable cross-section": {
+        "amount": 300,
+        "category": "Components",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "offshore farm cable cross-section",
+        "unit": "mm2",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 300,
+        "minimum": 270,
+        "maximum": 330
+    },
+    "242-2020-offshore farm cable cross-section": {
+        "amount": 300,
+        "category": "Components",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "offshore farm cable cross-section",
+        "unit": "mm2",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 300,
+        "minimum": 270,
+        "maximum": 330
+    },
+    "243-2030-offshore farm cable cross-section": {
+        "amount": 300,
+        "category": "Components",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "offshore farm cable cross-section",
+        "unit": "mm2",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 300,
+        "minimum": 270,
+        "maximum": 330
+    },
+    "244-2040-offshore farm cable cross-section": {
+        "amount": 300,
+        "category": "Components",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "offshore farm cable cross-section",
+        "unit": "mm2",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 300,
+        "minimum": 270,
+        "maximum": 330
+    },
+    "245-2050-offshore farm cable cross-section": {
+        "amount": 300,
+        "category": "Components",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "offshore farm cable cross-section",
+        "unit": "mm2",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 300,
+        "minimum": 270,
+        "maximum": 330
+    },
+    "246-2000-onshore farm cable cross-section": {
+        "amount": 300,
+        "category": "Components",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "onshore farm cable cross-section",
+        "unit": "mm2",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 300,
+        "minimum": 270,
+        "maximum": 330
+    },
+    "247-2010-onshore farm cable cross-section": {
+        "amount": 300,
+        "category": "Components",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "onshore farm cable cross-section",
+        "unit": "mm2",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 300,
+        "minimum": 270,
+        "maximum": 330
+    },
+    "248-2020-onshore farm cable cross-section": {
+        "amount": 300,
+        "category": "Components",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "onshore farm cable cross-section",
+        "unit": "mm2",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 300,
+        "minimum": 270,
+        "maximum": 330
+    },
+    "249-2030-onshore farm cable cross-section": {
+        "amount": 300,
+        "category": "Components",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "onshore farm cable cross-section",
+        "unit": "mm2",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 300,
+        "minimum": 270,
+        "maximum": 330
+    },
+    "250-2040-onshore farm cable cross-section": {
+        "amount": 300,
+        "category": "Components",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "onshore farm cable cross-section",
+        "unit": "mm2",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 300,
+        "minimum": 270,
+        "maximum": 330
+    },
+    "251-2050-onshore farm cable cross-section": {
+        "amount": 300,
+        "category": "Components",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "onshore farm cable cross-section",
+        "unit": "mm2",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Assumption",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 300,
+        "minimum": 270,
+        "maximum": 330
+    },
+    "252-2000-lifetime": {
+        "amount": 20,
+        "category": "Operation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 20,
+        "minimum": 18,
+        "maximum": 22
+    },
+    "253-2010-lifetime": {
+        "amount": 20,
+        "category": "Operation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 20,
+        "minimum": 18,
+        "maximum": 22
+    },
+    "254-2020-lifetime": {
+        "amount": 20,
+        "category": "Operation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 20,
+        "minimum": 18,
+        "maximum": 22
+    },
+    "255-2030-lifetime": {
+        "amount": 20,
+        "category": "Operation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 20,
+        "minimum": 18,
+        "maximum": 22
+    },
+    "256-2040-lifetime": {
+        "amount": 20,
+        "category": "Operation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 20,
+        "minimum": 18,
+        "maximum": 22
+    },
+    "257-2050-lifetime": {
+        "amount": 20,
+        "category": "Operation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 20,
+        "minimum": 18,
+        "maximum": 22
+    },
+    "258-2000-lifetime": {
+        "amount": 25,
+        "category": "Operation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 25,
+        "minimum": 22.5,
+        "maximum": 27.500000000000004
+    },
+    "259-2010-lifetime": {
+        "amount": 25,
+        "category": "Operation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 25,
+        "minimum": 22.5,
+        "maximum": 27.500000000000004
+    },
+    "260-2020-lifetime": {
+        "amount": 25,
+        "category": "Operation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 25,
+        "minimum": 22.5,
+        "maximum": 27.500000000000004
+    },
+    "261-2030-lifetime": {
+        "amount": 25,
+        "category": "Operation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 25,
+        "minimum": 22.5,
+        "maximum": 27.500000000000004
+    },
+    "262-2040-lifetime": {
+        "amount": 25,
+        "category": "Operation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 25,
+        "minimum": 22.5,
+        "maximum": 27.500000000000004
+    },
+    "263-2050-lifetime": {
+        "amount": 25,
+        "category": "Operation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 25,
+        "minimum": 22.5,
+        "maximum": 27.500000000000004
+    },
+    "264-2000-sea depth": {
+        "amount": 5,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "sea depth",
+        "unit": "meter",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 5,
+        "minimum": 4.5,
+        "maximum": 5.5
+    },
+    "265-2010-sea depth": {
+        "amount": 5,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "sea depth",
+        "unit": "meter",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 5,
+        "minimum": 4.5,
+        "maximum": 5.5
+    },
+    "266-2020-sea depth": {
+        "amount": 5,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "sea depth",
+        "unit": "meter",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 5,
+        "minimum": 4.5,
+        "maximum": 5.5
+    },
+    "267-2030-sea depth": {
+        "amount": 5,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "sea depth",
+        "unit": "meter",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 5,
+        "minimum": 4.5,
+        "maximum": 5.5
+    },
+    "268-2040-sea depth": {
+        "amount": 5,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "sea depth",
+        "unit": "meter",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 5,
+        "minimum": 4.5,
+        "maximum": 5.5
+    },
+    "269-2050-sea depth": {
+        "amount": 5,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "sea depth",
+        "unit": "meter",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 5,
+        "minimum": 4.5,
+        "maximum": 5.5
+    },
+    "270-2000-distance to transformer": {
+        "amount": 50,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "distance to transformer",
+        "unit": "meter",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 45,
+        "maximum": 55.00000000000001
+    },
+    "271-2010-distance to transformer": {
+        "amount": 50,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "distance to transformer",
+        "unit": "meter",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 45,
+        "maximum": 55.00000000000001
+    },
+    "272-2020-distance to transformer": {
+        "amount": 50,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "distance to transformer",
+        "unit": "meter",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 45,
+        "maximum": 55.00000000000001
+    },
+    "273-2030-distance to transformer": {
+        "amount": 50,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "distance to transformer",
+        "unit": "meter",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 45,
+        "maximum": 55.00000000000001
+    },
+    "274-2040-distance to transformer": {
+        "amount": 50,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "distance to transformer",
+        "unit": "meter",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 45,
+        "maximum": 55.00000000000001
+    },
+    "275-2050-distance to transformer": {
+        "amount": 50,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "distance to transformer",
+        "unit": "meter",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 45,
+        "maximum": 55.00000000000001
+    },
+    "276-2000-distance to coastline": {
+        "amount": 500,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "distance to coastline",
+        "unit": "meter",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 500,
+        "minimum": 450,
+        "maximum": 550
+    },
+    "277-2010-distance to coastline": {
+        "amount": 500,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "distance to coastline",
+        "unit": "meter",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 500,
+        "minimum": 450,
+        "maximum": 550
+    },
+    "278-2020-distance to coastline": {
+        "amount": 500,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "distance to coastline",
+        "unit": "meter",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 500,
+        "minimum": 450,
+        "maximum": 550
+    },
+    "279-2030-distance to coastline": {
+        "amount": 500,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "distance to coastline",
+        "unit": "meter",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 500,
+        "minimum": 450,
+        "maximum": 550
+    },
+    "280-2040-distance to coastline": {
+        "amount": 500,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "distance to coastline",
+        "unit": "meter",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 500,
+        "minimum": 450,
+        "maximum": 550
+    },
+    "281-2050-distance to coastline": {
+        "amount": 500,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "distance to coastline",
+        "unit": "meter",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 500,
+        "minimum": 450,
+        "maximum": 550
+    }
+}

@@ -1,0 +1,41 @@
+package:
+  name: windisch
+  version: {{ environ['VERSION'] }}
+
+source:
+  path: ..
+
+build:
+  noarch: python
+  number: 0
+  script: python -m pip install --no-deps --ignore-installed .
+  script_env:
+    - VERSION
+    - CONDA_BLD_PATH
+
+requirements:
+  build:
+    - python
+    - setuptools
+  run:
+    - scipy
+    - pyprind
+    - pandas
+    - xarray <0.18
+    - numpy
+    - klausen
+    - xlrd
+    - numexpr
+    - bw2io
+    - pycountry
+    - wurst
+
+test:
+  imports:
+    - windisch
+
+about:
+  home: https://github.com/romainsacchi/windisch
+  license: BSD License
+  summary: 'Life Cycle Assessment for passenger cars.'
+license_family: BSD
