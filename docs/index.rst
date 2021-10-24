@@ -16,4 +16,7 @@ Technical Reference
    :template: custom-module-template.rst
    :recursive:
 
-   windisch
+   windisch.update_input_parameters
+   windisch.turbines_input_parameters
+   windisch.array
+   windisch.model
