@@ -13,7 +13,6 @@
 import os
 import sys
 
-# sys.path.insert(0, os.path.abspath('C:\Users\sacchi_r\Documents\GitHub\coarse\coarse'))
 sys.path.insert(0, os.path.abspath(".."))
 
 
