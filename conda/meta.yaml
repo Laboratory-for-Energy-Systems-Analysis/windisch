@@ -18,17 +18,17 @@ requirements:
     - python
     - setuptools
   run:
-    - scipy
-    - pyprind
-    - pandas
-    - xarray <0.18
-    - numpy
-    - klausen
-    - xlrd
-    - numexpr
     - bw2io
-    - pycountry
+    - klausen
+    - numpy
+    - pandas
+    - PyPrind
+    - scipy
+    - setuptools
+    - stats_arrays
     - wurst
+    - xarray
+
 
 test:
   imports:

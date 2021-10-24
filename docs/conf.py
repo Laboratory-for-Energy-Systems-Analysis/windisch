@@ -19,12 +19,12 @@ sys.path.insert(0, os.path.abspath(".."))
 
 # -- Project information -----------------------------------------------------
 
-project = "Carculator"
-copyright = "2019, Paul Scherrer Institut"
-author = "Chris Mutel, Brian Cox, Romain Sacchi"
+project = "windisch"
+copyright = "2021, Paul Scherrer Institut"
+author = "Romain Sacchi"
 
 # The full version, including alpha/beta/rc tags
-release = "1.0.0"
+release = "0.0.1"
 
 
 # -- General configuration ---------------------------------------------------

@@ -6,8 +6,7 @@
   <a href="https://ci.appveyor.com/project/romainsacchi/windisch" target="_blank"><img src="https://ci.appveyor.com/api/projects/status/github/romainsacchi/windisch?svg=true"></a>
   <a href="https://coveralls.io/github/romainsacchi/windisch" target="_blank"><img src="https://coveralls.io/repos/github/romainsacchi/windisch/badge.svg"></a>
   <a href="https://windisch.readthedocs.io/en/latest/" target="_blank"><img src="https://readthedocs.org/projects/windisch/badge/?version=latest"></a>
-  <a href="https://doi.org/10.5281/zenodo.3778259"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.3778259.svg" alt="DOI"></a>
-</p>
+ </p>
 
 Life cycle assessment for wind turbines.
 
@@ -28,7 +27,7 @@ We recommend the installation on **Python 3.7 or above**.
 
     conda install -c romainsacchi windisch
 
-### Installation of a stable release (1.3.1) from Pypi
+### Installation of a stable release from Pypi
 
     pip install windisch
 
