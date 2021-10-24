@@ -5699,169 +5699,7 @@
         "minimum": 2160,
         "maximum": 2640
     },
-    "234-2000-copper density": {
-        "amount": 8960,
-        "category": "Components",
-        "application": [
-            "onshore",
-            "offshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2000,
-        "name": "copper density",
-        "unit": "kg/m3",
-        "importance": "moderate",
-        "source": "",
-        "comment": "Assumption",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 8960,
-        "minimum": 8064,
-        "maximum": 9856
-    },
-    "235-2010-copper density": {
-        "amount": 8960,
-        "category": "Components",
-        "application": [
-            "onshore",
-            "offshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2010,
-        "name": "copper density",
-        "unit": "kg/m3",
-        "importance": "moderate",
-        "source": "",
-        "comment": "Assumption",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 8960,
-        "minimum": 8064,
-        "maximum": 9856
-    },
-    "236-2020-copper density": {
-        "amount": 8960,
-        "category": "Components",
-        "application": [
-            "onshore",
-            "offshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2020,
-        "name": "copper density",
-        "unit": "kg/m3",
-        "importance": "moderate",
-        "source": "",
-        "comment": "Assumption",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 8960,
-        "minimum": 8064,
-        "maximum": 9856
-    },
-    "237-2030-copper density": {
-        "amount": 8960,
-        "category": "Components",
-        "application": [
-            "onshore",
-            "offshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2030,
-        "name": "copper density",
-        "unit": "kg/m3",
-        "importance": "moderate",
-        "source": "",
-        "comment": "Assumption",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 8960,
-        "minimum": 8064,
-        "maximum": 9856
-    },
-    "238-2040-copper density": {
-        "amount": 8960,
-        "category": "Components",
-        "application": [
-            "onshore",
-            "offshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2040,
-        "name": "copper density",
-        "unit": "kg/m3",
-        "importance": "moderate",
-        "source": "",
-        "comment": "Assumption",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 8960,
-        "minimum": 8064,
-        "maximum": 9856
-    },
-    "239-2050-copper density": {
-        "amount": 8960,
-        "category": "Components",
-        "application": [
-            "onshore",
-            "offshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2050,
-        "name": "copper density",
-        "unit": "kg/m3",
-        "importance": "moderate",
-        "source": "",
-        "comment": "Assumption",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 8960,
-        "minimum": 8064,
-        "maximum": 9856
-    },
-    "240-2000-offshore farm cable cross-section": {
+    "234-2000-offshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -5887,7 +5725,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "241-2010-offshore farm cable cross-section": {
+    "235-2010-offshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -5913,7 +5751,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "242-2020-offshore farm cable cross-section": {
+    "236-2020-offshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -5939,7 +5777,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "243-2030-offshore farm cable cross-section": {
+    "237-2030-offshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -5965,7 +5803,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "244-2040-offshore farm cable cross-section": {
+    "238-2040-offshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -5991,7 +5829,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "245-2050-offshore farm cable cross-section": {
+    "239-2050-offshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -6017,7 +5855,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "246-2000-onshore farm cable cross-section": {
+    "240-2000-onshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -6043,7 +5881,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "247-2010-onshore farm cable cross-section": {
+    "241-2010-onshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -6069,7 +5907,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "248-2020-onshore farm cable cross-section": {
+    "242-2020-onshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -6095,7 +5933,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "249-2030-onshore farm cable cross-section": {
+    "243-2030-onshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -6121,7 +5959,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "250-2040-onshore farm cable cross-section": {
+    "244-2040-onshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -6147,7 +5985,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "251-2050-onshore farm cable cross-section": {
+    "245-2050-onshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -6172,12 +6010,168 @@
         "loc": 300,
         "minimum": 270,
         "maximum": 330
+    },
+    "246-2000-lifetime": {
+        "amount": 20,
+        "category": "Operation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 20,
+        "minimum": 18,
+        "maximum": 22
+    },
+    "247-2010-lifetime": {
+        "amount": 20,
+        "category": "Operation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 20,
+        "minimum": 18,
+        "maximum": 22
+    },
+    "248-2020-lifetime": {
+        "amount": 20,
+        "category": "Operation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 20,
+        "minimum": 18,
+        "maximum": 22
+    },
+    "249-2030-lifetime": {
+        "amount": 20,
+        "category": "Operation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 20,
+        "minimum": 18,
+        "maximum": 22
+    },
+    "250-2040-lifetime": {
+        "amount": 20,
+        "category": "Operation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 20,
+        "minimum": 18,
+        "maximum": 22
+    },
+    "251-2050-lifetime": {
+        "amount": 20,
+        "category": "Operation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 20,
+        "minimum": 18,
+        "maximum": 22
     },
     "252-2000-lifetime": {
-        "amount": 20,
+        "amount": 25,
         "category": "Operation",
         "application": [
-            "onshore"
+            "offshore"
         ],
         "sizes": [
             "100kW",
@@ -6195,15 +6189,15 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 20,
-        "minimum": 18,
-        "maximum": 22
+        "loc": 25,
+        "minimum": 22.5,
+        "maximum": 27.500000000000004
     },
     "253-2010-lifetime": {
-        "amount": 20,
+        "amount": 25,
         "category": "Operation",
         "application": [
-            "onshore"
+            "offshore"
         ],
         "sizes": [
             "100kW",
@@ -6221,15 +6215,15 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 20,
-        "minimum": 18,
-        "maximum": 22
+        "loc": 25,
+        "minimum": 22.5,
+        "maximum": 27.500000000000004
     },
     "254-2020-lifetime": {
-        "amount": 20,
+        "amount": 25,
         "category": "Operation",
         "application": [
-            "onshore"
+            "offshore"
         ],
         "sizes": [
             "100kW",
@@ -6247,15 +6241,15 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 20,
-        "minimum": 18,
-        "maximum": 22
+        "loc": 25,
+        "minimum": 22.5,
+        "maximum": 27.500000000000004
     },
     "255-2030-lifetime": {
-        "amount": 20,
+        "amount": 25,
         "category": "Operation",
         "application": [
-            "onshore"
+            "offshore"
         ],
         "sizes": [
             "100kW",
@@ -6273,15 +6267,15 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 20,
-        "minimum": 18,
-        "maximum": 22
+        "loc": 25,
+        "minimum": 22.5,
+        "maximum": 27.500000000000004
     },
     "256-2040-lifetime": {
-        "amount": 20,
+        "amount": 25,
         "category": "Operation",
         "application": [
-            "onshore"
+            "offshore"
         ],
         "sizes": [
             "100kW",
@@ -6299,167 +6293,11 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 20,
-        "minimum": 18,
-        "maximum": 22
+        "loc": 25,
+        "minimum": 22.5,
+        "maximum": 27.500000000000004
     },
     "257-2050-lifetime": {
-        "amount": 20,
-        "category": "Operation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2050,
-        "name": "lifetime",
-        "unit": "years",
-        "importance": "critical",
-        "source": "",
-        "comment": "Assumption",
-        "status": "to be improved",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 20,
-        "minimum": 18,
-        "maximum": 22
-    },
-    "258-2000-lifetime": {
-        "amount": 25,
-        "category": "Operation",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2000,
-        "name": "lifetime",
-        "unit": "years",
-        "importance": "critical",
-        "source": "",
-        "comment": "Assumption",
-        "status": "to be improved",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 25,
-        "minimum": 22.5,
-        "maximum": 27.500000000000004
-    },
-    "259-2010-lifetime": {
-        "amount": 25,
-        "category": "Operation",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2010,
-        "name": "lifetime",
-        "unit": "years",
-        "importance": "critical",
-        "source": "",
-        "comment": "Assumption",
-        "status": "to be improved",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 25,
-        "minimum": 22.5,
-        "maximum": 27.500000000000004
-    },
-    "260-2020-lifetime": {
-        "amount": 25,
-        "category": "Operation",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2020,
-        "name": "lifetime",
-        "unit": "years",
-        "importance": "critical",
-        "source": "",
-        "comment": "Assumption",
-        "status": "to be improved",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 25,
-        "minimum": 22.5,
-        "maximum": 27.500000000000004
-    },
-    "261-2030-lifetime": {
-        "amount": 25,
-        "category": "Operation",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2030,
-        "name": "lifetime",
-        "unit": "years",
-        "importance": "critical",
-        "source": "",
-        "comment": "Assumption",
-        "status": "to be improved",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 25,
-        "minimum": 22.5,
-        "maximum": 27.500000000000004
-    },
-    "262-2040-lifetime": {
-        "amount": 25,
-        "category": "Operation",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2040,
-        "name": "lifetime",
-        "unit": "years",
-        "importance": "critical",
-        "source": "",
-        "comment": "Assumption",
-        "status": "to be improved",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 25,
-        "minimum": 22.5,
-        "maximum": 27.500000000000004
-    },
-    "263-2050-lifetime": {
         "amount": 25,
         "category": "Operation",
         "application": [
@@ -6485,7 +6323,7 @@
         "minimum": 22.5,
         "maximum": 27.500000000000004
     },
-    "264-2000-sea depth": {
+    "258-2000-sea depth": {
         "amount": 5,
         "category": "Installation",
         "application": [
@@ -6511,7 +6349,7 @@
         "minimum": 4.5,
         "maximum": 5.5
     },
-    "265-2010-sea depth": {
+    "259-2010-sea depth": {
         "amount": 5,
         "category": "Installation",
         "application": [
@@ -6537,7 +6375,7 @@
         "minimum": 4.5,
         "maximum": 5.5
     },
-    "266-2020-sea depth": {
+    "260-2020-sea depth": {
         "amount": 5,
         "category": "Installation",
         "application": [
@@ -6563,7 +6401,7 @@
         "minimum": 4.5,
         "maximum": 5.5
     },
-    "267-2030-sea depth": {
+    "261-2030-sea depth": {
         "amount": 5,
         "category": "Installation",
         "application": [
@@ -6589,7 +6427,7 @@
         "minimum": 4.5,
         "maximum": 5.5
     },
-    "268-2040-sea depth": {
+    "262-2040-sea depth": {
         "amount": 5,
         "category": "Installation",
         "application": [
@@ -6615,7 +6453,7 @@
         "minimum": 4.5,
         "maximum": 5.5
     },
-    "269-2050-sea depth": {
+    "263-2050-sea depth": {
         "amount": 5,
         "category": "Installation",
         "application": [
@@ -6641,7 +6479,7 @@
         "minimum": 4.5,
         "maximum": 5.5
     },
-    "270-2000-distance to transformer": {
+    "264-2000-distance to transformer": {
         "amount": 50,
         "category": "Installation",
         "application": [
@@ -6667,7 +6505,7 @@
         "minimum": 45,
         "maximum": 55.00000000000001
     },
-    "271-2010-distance to transformer": {
+    "265-2010-distance to transformer": {
         "amount": 50,
         "category": "Installation",
         "application": [
@@ -6693,7 +6531,7 @@
         "minimum": 45,
         "maximum": 55.00000000000001
     },
-    "272-2020-distance to transformer": {
+    "266-2020-distance to transformer": {
         "amount": 50,
         "category": "Installation",
         "application": [
@@ -6719,7 +6557,7 @@
         "minimum": 45,
         "maximum": 55.00000000000001
     },
-    "273-2030-distance to transformer": {
+    "267-2030-distance to transformer": {
         "amount": 50,
         "category": "Installation",
         "application": [
@@ -6745,7 +6583,7 @@
         "minimum": 45,
         "maximum": 55.00000000000001
     },
-    "274-2040-distance to transformer": {
+    "268-2040-distance to transformer": {
         "amount": 50,
         "category": "Installation",
         "application": [
@@ -6771,7 +6609,7 @@
         "minimum": 45,
         "maximum": 55.00000000000001
     },
-    "275-2050-distance to transformer": {
+    "269-2050-distance to transformer": {
         "amount": 50,
         "category": "Installation",
         "application": [
@@ -6797,7 +6635,7 @@
         "minimum": 45,
         "maximum": 55.00000000000001
     },
-    "276-2000-distance to coastline": {
+    "270-2000-distance to coastline": {
         "amount": 500,
         "category": "Installation",
         "application": [
@@ -6823,7 +6661,7 @@
         "minimum": 450,
         "maximum": 550
     },
-    "277-2010-distance to coastline": {
+    "271-2010-distance to coastline": {
         "amount": 500,
         "category": "Installation",
         "application": [
@@ -6849,7 +6687,7 @@
         "minimum": 450,
         "maximum": 550
     },
-    "278-2020-distance to coastline": {
+    "272-2020-distance to coastline": {
         "amount": 500,
         "category": "Installation",
         "application": [
@@ -6875,7 +6713,7 @@
         "minimum": 450,
         "maximum": 550
     },
-    "279-2030-distance to coastline": {
+    "273-2030-distance to coastline": {
         "amount": 500,
         "category": "Installation",
         "application": [
@@ -6901,7 +6739,7 @@
         "minimum": 450,
         "maximum": 550
     },
-    "280-2040-distance to coastline": {
+    "274-2040-distance to coastline": {
         "amount": 500,
         "category": "Installation",
         "application": [
@@ -6927,7 +6765,7 @@
         "minimum": 450,
         "maximum": 550
     },
-    "281-2050-distance to coastline": {
+    "275-2050-distance to coastline": {
         "amount": 500,
         "category": "Installation",
         "application": [

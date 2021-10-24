@@ -1,3 +1,8 @@
+"""
+update_input_params.py extracts input parameters values from `data/Input data.xlsx`
+and format that into the json file `default_parameters.json`.
+"""
+
 import json
 
 import numpy as np
@@ -14,50 +19,48 @@ def update_input_parameters():
     and store them in a json file, further used to build an input array.
     Does not return anything.
     """
-    df = pd.read_excel(FILEPATH_TO_INPUT_DATA)
-    df = df.replace(np.nan, "", regex=True)
+    dataframe = pd.read_excel(FILEPATH_TO_INPUT_DATA)
+    dataframe = dataframe.replace(np.nan, "", regex=True)
 
-    d = {}
+    dict_for_json = {}
     count = 0
 
-    d_dist = {"triangular": 5, "None": 1}
+    for _, row in dataframe.iterrows():
+        if row["parameter"] != "":
 
-    for i, j in df.iterrows():
-        if j["parameter"] != "":
+            category = row["category"]
 
-            category = j["category"]
-
-            if j["application"] == "all":
+            if row["application"] == "all":
                 application = ["onshore", "offshore"]
             else:
-                application = [x.strip() for x in j["application"].split(",")]
+                application = [x.strip() for x in row["application"].split(",")]
 
-            if j["sizes"] == "all":
+            if row["sizes"] == "all":
                 size = ["100kW", "500kW", "1000kW", "3000kW", "8000kW"]
 
             else:
-                size = [x.strip() for x in str(j["sizes"]).split(",")]
+                size = [x.strip() for x in str(row["sizes"]).split(",")]
 
-            param = j["parameter"]
-            unit = j["unit"]
-            importance = j["importance"]
-            status = j["status"]
-            source = j["source"]
-            comment = j["comment"]
+            param = row["parameter"]
+            unit = row["unit"]
+            importance = row["importance"]
+            status = row["status"]
+            source = row["source"]
+            comment = row["comment"]
 
             list_years = [2000, 2010, 2020, 2030, 2040, 2050]
 
-            for y in list_years:
-                if j[y] != "":
-                    name = str(count) + "-" + str(y) + "-" + param
+            for year in list_years:
+                if row[year] != "":
+                    name = str(count) + "-" + str(year) + "-" + param
 
-                    if j[str(y) + ".1"] != "" and j[str(y) + ".1"] != "":
-                        d[name] = {
-                            "amount": j[y],
+                    if row[str(year) + ".1"] != "" and row[str(year) + ".1"] != "":
+                        dict_for_json[name] = {
+                            "amount": row[year],
                             "category": category,
                             "application": application,
                             "sizes": size,
-                            "year": y,
+                            "year": year,
                             "name": param,
                             "unit": unit,
                             "importance": importance,
@@ -66,17 +69,17 @@ def update_input_parameters():
                             "status": status,
                             "kind": "distribution",
                             "uncertainty_type": 5,
-                            "loc": j[y],
-                            "minimum": j[str(y) + ".1"],
-                            "maximum": j[str(y) + ".2"],
+                            "loc": row[year],
+                            "minimum": row[str(year) + ".1"],
+                            "maximum": row[str(year) + ".2"],
                         }
                     else:
-                        d[name] = {
-                            "amount": j[y],
+                        dict_for_json[name] = {
+                            "amount": row[year],
                             "category": category,
                             "application": application,
                             "sizes": size,
-                            "year": y,
+                            "year": year,
                             "name": param,
                             "unit": unit,
                             "importance": importance,
@@ -85,10 +88,10 @@ def update_input_parameters():
                             "status": status,
                             "kind": "distribution",
                             "uncertainty_type": 1,
-                            "loc": j[y],
+                            "loc": row[year],
                         }
 
                     count += 1
 
-    with open(DATA_DIR / "default_parameters.json", "w") as fp:
-        json.dump(d, fp, indent=4)
+    with open(DATA_DIR / "default_parameters.json", "w", encoding="utf-8") as filepath:
+        json.dump(dict_for_json, filepath, indent=4)

@@ -1,3 +1,8 @@
+"""
+fill_xarray_from_input_parameters creates an xarray and fills it with sampled input parameter values
+if a distribution is defined.
+"""
+from typing import Tuple, Union
 import numpy as np
 import pandas as pd
 import stats_arrays as sa
@@ -6,7 +11,9 @@ import xarray as xr
 from .turbines_input_parameters import TurbinesInputParameters as t_i_p
 
 
-def fill_xarray_from_input_parameters(tip, sensitivity=False, scope=None):
+def fill_xarray_from_input_parameters(
+    tip: "t_i_p", sensitivity: bool = False, scope: dict = None
+) -> Tuple[Tuple, xr.DataArray]:
 
     """Create an `xarray` labeled array from the sampled input parameters.
 
@@ -35,7 +42,7 @@ def fill_xarray_from_input_parameters(tip, sensitivity=False, scope=None):
     # Check whether the argument passed is a cip object
     if not isinstance(tip, t_i_p):
         raise TypeError(
-            "The argument passed is not an object of the CarInputParameter class"
+            "The argument passed is not an object of the TurbinesInputParameters class"
         )
 
     if scope is None:
@@ -79,7 +86,7 @@ def fill_xarray_from_input_parameters(tip, sensitivity=False, scope=None):
         )
     else:
         params = ["reference"]
-        params.extend([a for a in tip.input_parameters])
+        params.extend(tip.input_parameters)
         array = xr.DataArray(
             np.zeros(
                 (
@@ -178,7 +185,7 @@ def fill_xarray_from_input_parameters(tip, sensitivity=False, scope=None):
     return (size_dict, application_dict, parameter_dict, year_dict), array
 
 
-def modify_xarray_from_custom_parameters(fp, array):
+def modify_xarray_from_custom_parameters(filepath: Union[str, dict], array: xr.DataArray) -> xr.DataArray:
     """
     Override default parameters values in `xarray` based on values provided by the user.
 
@@ -221,86 +228,79 @@ def modify_xarray_from_custom_parameters(fp, array):
 
             }
 
-    :param array:
-    :param fp: File path of workbook with new values or dictionary.
-    :type fp: str or dict
+    :param array: the array to modify
+    :param filepath: File path of workbook with new values or dictionary.
+    :type filepath: str or dict
+    :return: the original array, but modified
 
     """
 
-    if isinstance(fp, str):
+    if isinstance(filepath, str):
         try:
-            d = pd.read_excel(
-                fp,
+            dataframe = pd.read_excel(
+                filepath,
                 header=[0, 1],
                 index_col=[0, 1, 2, 3, 4],
                 sheet_name="Custom_parameters",
             ).to_dict(orient="index")
-        except:
-            raise FileNotFoundError("Custom parameters file not found.")
-    elif isinstance(fp, dict):
-        d = fp
+        except Exception as err:
+            raise FileNotFoundError("Custom parameters file not found.") from err
+    elif isinstance(filepath, dict):
+        dataframe = filepath
     else:
         raise TypeError("The format passed as parameter is not valid.")
 
-    FORBIDDEN_KEYS = ["Background", "Functional unit"]
+    forbidden_keys = ["Background", "Functional unit"]
 
-    for k in d:
-        if k[0] not in FORBIDDEN_KEYS:
-            if not isinstance(k[1], str):
-                pt = [p.strip() for p in k[1] if p]
-                pt = [p for p in pt if p]
-                pt = list(pt)
-            elif k[1] == "all":
-                pt = array.coords["application"].values
+    for row in dataframe:
+        if row[0] not in forbidden_keys:
+            if not isinstance(row[1], str):
+                application_type = [p.strip() for p in row[1] if p]
+                application_type = [p for p in application_type if p]
+                application_type = list(application_type)
+            elif row[1] == "all":
+                application_type = array.coords["application"].values
             else:
-                if k[1] in array.coords["application"].values:
-                    pt = [k[1]]
+                if row[1] in array.coords["application"].values:
+                    application_type = [row[1]]
                 elif all(
                     p
-                    for p in k[1].split(", ")
+                    for p in row[1].split(", ")
                     if p in array.coords["application"].values
                 ):
-                    pt = [p for p in k[1].split(", ")]
+                    application_type = row[1].split(", ")
                 else:
                     print(
-                        "{} is not a recognized application. It will be skipped.".format(
-                            k[1]
-                        )
+                        f"{row[1]} is not a recognized application. It will be skipped."
                     )
                     continue
 
-            if not isinstance(k[2], str):
-                sizes = [s.strip() for s in k[2] if s]
+            if not isinstance(row[2], str):
+                sizes = [s.strip() for s in row[2] if s]
                 sizes = [s for s in sizes if s]
                 sizes = list(sizes)
-            elif k[2] == "all":
+            elif row[2] == "all":
                 sizes = array.coords["size"].values
             else:
-                if k[2] in array.coords["size"].values:
-                    sizes = [k[2]]
+                if row[2] in array.coords["size"].values:
+                    sizes = [row[2]]
                 elif all(
-                    s for s in k[2].split(", ") if s in array.coords["size"].values
+                    s for s in row[2].split(", ") if s in array.coords["size"].values
                 ):
-                    sizes = [s for s in k[2].split(", ")]
+                    sizes = row[2].split(", ")
                 else:
                     print(
-                        "{} is not a recognized size category. It will be skipped.".format(
-                            k[2]
-                        )
+                        f"{row[2]} is not a recognized size category. It will be skipped."
                     )
                     continue
 
-            param = k[3]
+            param = row[3]
 
             if not param in array.coords["parameter"].values:
-                print(
-                    "{} is not a recognized parameter. It will be skipped.".format(
-                        param
-                    )
-                )
+                print(f"{param} is not a recognized parameter. It will be skipped.")
                 continue
 
-            val = d[k]
+            val = dataframe[row]
 
             distr_dic = {
                 "triangular": 5,
@@ -309,28 +309,28 @@ def modify_xarray_from_custom_parameters(fp, array):
                 "uniform": 4,
                 "none": 1,
             }
-            distr = distr_dic[k[4]]
+            distr = distr_dic[row[4]]
 
-            year = set([v[0] for v in val])
+            years = {v[0] for v in val}
 
-            for y in year:
+            for year in years:
                 # No uncertainty parameters given
                 if distr == 1:
                     # There should be at least a `loc`
-                    if ~np.isnan(val[(y, "loc")]):
-                        for s in sizes:
-                            for p in pt:
+                    if ~np.isnan(val[(year, "loc")]):
+                        for size in sizes:
+                            for app in application_type:
                                 array.loc[
                                     dict(
-                                        application=p,
-                                        size=s,
-                                        year=y,
+                                        application=app,
+                                        size=size,
+                                        year=year,
                                         parameter=param,
                                     )
-                                ] = val[(y, "loc")]
+                                ] = val[(year, "loc")]
                     # Otherwise warn
                     else:
-                        print("`loc`parameter missing for {} in {}.".format(param, y))
+                        print(f"`loc`parameter missing for {param} in {year}.")
                         continue
 
                 elif distr in [2, 3, 4, 5]:
@@ -340,56 +340,44 @@ def modify_xarray_from_custom_parameters(fp, array):
 
                     if distr == 5:
                         if (
-                            np.isnan(val[(y, "loc")])
-                            or np.isnan(val[(y, "minimum")])
-                            or np.isnan(val[(y, "maximum")])
+                            np.isnan(val[(year, "loc")])
+                            or np.isnan(val[(year, "minimum")])
+                            or np.isnan(val[(year, "maximum")])
                         ):
-                            print(
-                                "One or more parameters for the triangular distribution is/are missing for {} in {}.\n The parameter is skipped and default value applies".format(
-                                    param, y
-                                )
-                            )
+                            missing_param_for_distribution(param, "triangular", year)
                             continue
 
                     # Lognormal
                     if distr == 2:
-                        if np.isnan(val[(y, "loc")]) or np.isnan(val[(y, "scale")]):
-                            print(
-                                "One or more parameters for the lognormal distribution is/are missing for {} in {}.\n The parameter is skipped and default value applies".format(
-                                    param, y
-                                )
-                            )
+                        if np.isnan(val[(year, "loc")]) or np.isnan(
+                            val[(year, "scale")]
+                        ):
+                            missing_param_for_distribution(param, "lognormal", year)
                             continue
 
                     # Normal
                     if distr == 3:
-                        if np.isnan(val[(y, "loc")]) or np.isnan(val[(y, "scale")]):
-                            print(
-                                "One or more parameters for the normal distribution is/are missing for {} in {}.\n The parameter is skipped and default value applies".format(
-                                    param, y
-                                )
-                            )
+                        if np.isnan(val[(year, "loc")]) or np.isnan(
+                            val[(year, "scale")]
+                        ):
+                            missing_param_for_distribution(param, "normal", year)
                             continue
 
                     # Uniform
                     if distr == 4:
-                        if np.isnan(val[(y, "minimum")]) or np.isnan(
-                            val[(y, "maximum")]
+                        if np.isnan(val[(year, "minimum")]) or np.isnan(
+                            val[(year, "maximum")]
                         ):
-                            print(
-                                "One or more parameters for the uniform distribution is/are missing for {} in {}.\n The parameter is skipped and default value applies".format(
-                                    param, y
-                                )
-                            )
+                            missing_param_for_distribution(param, "uniform", year)
                             continue
 
-                    a = sa.UncertaintyBase.from_dicts(
+                    distribution_def = sa.UncertaintyBase.from_dicts(
                         {
-                            "loc": val[y, "loc"],
-                            "scale": val[y, "scale"],
-                            "shape": val[y, "shape"],
-                            "minimum": val[y, "minimum"],
-                            "maximum": val[y, "maximum"],
+                            "loc": val[year, "loc"],
+                            "scale": val[year, "scale"],
+                            "shape": val[year, "shape"],
+                            "minimum": val[year, "minimum"],
+                            "maximum": val[year, "maximum"],
                             "uncertainty_type": distr,
                         }
                     )
@@ -397,28 +385,53 @@ def modify_xarray_from_custom_parameters(fp, array):
                     # Stochastic mode
                     if array.sizes["value"] > 1:
 
-                        rng = sa.MCRandomNumberGenerator(a)
+                        rng = sa.MCRandomNumberGenerator(distribution_def)
 
-                        for s in sizes:
-                            for p in pt:
+                        for size in sizes:
+                            for app in application_type:
                                 array.loc[
-                                    dict(application=p, size=s, year=y, parameter=param)
+                                    dict(
+                                        application=app,
+                                        size=size,
+                                        year=year,
+                                        parameter=param,
+                                    )
                                 ] = rng.generate(array.sizes["value"]).reshape((-1,))
                     else:
 
                         dist = sa.uncertainty_choices[distr]
-                        median = float(dist.ppf(a, np.array((0.5,))))
+                        median = float(dist.ppf(distribution_def, np.array((0.5,))))
 
-                        for s in sizes:
-                            for p in pt:
+                        for size in sizes:
+                            for app in application_type:
                                 array.loc[
-                                    dict(application=p, size=s, year=y, parameter=param)
+                                    dict(
+                                        application=app,
+                                        size=size,
+                                        year=year,
+                                        parameter=param,
+                                    )
                                 ] = median
 
                 else:
                     print(
-                        "The uncertainty type is not recognized for {} in {}.\n The parameter is skipped and default value applies".format(
-                            param, y
-                        )
+                        f"The uncertainty type is not recognized for {param} in {year}.\n The parameter is skipped and default value applies"
                     )
                     continue
+
+    return array
+
+
+def missing_param_for_distribution(param: str, dist_type: str, year: int):
+    """
+    Print a warning message in case of misisng parameters for a distribution.
+    :param param: input parameter for which the distribution parameter is missing, str.
+    :param dist_type: distribution type, str.
+    :param year: year, int
+    :return: nothing.
+    """
+
+    print(
+        f"One or more parameters for the {dist_type} distribution is/are missing for {year} in {param}.\n "
+        f"The parameter is skipped and the default value applies."
+    )

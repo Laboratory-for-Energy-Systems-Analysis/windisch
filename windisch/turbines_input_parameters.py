@@ -1,5 +1,10 @@
+"""
+Provides `TurbinesInputParameters`, a class that formats input and output parameters and associated
+values into an array. This array is later on consumed by `WindTurbineModel`.
+"""
 import json
 from pathlib import Path
+from typing import Union
 
 from klausen import NamedParameters
 
@@ -7,13 +12,19 @@ DEFAULT = Path(__file__, "..").resolve() / "data" / "default_parameters.json"
 EXTRA = Path(__file__, "..").resolve() / "data" / "extra_parameters.json"
 
 
-def load_parameters(obj):
+def load_parameters(obj: Union[str, Path]):
+    """
+    Check if json file containing input parameters exists,
+    and if so, return it.
+    :param obj:
+    :return:
+    """
     if isinstance(obj, (str, Path)):
         assert Path(obj).exists(), "Can't find this filepath"
-        return json.load(open(obj))
-    else:
-        # Already in correct form, just return
-        return obj
+        return json.load(open(obj, encoding="utf-8"))
+
+    # Already in correct form, just return
+    return obj
 
 
 class TurbinesInputParameters(NamedParameters):
@@ -21,7 +32,7 @@ class TurbinesInputParameters(NamedParameters):
     A class used to represent wind turbines with associated type, size, technology, year and parameters.
 
     This class inherits from NamedParameters, located in the *klausen* package.
-    It sources default parameters for all vehicle types from a dictionary in
+    It sources default parameters for all wind turbine types from a dictionary in
     default_parameters and format them into an array following the structured described
     in the *klausen* package.
 
@@ -44,7 +55,7 @@ class TurbinesInputParameters(NamedParameters):
 
     """
 
-    def __init__(self, parameters=None, extra=None, limit=None):
+    def __init__(self, parameters=None, extra=None):
         """Create a `klausen <https://github.com/cmutel/klausen>`__ model with the car input parameters."""
         super().__init__(None)
 
@@ -53,15 +64,11 @@ class TurbinesInputParameters(NamedParameters):
 
         if not isinstance(parameters, dict):
             raise ValueError(
-                "Parameters are not correct type (expected `dict`, got `{}`)".format(
-                    type(parameters)
-                )
+                f"Parameters are not correct type (expected `dict`, got `{type(parameters)}`)"
             )
         if not isinstance(extra, set):
             raise ValueError(
-                "Extra parameters are not correct type (expected `set`, got `{}`)".format(
-                    type(extra)
-                )
+                f"Extra parameters are not correct type (expected `set`, got `{type(extra)}`)"
             )
         self.sizes = sorted(
             {size for o in parameters.values() for size in o.get("sizes", [])}
@@ -89,13 +96,13 @@ class TurbinesInputParameters(NamedParameters):
         :param parameters: A dictionary that contains parameters.
         :type parameters: dict
         """
-        KEYS = {"kind", "uncertainty_type", "amount", "loc", "minimum", "maximum"}
+        keys = {"kind", "uncertainty_type", "amount", "loc", "minimum", "maximum"}
 
         reformatted = {}
         for key, dct in parameters.items():
-            reformatted[key] = {k: v for k, v in dct.items() if k in KEYS}
+            reformatted[key] = {k: v for k, v in dct.items() if k in keys}
             reformatted[key]["metadata"] = {
-                k: v for k, v in dct.items() if k not in KEYS
+                k: v for k, v in dct.items() if k not in keys
             }
 
         self.add_parameters(reformatted)
