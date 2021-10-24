@@ -77,7 +77,7 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest --cov=carculator
+          pytest --cov=windisch
           coveralls
         env:
           GITHUB_TOKEN: ${{ secrets.COVERALLS }}
@@ -113,7 +113,7 @@ jobs:
 
         run: |
 
-          PKG_NAME=carculator
+          PKG_NAME=windisch
           USER=romainsacchi
           conda install anaconda-client
           mkdir ~/conda-bld
