@@ -24,7 +24,6 @@ __all__ = (
     "modify_xarray_from_custom_parameters",
     "WindTurbineModel",
     "InventoryCalculation",
-    "BackgroundSystemModel",
     "ExportInventory",
     "update_input_parameters",
 )
@@ -34,7 +33,6 @@ from .array import (
     fill_xarray_from_input_parameters,
     modify_xarray_from_custom_parameters,
 )
-from .background_systems import BackgroundSystemModel
 from .export import ExportInventory
 from .inventory import InventoryCalculation
 from .model import WindTurbineModel

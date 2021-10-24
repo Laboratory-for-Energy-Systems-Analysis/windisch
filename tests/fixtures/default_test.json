@@ -1,310 +1,496 @@
 {
-  "0-2017-lifetime kilometers": {
-    "amount": 200000.0,
-    "category": "Driving",
-    "comment": "Typical values, higher bound expected to increase in the future due to increases in car sharing",
-    "kind": "distribution",
-    "loc": 200000.0,
-    "maximum": 300000.0,
-    "minimum": 80000.0,
-    "name": "lifetime kilometers",
-    "powertrain": [
-      "BEV",
-      "FCEV",
-      "HEV-p"
-    ],
-    "sizes": [
-      "Large",
-      "Lower medium",
-      "Medium",
-      "Mini",
-      "SUV",
-      "Small",
-      "Van"
-    ],
-    "source": "Weymar et al. (2016), Biedermann et al (2017)",
-    "uncertainty_type": 5,
-    "unit": "km",
-    "year": 2017
-  },
-  "1-2040-lifetime kilometers": {
-    "amount": 200000.0,
-    "category": "Driving",
-    "comment": "Typical values, higher bound expected to increase in the future due to increases in car sharing",
-    "kind": "distribution",
-    "loc": 200000.0,
-    "maximum": 400000.0,
-    "minimum": 80000.0,
-    "name": "lifetime kilometers",
-    "powertrain": [
-      "FCEV",
-      "HEV-p"
-    ],
-    "sizes": [
-      "Large",
-      "Lower medium",
-      "Medium",
-      "Mini",
-      "SUV",
-      "Small",
-      "Van"
-    ],
-    "source": "Weymar et al. (2016), Biedermann et al (2017)",
-    "uncertainty_type": 5,
-    "unit": "km",
-    "year": 2040
-  },
-  "10-2017-glider base mass": {
-    "amount": 1300.0,
-    "category": "Glider",
-    "kind": "distribution",
-    "loc": 1300.0,
-    "maximum": 1500.0,
-    "minimum": 900.0,
-    "name": "glider base mass",
-    "powertrain": [
-      "BEV",
-      "FCEV",
-      "HEV-p"
-    ],
-    "sizes": [
-      "Medium"
-    ],
-    "source": "Hirschberg et al. (2016), Calibration result",
-    "uncertainty_type": 5,
-    "unit": "kg",
-    "year": 2017
-  },
-  "100-2040-electric mass per power": {
-    "amount": 0.5,
-    "category": "Powertrain",
-    "kind": "distribution",
-    "loc": 0.5,
-    "maximum": 0.75,
-    "minimum": 0.3,
-    "name": "electric mass per power",
-    "powertrain": [
-      "ICEV-p"
-    ],
-    "sizes": [
-      "Large",
-      "Lower medium",
-      "Medium",
-      "Mini",
-      "SUV",
-      "Small",
-      "Van"
-    ],
-    "source": "Del Duce et al (2016), Grunditz, Thiringer (2016), Hirschberg et al. (2016), Own assumption",
-    "uncertainty_type": 5,
-    "unit": "kg/kW",
-    "year": 2040
-  },
-  "101-2017-electric fixed mass": {
-    "amount": 20.0,
-    "category": "Powertrain",
-    "kind": "distribution",
-    "loc": 20.0,
-    "maximum": 25.0,
-    "minimum": 15.0,
-    "name": "electric fixed mass",
-    "powertrain": [
-      "BEV",
-      "FCEV"
-    ],
-    "sizes": [
-      "Large",
-      "Lower medium",
-      "Medium",
-      "Mini",
-      "SUV",
-      "Small",
-      "Van"
-    ],
-    "source": "Del Duce et al (2016), Grunditz, Thiringer (2016), Hirschberg et al. (2016), Own assumption",
-    "uncertainty_type": 5,
-    "unit": "kg",
-    "year": 2017
-  },
-  "102-2040-electric fixed mass": {
-    "amount": 15.0,
-    "category": "Powertrain",
-    "kind": "distribution",
-    "loc": 15.0,
-    "maximum": 20.0,
-    "minimum": 10.0,
-    "name": "electric fixed mass",
-    "powertrain": [
-      "BEV",
-      "FCEV",
-      "HEV-p"
-    ],
-    "sizes": [
-      "Large",
-      "Lower medium",
-      "Medium",
-      "Mini",
-      "SUV",
-      "Small",
-      "Van"
-    ],
-    "source": "Del Duce et al (2016), Grunditz, Thiringer (2016), Hirschberg et al. (2016), Own assumption",
-    "uncertainty_type": 5,
-    "unit": "kg",
-    "year": 2040
-  },
-  "103-2040-electric fixed mass": {
-    "amount": 15.0,
-    "category": "Powertrain",
-    "kind": "distribution",
-    "loc": 15.0,
-    "maximum": 20.0,
-    "minimum": 10.0,
-    "name": "electric fixed mass",
-    "powertrain": [
-      "ICEV-p"
-    ],
-    "sizes": [
-      "Large",
-      "Lower medium",
-      "Medium",
-      "Mini",
-      "SUV",
-      "Small",
-      "Van"
-    ],
-    "source": "Del Duce et al (2016), Grunditz, Thiringer (2016), Hirschberg et al. (2016), Own assumption",
-    "uncertainty_type": 5,
-    "unit": "kg",
-    "year": 2040
-  },
-  "104-2017-combustion mass per power": {
-    "amount": 0.7,
-    "category": "Powertrain",
-    "kind": "distribution",
-    "loc": 0.7,
-    "maximum": 0.8,
-    "minimum": 0.6,
-    "name": "combustion mass per power",
-    "powertrain": [
-      "ICEV-p",
-      "HEV-p"
-    ],
-    "sizes": [
-      "Large",
-      "Lower medium",
-      "Medium",
-      "Mini",
-      "SUV",
-      "Small",
-      "Van"
-    ],
-    "source": "Del Duce et al (2016), Grunditz, Thiringer (2016), Hirschberg et al. (2016), Own assumption",
-    "uncertainty_type": 5,
-    "unit": "kg/kW",
-    "year": 2017
-  },
-  "105-2040-combustion mass per power": {
-    "amount": 0.65,
-    "category": "Powertrain",
-    "kind": "distribution",
-    "loc": 0.65,
-    "maximum": 0.75,
-    "minimum": 0.55,
-    "name": "combustion mass per power",
-    "powertrain": [
-      "ICEV-p",
-      "HEV-p"
-    ],
-    "sizes": [
-      "Large",
-      "Lower medium",
-      "Medium",
-      "Mini",
-      "SUV",
-      "Small",
-      "Van"
-    ],
-    "source": "Del Duce et al (2016), Grunditz, Thiringer (2016), Hirschberg et al. (2016), Own assumption",
-    "uncertainty_type": 5,
-    "unit": "kg/kW",
-    "year": 2040
-  },
-  "107-2040-combustion mass per power": {
-    "amount": 0.75,
-    "category": "Powertrain",
-    "kind": "distribution",
-    "loc": 0.75,
-    "maximum": 0.85,
-    "minimum": 0.65,
-    "name": "combustion mass per power",
-    "powertrain": [
-      "ICEV-g"
-    ],
-    "sizes": [
-      "Large",
-      "Lower medium",
-      "Medium",
-      "Mini",
-      "SUV",
-      "Small",
-      "Van"
-    ],
-    "source": "Del Duce et al (2016), Grunditz, Thiringer (2016), Hirschberg et al. (2016), Own assumption",
-    "uncertainty_type": 5,
-    "unit": "kg/kW",
-    "year": 2040
-  },
-  "108-2017-combustion fixed mass": {
-    "amount": 60.0,
-    "category": "Powertrain",
-    "kind": "distribution",
-    "loc": 60.0,
-    "maximum": 70.0,
-    "minimum": 50.0,
-    "name": "combustion fixed mass",
-    "powertrain": [
-      "ICEV-p",
-      "HEV-p"
-    ],
-    "sizes": [
-      "Large",
-      "Lower medium",
-      "Medium",
-      "Mini",
-      "SUV",
-      "Small",
-      "Van"
-    ],
-    "source": "Simons (2013), Hirschberg et al. (2016), Own assumption",
-    "uncertainty_type": 5,
-    "unit": "kg",
-    "year": 2017
-  },
-  "109-2040-combustion fixed mass": {
-    "amount": 50.0,
-    "category": "Powertrain",
-    "kind": "distribution",
-    "loc": 50.0,
-    "maximum": 55.0,
-    "minimum": 45.0,
-    "name": "combustion fixed mass",
-    "powertrain": [
-      "ICEV-p",
-      "HEV-p"
-    ],
-    "sizes": [
-      "Large",
-      "Lower medium",
-      "Medium",
-      "Mini",
-      "SUV",
-      "Small",
-      "Van"
-    ],
-    "source": "Simons (2013), Hirschberg et al. (2016), Own assumption",
-    "uncertainty_type": 5,
-    "unit": "kg",
-    "year": 2040
-  }
+  "246-2000-lifetime": {
+        "amount": 20,
+        "category": "Operation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 20,
+        "minimum": 18,
+        "maximum": 22
+    },
+    "247-2010-lifetime": {
+        "amount": 20,
+        "category": "Operation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 20,
+        "minimum": 18,
+        "maximum": 22
+    },
+    "248-2020-lifetime": {
+        "amount": 20,
+        "category": "Operation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 20,
+        "minimum": 18,
+        "maximum": 22
+    },
+    "249-2030-lifetime": {
+        "amount": 20,
+        "category": "Operation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 20,
+        "minimum": 18,
+        "maximum": 22
+    },
+    "250-2040-lifetime": {
+        "amount": 20,
+        "category": "Operation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 20,
+        "minimum": 18,
+        "maximum": 22
+    },
+    "251-2050-lifetime": {
+        "amount": 20,
+        "category": "Operation",
+        "application": [
+            "onshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 20,
+        "minimum": 18,
+        "maximum": 22
+    },
+    "252-2000-lifetime": {
+        "amount": 25,
+        "category": "Operation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 25,
+        "minimum": 22.5,
+        "maximum": 27.500000000000004
+    },
+    "253-2010-lifetime": {
+        "amount": 25,
+        "category": "Operation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 25,
+        "minimum": 22.5,
+        "maximum": 27.500000000000004
+    },
+    "254-2020-lifetime": {
+        "amount": 25,
+        "category": "Operation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 25,
+        "minimum": 22.5,
+        "maximum": 27.500000000000004
+    },
+    "255-2030-lifetime": {
+        "amount": 25,
+        "category": "Operation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 25,
+        "minimum": 22.5,
+        "maximum": 27.500000000000004
+    },
+    "256-2040-lifetime": {
+        "amount": 25,
+        "category": "Operation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 25,
+        "minimum": 22.5,
+        "maximum": 27.500000000000004
+    },
+    "257-2050-lifetime": {
+        "amount": 25,
+        "category": "Operation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "lifetime",
+        "unit": "years",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 25,
+        "minimum": 22.5,
+        "maximum": 27.500000000000004
+    },
+    "258-2000-sea depth": {
+        "amount": 5,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "sea depth",
+        "unit": "meter",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 5,
+        "minimum": 4.5,
+        "maximum": 5.5
+    },
+    "259-2010-sea depth": {
+        "amount": 5,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "sea depth",
+        "unit": "meter",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 5,
+        "minimum": 4.5,
+        "maximum": 5.5
+    },
+    "260-2020-sea depth": {
+        "amount": 5,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "sea depth",
+        "unit": "meter",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 5,
+        "minimum": 4.5,
+        "maximum": 5.5
+    },
+    "261-2030-sea depth": {
+        "amount": 5,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "sea depth",
+        "unit": "meter",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 5,
+        "minimum": 4.5,
+        "maximum": 5.5
+    },
+    "262-2040-sea depth": {
+        "amount": 5,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "sea depth",
+        "unit": "meter",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 5,
+        "minimum": 4.5,
+        "maximum": 5.5
+    },
+    "263-2050-sea depth": {
+        "amount": 5,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "sea depth",
+        "unit": "meter",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 5,
+        "minimum": 4.5,
+        "maximum": 5.5
+    },
+    "264-2000-distance to transformer": {
+        "amount": 50,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "distance to transformer",
+        "unit": "meter",
+        "importance": "critical",
+        "source": "",
+        "comment": "Assumption",
+        "status": "to be improved",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 50,
+        "minimum": 45,
+        "maximum": 55.00000000000001
+    }
 }
