@@ -1,8 +1,10 @@
-import numpy as np
-import pytest
 import json
 
+import numpy as np
+import pytest
+
 from windisch.update_input_params import *
+
 
 def test_output_format():
     """
@@ -19,11 +21,11 @@ def test_output_format():
         data = json.load(file)
 
     # the original value is 20
-    assert data['246-2000-lifetime']['amount'] == 20
+    assert data["246-2000-lifetime"]["amount"] == 20
 
     # we modify it to 30
-    data['246-2000-lifetime']['amount'] = 30
-    assert data['246-2000-lifetime']['amount'] == 30
+    data["246-2000-lifetime"]["amount"] = 30
+    assert data["246-2000-lifetime"]["amount"] == 30
 
     # we save the json file
     with open(DATA_DIR / "default_parameters.json", "w", encoding="utf-8") as filepath:
@@ -37,8 +39,4 @@ def test_output_format():
         data = json.load(file)
 
     # we check that the value is overwritten and back to 20
-    assert data['246-2000-lifetime']['amount'] == 20
-
-
-
-
+    assert data["246-2000-lifetime"]["amount"] == 20
