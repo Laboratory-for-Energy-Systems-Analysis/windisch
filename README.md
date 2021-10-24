@@ -11,7 +11,9 @@
 Life cycle assessment for wind turbines.
 
 A fully parameterized Python model developed in  
-[Sacchi et al. 2019](https://doi.org/10.1016/j.renene.2018.09.020) to perform life cycle assessments (LCA) of wind turbines.
+[Sacchi et al. 2019](https://doi.org/10.1016/j.renene.2018.09.020) and  
+[Besseau et al. 2010](https://doi.org/10.1016/j.rser.2019.03.030) to perform life cycle assessments (LCA)  
+of wind turbines.
 
 
 See [the documentation](https://windisch.readthedocs.io/en/latest/index.html) for more detail, validation, etc.
@@ -21,19 +23,20 @@ See [the documentation](https://windisch.readthedocs.io/en/latest/index.html) fo
 ``windisch`` is at an early stage of development and is subject to continuous change and improvement.
 Two ways of installing ``windisch`` are suggested.
 
-We recommend the installation on **Python 3.7 or above**.
+We recommend the installation on **Python 3.9 or above**.
 
 ### Installation of the latest version, using conda
 
     conda install -c romainsacchi windisch
 
-### Installation of a stable release from Pypi
+### Installation of a stable release from Pypi (not active yet)
 
     pip install windisch
 
 ## As a Web app
 
-``windisch`` has been used [here](http://viewer.webservice-energy.org/lca-wind-dk/) for fast comparisons of wind turbines in Denmark.
+An early form of ``windisch`` has been used [here](http://viewer.webservice-energy.org/lca-wind-dk/)  
+for fast comparisons of wind turbines in Denmark.
 
 ## Support
 
@@ -49,4 +52,4 @@ See [contributing](https://github.com/romainsacchi/windisch/blob/master/CONTRIBU
 
 ## License
 
-[BSD-3-Clause](https://github.com/romainsacchi/windisch/blob/master/LICENSE). Copyright 2020 Paul Scherrer Institut.
+[BSD-3-Clause](https://github.com/romainsacchi/windisch/blob/master/LICENSE). Copyright 2021 Paul Scherrer Institut.
