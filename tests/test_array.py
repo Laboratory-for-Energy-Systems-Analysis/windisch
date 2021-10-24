@@ -44,7 +44,7 @@ def test_modify_array():
             size="100kW",
             year=2020,
             parameter="lifetime",
-            value=0
+            value=0,
         ).values
         == 30
     )

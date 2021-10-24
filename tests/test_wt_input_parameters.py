@@ -1,7 +1,6 @@
 import json
 from pathlib import Path
 
-
 import windisch.turbines_input_parameters as tip
 
 DEFAULT = Path(__file__, "..").resolve() / "fixtures" / "default_test.json"
