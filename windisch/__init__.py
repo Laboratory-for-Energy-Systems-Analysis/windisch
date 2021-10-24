@@ -3,6 +3,7 @@ __init__ file.
 """
 
 from pathlib import Path
+
 DATA_DIR = Path(__file__).resolve().parent / "data"
 
 
@@ -39,9 +40,3 @@ from .inventory import InventoryCalculation
 from .model import WindTurbineModel
 from .turbines_input_parameters import TurbinesInputParameters
 from .update_input_params import update_input_parameters
-
-
-
-
-
-

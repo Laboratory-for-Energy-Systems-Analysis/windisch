@@ -3,6 +3,7 @@ fill_xarray_from_input_parameters creates an xarray and fills it with sampled in
 if a distribution is defined.
 """
 from typing import Tuple, Union
+
 import numpy as np
 import pandas as pd
 import stats_arrays as sa
@@ -185,7 +186,9 @@ def fill_xarray_from_input_parameters(
     return (size_dict, application_dict, parameter_dict, year_dict), array
 
 
-def modify_xarray_from_custom_parameters(filepath: Union[str, dict], array: xr.DataArray) -> xr.DataArray:
+def modify_xarray_from_custom_parameters(
+    filepath: Union[str, dict], array: xr.DataArray
+) -> xr.DataArray:
     """
     Override default parameters values in `xarray` based on values provided by the user.
 

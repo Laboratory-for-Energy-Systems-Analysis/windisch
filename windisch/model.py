@@ -3,7 +3,8 @@ model.py contains `WindTurbineModel` which sizes wind turbines
 and calculates dimensions and mass attributes.
 """
 
-from typing import Tuple, List, Union
+from typing import List, Tuple, Union
+
 import numpy as np
 
 # material densities, in kg/m3
@@ -503,8 +504,13 @@ class WindTurbineModel:
                 onshore["foundation mass"] = func_mass_foundation_onshore(
                     height, diameter
                 )
-                onshore["reinforcing steel in foundation mass"] = func_mass_reinf_steel_onshore(power)
-                onshore["concrete in foundation mass"] = onshore["foundation mass"] - onshore["reinforcing steel in foundation mass"]
+                onshore[
+                    "reinforcing steel in foundation mass"
+                ] = func_mass_reinf_steel_onshore(power)
+                onshore["concrete in foundation mass"] = (
+                    onshore["foundation mass"]
+                    - onshore["reinforcing steel in foundation mass"]
+                )
 
         if "offshore" in self.array.application:
             with self("offshore") as off:
@@ -530,7 +536,11 @@ class WindTurbineModel:
                 ].sum(dim="parameter")
 
                 cable_mass, energy = set_cable_requirements(
-                    power, cross_section, dist_transf, dist_coast, park_size,
+                    power,
+                    cross_section,
+                    dist_transf,
+                    dist_coast,
+                    park_size,
                 )
                 off["cable mass"] = cable_mass
                 off["energy for cable lay-up"] = energy
