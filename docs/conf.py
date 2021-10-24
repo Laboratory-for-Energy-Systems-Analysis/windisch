@@ -37,9 +37,6 @@ extensions = [
 ]
 autosummary_generate = True  # Turn on sphinx.ext.autosummary
 
-autoapi_type = "python"
-autoapi_dirs = ["../windisch"]
-
 master_doc = "index"
 
 # Add any paths that contain templates here, relative to this directory.
