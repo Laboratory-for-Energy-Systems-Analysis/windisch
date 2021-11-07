@@ -13,7 +13,7 @@ Life cycle assessment for wind turbines.
 A fully parameterized Python model initially developed in [Sacchi et al. 2019](https://doi.org/10.1016/j.renene.2018.09.020) and  
 [Besseau et al. 2019](https://doi.org/10.1016/j.rser.2019.03.030) to perform life cycle assessments (LCA) of wind turbines.
 
-Windisch also happens to also be [a small town in canton of Aargau, Switzerland](https://en.wikipedia.org/wiki/Windisch) (not particularly windy though).
+Windisch also happens to be [a small town in canton of Aargau, Switzerland](https://en.wikipedia.org/wiki/Windisch) (not particularly windy though).
 
 See [the documentation](https://windisch.readthedocs.io/en/latest/index.html) for more detail, validation, etc.
 There is also [a notebook with examples](https://github.com/romainsacchi/windisch/blob/main/examples/Examples.ipynb) on how to use the library.
