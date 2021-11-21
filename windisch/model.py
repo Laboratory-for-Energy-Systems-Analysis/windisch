@@ -52,7 +52,7 @@ def func_nacelle_weight_power(power: int, coeff_a: float, coeff_b: float) -> flo
     return 1e3 * nacelle_mass
 
 
-def func_rotor_diamter(
+def func_rotor_diameter(
     power: int, coeff_a: float, coeff_b: float, coeff_c: float, coeff_d: float
 ) -> float:
     """
@@ -348,13 +348,13 @@ class WindTurbineModel:
 
         """
 
-        self.set_size_rotor()
-        self.set_tower_height()
-        self.set_nacelle_mass()
-        self.set_rotor_mass()
-        self.set_tower_mass()
-        self.set_electronics_mass()
-        self.set_foundation_mass()
+        self.__set_size_rotor()
+        self.__set_tower_height()
+        self.__set_nacelle_mass()
+        self.__set_rotor_mass()
+        self.__set_tower_mass()
+        self.__set_electronics_mass()
+        self.__set_foundation_mass()
 
         self["total mass"] = self[
             [
@@ -380,7 +380,7 @@ class WindTurbineModel:
             )
         ] = 0
 
-    def set_size_rotor(self):
+    def __set_size_rotor(self):
         """
         This method defines the rotor diameter, based on its power output.
         :return:
@@ -389,18 +389,18 @@ class WindTurbineModel:
         if "onshore" in self.array.application:
             with self("onshore") as onshore:
                 power = onshore["rated power"]
-                onshore["rotor diameter"] = func_rotor_diamter(
+                onshore["rotor diameter"] = func_rotor_diameter(
                     power, 152.66222073, 136.56772435, 2478.03511414, 16.44042379
                 )
 
         if "offshore" in self.array.application:
             with self("offshore") as offshore:
                 power = offshore["rated power"]
-                offshore["rotor diameter"] = func_rotor_diamter(
+                offshore["rotor diameter"] = func_rotor_diameter(
                     power, 191.83651588, 147.37205671, 5101.28555377, 376.62814798
                 )
 
-    def set_tower_height(self):
+    def __set_tower_height(self):
         """
         This method defines the hub height based on the power output.
         :return:
@@ -420,7 +420,7 @@ class WindTurbineModel:
                     power, 120.75491612, 82.75390577, 4177.56520433
                 )
 
-    def set_nacelle_mass(self):
+    def __set_nacelle_mass(self):
         """
         This method defines the mass of the nacelle on the power output.
         :return:
@@ -440,7 +440,7 @@ class WindTurbineModel:
                     power, 2.15668283e-06, 3.24712680e-02
                 )
 
-    def set_rotor_mass(self):
+    def __set_rotor_mass(self):
         """
         This method defines the mass of the rotor based on its diameter.
         :return:
@@ -460,7 +460,7 @@ class WindTurbineModel:
                     diameter, 0.0088365, -0.16435292
                 )
 
-    def set_tower_mass(self):
+    def __set_tower_mass(self):
         """
         This method defines the mass of the tower (kg) based on the rotor diameter (m) and tower height (m).
         :return:
@@ -478,20 +478,20 @@ class WindTurbineModel:
             rotor_diameter, rotor_height, 3.03584782e-04, 9.68652909e00
         )
 
-    def set_electronics_mass(self):
+    def __set_electronics_mass(self):
         """
-        Define mass of electronics based on rated power output (kW
+        Define mass of electronics based on rated power output (kW)
         :return:
         """
         self["electronics mass"] = np.interp(
             self["rated power"], [30, 150, 600, 800, 2000], [150, 300, 862, 1112, 3946]
         )
 
-    def set_foundation_mass(self):
+    def __set_foundation_mass(self):
         """
         Define mass of foundation.
         For onshore turbines, this consists of concrete and reinforcing steel.
-        For osshore turbines, this consists of anti-scour materials at the sea bottom,
+        For offhore turbines, this consists of anti-scour materials at the sea bottom,
         the steel pile, the grout, the transition piece (incl. the platform) as well as the cables.
         :return:
         """
@@ -528,19 +528,164 @@ class WindTurbineModel:
                 off["grout volume"] = get_grout_volume(off["transition length"])
                 off["scour volume"] = get_scour_volume(off["rated power"])
 
-                off["foundation mass"] = self[
-                    [
-                        "pile mass",
-                        "transition mass",
-                    ]
-                ].sum(dim="parameter")
+                off["foundation mass"] = self[["pile mass", "transition mass",]].sum(
+                    dim="parameter"
+                )
 
                 cable_mass, energy = set_cable_requirements(
-                    power,
-                    cross_section,
-                    dist_transf,
-                    dist_coast,
-                    park_size,
+                    power, cross_section, dist_transf, dist_coast, park_size,
                 )
                 off["cable mass"] = cable_mass
                 off["energy for cable lay-up"] = energy
+
+    def __set_assembly_requirements(self):
+        """
+        Assembly requirements: components supply, electricity
+        :return:
+        """
+
+        # 0.5 kWh per kg of wind turbine
+        self["assembly electricity"] = (
+            self[["rotor mass", "nacelle mass", "tower mass", "electronics mass"]].sum(
+                dim="parameter"
+            )
+        ) * 0.5
+
+        # transport to assembly plant
+        self["transport to assembly"] = (
+            (
+                self[
+                    ["rotor mass", "nacelle mass", "tower mass", "electronics mass"]
+                ].sum(dim="parameter")
+            )
+            / 100
+            * self["distance to assembly plant"]
+        )
+
+    def __set_installation_requirements(self):
+        """
+        Amount of transport demand for installation.
+        And fuel use for installation.
+        :return:
+        """
+
+        if "onshore" in self.array.application:
+            # 1 liter diesel (0.85 kg, 37 MJ) per kilowatt of power
+            # assumed burned in a "building machine"
+
+            with self("onshore") as onshore:
+                onshore["installation energy"] = 37 * onshore["rated power"]
+
+        if "offshore" in self.array.application:
+            # 46 liters diesel (46.5 kg, 1'680 MJ) per kilowatt of power
+            # assumed burned in a "building machine"
+            with self("offshore") as offshore:
+                offshore["installation energy"] = 1680 * offshore["rated power"]
+
+        # transport to installation site
+        # tons over km
+        self["installation transport, by truck"] = (
+            self["nacelle transport to site"]
+            * self["share nacelle transport by truck"]
+            * self["nacelle mass"]
+            / 1000
+        )
+        self["installation transport, by truck"] += (
+            self["rotor transport to site"]
+            * self["share rotor transport by truck"]
+            * self["rotor mass"]
+            / 1000
+        )
+        self["installation transport, by truck"] += (
+            self["tower transport to site"]
+            * self["share tower transport by truck"]
+            * self["tower mass"]
+            / 1000
+        )
+        self["installation transport, by truck"] += (
+            self["foundation transport to site"]
+            * self["share foundation transport by truck"]
+            * self["foundation mass"]
+            / 1000
+        )
+
+        self["installation transport, by rail"] = (
+            self["nacelle transport to site"]
+            * self["share nacelle transport by rail"]
+            * self["nacelle mass"]
+            / 1000
+        )
+        self["installation transport, by rail"] += (
+            self["rotor transport to site"]
+            * self["share rotor transport by rail"]
+            * self["rotor mass"]
+            / 1000
+        )
+        self["installation transport, by rail"] += (
+            self["tower transport to site"]
+            * self["share tower transport by rail"]
+            * self["tower mass"]
+            / 1000
+        )
+        self["installation transport, by rail"] += (
+            self["foundation transport to site"]
+            * self["share foundation transport by rail"]
+            * self["foundation mass"]
+            / 1000
+        )
+
+        self["installation transport, by sea"] = (
+            self["nacelle transport to site"]
+            * self["share nacelle transport by sea"]
+            * self["nacelle mass"]
+            / 1000
+        )
+        self["installation transport, by sea"] += (
+            self["rotor transport to site"]
+            * self["share rotor transport by sea"]
+            * self["rotor mass"]
+            / 1000
+        )
+        self["installation transport, by sea"] += (
+            self["tower transport to site"]
+            * self["share tower transport by sea"]
+            * self["tower mass"]
+            / 1000
+        )
+        self["installation transport, by sea"] += (
+            self["foundation transport to site"]
+            * self["share foundation transport by sea"]
+            * self["foundation mass"]
+            / 1000
+        )
+
+        if "offshore" in self.array.application:
+            # additional transport to offshore location
+            with self("offshore") as offshore:
+                offshore["installation transport, by ship"] = (
+                    self["distance to coastline"] * self["total mass"] / 1000
+                )
+
+        if "onshore" in self.array.application:
+            # access road to onshore turbine
+            with self("onshore") as onshore:
+                onshore["access road"] = np.interp(
+                    self["rated power"], [0, 2000], [0, 8000]
+                )
+
+    def __set_maintenance_energy(self):
+        """
+        An amount of transport per wind turbine per year is given.
+        :return:
+        """
+
+        if "onshore" in self.array.application:
+            with self("onshore") as onshore:
+                onshore["maintenance transport"] = 500 * 100 / 8
+
+        if "offshore" in self.array.application:
+            # 7'500 liters (7'575 kg) heavy fuel oil per turbine per year
+            # assumed equivalent to 257'000 ton-km
+            # by a ferry boat @ 2.95 kg/100 ton-km
+            with self("offshore") as offshore:
+                offshore["maintenance transport"] = 7575 * 100 / 2.95

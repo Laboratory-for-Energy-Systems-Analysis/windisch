@@ -18,5 +18,12 @@
   "grout volume",
   "scour volume",
   "cable mass",
-  "energy for cable lay-up"
+  "assembly electricity",
+  "energy for cable lay-up",
+  "installation energy",
+  "maintenance transport",
+  "installation transport, by truck",
+  "installation transport, by ship",
+  "access road",
+  "transport to assembly"
 ]
