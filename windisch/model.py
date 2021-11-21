@@ -528,12 +528,19 @@ class WindTurbineModel:
                 off["grout volume"] = get_grout_volume(off["transition length"])
                 off["scour volume"] = get_scour_volume(off["rated power"])
 
-                off["foundation mass"] = self[["pile mass", "transition mass",]].sum(
-                    dim="parameter"
-                )
+                off["foundation mass"] = self[
+                    [
+                        "pile mass",
+                        "transition mass",
+                    ]
+                ].sum(dim="parameter")
 
                 cable_mass, energy = set_cable_requirements(
-                    power, cross_section, dist_transf, dist_coast, park_size,
+                    power,
+                    cross_section,
+                    dist_transf,
+                    dist_coast,
+                    park_size,
                 )
                 off["cable mass"] = cable_mass
                 off["energy for cable lay-up"] = energy
