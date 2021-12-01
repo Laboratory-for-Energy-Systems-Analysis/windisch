@@ -633,6 +633,7 @@
         "amount": 30,
         "category": "Operation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -659,6 +660,7 @@
         "amount": 30,
         "category": "Operation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -685,6 +687,7 @@
         "amount": 30,
         "category": "Operation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -711,6 +714,7 @@
         "amount": 30,
         "category": "Operation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -737,6 +741,7 @@
         "amount": 30,
         "category": "Operation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -763,6 +768,7 @@
         "amount": 30,
         "category": "Operation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -785,166 +791,11 @@
         "minimum": 25,
         "maximum": 35
     },
-    "36-2000-nacelle transport to site": {
-        "amount": 1025,
-        "category": "Installation",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2000,
-        "name": "nacelle transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 1025,
-        "minimum": 820,
-        "maximum": 1230
-    },
-    "37-2010-nacelle transport to site": {
-        "amount": 1025,
-        "category": "Installation",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2010,
-        "name": "nacelle transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 1025,
-        "minimum": 820,
-        "maximum": 1230
-    },
-    "38-2020-nacelle transport to site": {
-        "amount": 1025,
-        "category": "Installation",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2020,
-        "name": "nacelle transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 1025,
-        "minimum": 820,
-        "maximum": 1230
-    },
-    "39-2030-nacelle transport to site": {
-        "amount": 1025,
-        "category": "Installation",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2030,
-        "name": "nacelle transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 1025,
-        "minimum": 820,
-        "maximum": 1230
-    },
-    "40-2040-nacelle transport to site": {
-        "amount": 1025,
-        "category": "Installation",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2040,
-        "name": "nacelle transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 1025,
-        "minimum": 820,
-        "maximum": 1230
-    },
-    "41-2050-nacelle transport to site": {
-        "amount": 1025,
-        "category": "Installation",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2050,
-        "name": "nacelle transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 1025,
-        "minimum": 820,
-        "maximum": 1230
-    },
-    "42-2000-rotor transport to site": {
+    "36-2000-distance to assembly plant": {
         "amount": 600,
-        "category": "Installation",
+        "category": "Assembly",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -955,10 +806,10 @@
             "8000kW"
         ],
         "year": 2000,
-        "name": "rotor transport to site",
+        "name": "distance to assembly plant",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
@@ -967,10 +818,11 @@
         "minimum": 480,
         "maximum": 720
     },
-    "43-2010-rotor transport to site": {
+    "37-2010-distance to assembly plant": {
         "amount": 600,
-        "category": "Installation",
+        "category": "Assembly",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -981,10 +833,10 @@
             "8000kW"
         ],
         "year": 2010,
-        "name": "rotor transport to site",
+        "name": "distance to assembly plant",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
@@ -993,10 +845,11 @@
         "minimum": 480,
         "maximum": 720
     },
-    "44-2020-rotor transport to site": {
+    "38-2020-distance to assembly plant": {
         "amount": 600,
-        "category": "Installation",
+        "category": "Assembly",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -1007,10 +860,10 @@
             "8000kW"
         ],
         "year": 2020,
-        "name": "rotor transport to site",
+        "name": "distance to assembly plant",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
@@ -1019,10 +872,11 @@
         "minimum": 480,
         "maximum": 720
     },
-    "45-2030-rotor transport to site": {
+    "39-2030-distance to assembly plant": {
         "amount": 600,
-        "category": "Installation",
+        "category": "Assembly",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -1033,10 +887,10 @@
             "8000kW"
         ],
         "year": 2030,
-        "name": "rotor transport to site",
+        "name": "distance to assembly plant",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
@@ -1045,10 +899,11 @@
         "minimum": 480,
         "maximum": 720
     },
-    "46-2040-rotor transport to site": {
+    "40-2040-distance to assembly plant": {
         "amount": 600,
-        "category": "Installation",
+        "category": "Assembly",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -1059,10 +914,10 @@
             "8000kW"
         ],
         "year": 2040,
-        "name": "rotor transport to site",
+        "name": "distance to assembly plant",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
@@ -1071,10 +926,11 @@
         "minimum": 480,
         "maximum": 720
     },
-    "47-2050-rotor transport to site": {
+    "41-2050-distance to assembly plant": {
         "amount": 600,
-        "category": "Installation",
+        "category": "Assembly",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -1085,10 +941,10 @@
             "8000kW"
         ],
         "year": 2050,
-        "name": "rotor transport to site",
+        "name": "distance to assembly plant",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
@@ -1097,10 +953,335 @@
         "minimum": 480,
         "maximum": 720
     },
-    "48-2000-tower transport to site": {
-        "amount": 1100,
+    "42-2000-nacelle transport to site": {
+        "amount": 1025,
         "category": "Installation",
         "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "nacelle transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 1025,
+        "minimum": 820,
+        "maximum": 1230
+    },
+    "43-2010-nacelle transport to site": {
+        "amount": 1025,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "nacelle transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 1025,
+        "minimum": 820,
+        "maximum": 1230
+    },
+    "44-2020-nacelle transport to site": {
+        "amount": 1025,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "nacelle transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 1025,
+        "minimum": 820,
+        "maximum": 1230
+    },
+    "45-2030-nacelle transport to site": {
+        "amount": 1025,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "nacelle transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 1025,
+        "minimum": 820,
+        "maximum": 1230
+    },
+    "46-2040-nacelle transport to site": {
+        "amount": 1025,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "nacelle transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 1025,
+        "minimum": 820,
+        "maximum": 1230
+    },
+    "47-2050-nacelle transport to site": {
+        "amount": 1025,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "nacelle transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 1025,
+        "minimum": 820,
+        "maximum": 1230
+    },
+    "48-2000-rotor transport to site": {
+        "amount": 600,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "rotor transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 600,
+        "minimum": 480,
+        "maximum": 720
+    },
+    "49-2010-rotor transport to site": {
+        "amount": 600,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "rotor transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 600,
+        "minimum": 480,
+        "maximum": 720
+    },
+    "50-2020-rotor transport to site": {
+        "amount": 600,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "rotor transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 600,
+        "minimum": 480,
+        "maximum": 720
+    },
+    "51-2030-rotor transport to site": {
+        "amount": 600,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "rotor transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 600,
+        "minimum": 480,
+        "maximum": 720
+    },
+    "52-2040-rotor transport to site": {
+        "amount": 600,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "rotor transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 600,
+        "minimum": 480,
+        "maximum": 720
+    },
+    "53-2050-rotor transport to site": {
+        "amount": 600,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "rotor transport to site",
+        "unit": "km",
+        "importance": "moderate",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "comment": "",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 600,
+        "minimum": 480,
+        "maximum": 720
+    },
+    "54-2000-tower transport to site": {
+        "amount": 9150,
+        "category": "Installation",
+        "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -1114,19 +1295,20 @@
         "name": "tower transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1100,
-        "minimum": 880,
-        "maximum": 1320
+        "loc": 9150,
+        "minimum": 7320,
+        "maximum": 10980
     },
-    "49-2010-tower transport to site": {
-        "amount": 1100,
+    "55-2010-tower transport to site": {
+        "amount": 9150,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -1140,19 +1322,20 @@
         "name": "tower transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1100,
-        "minimum": 880,
-        "maximum": 1320
+        "loc": 9150,
+        "minimum": 7320,
+        "maximum": 10980
     },
-    "50-2020-tower transport to site": {
-        "amount": 1100,
+    "56-2020-tower transport to site": {
+        "amount": 9150,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -1166,19 +1349,20 @@
         "name": "tower transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1100,
-        "minimum": 880,
-        "maximum": 1320
+        "loc": 9150,
+        "minimum": 7320,
+        "maximum": 10980
     },
-    "51-2030-tower transport to site": {
-        "amount": 1100,
+    "57-2030-tower transport to site": {
+        "amount": 9150,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -1192,19 +1376,20 @@
         "name": "tower transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1100,
-        "minimum": 880,
-        "maximum": 1320
+        "loc": 9150,
+        "minimum": 7320,
+        "maximum": 10980
     },
-    "52-2040-tower transport to site": {
-        "amount": 1100,
+    "58-2040-tower transport to site": {
+        "amount": 9150,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -1218,19 +1403,20 @@
         "name": "tower transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1100,
-        "minimum": 880,
-        "maximum": 1320
+        "loc": 9150,
+        "minimum": 7320,
+        "maximum": 10980
     },
-    "53-2050-tower transport to site": {
-        "amount": 1100,
+    "59-2050-tower transport to site": {
+        "amount": 9150,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -1244,19 +1430,20 @@
         "name": "tower transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1100,
-        "minimum": 880,
-        "maximum": 1320
+        "loc": 9150,
+        "minimum": 7320,
+        "maximum": 10980
     },
-    "54-2000-foundation transport to site": {
+    "60-2000-foundation transport to site": {
         "amount": 50,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -1270,7 +1457,7 @@
         "name": "foundation transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
@@ -1279,10 +1466,11 @@
         "minimum": 40,
         "maximum": 60
     },
-    "55-2010-foundation transport to site": {
+    "61-2010-foundation transport to site": {
         "amount": 50,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -1296,7 +1484,7 @@
         "name": "foundation transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
@@ -1305,10 +1493,11 @@
         "minimum": 40,
         "maximum": 60
     },
-    "56-2020-foundation transport to site": {
+    "62-2020-foundation transport to site": {
         "amount": 50,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -1322,7 +1511,7 @@
         "name": "foundation transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
@@ -1331,10 +1520,11 @@
         "minimum": 40,
         "maximum": 60
     },
-    "57-2030-foundation transport to site": {
+    "63-2030-foundation transport to site": {
         "amount": 50,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -1348,7 +1538,7 @@
         "name": "foundation transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
@@ -1357,10 +1547,11 @@
         "minimum": 40,
         "maximum": 60
     },
-    "58-2040-foundation transport to site": {
+    "64-2040-foundation transport to site": {
         "amount": 50,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -1374,7 +1565,7 @@
         "name": "foundation transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
@@ -1383,10 +1574,11 @@
         "minimum": 40,
         "maximum": 60
     },
-    "59-2050-foundation transport to site": {
+    "65-2050-foundation transport to site": {
         "amount": 50,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -1400,7 +1592,7 @@
         "name": "foundation transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
@@ -1409,634 +1601,161 @@
         "minimum": 40,
         "maximum": 60
     },
-    "60-2000-nacelle transport to site": {
-        "amount": 400,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2000,
-        "name": "nacelle transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 400,
-        "minimum": 320,
-        "maximum": 480
-    },
-    "61-2010-nacelle transport to site": {
-        "amount": 400,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2010,
-        "name": "nacelle transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 400,
-        "minimum": 320,
-        "maximum": 480
-    },
-    "62-2020-nacelle transport to site": {
-        "amount": 400,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2020,
-        "name": "nacelle transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 400,
-        "minimum": 320,
-        "maximum": 480
-    },
-    "63-2030-nacelle transport to site": {
-        "amount": 400,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2030,
-        "name": "nacelle transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 400,
-        "minimum": 320,
-        "maximum": 480
-    },
-    "64-2040-nacelle transport to site": {
-        "amount": 400,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2040,
-        "name": "nacelle transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 400,
-        "minimum": 320,
-        "maximum": 480
-    },
-    "65-2050-nacelle transport to site": {
-        "amount": 400,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2050,
-        "name": "nacelle transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 400,
-        "minimum": 320,
-        "maximum": 480
-    },
-    "66-2000-rotor transport to site": {
-        "amount": 400,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2000,
-        "name": "rotor transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 400,
-        "minimum": 320,
-        "maximum": 480
-    },
-    "67-2010-rotor transport to site": {
-        "amount": 400,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2010,
-        "name": "rotor transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 400,
-        "minimum": 320,
-        "maximum": 480
-    },
-    "68-2020-rotor transport to site": {
-        "amount": 400,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2020,
-        "name": "rotor transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 400,
-        "minimum": 320,
-        "maximum": 480
-    },
-    "69-2030-rotor transport to site": {
-        "amount": 400,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2030,
-        "name": "rotor transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 400,
-        "minimum": 320,
-        "maximum": 480
-    },
-    "70-2040-rotor transport to site": {
-        "amount": 400,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2040,
-        "name": "rotor transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 400,
-        "minimum": 320,
-        "maximum": 480
-    },
-    "71-2050-rotor transport to site": {
-        "amount": 400,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2050,
-        "name": "rotor transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 400,
-        "minimum": 320,
-        "maximum": 480
-    },
-    "72-2000-tower transport to site": {
-        "amount": 400,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2000,
-        "name": "tower transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 400,
-        "minimum": 320,
-        "maximum": 480
-    },
-    "73-2010-tower transport to site": {
-        "amount": 400,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2010,
-        "name": "tower transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 400,
-        "minimum": 320,
-        "maximum": 480
-    },
-    "74-2020-tower transport to site": {
-        "amount": 400,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2020,
-        "name": "tower transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 400,
-        "minimum": 320,
-        "maximum": 480
-    },
-    "75-2030-tower transport to site": {
-        "amount": 400,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2030,
-        "name": "tower transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 400,
-        "minimum": 320,
-        "maximum": 480
-    },
-    "76-2040-tower transport to site": {
-        "amount": 400,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2040,
-        "name": "tower transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 400,
-        "minimum": 320,
-        "maximum": 480
-    },
-    "77-2050-tower transport to site": {
-        "amount": 400,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2050,
-        "name": "tower transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 400,
-        "minimum": 320,
-        "maximum": 480
-    },
-    "78-2000-foundation transport to site": {
-        "amount": 50,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2000,
-        "name": "foundation transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 50,
-        "minimum": 40,
-        "maximum": 60
-    },
-    "79-2010-foundation transport to site": {
-        "amount": 50,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2010,
-        "name": "foundation transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 50,
-        "minimum": 40,
-        "maximum": 60
-    },
-    "80-2020-foundation transport to site": {
-        "amount": 50,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2020,
-        "name": "foundation transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 50,
-        "minimum": 40,
-        "maximum": 60
-    },
-    "81-2030-foundation transport to site": {
-        "amount": 50,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2030,
-        "name": "foundation transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 50,
-        "minimum": 40,
-        "maximum": 60
-    },
-    "82-2040-foundation transport to site": {
-        "amount": 50,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2040,
-        "name": "foundation transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 50,
-        "minimum": 40,
-        "maximum": 60
-    },
-    "83-2050-foundation transport to site": {
-        "amount": 50,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2050,
-        "name": "foundation transport to site",
-        "unit": "km",
-        "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
-        "comment": "",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 50,
-        "minimum": 40,
-        "maximum": 60
-    },
-    "84-2000-share nacelle transport by rail": {
+    "66-2000-share nacelle transport by truck": {
         "amount": 0,
         "category": "Installation",
         "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "share nacelle transport by truck",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "67-2010-share nacelle transport by truck": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "share nacelle transport by truck",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "68-2020-share nacelle transport by truck": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "share nacelle transport by truck",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "69-2030-share nacelle transport by truck": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "share nacelle transport by truck",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "70-2040-share nacelle transport by truck": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "share nacelle transport by truck",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "71-2050-share nacelle transport by truck": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "share nacelle transport by truck",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 0
+    },
+    "72-2000-share nacelle transport by rail": {
+        "amount": 0,
+        "category": "Installation",
+        "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2057,10 +1776,11 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "85-2010-share nacelle transport by rail": {
+    "73-2010-share nacelle transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2081,10 +1801,11 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "86-2020-share nacelle transport by rail": {
+    "74-2020-share nacelle transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2105,10 +1826,11 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "87-2030-share nacelle transport by rail": {
+    "75-2030-share nacelle transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2129,10 +1851,11 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "88-2040-share nacelle transport by rail": {
+    "76-2040-share nacelle transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2153,10 +1876,11 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "89-2050-share nacelle transport by rail": {
+    "77-2050-share nacelle transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2177,10 +1901,161 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "90-2000-share nacelle transport by sea": {
-        "amount": 0,
+    "78-2000-share nacelle transport by truck": {
+        "amount": 1,
         "category": "Installation",
         "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "share nacelle transport by truck",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "79-2010-share nacelle transport by truck": {
+        "amount": 1,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "share nacelle transport by truck",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "80-2020-share nacelle transport by truck": {
+        "amount": 1,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "share nacelle transport by truck",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "81-2030-share nacelle transport by truck": {
+        "amount": 1,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "share nacelle transport by truck",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "82-2040-share nacelle transport by truck": {
+        "amount": 1,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "share nacelle transport by truck",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "83-2050-share nacelle transport by truck": {
+        "amount": 1,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "share nacelle transport by truck",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "84-2000-share nacelle transport by sea": {
+        "amount": 1,
+        "category": "Installation",
+        "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2199,12 +2074,13 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 1
     },
-    "91-2010-share nacelle transport by sea": {
-        "amount": 0,
+    "85-2010-share nacelle transport by sea": {
+        "amount": 1,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2223,12 +2099,13 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 1
     },
-    "92-2020-share nacelle transport by sea": {
-        "amount": 0,
+    "86-2020-share nacelle transport by sea": {
+        "amount": 1,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2247,12 +2124,13 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 1
     },
-    "93-2030-share nacelle transport by sea": {
-        "amount": 0,
+    "87-2030-share nacelle transport by sea": {
+        "amount": 1,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2271,12 +2149,13 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 1
     },
-    "94-2040-share nacelle transport by sea": {
-        "amount": 0,
+    "88-2040-share nacelle transport by sea": {
+        "amount": 1,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2295,12 +2174,13 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 1
     },
-    "95-2050-share nacelle transport by sea": {
-        "amount": 0,
+    "89-2050-share nacelle transport by sea": {
+        "amount": 1,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2319,12 +2199,13 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 1
     },
-    "96-2000-share rotor transport by rail": {
+    "90-2000-share rotor transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2345,10 +2226,11 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "97-2010-share rotor transport by rail": {
+    "91-2010-share rotor transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2369,10 +2251,11 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "98-2020-share rotor transport by rail": {
+    "92-2020-share rotor transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2393,10 +2276,11 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "99-2030-share rotor transport by rail": {
+    "93-2030-share rotor transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2417,10 +2301,11 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "100-2040-share rotor transport by rail": {
+    "94-2040-share rotor transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2441,10 +2326,11 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "101-2050-share rotor transport by rail": {
+    "95-2050-share rotor transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2464,11 +2350,162 @@
         "kind": "distribution",
         "uncertainty_type": 1,
         "loc": 0
+    },
+    "96-2000-share rotor transport by truck": {
+        "amount": 1,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "share rotor transport by truck",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "97-2010-share rotor transport by truck": {
+        "amount": 1,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "share rotor transport by truck",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "98-2020-share rotor transport by truck": {
+        "amount": 1,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "share rotor transport by truck",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "99-2030-share rotor transport by truck": {
+        "amount": 1,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "share rotor transport by truck",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "100-2040-share rotor transport by truck": {
+        "amount": 1,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "share rotor transport by truck",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "101-2050-share rotor transport by truck": {
+        "amount": 1,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "share rotor transport by truck",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
     },
     "102-2000-share rotor transport by sea": {
-        "amount": 0,
+        "amount": 1,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2487,12 +2524,13 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 1
     },
     "103-2010-share rotor transport by sea": {
-        "amount": 0,
+        "amount": 1,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2511,12 +2549,13 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 1
     },
     "104-2020-share rotor transport by sea": {
-        "amount": 0,
+        "amount": 1,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2535,12 +2574,13 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 1
     },
     "105-2030-share rotor transport by sea": {
-        "amount": 0,
+        "amount": 1,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2559,12 +2599,13 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 1
     },
     "106-2040-share rotor transport by sea": {
-        "amount": 0,
+        "amount": 1,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2583,12 +2624,13 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 1
     },
     "107-2050-share rotor transport by sea": {
-        "amount": 0,
+        "amount": 1,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2607,12 +2649,13 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 1
     },
     "108-2000-share tower transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2637,6 +2680,7 @@
         "amount": 0,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2661,6 +2705,7 @@
         "amount": 0,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2685,6 +2730,7 @@
         "amount": 0,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2709,6 +2755,7 @@
         "amount": 0,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2733,6 +2780,7 @@
         "amount": 0,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2753,10 +2801,161 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "114-2000-share tower transport by sea": {
-        "amount": 0,
+    "114-2000-share tower transport by truck": {
+        "amount": 1,
         "category": "Installation",
         "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "share tower transport by truck",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "115-2010-share tower transport by truck": {
+        "amount": 1,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "share tower transport by truck",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "116-2020-share tower transport by truck": {
+        "amount": 1,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "share tower transport by truck",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "117-2030-share tower transport by truck": {
+        "amount": 1,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "share tower transport by truck",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "118-2040-share tower transport by truck": {
+        "amount": 1,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "share tower transport by truck",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "119-2050-share tower transport by truck": {
+        "amount": 1,
+        "category": "Installation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "share tower transport by truck",
+        "unit": "%",
+        "importance": "moderate",
+        "source": "",
+        "comment": "The share of road transport is 100% - share of sea and rail transport.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "120-2000-share tower transport by sea": {
+        "amount": 1,
+        "category": "Installation",
+        "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2775,12 +2974,13 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 1
     },
-    "115-2010-share tower transport by sea": {
-        "amount": 0,
+    "121-2010-share tower transport by sea": {
+        "amount": 1,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2799,12 +2999,13 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 1
     },
-    "116-2020-share tower transport by sea": {
-        "amount": 0,
+    "122-2020-share tower transport by sea": {
+        "amount": 1,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2823,12 +3024,13 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 1
     },
-    "117-2030-share tower transport by sea": {
-        "amount": 0,
+    "123-2030-share tower transport by sea": {
+        "amount": 1,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2847,12 +3049,13 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 1
     },
-    "118-2040-share tower transport by sea": {
-        "amount": 0,
+    "124-2040-share tower transport by sea": {
+        "amount": 1,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2871,12 +3074,13 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 1
     },
-    "119-2050-share tower transport by sea": {
-        "amount": 0,
+    "125-2050-share tower transport by sea": {
+        "amount": 1,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2895,12 +3099,13 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 1
     },
-    "120-2000-share foundation transport by rail": {
-        "amount": 0,
+    "126-2000-share foundation transport by truck": {
+        "amount": 1,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2911,7 +3116,7 @@
             "8000kW"
         ],
         "year": 2000,
-        "name": "share foundation transport by rail",
+        "name": "share foundation transport by truck",
         "unit": "%",
         "importance": "moderate",
         "source": "",
@@ -2919,12 +3124,13 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 1
     },
-    "121-2010-share foundation transport by rail": {
-        "amount": 0,
+    "127-2010-share foundation transport by truck": {
+        "amount": 1,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2935,7 +3141,7 @@
             "8000kW"
         ],
         "year": 2010,
-        "name": "share foundation transport by rail",
+        "name": "share foundation transport by truck",
         "unit": "%",
         "importance": "moderate",
         "source": "",
@@ -2943,12 +3149,13 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 1
     },
-    "122-2020-share foundation transport by rail": {
-        "amount": 0,
+    "128-2020-share foundation transport by truck": {
+        "amount": 1,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2959,7 +3166,7 @@
             "8000kW"
         ],
         "year": 2020,
-        "name": "share foundation transport by rail",
+        "name": "share foundation transport by truck",
         "unit": "%",
         "importance": "moderate",
         "source": "",
@@ -2967,12 +3174,13 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 1
     },
-    "123-2030-share foundation transport by rail": {
-        "amount": 0,
+    "129-2030-share foundation transport by truck": {
+        "amount": 1,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -2983,7 +3191,7 @@
             "8000kW"
         ],
         "year": 2030,
-        "name": "share foundation transport by rail",
+        "name": "share foundation transport by truck",
         "unit": "%",
         "importance": "moderate",
         "source": "",
@@ -2991,12 +3199,13 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 1
     },
-    "124-2040-share foundation transport by rail": {
-        "amount": 0,
+    "130-2040-share foundation transport by truck": {
+        "amount": 1,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -3007,7 +3216,7 @@
             "8000kW"
         ],
         "year": 2040,
-        "name": "share foundation transport by rail",
+        "name": "share foundation transport by truck",
         "unit": "%",
         "importance": "moderate",
         "source": "",
@@ -3015,12 +3224,13 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 1
     },
-    "125-2050-share foundation transport by rail": {
-        "amount": 0,
+    "131-2050-share foundation transport by truck": {
+        "amount": 1,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
         ],
         "sizes": [
@@ -3031,7 +3241,7 @@
             "8000kW"
         ],
         "year": 2050,
-        "name": "share foundation transport by rail",
+        "name": "share foundation transport by truck",
         "unit": "%",
         "importance": "moderate",
         "source": "",
@@ -3039,1021 +3249,14 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 1
     },
-    "126-2000-share foundation transport by sea": {
+    "132-2000-share foundation transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
+            "onshore",
             "offshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2000,
-        "name": "share foundation transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "127-2010-share foundation transport by sea": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2010,
-        "name": "share foundation transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "128-2020-share foundation transport by sea": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2020,
-        "name": "share foundation transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "129-2030-share foundation transport by sea": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2030,
-        "name": "share foundation transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "130-2040-share foundation transport by sea": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2040,
-        "name": "share foundation transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "131-2050-share foundation transport by sea": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2050,
-        "name": "share foundation transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "132-2000-share nacelle transport by rail": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2000,
-        "name": "share nacelle transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "133-2010-share nacelle transport by rail": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2010,
-        "name": "share nacelle transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "134-2020-share nacelle transport by rail": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2020,
-        "name": "share nacelle transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "135-2030-share nacelle transport by rail": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2030,
-        "name": "share nacelle transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "136-2040-share nacelle transport by rail": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2040,
-        "name": "share nacelle transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "137-2050-share nacelle transport by rail": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2050,
-        "name": "share nacelle transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "138-2000-share nacelle transport by sea": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2000,
-        "name": "share nacelle transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "139-2010-share nacelle transport by sea": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2010,
-        "name": "share nacelle transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "140-2020-share nacelle transport by sea": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2020,
-        "name": "share nacelle transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "141-2030-share nacelle transport by sea": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2030,
-        "name": "share nacelle transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "142-2040-share nacelle transport by sea": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2040,
-        "name": "share nacelle transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "143-2050-share nacelle transport by sea": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2050,
-        "name": "share nacelle transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "144-2000-share rotor transport by rail": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2000,
-        "name": "share rotor transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "145-2010-share rotor transport by rail": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2010,
-        "name": "share rotor transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "146-2020-share rotor transport by rail": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2020,
-        "name": "share rotor transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "147-2030-share rotor transport by rail": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2030,
-        "name": "share rotor transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "148-2040-share rotor transport by rail": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2040,
-        "name": "share rotor transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "149-2050-share rotor transport by rail": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2050,
-        "name": "share rotor transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "150-2000-share rotor transport by sea": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2000,
-        "name": "share rotor transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "151-2010-share rotor transport by sea": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2010,
-        "name": "share rotor transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "152-2020-share rotor transport by sea": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2020,
-        "name": "share rotor transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "153-2030-share rotor transport by sea": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2030,
-        "name": "share rotor transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "154-2040-share rotor transport by sea": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2040,
-        "name": "share rotor transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "155-2050-share rotor transport by sea": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2050,
-        "name": "share rotor transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "156-2000-share tower transport by rail": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2000,
-        "name": "share tower transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "157-2010-share tower transport by rail": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2010,
-        "name": "share tower transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "158-2020-share tower transport by rail": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2020,
-        "name": "share tower transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "159-2030-share tower transport by rail": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2030,
-        "name": "share tower transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "160-2040-share tower transport by rail": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2040,
-        "name": "share tower transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "161-2050-share tower transport by rail": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2050,
-        "name": "share tower transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "162-2000-share tower transport by sea": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2000,
-        "name": "share tower transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "163-2010-share tower transport by sea": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2010,
-        "name": "share tower transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "164-2020-share tower transport by sea": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2020,
-        "name": "share tower transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "165-2030-share tower transport by sea": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2030,
-        "name": "share tower transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "166-2040-share tower transport by sea": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2040,
-        "name": "share tower transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "167-2050-share tower transport by sea": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            "100kW",
-            "500kW",
-            "1000kW",
-            "3000kW",
-            "8000kW"
-        ],
-        "year": 2050,
-        "name": "share tower transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "168-2000-share foundation transport by rail": {
-        "amount": 0,
-        "category": "Installation",
-        "application": [
-            "onshore"
         ],
         "sizes": [
             "100kW",
@@ -4073,11 +3276,12 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "169-2010-share foundation transport by rail": {
+    "133-2010-share foundation transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
-            "onshore"
+            "onshore",
+            "offshore"
         ],
         "sizes": [
             "100kW",
@@ -4097,11 +3301,12 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "170-2020-share foundation transport by rail": {
+    "134-2020-share foundation transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
-            "onshore"
+            "onshore",
+            "offshore"
         ],
         "sizes": [
             "100kW",
@@ -4121,11 +3326,12 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "171-2030-share foundation transport by rail": {
+    "135-2030-share foundation transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
-            "onshore"
+            "onshore",
+            "offshore"
         ],
         "sizes": [
             "100kW",
@@ -4145,11 +3351,12 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "172-2040-share foundation transport by rail": {
+    "136-2040-share foundation transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
-            "onshore"
+            "onshore",
+            "offshore"
         ],
         "sizes": [
             "100kW",
@@ -4169,11 +3376,12 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "173-2050-share foundation transport by rail": {
+    "137-2050-share foundation transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
-            "onshore"
+            "onshore",
+            "offshore"
         ],
         "sizes": [
             "100kW",
@@ -4193,11 +3401,12 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "174-2000-share foundation transport by sea": {
+    "138-2000-share foundation transport by sea": {
         "amount": 0,
         "category": "Installation",
         "application": [
-            "onshore"
+            "onshore",
+            "offshore"
         ],
         "sizes": [
             "100kW",
@@ -4217,11 +3426,12 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "175-2010-share foundation transport by sea": {
+    "139-2010-share foundation transport by sea": {
         "amount": 0,
         "category": "Installation",
         "application": [
-            "onshore"
+            "onshore",
+            "offshore"
         ],
         "sizes": [
             "100kW",
@@ -4241,11 +3451,12 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "176-2020-share foundation transport by sea": {
+    "140-2020-share foundation transport by sea": {
         "amount": 0,
         "category": "Installation",
         "application": [
-            "onshore"
+            "onshore",
+            "offshore"
         ],
         "sizes": [
             "100kW",
@@ -4265,11 +3476,12 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "177-2030-share foundation transport by sea": {
+    "141-2030-share foundation transport by sea": {
         "amount": 0,
         "category": "Installation",
         "application": [
-            "onshore"
+            "onshore",
+            "offshore"
         ],
         "sizes": [
             "100kW",
@@ -4289,11 +3501,12 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "178-2040-share foundation transport by sea": {
+    "142-2040-share foundation transport by sea": {
         "amount": 0,
         "category": "Installation",
         "application": [
-            "onshore"
+            "onshore",
+            "offshore"
         ],
         "sizes": [
             "100kW",
@@ -4313,11 +3526,12 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "179-2050-share foundation transport by sea": {
+    "143-2050-share foundation transport by sea": {
         "amount": 0,
         "category": "Installation",
         "application": [
-            "onshore"
+            "onshore",
+            "offshore"
         ],
         "sizes": [
             "100kW",
@@ -4337,7 +3551,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "180-2000-transport to waste facility": {
+    "144-2000-transport to waste facility": {
         "amount": 50,
         "category": "Disposal",
         "application": [
@@ -4363,7 +3577,7 @@
         "minimum": 40,
         "maximum": 60
     },
-    "181-2010-transport to waste facility": {
+    "145-2010-transport to waste facility": {
         "amount": 50,
         "category": "Disposal",
         "application": [
@@ -4389,7 +3603,7 @@
         "minimum": 40,
         "maximum": 60
     },
-    "182-2020-transport to waste facility": {
+    "146-2020-transport to waste facility": {
         "amount": 50,
         "category": "Disposal",
         "application": [
@@ -4415,7 +3629,7 @@
         "minimum": 40,
         "maximum": 60
     },
-    "183-2030-transport to waste facility": {
+    "147-2030-transport to waste facility": {
         "amount": 50,
         "category": "Disposal",
         "application": [
@@ -4441,7 +3655,7 @@
         "minimum": 40,
         "maximum": 60
     },
-    "184-2040-transport to waste facility": {
+    "148-2040-transport to waste facility": {
         "amount": 50,
         "category": "Disposal",
         "application": [
@@ -4467,7 +3681,7 @@
         "minimum": 40,
         "maximum": 60
     },
-    "185-2050-transport to waste facility": {
+    "149-2050-transport to waste facility": {
         "amount": 50,
         "category": "Disposal",
         "application": [
@@ -4493,7 +3707,7 @@
         "minimum": 40,
         "maximum": 60
     },
-    "186-2000-transport to waste facility": {
+    "150-2000-transport to waste facility": {
         "amount": 50,
         "category": "Disposal",
         "application": [
@@ -4519,7 +3733,7 @@
         "minimum": 40,
         "maximum": 60
     },
-    "187-2010-transport to waste facility": {
+    "151-2010-transport to waste facility": {
         "amount": 50,
         "category": "Disposal",
         "application": [
@@ -4545,7 +3759,7 @@
         "minimum": 40,
         "maximum": 60
     },
-    "188-2020-transport to waste facility": {
+    "152-2020-transport to waste facility": {
         "amount": 50,
         "category": "Disposal",
         "application": [
@@ -4571,7 +3785,7 @@
         "minimum": 40,
         "maximum": 60
     },
-    "189-2030-transport to waste facility": {
+    "153-2030-transport to waste facility": {
         "amount": 50,
         "category": "Disposal",
         "application": [
@@ -4597,7 +3811,7 @@
         "minimum": 40,
         "maximum": 60
     },
-    "190-2040-transport to waste facility": {
+    "154-2040-transport to waste facility": {
         "amount": 50,
         "category": "Disposal",
         "application": [
@@ -4623,7 +3837,7 @@
         "minimum": 40,
         "maximum": 60
     },
-    "191-2050-transport to waste facility": {
+    "155-2050-transport to waste facility": {
         "amount": 50,
         "category": "Disposal",
         "application": [
@@ -4649,7 +3863,7 @@
         "minimum": 40,
         "maximum": 60
     },
-    "192-2000-transport for maintenance per year": {
+    "156-2000-transport for maintenance per year": {
         "amount": 72,
         "category": "Maintenance",
         "application": [
@@ -4666,7 +3880,7 @@
         "name": "transport for maintenance per year",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
@@ -4675,7 +3889,7 @@
         "minimum": 57.6,
         "maximum": 86.39999999999999
     },
-    "193-2010-transport for maintenance per year": {
+    "157-2010-transport for maintenance per year": {
         "amount": 72,
         "category": "Maintenance",
         "application": [
@@ -4692,7 +3906,7 @@
         "name": "transport for maintenance per year",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
@@ -4701,7 +3915,7 @@
         "minimum": 57.6,
         "maximum": 86.39999999999999
     },
-    "194-2020-transport for maintenance per year": {
+    "158-2020-transport for maintenance per year": {
         "amount": 72,
         "category": "Maintenance",
         "application": [
@@ -4718,7 +3932,7 @@
         "name": "transport for maintenance per year",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
@@ -4727,7 +3941,7 @@
         "minimum": 57.6,
         "maximum": 86.39999999999999
     },
-    "195-2030-transport for maintenance per year": {
+    "159-2030-transport for maintenance per year": {
         "amount": 72,
         "category": "Maintenance",
         "application": [
@@ -4744,7 +3958,7 @@
         "name": "transport for maintenance per year",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
@@ -4753,7 +3967,7 @@
         "minimum": 57.6,
         "maximum": 86.39999999999999
     },
-    "196-2040-transport for maintenance per year": {
+    "160-2040-transport for maintenance per year": {
         "amount": 72,
         "category": "Maintenance",
         "application": [
@@ -4770,7 +3984,7 @@
         "name": "transport for maintenance per year",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
@@ -4779,7 +3993,7 @@
         "minimum": 57.6,
         "maximum": 86.39999999999999
     },
-    "197-2050-transport for maintenance per year": {
+    "161-2050-transport for maintenance per year": {
         "amount": 72,
         "category": "Maintenance",
         "application": [
@@ -4796,7 +4010,7 @@
         "name": "transport for maintenance per year",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
@@ -4805,7 +4019,7 @@
         "minimum": 57.6,
         "maximum": 86.39999999999999
     },
-    "198-2000-transport for maintenance per year": {
+    "162-2000-transport for maintenance per year": {
         "amount": 600,
         "category": "Maintenance",
         "application": [
@@ -4822,7 +4036,7 @@
         "name": "transport for maintenance per year",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
@@ -4831,7 +4045,7 @@
         "minimum": 480,
         "maximum": 720
     },
-    "199-2010-transport for maintenance per year": {
+    "163-2010-transport for maintenance per year": {
         "amount": 2160,
         "category": "Maintenance",
         "application": [
@@ -4848,7 +4062,7 @@
         "name": "transport for maintenance per year",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
@@ -4857,7 +4071,7 @@
         "minimum": 1728,
         "maximum": 2592
     },
-    "200-2020-transport for maintenance per year": {
+    "164-2020-transport for maintenance per year": {
         "amount": 2160,
         "category": "Maintenance",
         "application": [
@@ -4874,7 +4088,7 @@
         "name": "transport for maintenance per year",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
@@ -4883,7 +4097,7 @@
         "minimum": 1728,
         "maximum": 2592
     },
-    "201-2030-transport for maintenance per year": {
+    "165-2030-transport for maintenance per year": {
         "amount": 2160,
         "category": "Maintenance",
         "application": [
@@ -4900,7 +4114,7 @@
         "name": "transport for maintenance per year",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
@@ -4909,7 +4123,7 @@
         "minimum": 1728,
         "maximum": 2592
     },
-    "202-2040-transport for maintenance per year": {
+    "166-2040-transport for maintenance per year": {
         "amount": 2160,
         "category": "Maintenance",
         "application": [
@@ -4926,7 +4140,7 @@
         "name": "transport for maintenance per year",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
@@ -4935,7 +4149,7 @@
         "minimum": 1728,
         "maximum": 2592
     },
-    "203-2050-transport for maintenance per year": {
+    "167-2050-transport for maintenance per year": {
         "amount": 2160,
         "category": "Maintenance",
         "application": [
@@ -4952,7 +4166,7 @@
         "name": "transport for maintenance per year",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/~/media/vestas/about/sustainability/pdfs/lca_v903mw_version_1_1.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
@@ -4961,7 +4175,7 @@
         "minimum": 1728,
         "maximum": 2592
     },
-    "204-2000-share maintenance transport by rail": {
+    "168-2000-share maintenance transport by rail": {
         "amount": 0,
         "category": "Maintenance",
         "application": [
@@ -4985,7 +4199,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "205-2010-share maintenance transport by rail": {
+    "169-2010-share maintenance transport by rail": {
         "amount": 0,
         "category": "Maintenance",
         "application": [
@@ -5009,7 +4223,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "206-2020-share maintenance transport by rail": {
+    "170-2020-share maintenance transport by rail": {
         "amount": 0,
         "category": "Maintenance",
         "application": [
@@ -5033,7 +4247,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "207-2030-share maintenance transport by rail": {
+    "171-2030-share maintenance transport by rail": {
         "amount": 0,
         "category": "Maintenance",
         "application": [
@@ -5057,7 +4271,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "208-2040-share maintenance transport by rail": {
+    "172-2040-share maintenance transport by rail": {
         "amount": 0,
         "category": "Maintenance",
         "application": [
@@ -5081,7 +4295,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "209-2050-share maintenance transport by rail": {
+    "173-2050-share maintenance transport by rail": {
         "amount": 0,
         "category": "Maintenance",
         "application": [
@@ -5105,7 +4319,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "210-2000-share maintenance transport by sea": {
+    "174-2000-share maintenance transport by sea": {
         "amount": 0,
         "category": "Maintenance",
         "application": [
@@ -5129,7 +4343,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "211-2010-share maintenance transport by sea": {
+    "175-2010-share maintenance transport by sea": {
         "amount": 0,
         "category": "Maintenance",
         "application": [
@@ -5153,7 +4367,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "212-2020-share maintenance transport by sea": {
+    "176-2020-share maintenance transport by sea": {
         "amount": 0,
         "category": "Maintenance",
         "application": [
@@ -5177,7 +4391,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "213-2030-share maintenance transport by sea": {
+    "177-2030-share maintenance transport by sea": {
         "amount": 0,
         "category": "Maintenance",
         "application": [
@@ -5201,7 +4415,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "214-2040-share maintenance transport by sea": {
+    "178-2040-share maintenance transport by sea": {
         "amount": 0,
         "category": "Maintenance",
         "application": [
@@ -5225,7 +4439,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "215-2050-share maintenance transport by sea": {
+    "179-2050-share maintenance transport by sea": {
         "amount": 0,
         "category": "Maintenance",
         "application": [
@@ -5249,7 +4463,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "216-2000-share maintenance transport by rail": {
+    "180-2000-share maintenance transport by rail": {
         "amount": 0,
         "category": "Maintenance",
         "application": [
@@ -5273,7 +4487,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "217-2010-share maintenance transport by rail": {
+    "181-2010-share maintenance transport by rail": {
         "amount": 0,
         "category": "Maintenance",
         "application": [
@@ -5297,7 +4511,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "218-2020-share maintenance transport by rail": {
+    "182-2020-share maintenance transport by rail": {
         "amount": 0,
         "category": "Maintenance",
         "application": [
@@ -5321,7 +4535,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "219-2030-share maintenance transport by rail": {
+    "183-2030-share maintenance transport by rail": {
         "amount": 0,
         "category": "Maintenance",
         "application": [
@@ -5345,7 +4559,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "220-2040-share maintenance transport by rail": {
+    "184-2040-share maintenance transport by rail": {
         "amount": 0,
         "category": "Maintenance",
         "application": [
@@ -5369,7 +4583,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "221-2050-share maintenance transport by rail": {
+    "185-2050-share maintenance transport by rail": {
         "amount": 0,
         "category": "Maintenance",
         "application": [
@@ -5393,7 +4607,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "222-2000-share maintenance transport by sea": {
+    "186-2000-share maintenance transport by sea": {
         "amount": 1,
         "category": "Maintenance",
         "application": [
@@ -5417,7 +4631,7 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "223-2010-share maintenance transport by sea": {
+    "187-2010-share maintenance transport by sea": {
         "amount": 1,
         "category": "Maintenance",
         "application": [
@@ -5441,7 +4655,7 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "224-2020-share maintenance transport by sea": {
+    "188-2020-share maintenance transport by sea": {
         "amount": 1,
         "category": "Maintenance",
         "application": [
@@ -5465,7 +4679,7 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "225-2030-share maintenance transport by sea": {
+    "189-2030-share maintenance transport by sea": {
         "amount": 1,
         "category": "Maintenance",
         "application": [
@@ -5489,7 +4703,7 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "226-2040-share maintenance transport by sea": {
+    "190-2040-share maintenance transport by sea": {
         "amount": 1,
         "category": "Maintenance",
         "application": [
@@ -5513,7 +4727,7 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "227-2050-share maintenance transport by sea": {
+    "191-2050-share maintenance transport by sea": {
         "amount": 1,
         "category": "Maintenance",
         "application": [
@@ -5537,7 +4751,7 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "228-2000-concrete density": {
+    "192-2000-concrete density": {
         "amount": 2400,
         "category": "Components",
         "application": [
@@ -5564,7 +4778,7 @@
         "minimum": 2160,
         "maximum": 2640
     },
-    "229-2010-concrete density": {
+    "193-2010-concrete density": {
         "amount": 2400,
         "category": "Components",
         "application": [
@@ -5591,7 +4805,7 @@
         "minimum": 2160,
         "maximum": 2640
     },
-    "230-2020-concrete density": {
+    "194-2020-concrete density": {
         "amount": 2400,
         "category": "Components",
         "application": [
@@ -5618,7 +4832,7 @@
         "minimum": 2160,
         "maximum": 2640
     },
-    "231-2030-concrete density": {
+    "195-2030-concrete density": {
         "amount": 2400,
         "category": "Components",
         "application": [
@@ -5645,7 +4859,7 @@
         "minimum": 2160,
         "maximum": 2640
     },
-    "232-2040-concrete density": {
+    "196-2040-concrete density": {
         "amount": 2400,
         "category": "Components",
         "application": [
@@ -5672,7 +4886,7 @@
         "minimum": 2160,
         "maximum": 2640
     },
-    "233-2050-concrete density": {
+    "197-2050-concrete density": {
         "amount": 2400,
         "category": "Components",
         "application": [
@@ -5699,7 +4913,7 @@
         "minimum": 2160,
         "maximum": 2640
     },
-    "234-2000-offshore farm cable cross-section": {
+    "198-2000-offshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -5725,7 +4939,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "235-2010-offshore farm cable cross-section": {
+    "199-2010-offshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -5751,7 +4965,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "236-2020-offshore farm cable cross-section": {
+    "200-2020-offshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -5777,7 +4991,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "237-2030-offshore farm cable cross-section": {
+    "201-2030-offshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -5803,7 +5017,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "238-2040-offshore farm cable cross-section": {
+    "202-2040-offshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -5829,7 +5043,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "239-2050-offshore farm cable cross-section": {
+    "203-2050-offshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -5855,7 +5069,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "240-2000-onshore farm cable cross-section": {
+    "204-2000-onshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -5881,7 +5095,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "241-2010-onshore farm cable cross-section": {
+    "205-2010-onshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -5907,7 +5121,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "242-2020-onshore farm cable cross-section": {
+    "206-2020-onshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -5933,7 +5147,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "243-2030-onshore farm cable cross-section": {
+    "207-2030-onshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -5959,7 +5173,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "244-2040-onshore farm cable cross-section": {
+    "208-2040-onshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -5985,7 +5199,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "245-2050-onshore farm cable cross-section": {
+    "209-2050-onshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -6011,7 +5225,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "246-2000-lifetime": {
+    "210-2000-lifetime": {
         "amount": 20,
         "category": "Operation",
         "application": [
@@ -6037,7 +5251,7 @@
         "minimum": 18,
         "maximum": 22
     },
-    "247-2010-lifetime": {
+    "211-2010-lifetime": {
         "amount": 20,
         "category": "Operation",
         "application": [
@@ -6063,7 +5277,7 @@
         "minimum": 18,
         "maximum": 22
     },
-    "248-2020-lifetime": {
+    "212-2020-lifetime": {
         "amount": 20,
         "category": "Operation",
         "application": [
@@ -6089,7 +5303,7 @@
         "minimum": 18,
         "maximum": 22
     },
-    "249-2030-lifetime": {
+    "213-2030-lifetime": {
         "amount": 20,
         "category": "Operation",
         "application": [
@@ -6115,7 +5329,7 @@
         "minimum": 18,
         "maximum": 22
     },
-    "250-2040-lifetime": {
+    "214-2040-lifetime": {
         "amount": 20,
         "category": "Operation",
         "application": [
@@ -6141,7 +5355,7 @@
         "minimum": 18,
         "maximum": 22
     },
-    "251-2050-lifetime": {
+    "215-2050-lifetime": {
         "amount": 20,
         "category": "Operation",
         "application": [
@@ -6167,7 +5381,7 @@
         "minimum": 18,
         "maximum": 22
     },
-    "252-2000-lifetime": {
+    "216-2000-lifetime": {
         "amount": 25,
         "category": "Operation",
         "application": [
@@ -6193,7 +5407,7 @@
         "minimum": 22.5,
         "maximum": 27.500000000000004
     },
-    "253-2010-lifetime": {
+    "217-2010-lifetime": {
         "amount": 25,
         "category": "Operation",
         "application": [
@@ -6219,7 +5433,7 @@
         "minimum": 22.5,
         "maximum": 27.500000000000004
     },
-    "254-2020-lifetime": {
+    "218-2020-lifetime": {
         "amount": 25,
         "category": "Operation",
         "application": [
@@ -6245,7 +5459,7 @@
         "minimum": 22.5,
         "maximum": 27.500000000000004
     },
-    "255-2030-lifetime": {
+    "219-2030-lifetime": {
         "amount": 25,
         "category": "Operation",
         "application": [
@@ -6271,7 +5485,7 @@
         "minimum": 22.5,
         "maximum": 27.500000000000004
     },
-    "256-2040-lifetime": {
+    "220-2040-lifetime": {
         "amount": 25,
         "category": "Operation",
         "application": [
@@ -6297,7 +5511,7 @@
         "minimum": 22.5,
         "maximum": 27.500000000000004
     },
-    "257-2050-lifetime": {
+    "221-2050-lifetime": {
         "amount": 25,
         "category": "Operation",
         "application": [
@@ -6323,7 +5537,7 @@
         "minimum": 22.5,
         "maximum": 27.500000000000004
     },
-    "258-2000-sea depth": {
+    "222-2000-sea depth": {
         "amount": 5,
         "category": "Installation",
         "application": [
@@ -6349,7 +5563,7 @@
         "minimum": 4.5,
         "maximum": 5.5
     },
-    "259-2010-sea depth": {
+    "223-2010-sea depth": {
         "amount": 5,
         "category": "Installation",
         "application": [
@@ -6375,7 +5589,7 @@
         "minimum": 4.5,
         "maximum": 5.5
     },
-    "260-2020-sea depth": {
+    "224-2020-sea depth": {
         "amount": 5,
         "category": "Installation",
         "application": [
@@ -6401,7 +5615,7 @@
         "minimum": 4.5,
         "maximum": 5.5
     },
-    "261-2030-sea depth": {
+    "225-2030-sea depth": {
         "amount": 5,
         "category": "Installation",
         "application": [
@@ -6427,7 +5641,7 @@
         "minimum": 4.5,
         "maximum": 5.5
     },
-    "262-2040-sea depth": {
+    "226-2040-sea depth": {
         "amount": 5,
         "category": "Installation",
         "application": [
@@ -6453,7 +5667,7 @@
         "minimum": 4.5,
         "maximum": 5.5
     },
-    "263-2050-sea depth": {
+    "227-2050-sea depth": {
         "amount": 5,
         "category": "Installation",
         "application": [
@@ -6479,7 +5693,7 @@
         "minimum": 4.5,
         "maximum": 5.5
     },
-    "264-2000-distance to transformer": {
+    "228-2000-distance to transformer": {
         "amount": 50,
         "category": "Installation",
         "application": [
@@ -6505,7 +5719,7 @@
         "minimum": 45,
         "maximum": 55.00000000000001
     },
-    "265-2010-distance to transformer": {
+    "229-2010-distance to transformer": {
         "amount": 50,
         "category": "Installation",
         "application": [
@@ -6531,7 +5745,7 @@
         "minimum": 45,
         "maximum": 55.00000000000001
     },
-    "266-2020-distance to transformer": {
+    "230-2020-distance to transformer": {
         "amount": 50,
         "category": "Installation",
         "application": [
@@ -6557,7 +5771,7 @@
         "minimum": 45,
         "maximum": 55.00000000000001
     },
-    "267-2030-distance to transformer": {
+    "231-2030-distance to transformer": {
         "amount": 50,
         "category": "Installation",
         "application": [
@@ -6583,7 +5797,7 @@
         "minimum": 45,
         "maximum": 55.00000000000001
     },
-    "268-2040-distance to transformer": {
+    "232-2040-distance to transformer": {
         "amount": 50,
         "category": "Installation",
         "application": [
@@ -6609,7 +5823,7 @@
         "minimum": 45,
         "maximum": 55.00000000000001
     },
-    "269-2050-distance to transformer": {
+    "233-2050-distance to transformer": {
         "amount": 50,
         "category": "Installation",
         "application": [
@@ -6635,7 +5849,7 @@
         "minimum": 45,
         "maximum": 55.00000000000001
     },
-    "270-2000-distance to coastline": {
+    "234-2000-distance to coastline": {
         "amount": 500,
         "category": "Installation",
         "application": [
@@ -6661,7 +5875,7 @@
         "minimum": 450,
         "maximum": 550
     },
-    "271-2010-distance to coastline": {
+    "235-2010-distance to coastline": {
         "amount": 500,
         "category": "Installation",
         "application": [
@@ -6687,7 +5901,7 @@
         "minimum": 450,
         "maximum": 550
     },
-    "272-2020-distance to coastline": {
+    "236-2020-distance to coastline": {
         "amount": 500,
         "category": "Installation",
         "application": [
@@ -6713,7 +5927,7 @@
         "minimum": 450,
         "maximum": 550
     },
-    "273-2030-distance to coastline": {
+    "237-2030-distance to coastline": {
         "amount": 500,
         "category": "Installation",
         "application": [
@@ -6739,7 +5953,7 @@
         "minimum": 450,
         "maximum": 550
     },
-    "274-2040-distance to coastline": {
+    "238-2040-distance to coastline": {
         "amount": 500,
         "category": "Installation",
         "application": [
@@ -6765,7 +5979,7 @@
         "minimum": 450,
         "maximum": 550
     },
-    "275-2050-distance to coastline": {
+    "239-2050-distance to coastline": {
         "amount": 500,
         "category": "Installation",
         "application": [
