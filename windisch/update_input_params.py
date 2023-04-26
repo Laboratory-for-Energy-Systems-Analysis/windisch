@@ -27,7 +27,6 @@ def update_input_parameters():
 
     for _, row in dataframe.iterrows():
         if row["parameter"] != "":
-
             category = row["category"]
 
             if row["application"] == "all":
