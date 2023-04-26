@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+
 import pytest
 
 import windisch.turbines_input_parameters as tip
