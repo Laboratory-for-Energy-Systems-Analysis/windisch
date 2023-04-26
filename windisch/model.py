@@ -135,7 +135,7 @@ def get_pile_mass(power: int, pile_height: float) -> float:
     outer_diameter = f_fit_diameter(power)
 
     # Calculate the cross-section area of the pile based on the outer diameter.
-    outer_area = (np.pi / 4) * (outer_diameter ** 2)
+    outer_area = (np.pi / 4) * (outer_diameter**2)
 
     # Calculate the volume of the pile based on the outer area and the pile height.
     outer_volume = outer_area * pile_height
@@ -150,7 +150,7 @@ def get_pile_mass(power: int, pile_height: float) -> float:
     inner_diameter -= 2 * pile_thickness
 
     # Calculate the cross-section area of the inner part of the pile.
-    inner_area = (np.pi / 4) * (inner_diameter ** 2)
+    inner_area = (np.pi / 4) * (inner_diameter**2)
 
     # Calculate the volume of the inner part of the pile based on the inner area and the pile height.
     inner_volume = inner_area * pile_height
@@ -443,10 +443,7 @@ class WindTurbineModel:
         """
 
         self["tower mass"] = func_tower_weight_d2h(
-            self["rotor diameter"],
-            self["tower height"],
-            3.03584782e-04,
-            9.68652909e00
+            self["rotor diameter"], self["tower height"], 3.03584782e-04, 9.68652909e00
         )
 
     def __set_electronics_mass(self):
@@ -476,8 +473,7 @@ class WindTurbineModel:
         ) * (1 - self["offshore"])
 
         self["concrete in foundation mass"] = (
-            self["foundation mass"]
-            - self["reinforcing steel in foundation mass"]
+            self["foundation mass"] - self["reinforcing steel in foundation mass"]
         ) * (1 - self["offshore"])
 
         self["pile height"] = (
@@ -531,7 +527,7 @@ class WindTurbineModel:
                     ["rotor mass", "nacelle mass", "tower mass", "electronics mass"]
                 ].sum(dim="parameter")
             )
-            / 1000 # kg to tons
+            / 1000  # kg to tons
             * self["distance to assembly plant"]
         )
 
@@ -628,9 +624,7 @@ class WindTurbineModel:
         )
 
         self["installation transport, by sea"] += (
-            self["distance to coastline"]
-            * self["total mass"]
-            / 1000  # kg/ton
+            self["distance to coastline"] * self["total mass"] / 1000  # kg/ton
         ) * self["offshore"]
 
         self["access road"] = np.interp(self["power"], [0, 2000], [0, 8000]) * (

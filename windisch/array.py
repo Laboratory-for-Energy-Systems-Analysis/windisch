@@ -15,7 +15,6 @@ from .turbines_input_parameters import TurbinesInputParameters as t_i_p
 def fill_xarray_from_input_parameters(
     tip: "t_i_p", sensitivity: bool = False, scope: dict = None
 ) -> Tuple[Tuple, xr.DataArray]:
-
     """Create an `xarray` labeled array from the sampled input parameters.
 
     This function extracts the parameters' names and values contained in the
@@ -108,9 +107,7 @@ def fill_xarray_from_input_parameters(
     parameter_dict = {k: i for i, k in enumerate(tip.parameters)}
 
     if not sensitivity:
-
         for param in tip:
-
             pwt = (
                 set(tip.metadata[param]["application"])
                 if isinstance(tip.metadata[param]["application"], list)
@@ -134,7 +131,6 @@ def fill_xarray_from_input_parameters(
                 and size.intersection(scope["size"])
                 and year.intersection(scope["year"])
             ):
-
                 array.loc[
                     dict(
                         application=[p for p in pwt if p in scope["application"]],
@@ -144,13 +140,10 @@ def fill_xarray_from_input_parameters(
                     )
                 ] = tip.values[param]
     else:
-
         for param in tip.input_parameters:
-
             names = [n for n in tip.metadata if tip.metadata[n]["name"] == param]
 
             for name in names:
-
                 pwt = (
                     set(tip.metadata[name]["application"])
                     if isinstance(tip.metadata[name]["application"], list)
@@ -337,7 +330,6 @@ def modify_xarray_from_custom_parameters(
                         continue
 
                 elif distr in [2, 3, 4, 5]:
-
                     # Check if the correct parameters are present
                     # Triangular
 
@@ -387,7 +379,6 @@ def modify_xarray_from_custom_parameters(
 
                     # Stochastic mode
                     if array.sizes["value"] > 1:
-
                         rng = sa.MCRandomNumberGenerator(distribution_def)
 
                         for size in sizes:
@@ -401,7 +392,6 @@ def modify_xarray_from_custom_parameters(
                                     )
                                 ] = rng.generate(array.sizes["value"]).reshape((-1,))
                     else:
-
                         dist = sa.uncertainty_choices[distr]
                         median = float(dist.ppf(distribution_def, np.array((0.5,))))
 
