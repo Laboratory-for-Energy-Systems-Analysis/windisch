@@ -44,7 +44,6 @@ setup(
         "scipy",
         "setuptools",
         "stats_arrays",
-        "wurst",
         "xarray",
     ],
     url="https://github.com/romainsacchi/windisch",

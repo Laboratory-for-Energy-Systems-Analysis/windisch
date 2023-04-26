@@ -26,7 +26,6 @@ requirements:
     - scipy
     - setuptools
     - stats_arrays
-    - wurst
     - xarray
 
 
