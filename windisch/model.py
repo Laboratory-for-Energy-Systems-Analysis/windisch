@@ -23,7 +23,7 @@ def func_height_power(
     :param coeff_c: coefficient
     :return: hub height (m)
     """
-    return coeff_a - coeff_b * np.exp(-(power) / coeff_c)
+    return coeff_a - coeff_b * np.exp(-power / coeff_c)
 
 
 def func_rotor_weight_rotor_diameter(
@@ -32,11 +32,11 @@ def func_rotor_weight_rotor_diameter(
     """
     Returns rotor weight, in kg, based on rotor diameter.
     :param power: power output (kW)
-    :param coeff_a: coefficient
-    :param coeff_b: coefficient
+    :param coeff_a: coefficient a
+    :param coeff_b: coefficient b
     :return: nacelle weight (in kg)
     """
-    rotor_mass = coeff_a * power ** 2 + coeff_b * power
+    rotor_mass = coeff_a * power**2 + coeff_b * power
     return 1e3 * rotor_mass
 
 
@@ -44,11 +44,11 @@ def func_nacelle_weight_power(power: int, coeff_a: float, coeff_b: float) -> flo
     """
     Returns nacelle weight, in kg.
     :param power: power output (kW)
-    :param coeff_a: coefficient
-    :param coeff_b: coefficient
+    :param coeff_a: coefficient a
+    :param coeff_b: coefficient b
     :return: nacelle weight (in kg)
     """
-    nacelle_mass = coeff_a * power ** 2 + coeff_b * power
+    nacelle_mass = coeff_a * power**2 + coeff_b * power
     return 1e3 * nacelle_mass
 
 
@@ -74,7 +74,7 @@ def func_mass_foundation_onshore(height: float, diameter: float) -> float:
     :param diameter: rotor diameter (m)
     :return:
     """
-    return 1696e3 * height / 80 * diameter ** 2 / (100 ** 2)
+    return 1696e3 * height / 80 * diameter**2 / (100**2)
 
 
 def func_mass_reinf_steel_onshore(power: int) -> float:
@@ -104,6 +104,7 @@ def get_pile_height(power: int, sea_depth: float) -> float:
     """
     Returns undersea pile height (m) from rated power output (kW), penetration depth and sea depeth.
     :param power: power output (kW)
+    :param sea_depth: sea depth (m)
     :return: pile height (m)
     """
     fit_penetration_depth = penetration_depth_fit()
@@ -112,25 +113,34 @@ def get_pile_height(power: int, sea_depth: float) -> float:
 
 def get_pile_mass(power: int, pile_height: float) -> float:
     """
-    Return the mass of the steel pile
+    Return the mass of the steel pile based on the power output of the rotor and the height of the pile.
     :param power: power output (in kW) of the rotor
     :param pile_height: height (in m) of the pile
-    :return: mass of the steel pile
+    :return: mass of the steel pile (in kg)
     """
+
+    # The following lists store data on the relationship
+    # between the power output of the rotor and the diameter of the pile.
     # diameters, in meters
     diameter_x = [5, 5.5, 5.75, 6.75, 7.75]
     # kW
     power_y = [3000, 3600, 4000, 8000, 10000]
+
+    # Use polynomial regression to find the function that best fits the data.
+    # This function relates the diameter of the pile with the power output of the rotor.
     fit_diameter = np.polyfit(power_y, diameter_x, 1)
     f_fit_diameter = np.poly1d(fit_diameter)
 
-    # diameter for given power, in m
+    # Calculate the outer diameter of the pile based on the power output of the rotor.
     outer_diameter = f_fit_diameter(power)
-    # Cross section area of pile
+
+    # Calculate the cross-section area of the pile based on the outer diameter.
     outer_area = (np.pi / 4) * (outer_diameter ** 2)
-    # Pile volume, in m3
+
+    # Calculate the volume of the pile based on the outer area and the pile height.
     outer_volume = outer_area * pile_height
 
+    # Calculate the inner diameter of the pile based on the power output of the rotor and the thickness of the pile.
     inner_diameter = outer_diameter
     pile_thickness = np.interp(
         power,
@@ -138,16 +148,27 @@ def get_pile_mass(power: int, pile_height: float) -> float:
         [0.07, 0.10, 0.13, 0.16, 0.19, 0.22],
     )
     inner_diameter -= 2 * pile_thickness
+
+    # Calculate the cross-section area of the inner part of the pile.
     inner_area = (np.pi / 4) * (inner_diameter ** 2)
+
+    # Calculate the volume of the inner part of the pile based on the inner area and the pile height.
     inner_volume = inner_area * pile_height
+
+    # Calculate the volume of steel used in the pile by subtracting the inner volume from the outer volume.
     volume_steel = outer_volume - inner_volume
+
+    # Calculate the weight of the steel used in the pile based on its volume and density.
     weight_steel = STEEL_DENSITY * volume_steel
+
+    # Return the weight of the steel pile.
     return weight_steel
 
 
 def get_transition_height() -> np.poly1d:
     """
-    Returns a fitting model for the height of transition piece (in m), based on pile height (in m).
+    Returns a fitting model for the height of
+    transition piece (in m), based on pile height (in m).
     :return:
     """
     pile_length = [35, 55, 35, 60, 40, 65, 50, 70, 50, 80]
@@ -202,11 +223,11 @@ def func_tower_weight_d2h(
     Returns tower mass, in kg, based on tower diameter and height.
     :param diameter: tower diameter (m)
     :param height: tower height (m)
-    :param coeff_a: coefficient
-    :param coeff_b: coefficient
+    :param coeff_a: coefficient a
+    :param coeff_b: coefficient b
     :return: tower mass (in kg)
     """
-    tower_mass = coeff_a * diameter ** 2 * height + coeff_b
+    tower_mass = coeff_a * diameter**2 * height + coeff_b
     return 1e3 * tower_mass
 
 
@@ -220,7 +241,7 @@ def set_cable_requirements(
     """
     Return the required cable mass as well as the energy needed to lay down the cable.
     :param power: rotor power output (in kW)
-    :param cross_section: cable cross section (in mm2)
+    :param cross_section: cable cross-section (in mm2)
     :param dist_transfo: distance to transformer (in m)
     :param dist_coast: distance to coastline (in m)
     :param park_size:
@@ -233,7 +254,7 @@ def set_cable_requirements(
     # 39 MJ/liter, 15 km/h as speed of laying the cable
     energy_cable_laying_ship = 450 * 39 / 15 * dist_transfo
 
-    # Cross section calculated based on the farm cumulated power,
+    # Cross-section calculated based on the farm cumulated power,
     # and the transport capacity of the Nexans cables @ 150kV
     # if the cumulated power of the park cannot be transported @ 33kV
 
@@ -263,18 +284,17 @@ def set_cable_requirements(
     energy_cable_laying_ship += 450 * 39 / 15 * dist_coast / park_size
 
     m_cable = m_copper * 617 / 220
-    # FIXME: ask why * 0.5
+    # FIXME: why * 0.5 ???
     return m_cable * 0.5, energy_cable_laying_ship * 0.5
 
 
 class WindTurbineModel:
-
     """
     This class represents the entirety of the turbines considered,
     with useful attributes, such as an array that stores
     all the turbine input parameters.
 
-    :ivar array: multi-dimensional numpy-like array that contains parameters' value(s)
+    :ivar array: multidimensional numpy-like array that contains parameters' value(s)
     :vartype array: xarray.DataArray
 
     """
@@ -282,37 +302,6 @@ class WindTurbineModel:
     def __init__(self, array):
         self.__cache = None
         self.array = array
-
-    def __call__(self, key):
-        """
-        This method fixes a dimension of the `array` attribute
-        given an `application` technology selected.
-
-        Set up this class as a context manager, so we can have some nice syntax
-
-        .. code-block:: python
-
-            with class('some powertrain') as cpm:
-                cpm['something']. # Will be filtered for the correct powertrain
-
-        On with block exit, this filter is cleared
-        https://stackoverflow.com/a/10252925/164864
-
-        :param key: A powertrain type, e.g., "FCEV"
-        :type key: str
-        :return: An instance of `array` filtered after the powertrain selected.
-
-        """
-        self.__cache = self.array
-        self.array = self.array.sel(application=key)
-        return self
-
-    def __enter__(self):
-        return self
-
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        self.array = self.__cache
-        del self.__cache
 
     def __getitem__(self, key: Union[str, List[str]]):
         """
@@ -332,7 +321,7 @@ class WindTurbineModel:
 
         .. code-block:: python
 
-            class['key', 'value]
+            class['key', 'value']
 
         :param key: Parameter name
         :param value: Numeric value (int or float)
@@ -355,6 +344,9 @@ class WindTurbineModel:
         self.__set_tower_mass()
         self.__set_electronics_mass()
         self.__set_foundation_mass()
+        self.__set_assembly_requirements()
+        self.__set_installation_requirements()
+        self.__set_maintenance_energy()
 
         self["total mass"] = self[
             [
@@ -386,19 +378,16 @@ class WindTurbineModel:
         :return:
         """
 
-        if "onshore" in self.array.application:
-            with self("onshore") as onshore:
-                power = onshore["rated power"]
-                onshore["rotor diameter"] = func_rotor_diameter(
-                    power, 152.66222073, 136.56772435, 2478.03511414, 16.44042379
-                )
+        self["rotor diameter"] = func_rotor_diameter(
+            self["power"], 152.66222073, 136.56772435, 2478.03511414, 16.44042379
+        ) * (1 - self["offshore"])
 
-        if "offshore" in self.array.application:
-            with self("offshore") as offshore:
-                power = offshore["rated power"]
-                offshore["rotor diameter"] = func_rotor_diameter(
-                    power, 191.83651588, 147.37205671, 5101.28555377, 376.62814798
-                )
+        self["rotor diameter"] += (
+            func_rotor_diameter(
+                self["power"], 191.83651588, 147.37205671, 5101.28555377, 376.62814798
+            )
+            * self["offshore"]
+        )
 
     def __set_tower_height(self):
         """
@@ -406,19 +395,14 @@ class WindTurbineModel:
         :return:
         """
 
-        if "onshore" in self.array.application:
-            with self("onshore") as onshore:
-                power = onshore["rated power"]
-                onshore["tower height"] = func_height_power(
-                    power, 116.43035193, 91.64953366, 2391.88662558
-                )
+        self["tower height"] = func_height_power(
+            self["power"], 116.43035193, 91.64953366, 2391.88662558
+        ) * (1 - self["offshore"])
 
-        if "offshore" in self.array.application:
-            with self("offshore") as offshore:
-                power = offshore["rated power"]
-                offshore["tower height"] = func_height_power(
-                    power, 120.75491612, 82.75390577, 4177.56520433
-                )
+        self["tower height"] += (
+            func_height_power(self["power"], 120.75491612, 82.75390577, 4177.56520433)
+            * self["offshore"]
+        )
 
     def __set_nacelle_mass(self):
         """
@@ -426,19 +410,14 @@ class WindTurbineModel:
         :return:
         """
 
-        if "onshore" in self.array.application:
-            with self("onshore") as onshore:
-                power = onshore["rated power"]
-                onshore["nacelle mass"] = func_nacelle_weight_power(
-                    power, 1.66691134e-06, 3.20700974e-02
-                )
+        self["nacelle mass"] = func_nacelle_weight_power(
+            self["power"], 1.66691134e-06, 3.20700974e-02
+        ) * (1 - self["offshore"])
 
-        if "offshore" in self.array.application:
-            with self("offshore") as off:
-                power = off["rated power"]
-                off["nacelle mass"] = func_nacelle_weight_power(
-                    power, 2.15668283e-06, 3.24712680e-02
-                )
+        self["nacelle mass"] += (
+            func_nacelle_weight_power(self["power"], 2.15668283e-06, 3.24712680e-02)
+            * self["offshore"]
+        )
 
     def __set_rotor_mass(self):
         """
@@ -446,19 +425,16 @@ class WindTurbineModel:
         :return:
         """
 
-        if "onshore" in self.array.application:
-            with self("onshore") as onshore:
-                diameter = onshore["rotor diameter"]
-                onshore["rotor mass"] = func_rotor_weight_rotor_diameter(
-                    diameter, 0.00460956, 0.11199577
-                )
+        self["rotor mass"] = func_rotor_weight_rotor_diameter(
+            self["rotor diameter"], 0.00460956, 0.11199577
+        ) * (1 - self["offshore"])
 
-        if "offshore" in self.array.application:
-            with self("offshore") as off:
-                diameter = onshore["rotor diameter"]
-                off["rotor mass"] = func_rotor_weight_rotor_diameter(
-                    diameter, 0.0088365, -0.16435292
-                )
+        self["rotor mass"] += (
+            func_rotor_weight_rotor_diameter(
+                self["rotor diameter"], 0.0088365, -0.16435292
+            )
+            * self["offshore"]
+        )
 
     def __set_tower_mass(self):
         """
@@ -466,16 +442,11 @@ class WindTurbineModel:
         :return:
         """
 
-        rotor_diameter = self.array.loc[
-            dict(application="onshore", parameter="rotor diameter")
-        ]
-        rotor_height = self.array.loc[
-            dict(application="onshore", parameter="tower height")
-        ]
-        self.array.loc[
-            dict(application="onshore", parameter="tower mass")
-        ] = func_tower_weight_d2h(
-            rotor_diameter, rotor_height, 3.03584782e-04, 9.68652909e00
+        self["tower mass"] = func_tower_weight_d2h(
+            self["rotor diameter"],
+            self["tower height"],
+            3.03584782e-04,
+            9.68652909e00
         )
 
     def __set_electronics_mass(self):
@@ -484,66 +455,61 @@ class WindTurbineModel:
         :return:
         """
         self["electronics mass"] = np.interp(
-            self["rated power"], [30, 150, 600, 800, 2000], [150, 300, 862, 1112, 3946]
+            self["power"], [30, 150, 600, 800, 2000], [150, 300, 862, 1112, 3946]
         )
 
     def __set_foundation_mass(self):
         """
         Define mass of foundation.
         For onshore turbines, this consists of concrete and reinforcing steel.
-        For offhore turbines, this consists of anti-scour materials at the sea bottom,
+        For offshore turbines, this consists of anti-scour materials at the sea bottom,
         the steel pile, the grout, the transition piece (incl. the platform) as well as the cables.
         :return:
         """
 
-        if "onshore" in self.array.application:
-            with self("onshore") as onshore:
-                height = onshore["tower height"]
-                diameter = onshore["rotor diameter"]
-                power = onshore["rated power"]
-                onshore["foundation mass"] = func_mass_foundation_onshore(
-                    height, diameter
-                )
-                onshore[
-                    "reinforcing steel in foundation mass"
-                ] = func_mass_reinf_steel_onshore(power)
-                onshore["concrete in foundation mass"] = (
-                    onshore["foundation mass"]
-                    - onshore["reinforcing steel in foundation mass"]
-                )
+        self["foundation mass"] = func_mass_foundation_onshore(
+            self["tower height"], self["rotor diameter"]
+        ) * (1 - self["offshore"])
 
-        if "offshore" in self.array.application:
-            with self("offshore") as off:
-                power = off["rated power"]
-                sea_depth = off["sea depth"]
-                cross_section = off["offshore farm cable cross-section"]
-                dist_transf = off["distance to transformer"]
-                dist_coast = off["distance to coastline"]
-                park_size = off["turbines per farm"]
+        self["reinforcing steel in foundation mass"] = func_mass_reinf_steel_onshore(
+            self["power"]
+        ) * (1 - self["offshore"])
 
-                off["pile height"] = get_pile_height(power, sea_depth)
-                off["pile mass"] = get_pile_mass(power, off["pile height"])
-                off["transition length"] = get_transition_height()(off["pile height"])
-                off["transition mass"] = get_transition_mass(off["pile height"])
-                off["grout volume"] = get_grout_volume(off["transition length"])
-                off["scour volume"] = get_scour_volume(off["rated power"])
+        self["concrete in foundation mass"] = (
+            self["foundation mass"]
+            - self["reinforcing steel in foundation mass"]
+        ) * (1 - self["offshore"])
 
-                off["foundation mass"] = self[
-                    [
-                        "pile mass",
-                        "transition mass",
-                    ]
-                ].sum(dim="parameter")
+        self["pile height"] = (
+            get_pile_height(self["power"], self["sea depth"]) * self["offshore"]
+        )
+        self["pile mass"] = (
+            get_pile_mass(self["power"], self["pile height"]) * self["offshore"]
+        )
+        self["transition length"] = (
+            get_transition_height()(self["pile height"]) * self["offshore"]
+        )
+        self["transition mass"] = (
+            get_transition_mass(self["pile height"]) * self["offshore"]
+        )
+        self["grout volume"] = (
+            get_grout_volume(self["transition length"]) * self["offshore"]
+        )
+        self["scour volume"] = get_scour_volume(self["power"]) * self["offshore"]
 
-                cable_mass, energy = set_cable_requirements(
-                    power,
-                    cross_section,
-                    dist_transf,
-                    dist_coast,
-                    park_size,
-                )
-                off["cable mass"] = cable_mass
-                off["energy for cable lay-up"] = energy
+        self["foundation mass"] += (self["pile mass"] + self["transition mass"]) * self[
+            "offshore"
+        ]
+
+        cable_mass, energy = set_cable_requirements(
+            self["power"],
+            self["offshore farm cable cross-section"],
+            self["distance to transformer"],
+            self["distance to coastline"],
+            self["turbines per farm"],
+        )
+        self["cable mass"] = cable_mass * self["offshore"]
+        self["energy for cable lay-up"] = energy * self["offshore"]
 
     def __set_assembly_requirements(self):
         """
@@ -565,7 +531,7 @@ class WindTurbineModel:
                     ["rotor mass", "nacelle mass", "tower mass", "electronics mass"]
                 ].sum(dim="parameter")
             )
-            / 100
+            / 1000 # kg to tons
             * self["distance to assembly plant"]
         )
 
@@ -576,18 +542,13 @@ class WindTurbineModel:
         :return:
         """
 
-        if "onshore" in self.array.application:
-            # 1 liter diesel (0.85 kg, 37 MJ) per kilowatt of power
-            # assumed burned in a "building machine"
+        # 1 liter diesel (0.85 kg, 37 MJ) per kilowatt of power
+        # assumed burned in a "building machine"
+        self["installation energy"] = 37 * self["power"] * (1 - self["offshore"])
 
-            with self("onshore") as onshore:
-                onshore["installation energy"] = 37 * onshore["rated power"]
-
-        if "offshore" in self.array.application:
-            # 46 liters diesel (46.5 kg, 1'680 MJ) per kilowatt of power
-            # assumed burned in a "building machine"
-            with self("offshore") as offshore:
-                offshore["installation energy"] = 1680 * offshore["rated power"]
+        # 46 liters diesel (46.5 kg, 1'680 MJ) per kilowatt of power
+        # assumed burned in a "building machine"
+        self["installation energy"] += 1680 * self["power"] * self["offshore"]
 
         # transport to installation site
         # tons over km
@@ -666,19 +627,15 @@ class WindTurbineModel:
             / 1000
         )
 
-        if "offshore" in self.array.application:
-            # additional transport to offshore location
-            with self("offshore") as offshore:
-                offshore["installation transport, by ship"] = (
-                    self["distance to coastline"] * self["total mass"] / 1000
-                )
+        self["installation transport, by sea"] += (
+            self["distance to coastline"]
+            * self["total mass"]
+            / 1000  # kg/ton
+        ) * self["offshore"]
 
-        if "onshore" in self.array.application:
-            # access road to onshore turbine
-            with self("onshore") as onshore:
-                onshore["access road"] = np.interp(
-                    self["rated power"], [0, 2000], [0, 8000]
-                )
+        self["access road"] = np.interp(self["power"], [0, 2000], [0, 8000]) * (
+            1 - self["offshore"]
+        )
 
     def __set_maintenance_energy(self):
         """
@@ -686,13 +643,9 @@ class WindTurbineModel:
         :return:
         """
 
-        if "onshore" in self.array.application:
-            with self("onshore") as onshore:
-                onshore["maintenance transport"] = 500 * 100 / 8
+        self["maintenance transport"] = (500 * 100 / 8) * (1 - self["offshore"])
 
-        if "offshore" in self.array.application:
-            # 7'500 liters (7'575 kg) heavy fuel oil per turbine per year
-            # assumed equivalent to 257'000 ton-km
-            # by a ferry boat @ 2.95 kg/100 ton-km
-            with self("offshore") as offshore:
-                offshore["maintenance transport"] = 7575 * 100 / 2.95
+        # 7'500 liters (7'575 kg) heavy fuel oil per turbine per year
+        # assumed equivalent to 257'000 ton-km
+        # by a ferry boat @ 2.95 kg/100 ton-km
+        self["maintenance transport"] += (7575 * 100 / 2.95) * self["offshore"]

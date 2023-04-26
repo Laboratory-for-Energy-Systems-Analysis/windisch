@@ -1,5 +1,5 @@
 {
-    "0-2000-rated power": {
+    "0-2000-power": {
         "amount": 100,
         "category": "Power",
         "application": [
@@ -10,7 +10,7 @@
             "100kW"
         ],
         "year": 2000,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -20,7 +20,7 @@
         "uncertainty_type": 1,
         "loc": 100
     },
-    "1-2010-rated power": {
+    "1-2010-power": {
         "amount": 100,
         "category": "Power",
         "application": [
@@ -31,7 +31,7 @@
             "100kW"
         ],
         "year": 2010,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -41,7 +41,7 @@
         "uncertainty_type": 1,
         "loc": 100
     },
-    "2-2020-rated power": {
+    "2-2020-power": {
         "amount": 100,
         "category": "Power",
         "application": [
@@ -52,7 +52,7 @@
             "100kW"
         ],
         "year": 2020,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -62,7 +62,7 @@
         "uncertainty_type": 1,
         "loc": 100
     },
-    "3-2030-rated power": {
+    "3-2030-power": {
         "amount": 100,
         "category": "Power",
         "application": [
@@ -73,7 +73,7 @@
             "100kW"
         ],
         "year": 2030,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -83,7 +83,7 @@
         "uncertainty_type": 1,
         "loc": 100
     },
-    "4-2040-rated power": {
+    "4-2040-power": {
         "amount": 100,
         "category": "Power",
         "application": [
@@ -94,7 +94,7 @@
             "100kW"
         ],
         "year": 2040,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -104,7 +104,7 @@
         "uncertainty_type": 1,
         "loc": 100
     },
-    "5-2050-rated power": {
+    "5-2050-power": {
         "amount": 100,
         "category": "Power",
         "application": [
@@ -115,7 +115,7 @@
             "100kW"
         ],
         "year": 2050,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -125,7 +125,7 @@
         "uncertainty_type": 1,
         "loc": 100
     },
-    "6-2000-rated power": {
+    "6-2000-power": {
         "amount": 500,
         "category": "Power",
         "application": [
@@ -136,7 +136,7 @@
             "500kW"
         ],
         "year": 2000,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -146,7 +146,7 @@
         "uncertainty_type": 1,
         "loc": 500
     },
-    "7-2010-rated power": {
+    "7-2010-power": {
         "amount": 500,
         "category": "Power",
         "application": [
@@ -157,7 +157,7 @@
             "500kW"
         ],
         "year": 2010,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -167,7 +167,7 @@
         "uncertainty_type": 1,
         "loc": 500
     },
-    "8-2020-rated power": {
+    "8-2020-power": {
         "amount": 500,
         "category": "Power",
         "application": [
@@ -178,7 +178,7 @@
             "500kW"
         ],
         "year": 2020,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -188,7 +188,7 @@
         "uncertainty_type": 1,
         "loc": 500
     },
-    "9-2030-rated power": {
+    "9-2030-power": {
         "amount": 500,
         "category": "Power",
         "application": [
@@ -199,7 +199,7 @@
             "500kW"
         ],
         "year": 2030,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -209,7 +209,7 @@
         "uncertainty_type": 1,
         "loc": 500
     },
-    "10-2040-rated power": {
+    "10-2040-power": {
         "amount": 500,
         "category": "Power",
         "application": [
@@ -220,7 +220,7 @@
             "500kW"
         ],
         "year": 2040,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -230,7 +230,7 @@
         "uncertainty_type": 1,
         "loc": 500
     },
-    "11-2050-rated power": {
+    "11-2050-power": {
         "amount": 500,
         "category": "Power",
         "application": [
@@ -241,7 +241,7 @@
             "500kW"
         ],
         "year": 2050,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -251,7 +251,7 @@
         "uncertainty_type": 1,
         "loc": 500
     },
-    "12-2000-rated power": {
+    "12-2000-power": {
         "amount": 1000,
         "category": "Power",
         "application": [
@@ -262,7 +262,7 @@
             "1000kW"
         ],
         "year": 2000,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -272,7 +272,7 @@
         "uncertainty_type": 1,
         "loc": 1000
     },
-    "13-2010-rated power": {
+    "13-2010-power": {
         "amount": 1000,
         "category": "Power",
         "application": [
@@ -283,7 +283,7 @@
             "1000kW"
         ],
         "year": 2010,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -293,7 +293,7 @@
         "uncertainty_type": 1,
         "loc": 1000
     },
-    "14-2020-rated power": {
+    "14-2020-power": {
         "amount": 1000,
         "category": "Power",
         "application": [
@@ -304,7 +304,7 @@
             "1000kW"
         ],
         "year": 2020,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -314,7 +314,7 @@
         "uncertainty_type": 1,
         "loc": 1000
     },
-    "15-2030-rated power": {
+    "15-2030-power": {
         "amount": 1000,
         "category": "Power",
         "application": [
@@ -325,7 +325,7 @@
             "1000kW"
         ],
         "year": 2030,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -335,7 +335,7 @@
         "uncertainty_type": 1,
         "loc": 1000
     },
-    "16-2040-rated power": {
+    "16-2040-power": {
         "amount": 1000,
         "category": "Power",
         "application": [
@@ -346,7 +346,7 @@
             "1000kW"
         ],
         "year": 2040,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -356,7 +356,7 @@
         "uncertainty_type": 1,
         "loc": 1000
     },
-    "17-2050-rated power": {
+    "17-2050-power": {
         "amount": 1000,
         "category": "Power",
         "application": [
@@ -367,7 +367,7 @@
             "1000kW"
         ],
         "year": 2050,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -377,7 +377,7 @@
         "uncertainty_type": 1,
         "loc": 1000
     },
-    "18-2000-rated power": {
+    "18-2000-power": {
         "amount": 3000,
         "category": "Power",
         "application": [
@@ -388,7 +388,7 @@
             "3000kW"
         ],
         "year": 2000,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -398,7 +398,7 @@
         "uncertainty_type": 1,
         "loc": 3000
     },
-    "19-2010-rated power": {
+    "19-2010-power": {
         "amount": 3000,
         "category": "Power",
         "application": [
@@ -409,7 +409,7 @@
             "3000kW"
         ],
         "year": 2010,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -419,7 +419,7 @@
         "uncertainty_type": 1,
         "loc": 3000
     },
-    "20-2020-rated power": {
+    "20-2020-power": {
         "amount": 3000,
         "category": "Power",
         "application": [
@@ -430,7 +430,7 @@
             "3000kW"
         ],
         "year": 2020,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -440,7 +440,7 @@
         "uncertainty_type": 1,
         "loc": 3000
     },
-    "21-2030-rated power": {
+    "21-2030-power": {
         "amount": 3000,
         "category": "Power",
         "application": [
@@ -451,7 +451,7 @@
             "3000kW"
         ],
         "year": 2030,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -461,7 +461,7 @@
         "uncertainty_type": 1,
         "loc": 3000
     },
-    "22-2040-rated power": {
+    "22-2040-power": {
         "amount": 3000,
         "category": "Power",
         "application": [
@@ -472,7 +472,7 @@
             "3000kW"
         ],
         "year": 2040,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -482,7 +482,7 @@
         "uncertainty_type": 1,
         "loc": 3000
     },
-    "23-2050-rated power": {
+    "23-2050-power": {
         "amount": 3000,
         "category": "Power",
         "application": [
@@ -493,7 +493,7 @@
             "3000kW"
         ],
         "year": 2050,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -503,7 +503,7 @@
         "uncertainty_type": 1,
         "loc": 3000
     },
-    "24-2000-rated power": {
+    "24-2000-power": {
         "amount": 8000,
         "category": "Power",
         "application": [
@@ -514,7 +514,7 @@
             "8000kW"
         ],
         "year": 2000,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -524,7 +524,7 @@
         "uncertainty_type": 1,
         "loc": 8000
     },
-    "25-2010-rated power": {
+    "25-2010-power": {
         "amount": 8000,
         "category": "Power",
         "application": [
@@ -535,7 +535,7 @@
             "8000kW"
         ],
         "year": 2010,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -545,7 +545,7 @@
         "uncertainty_type": 1,
         "loc": 8000
     },
-    "26-2020-rated power": {
+    "26-2020-power": {
         "amount": 8000,
         "category": "Power",
         "application": [
@@ -556,7 +556,7 @@
             "8000kW"
         ],
         "year": 2020,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -566,7 +566,7 @@
         "uncertainty_type": 1,
         "loc": 8000
     },
-    "27-2030-rated power": {
+    "27-2030-power": {
         "amount": 8000,
         "category": "Power",
         "application": [
@@ -577,7 +577,7 @@
             "8000kW"
         ],
         "year": 2030,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -587,7 +587,7 @@
         "uncertainty_type": 1,
         "loc": 8000
     },
-    "28-2040-rated power": {
+    "28-2040-power": {
         "amount": 8000,
         "category": "Power",
         "application": [
@@ -598,7 +598,7 @@
             "8000kW"
         ],
         "year": 2040,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -608,7 +608,7 @@
         "uncertainty_type": 1,
         "loc": 8000
     },
-    "29-2050-rated power": {
+    "29-2050-power": {
         "amount": 8000,
         "category": "Power",
         "application": [
@@ -619,7 +619,7 @@
             "8000kW"
         ],
         "year": 2050,
-        "name": "rated power",
+        "name": "power",
         "unit": "kW",
         "importance": "critical",
         "source": "",
@@ -6004,5 +6004,149 @@
         "loc": 500,
         "minimum": 450,
         "maximum": 550
+    },
+    "240-2000-offshore": {
+        "amount": 1,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2000,
+        "name": "offshore",
+        "unit": "bool",
+        "importance": "",
+        "source": "",
+        "comment": "Switch",
+        "status": "",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "241-2010-offshore": {
+        "amount": 1,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2010,
+        "name": "offshore",
+        "unit": "bool",
+        "importance": "",
+        "source": "",
+        "comment": "Switch",
+        "status": "",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "242-2020-offshore": {
+        "amount": 1,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2020,
+        "name": "offshore",
+        "unit": "bool",
+        "importance": "",
+        "source": "",
+        "comment": "Switch",
+        "status": "",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "243-2030-offshore": {
+        "amount": 1,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2030,
+        "name": "offshore",
+        "unit": "bool",
+        "importance": "",
+        "source": "",
+        "comment": "Switch",
+        "status": "",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "244-2040-offshore": {
+        "amount": 1,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2040,
+        "name": "offshore",
+        "unit": "bool",
+        "importance": "",
+        "source": "",
+        "comment": "Switch",
+        "status": "",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
+    },
+    "245-2050-offshore": {
+        "amount": 1,
+        "category": "Installation",
+        "application": [
+            "offshore"
+        ],
+        "sizes": [
+            "100kW",
+            "500kW",
+            "1000kW",
+            "3000kW",
+            "8000kW"
+        ],
+        "year": 2050,
+        "name": "offshore",
+        "unit": "bool",
+        "importance": "",
+        "source": "",
+        "comment": "Switch",
+        "status": "",
+        "kind": "distribution",
+        "uncertainty_type": 1,
+        "loc": 1
     }
 }
