@@ -3,7 +3,6 @@
 <p align="center">
   <a href="https://badge.fury.io/py/windisch" target="_blank"><img src="https://badge.fury.io/py/windisch.svg"></a>
   <a href="https://github.com/romainsacchi/windisch" target="_blank"><img src="https://github.com/romainsacchi/windisch/actions/workflows/main.yml/badge.svg?branch=master"></a>
-  <a href="https://ci.appveyor.com/project/romainsacchi/windisch" target="_blank"><img src="https://ci.appveyor.com/api/projects/status/github/romainsacchi/windisch?svg=true"></a>
   <a href="https://coveralls.io/github/romainsacchi/windisch" target="_blank"><img src="https://coveralls.io/repos/github/romainsacchi/windisch/badge.svg"></a>
   <a href="https://windisch.readthedocs.io/en/latest/" target="_blank"><img src="https://readthedocs.org/projects/windisch/badge/?version=latest"></a>
  </p>

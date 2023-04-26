@@ -360,7 +360,6 @@ class WindTurbineModel:
         ].sum(dim="parameter")
 
         # we remove wind turbines that are unlikely to exist
-
         self.array.loc[
             dict(
                 size=[
@@ -454,6 +453,8 @@ class WindTurbineModel:
         self["electronics mass"] = np.interp(
             self["power"], [30, 150, 600, 800, 2000], [150, 300, 862, 1112, 3946]
         )
+
+
 
     def __set_foundation_mass(self):
         """
