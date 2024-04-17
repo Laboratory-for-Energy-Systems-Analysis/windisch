@@ -35,7 +35,7 @@ def update_input_parameters():
                 application = [x.strip() for x in row["application"].split(",")]
 
             if row["sizes"] == "all":
-                size = ["100kW", "500kW", "1000kW", "3000kW", "8000kW"]
+                size = ["100kW", "500kW", "1000kW", "3000kW", ,"3400kW", "8000kW", "10000kW", "15000kW"]
 
             else:
                 size = [x.strip() for x in str(row["sizes"]).split(",")]
