@@ -71,9 +71,7 @@ class TurbinesInputParameters(NamedParameters):
             raise ValueError(
                 f"Extra parameters are not correct type (expected `set`, got `{type(extra)}`)"
             )
-        self.sizes = sorted(
-            {size for o in parameters.values() for size in o.get("sizes", [])}
-        )
+        self.sizes = sorted({int(size) for o in parameters.values() for size in o.get("sizes", [])})
         self.application = sorted(
             {pt for o in parameters.values() for pt in o.get("application", [])}
         )
