@@ -21,6 +21,7 @@ def update_input_parameters():
     """
     dataframe = pd.read_excel(FILEPATH_TO_INPUT_DATA)
     dataframe = dataframe.replace(np.nan, "", regex=True)
+    all_sizes = [x for x in dataframe["sizes"].unique() if x not in ["", "all"]]
 
     dict_for_json = {}
     count = 0
@@ -35,7 +36,7 @@ def update_input_parameters():
                 application = [x.strip() for x in row["application"].split(",")]
 
             if row["sizes"] == "all":
-                size = ["100kW", "500kW", "1000kW", "3000kW", "8000kW"]
+                size = all_sizes
 
             else:
                 size = [x.strip() for x in str(row["sizes"]).split(",")]
