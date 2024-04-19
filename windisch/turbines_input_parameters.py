@@ -2,6 +2,7 @@
 Provides `TurbinesInputParameters`, a class that formats input and output parameters and associated
 values into an array. This array is later on consumed by `WindTurbineModel`.
 """
+
 import json
 from pathlib import Path
 from typing import Union

@@ -2,6 +2,7 @@
 fill_xarray_from_input_parameters creates an xarray and fills it with sampled input parameter values
 if a distribution is defined.
 """
+
 from typing import Tuple, Union
 
 import numpy as np
