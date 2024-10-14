@@ -454,6 +454,8 @@ class WindTurbineModel:
             self["power"], [30, 150, 600, 800, 2000], [150, 300, 862, 1112, 3946]
         )
 
+    # this is another comment
+
     def __set_foundation_mass(self):
         """
         Define mass of foundation.
