@@ -7,9 +7,8 @@ import json
 
 import numpy as np
 import pandas as pd
-
-from . import DATA_DIR
-
+from pathlib import Path
+DATA_DIR = Path(__file__).resolve().parent / "data"
 FILEPATH_TO_INPUT_DATA = DATA_DIR / "Input data.xlsx"
 
 
