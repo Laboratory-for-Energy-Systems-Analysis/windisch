@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 # Load the data
-file_path = 'Power_curves.csv'
+file_path = "/Users/kalenajonsson/Desktop/SemesterProject/Code/windisch_folder/dev/Power_Curves.csv"
 data = pd.read_csv(file_path)
 
 # Debugging: Check the structure of the data
