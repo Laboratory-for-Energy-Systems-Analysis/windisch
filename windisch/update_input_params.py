@@ -38,7 +38,7 @@ def update_input_parameters():
                 size = all_sizes
 
             else:
-                size = [x.strip() for x in str(row["sizes"]).split(",")]
+                size = [int(x.strip()) for x in str(row["sizes"]).split(",")]
 
             param = row["parameter"]
             unit = row["unit"]

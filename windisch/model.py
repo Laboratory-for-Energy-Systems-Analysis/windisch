@@ -7,8 +7,7 @@ from typing import List, Tuple, Union
 
 import numpy as np
 
-from power_curve import GenericWindTurbinePowerCurve
-from cut_speeds import load_cut_in_off_speeds
+from .power_curve import GenericWindTurbinePowerCurve
 
 # material densities, in kg/m3
 COPPER_DENSITY = 8960
@@ -374,10 +373,6 @@ class WindTurbineModel:
             )
         ] = 0
 
-        # we load the cut-in cut-off speeds
-        load_cut_in_off_speeds(
-            powers=self.array.coords["size"].value
-        )
 
         # we get the power curve
         self.power_curve = GenericWindTurbinePowerCurve(

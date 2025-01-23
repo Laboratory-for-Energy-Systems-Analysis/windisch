@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Loading the data
-file_path = "/Users/kalenajonsson/Desktop/SemesterProject/Code/windisch_folder/dev/Power_Curves.csv"
+file_path = "Power_Curves.csv"
 data = pd.read_csv(file_path)
 
 # Creating a DataFrame of size (881x71) containing the power outputs and corresponding wind speeds - the first row is the wind speed
