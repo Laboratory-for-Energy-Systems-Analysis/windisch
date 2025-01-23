@@ -1,11 +1,14 @@
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 from numpy.f2py.crackfortran import skipfuncs
 
 # Loading the data
 file_path = "Power_Curves.csv"
-data = pd.read_csv(file_path, header=1, )
+data = pd.read_csv(
+    file_path,
+    header=1,
+)
 data = data.iloc[:, :-2]
 
 # for each row, find the maximum power output
@@ -20,13 +23,7 @@ cut_out = data.iloc[:, 4:].apply(lambda row: row[row != 0].index[-1], axis=1).va
 # create a dataframe with the power of each turbine
 # and their cut-in and cut-off speed
 
-df = pd.DataFrame(
-    data={
-        "Power": max_power,
-        "Cut-in": cut_in,
-        "Cut-out": cut_out
-    }
-)
+df = pd.DataFrame(data={"Power": max_power, "Cut-in": cut_in, "Cut-out": cut_out})
 
 # All columns as numeric
 df = df.apply(pd.to_numeric, errors="coerce")
@@ -65,6 +62,6 @@ df_grouped = df.groupby("Power_bin").agg(
     Cut_in_max=("Cut-in", "max"),
     Cut_out_mean=("Cut-out", "mean"),
     Cut_out_min=("Cut-out", "min"),
-    Cut_out_max=("Cut-out", "max")
+    Cut_out_max=("Cut-out", "max"),
 )
 df_grouped.to_excel("average_cutin_cutoff_speeds.xlsx")

@@ -373,13 +373,11 @@ class WindTurbineModel:
             )
         ] = 0
 
-
         # we get the power curve
         self.power_curve = GenericWindTurbinePowerCurve(
             Vws=None,
             Pnom=self["power"],
             Drotor=self["rotor diameter"],
-
         )
 
     def __set_size_rotor(self):

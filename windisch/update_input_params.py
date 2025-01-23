@@ -4,10 +4,11 @@ and format that into the json file `default_parameters.json`.
 """
 
 import json
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
-from pathlib import Path
+
 DATA_DIR = Path(__file__).resolve().parent / "data"
 FILEPATH_TO_INPUT_DATA = DATA_DIR / "Input data.xlsx"
 
