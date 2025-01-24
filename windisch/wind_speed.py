@@ -1,10 +1,11 @@
 import os
-import requests
 import tempfile
-import xarray as xr
+
 import numpy as np
-from requests.exceptions import Timeout
+import requests
+import xarray as xr
 from dotenv import load_dotenv
+from requests.exceptions import Timeout
 
 load_dotenv(dotenv_path="../.env")
 
@@ -28,7 +29,9 @@ def fetch_wind_speed(latitude: float, longitude: float) -> xr.DataArray:
         raise EnvironmentError("API_NEWA environment variable is not set.")
 
     # Construct the API URL
-    url = API_NEWA_TIME_SERIES.replace("longitude=X", f"longitude={longitude}").replace("latitude=X", f"latitude={latitude}")
+    url = API_NEWA_TIME_SERIES.replace("longitude=X", f"longitude={longitude}").replace(
+        "latitude=X", f"latitude={latitude}"
+    )
 
     attempts = 0
     max_attempts = 10
@@ -41,10 +44,14 @@ def fetch_wind_speed(latitude: float, longitude: float) -> xr.DataArray:
             # Check if the response is successful
             if response.status_code == 200:
                 size_kb = len(response.content) / 1024  # Calculate response size in KB
-                print(f"Downloaded {size_kb:.2f} kB for location ({latitude}, {longitude})")
+                print(
+                    f"Downloaded {size_kb:.2f} kB for location ({latitude}, {longitude})"
+                )
 
                 # Write content to a temporary file
-                with tempfile.NamedTemporaryFile(suffix=".nc", delete=False) as tmp_file:
+                with tempfile.NamedTemporaryFile(
+                    suffix=".nc", delete=False
+                ) as tmp_file:
                     tmp_file.write(response.content)
                     tmp_file_path = tmp_file.name
 
@@ -60,11 +67,15 @@ def fetch_wind_speed(latitude: float, longitude: float) -> xr.DataArray:
                 return ds
 
             else:
-                raise Exception(f"Failed to fetch data. HTTP Status: {response.status_code}")
+                raise Exception(
+                    f"Failed to fetch data. HTTP Status: {response.status_code}"
+                )
 
         except (Timeout, Exception) as e:
             attempts += 1
             print(f"Error: {e}. Retrying ({attempts}/{max_attempts})...")
 
             if attempts >= max_attempts:
-                raise Exception(f"Failed to fetch data for location ({latitude}, {longitude}) after {max_attempts} attempts.")
+                raise Exception(
+                    f"Failed to fetch data for location ({latitude}, {longitude}) after {max_attempts} attempts."
+                )

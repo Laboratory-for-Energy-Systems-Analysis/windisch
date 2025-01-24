@@ -9,6 +9,7 @@ import numpy as np
 import xarray as xr
 
 from windisch.power_curve import calculate_generic_power_curve
+
 from .wind_speed import fetch_wind_speed
 
 # material densities, in kg/m3
@@ -308,10 +309,10 @@ class WindTurbineModel:
     """
 
     def __init__(
-            self,
-            array: xr.DataArray,
-            country: str = None,
-            location: Tuple[float, float] = None,
+        self,
+        array: xr.DataArray,
+        country: str = None,
+        location: Tuple[float, float] = None,
     ):
         self.terrain_vars = None
         self.array = array
@@ -330,7 +331,6 @@ class WindTurbineModel:
                 print("Offshore wind turbines")
                 if "onshore" in self.array.coords["application"]:
                     self.array.loc[dict(application="onshore")] = 0
-
 
     def __getitem__(self, key: Union[str, List[str]]):
         """
@@ -398,8 +398,8 @@ class WindTurbineModel:
             # otherwise, fetch country-average load factors
             if self.country:
                 pass
-                #self.__fetch_load_factor()
-        #self.__calculate_lifetime_electricity_production()
+                # self.__fetch_load_factor()
+        # self.__calculate_lifetime_electricity_production()
 
     def __fetch_terrain_variables(self):
         """
@@ -433,30 +433,30 @@ class WindTurbineModel:
 
         self.power_curve = xr.DataArray(
             data=power_curve,
-            dims=[
-                "size",
-                "application",
-                "year",
-                "value",
-                "wind speed"
-            ],
+            dims=["size", "application", "year", "value", "wind speed"],
             coords={
                 "size": self.array.coords["size"],
                 "application": self.array.coords["application"],
                 "year": self.array.coords["year"],
                 "value": self.array.coords["value"],
-                "wind speed": np.arange(0, 31, 1)
+                "wind speed": np.arange(0, 31, 1),
             },
         )
 
     def __calculate_electricity_production(self):
         # we calculate the electricity production
-        self.electricity_production = self.power_curve.interp({"wind speed": self.terrain_vars["WS"]}, method="linear")
-        self["lifetime electricity production"] = self.electricity_production.sum(dim="time") * self["lifetime"]
+        self.electricity_production = self.power_curve.interp(
+            {"wind speed": self.terrain_vars["WS"]}, method="linear"
+        )
+        self["lifetime electricity production"] = (
+            self.electricity_production.sum(dim="time") * self["lifetime"]
+        )
 
     def __calculate_average_load_factor(self):
         # we calculate the average load factor
-        self["average load factor"] = self.electricity_production.sum(dim="time") / (8760 * self["power"])
+        self["average load factor"] = self.electricity_production.sum(dim="time") / (
+            8760 * self["power"]
+        )
 
     def __set_size_rotor(self):
         """

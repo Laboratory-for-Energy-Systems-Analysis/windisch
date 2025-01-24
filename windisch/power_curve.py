@@ -12,9 +12,10 @@ Functions:
     - calculate_generic_power_curve: Computes the complete power curve of a wind turbine considering environmental factors.
 """
 
+from typing import List, Union
+
 import numpy as np
 import xarray as xr
-from typing import List, Union
 
 
 def calculate_cp(
@@ -150,7 +151,9 @@ def calculate_raw_power_curve(
 
     # Tip speed and power coefficient
 
-    vtip = np.clip(tsr_opt * vws, vtip_min.values[..., None], vtip_max.values[..., None])
+    vtip = np.clip(
+        tsr_opt * vws, vtip_min.values[..., None], vtip_max.values[..., None]
+    )
 
     tsr = np.divide(vtip, vws, out=np.zeros_like(vws), where=vws > 0)
 
@@ -166,7 +169,11 @@ def calculate_raw_power_curve(
     # even though we have RHO per hour
     # we will use the average value
     pin = (
-        0.5 * air_density.mean(dim="time").values * a_rotor.values[..., None] * (vws**3) / 1000
+        0.5
+        * air_density.mean(dim="time").values
+        * a_rotor.values[..., None]
+        * (vws**3)
+        / 1000
     )  # Power input in kW (0.5 * rho * A * V^3)
 
     # Ensure pin is safe (avoid division by zero)
@@ -179,7 +186,11 @@ def calculate_raw_power_curve(
         p_nom = p_nom.values if isinstance(p_nom, xr.DataArray) else p_nom
 
     # Apply np.minimum safely
-    cp = np.minimum(cp0, np.minimum(1.0, p_nom.values[..., None] / pin_safe), where=~np.isnan(pin_safe))
+    cp = np.minimum(
+        cp0,
+        np.minimum(1.0, p_nom.values[..., None] / pin_safe),
+        where=~np.isnan(pin_safe),
+    )
 
     p_out = cp * pin
 
@@ -209,15 +220,32 @@ def apply_turbulence_and_direction_effect(
     """
     # Calculate turbulence intensity (TI) from TKE
     # Cap vws to the range of mean_ws before interpolation
-    mean_tke = tke["TKE"].mean(dim=["year", "size", "value", "application", ])
-    mean_ws = tke["WS"].mean(dim=["year", "size", "value", "application", ])
+    mean_tke = tke["TKE"].mean(
+        dim=[
+            "year",
+            "size",
+            "value",
+            "application",
+        ]
+    )
+    mean_ws = tke["WS"].mean(
+        dim=[
+            "year",
+            "size",
+            "value",
+            "application",
+        ]
+    )
     vws_clipped = np.clip(vws, mean_ws.min().values, mean_ws.max().values)
     interp_tke = np.interp(vws_clipped, mean_ws, mean_tke)
 
     # Avoid division by zero or invalid values
     ti = xr.apply_ufunc(
-        lambda interp_tke, vws: np.where((vws > 0) & (interp_tke > 0), np.sqrt(2 / 3 * interp_tke) / (vws + 1e-6), 0),
-        interp_tke, vws,
+        lambda interp_tke, vws: np.where(
+            (vws > 0) & (interp_tke > 0), np.sqrt(2 / 3 * interp_tke) / (vws + 1e-6), 0
+        ),
+        interp_tke,
+        vws,
         dask="allowed",
         vectorize=True,
         keep_attrs=True,
@@ -229,8 +257,12 @@ def apply_turbulence_and_direction_effect(
     # Apply Gaussian smoothing for turbulence effect
     def gaussian_smoothing(tWS, vWS, Pwt, TI):
         # Ensure vWS and tWS are properly aligned
-        vWS = vWS[..., np.newaxis]  # Add an extra dimension to vWS for alignment (1, 1, 1, 1, 31, 1)
-        tWS = tWS[..., np.newaxis, :]  # Add an extra dimension to tWS for alignment (1, 1, 1, 1, 1, 31)
+        vWS = vWS[
+            ..., np.newaxis
+        ]  # Add an extra dimension to vWS for alignment (1, 1, 1, 1, 31, 1)
+        tWS = tWS[
+            ..., np.newaxis, :
+        ]  # Add an extra dimension to tWS for alignment (1, 1, 1, 1, 1, 31)
 
         # Adjust sigma for turbulence intensity
         sigma = np.maximum(TI[..., None] * tWS, 0.1 * tWS)  # Scale sigma with tWS
@@ -246,17 +278,29 @@ def apply_turbulence_and_direction_effect(
 
         # Normalize weights along the wind speed axis (-2)
         weights_sum = weights.sum(axis=-2, keepdims=True)  # Sum along vWS axis
-        weights = np.divide(weights, weights_sum, out=np.zeros_like(weights), where=weights_sum > 0)
+        weights = np.divide(
+            weights, weights_sum, out=np.zeros_like(weights), where=weights_sum > 0
+        )
 
         # Collapse the extra dimension
-        smoothed_power = np.sum(Pwt[..., np.newaxis] * weights, axis=-2)  # Collapse vWS axis (-2)
+        smoothed_power = np.sum(
+            Pwt[..., np.newaxis] * weights, axis=-2
+        )  # Collapse vWS axis (-2)
 
         return smoothed_power
 
     pwt = xr.apply_ufunc(
         gaussian_smoothing,
-        vws, vws, pwt, ti,
-        input_core_dims=[["wind_speed"], ["wind_speed"], ["wind_speed"], ["wind_speed"]],
+        vws,
+        vws,
+        pwt,
+        ti,
+        input_core_dims=[
+            ["wind_speed"],
+            ["wind_speed"],
+            ["wind_speed"],
+            ["wind_speed"],
+        ],
         output_core_dims=[["wind_speed"]],
         vectorize=True,
         dask="allowed",
@@ -264,7 +308,9 @@ def apply_turbulence_and_direction_effect(
     )
 
     # Set power to zero outside cut-in and cut-off wind speeds
-    pwt = np.where((vws >= v_cutin.values[..., None]) & (vws <= v_cutoff.values[..., None]), pwt, 0)
+    pwt = np.where(
+        (vws >= v_cutin.values[..., None]) & (vws <= v_cutoff.values[..., None]), pwt, 0
+    )
 
     return pwt
 
@@ -319,9 +365,7 @@ def calculate_rews(
     )  # Veer angle adjustment factor
 
     vi = vws * coeff_shear[..., None] * coeff_veer[..., None]
-    rews = (
-        np.sum((vi**3) * ai[..., None] / total_area[..., None, None], axis=-2)
-    ) ** (
+    rews = (np.sum((vi**3) * ai[..., None] / total_area[..., None, None], axis=-2)) ** (
         1 / 3
     )  # Rotor-equivalent wind speed (m/s)
 
