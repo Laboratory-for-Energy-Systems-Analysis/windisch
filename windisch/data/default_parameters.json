@@ -6149,161 +6149,143 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "246-2000-average capacity factor": {
-        "amount": 0.35,
+    "246-2000-cut-in": {
+        "amount": 3.6,
         "category": "Operation",
         "application": [
-            "onshore"
+            "onshore",
+            "offshore"
         ],
         "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000
+            100
         ],
         "year": 2000,
-        "name": "average capacity factor",
-        "unit": "unitless",
-        "importance": "critical",
+        "name": "cut-in",
+        "unit": "m/s",
+        "importance": "moderate",
         "source": "",
-        "comment": "",
-        "status": "",
+        "comment": "Cut-in wind speed. Source: WindTurbine power curves database.",
+        "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 0.35,
-        "minimum": 0.2,
-        "maximum": 0.45
+        "loc": 3.6,
+        "minimum": 1.5,
+        "maximum": 6.5
     },
-    "247-2010-average capacity factor": {
-        "amount": 0.35,
+    "247-2010-cut-in": {
+        "amount": 3.6,
         "category": "Operation",
         "application": [
-            "onshore"
+            "onshore",
+            "offshore"
         ],
         "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000
+            100
         ],
         "year": 2010,
-        "name": "average capacity factor",
-        "unit": "unitless",
-        "importance": "critical",
+        "name": "cut-in",
+        "unit": "m/s",
+        "importance": "moderate",
         "source": "",
-        "comment": "",
-        "status": "",
+        "comment": "Cut-in wind speed. Source: WindTurbine power curves database.",
+        "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 0.35,
-        "minimum": 0.2,
-        "maximum": 0.45
+        "loc": 3.6,
+        "minimum": 1.5,
+        "maximum": 6.5
     },
-    "248-2020-average capacity factor": {
-        "amount": 0.35,
+    "248-2020-cut-in": {
+        "amount": 3.6,
         "category": "Operation",
         "application": [
-            "onshore"
+            "onshore",
+            "offshore"
         ],
         "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000
+            100
         ],
         "year": 2020,
-        "name": "average capacity factor",
-        "unit": "unitless",
-        "importance": "critical",
+        "name": "cut-in",
+        "unit": "m/s",
+        "importance": "moderate",
         "source": "",
-        "comment": "",
-        "status": "",
+        "comment": "Cut-in wind speed. Source: WindTurbine power curves database.",
+        "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 0.35,
-        "minimum": 0.2,
-        "maximum": 0.45
+        "loc": 3.6,
+        "minimum": 1.5,
+        "maximum": 6.5
     },
-    "249-2030-average capacity factor": {
-        "amount": 0.35,
+    "249-2030-cut-in": {
+        "amount": 3.6,
         "category": "Operation",
         "application": [
-            "onshore"
+            "onshore",
+            "offshore"
         ],
         "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000
+            100
         ],
         "year": 2030,
-        "name": "average capacity factor",
-        "unit": "unitless",
-        "importance": "critical",
+        "name": "cut-in",
+        "unit": "m/s",
+        "importance": "moderate",
         "source": "",
-        "comment": "",
-        "status": "",
+        "comment": "Cut-in wind speed. Source: WindTurbine power curves database.",
+        "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 0.35,
-        "minimum": 0.2,
-        "maximum": 0.45
+        "loc": 3.6,
+        "minimum": 1.5,
+        "maximum": 6.5
     },
-    "250-2040-average capacity factor": {
-        "amount": 0.35,
+    "250-2040-cut-in": {
+        "amount": 3.6,
         "category": "Operation",
         "application": [
-            "onshore"
+            "onshore",
+            "offshore"
         ],
         "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000
+            100
         ],
         "year": 2040,
-        "name": "average capacity factor",
-        "unit": "unitless",
-        "importance": "critical",
+        "name": "cut-in",
+        "unit": "m/s",
+        "importance": "moderate",
         "source": "",
-        "comment": "",
-        "status": "",
+        "comment": "Cut-in wind speed. Source: WindTurbine power curves database.",
+        "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 0.35,
-        "minimum": 0.2,
-        "maximum": 0.45
+        "loc": 3.6,
+        "minimum": 1.5,
+        "maximum": 6.5
     },
-    "251-2050-average capacity factor": {
-        "amount": 0.35,
+    "251-2050-cut-in": {
+        "amount": 3.6,
         "category": "Operation",
         "application": [
-            "onshore"
+            "onshore",
+            "offshore"
         ],
         "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000
+            100
         ],
         "year": 2050,
-        "name": "average capacity factor",
-        "unit": "unitless",
-        "importance": "critical",
+        "name": "cut-in",
+        "unit": "m/s",
+        "importance": "moderate",
         "source": "",
-        "comment": "",
-        "status": "",
+        "comment": "Cut-in wind speed. Source: WindTurbine power curves database.",
+        "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 0.35,
-        "minimum": 0.2,
-        "maximum": 0.45
+        "loc": 3.6,
+        "minimum": 1.5,
+        "maximum": 6.5
     },
     "252-2000-cut-in": {
         "amount": 3.6,
@@ -6313,7 +6295,7 @@
             "offshore"
         ],
         "sizes": [
-            100
+            500
         ],
         "year": 2000,
         "name": "cut-in",
@@ -6336,7 +6318,7 @@
             "offshore"
         ],
         "sizes": [
-            100
+            500
         ],
         "year": 2010,
         "name": "cut-in",
@@ -6359,7 +6341,7 @@
             "offshore"
         ],
         "sizes": [
-            100
+            500
         ],
         "year": 2020,
         "name": "cut-in",
@@ -6382,7 +6364,7 @@
             "offshore"
         ],
         "sizes": [
-            100
+            500
         ],
         "year": 2030,
         "name": "cut-in",
@@ -6405,7 +6387,7 @@
             "offshore"
         ],
         "sizes": [
-            100
+            500
         ],
         "year": 2040,
         "name": "cut-in",
@@ -6428,7 +6410,7 @@
             "offshore"
         ],
         "sizes": [
-            100
+            500
         ],
         "year": 2050,
         "name": "cut-in",
@@ -6444,14 +6426,14 @@
         "maximum": 6.5
     },
     "258-2000-cut-in": {
-        "amount": 3.6,
+        "amount": 3.3,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            500
+            1000
         ],
         "year": 2000,
         "name": "cut-in",
@@ -6462,19 +6444,19 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 3.6,
-        "minimum": 1.5,
-        "maximum": 6.5
+        "loc": 3.3,
+        "minimum": 2,
+        "maximum": 5.5
     },
     "259-2010-cut-in": {
-        "amount": 3.6,
+        "amount": 3.3,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            500
+            1000
         ],
         "year": 2010,
         "name": "cut-in",
@@ -6485,19 +6467,19 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 3.6,
-        "minimum": 1.5,
-        "maximum": 6.5
+        "loc": 3.3,
+        "minimum": 2,
+        "maximum": 5.5
     },
     "260-2020-cut-in": {
-        "amount": 3.6,
+        "amount": 3.3,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            500
+            1000
         ],
         "year": 2020,
         "name": "cut-in",
@@ -6508,19 +6490,19 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 3.6,
-        "minimum": 1.5,
-        "maximum": 6.5
+        "loc": 3.3,
+        "minimum": 2,
+        "maximum": 5.5
     },
     "261-2030-cut-in": {
-        "amount": 3.6,
+        "amount": 3.3,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            500
+            1000
         ],
         "year": 2030,
         "name": "cut-in",
@@ -6531,19 +6513,19 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 3.6,
-        "minimum": 1.5,
-        "maximum": 6.5
+        "loc": 3.3,
+        "minimum": 2,
+        "maximum": 5.5
     },
     "262-2040-cut-in": {
-        "amount": 3.6,
+        "amount": 3.3,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            500
+            1000
         ],
         "year": 2040,
         "name": "cut-in",
@@ -6554,19 +6536,19 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 3.6,
-        "minimum": 1.5,
-        "maximum": 6.5
+        "loc": 3.3,
+        "minimum": 2,
+        "maximum": 5.5
     },
     "263-2050-cut-in": {
-        "amount": 3.6,
+        "amount": 3.3,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            500
+            1000
         ],
         "year": 2050,
         "name": "cut-in",
@@ -6577,19 +6559,19 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 3.6,
-        "minimum": 1.5,
-        "maximum": 6.5
+        "loc": 3.3,
+        "minimum": 2,
+        "maximum": 5.5
     },
     "264-2000-cut-in": {
-        "amount": 3.3,
+        "amount": 3.1,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            1000
+            3000
         ],
         "year": 2000,
         "name": "cut-in",
@@ -6600,19 +6582,19 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 3.3,
+        "loc": 3.1,
         "minimum": 2,
-        "maximum": 5.5
+        "maximum": 5
     },
     "265-2010-cut-in": {
-        "amount": 3.3,
+        "amount": 3.1,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            1000
+            3000
         ],
         "year": 2010,
         "name": "cut-in",
@@ -6623,19 +6605,19 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 3.3,
+        "loc": 3.1,
         "minimum": 2,
-        "maximum": 5.5
+        "maximum": 5
     },
     "266-2020-cut-in": {
-        "amount": 3.3,
+        "amount": 3.1,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            1000
+            3000
         ],
         "year": 2020,
         "name": "cut-in",
@@ -6646,19 +6628,19 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 3.3,
+        "loc": 3.1,
         "minimum": 2,
-        "maximum": 5.5
+        "maximum": 5
     },
     "267-2030-cut-in": {
-        "amount": 3.3,
+        "amount": 3.1,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            1000
+            3000
         ],
         "year": 2030,
         "name": "cut-in",
@@ -6669,19 +6651,19 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 3.3,
+        "loc": 3.1,
         "minimum": 2,
-        "maximum": 5.5
+        "maximum": 5
     },
     "268-2040-cut-in": {
-        "amount": 3.3,
+        "amount": 3.1,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            1000
+            3000
         ],
         "year": 2040,
         "name": "cut-in",
@@ -6692,19 +6674,19 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 3.3,
+        "loc": 3.1,
         "minimum": 2,
-        "maximum": 5.5
+        "maximum": 5
     },
     "269-2050-cut-in": {
-        "amount": 3.3,
+        "amount": 3.1,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            1000
+            3000
         ],
         "year": 2050,
         "name": "cut-in",
@@ -6715,9 +6697,9 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 3.3,
+        "loc": 3.1,
         "minimum": 2,
-        "maximum": 5.5
+        "maximum": 5
     },
     "270-2000-cut-in": {
         "amount": 3.1,
@@ -6727,7 +6709,7 @@
             "offshore"
         ],
         "sizes": [
-            3000
+            8000
         ],
         "year": 2000,
         "name": "cut-in",
@@ -6739,8 +6721,8 @@
         "kind": "distribution",
         "uncertainty_type": 5,
         "loc": 3.1,
-        "minimum": 2,
-        "maximum": 5
+        "minimum": 2.5,
+        "maximum": 4
     },
     "271-2010-cut-in": {
         "amount": 3.1,
@@ -6750,7 +6732,7 @@
             "offshore"
         ],
         "sizes": [
-            3000
+            8000
         ],
         "year": 2010,
         "name": "cut-in",
@@ -6762,8 +6744,8 @@
         "kind": "distribution",
         "uncertainty_type": 5,
         "loc": 3.1,
-        "minimum": 2,
-        "maximum": 5
+        "minimum": 2.5,
+        "maximum": 4
     },
     "272-2020-cut-in": {
         "amount": 3.1,
@@ -6773,7 +6755,7 @@
             "offshore"
         ],
         "sizes": [
-            3000
+            8000
         ],
         "year": 2020,
         "name": "cut-in",
@@ -6785,8 +6767,8 @@
         "kind": "distribution",
         "uncertainty_type": 5,
         "loc": 3.1,
-        "minimum": 2,
-        "maximum": 5
+        "minimum": 2.5,
+        "maximum": 4
     },
     "273-2030-cut-in": {
         "amount": 3.1,
@@ -6796,7 +6778,7 @@
             "offshore"
         ],
         "sizes": [
-            3000
+            8000
         ],
         "year": 2030,
         "name": "cut-in",
@@ -6808,8 +6790,8 @@
         "kind": "distribution",
         "uncertainty_type": 5,
         "loc": 3.1,
-        "minimum": 2,
-        "maximum": 5
+        "minimum": 2.5,
+        "maximum": 4
     },
     "274-2040-cut-in": {
         "amount": 3.1,
@@ -6819,7 +6801,7 @@
             "offshore"
         ],
         "sizes": [
-            3000
+            8000
         ],
         "year": 2040,
         "name": "cut-in",
@@ -6831,8 +6813,8 @@
         "kind": "distribution",
         "uncertainty_type": 5,
         "loc": 3.1,
-        "minimum": 2,
-        "maximum": 5
+        "minimum": 2.5,
+        "maximum": 4
     },
     "275-2050-cut-in": {
         "amount": 3.1,
@@ -6842,7 +6824,7 @@
             "offshore"
         ],
         "sizes": [
-            3000
+            8000
         ],
         "year": 2050,
         "name": "cut-in",
@@ -6854,21 +6836,21 @@
         "kind": "distribution",
         "uncertainty_type": 5,
         "loc": 3.1,
-        "minimum": 2,
-        "maximum": 5
+        "minimum": 2.5,
+        "maximum": 4
     },
-    "276-2000-cut-in": {
-        "amount": 3.1,
+    "276-2000-cut-out": {
+        "amount": 23.6698717948718,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            8000
+            100
         ],
         "year": 2000,
-        "name": "cut-in",
+        "name": "cut-out",
         "unit": "m/s",
         "importance": "moderate",
         "source": "",
@@ -6876,22 +6858,22 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 3.1,
-        "minimum": 2.5,
-        "maximum": 4
+        "loc": 23.6698717948718,
+        "minimum": 14,
+        "maximum": 30
     },
-    "277-2010-cut-in": {
-        "amount": 3.1,
+    "277-2010-cut-out": {
+        "amount": 23.6698717948718,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            8000
+            100
         ],
         "year": 2010,
-        "name": "cut-in",
+        "name": "cut-out",
         "unit": "m/s",
         "importance": "moderate",
         "source": "",
@@ -6899,22 +6881,22 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 3.1,
-        "minimum": 2.5,
-        "maximum": 4
+        "loc": 23.6698717948718,
+        "minimum": 14,
+        "maximum": 30
     },
-    "278-2020-cut-in": {
-        "amount": 3.1,
+    "278-2020-cut-out": {
+        "amount": 23.6698717948718,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            8000
+            100
         ],
         "year": 2020,
-        "name": "cut-in",
+        "name": "cut-out",
         "unit": "m/s",
         "importance": "moderate",
         "source": "",
@@ -6922,22 +6904,22 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 3.1,
-        "minimum": 2.5,
-        "maximum": 4
+        "loc": 23.6698717948718,
+        "minimum": 14,
+        "maximum": 30
     },
-    "279-2030-cut-in": {
-        "amount": 3.1,
+    "279-2030-cut-out": {
+        "amount": 23.6698717948718,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            8000
+            100
         ],
         "year": 2030,
-        "name": "cut-in",
+        "name": "cut-out",
         "unit": "m/s",
         "importance": "moderate",
         "source": "",
@@ -6945,22 +6927,22 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 3.1,
-        "minimum": 2.5,
-        "maximum": 4
+        "loc": 23.6698717948718,
+        "minimum": 14,
+        "maximum": 30
     },
-    "280-2040-cut-in": {
-        "amount": 3.1,
+    "280-2040-cut-out": {
+        "amount": 23.6698717948718,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            8000
+            100
         ],
         "year": 2040,
-        "name": "cut-in",
+        "name": "cut-out",
         "unit": "m/s",
         "importance": "moderate",
         "source": "",
@@ -6968,22 +6950,22 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 3.1,
-        "minimum": 2.5,
-        "maximum": 4
+        "loc": 23.6698717948718,
+        "minimum": 14,
+        "maximum": 30
     },
-    "281-2050-cut-in": {
-        "amount": 3.1,
+    "281-2050-cut-out": {
+        "amount": 23.6698717948718,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            8000
+            100
         ],
         "year": 2050,
-        "name": "cut-in",
+        "name": "cut-out",
         "unit": "m/s",
         "importance": "moderate",
         "source": "",
@@ -6991,9 +6973,9 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 3.1,
-        "minimum": 2.5,
-        "maximum": 4
+        "loc": 23.6698717948718,
+        "minimum": 14,
+        "maximum": 30
     },
     "282-2000-cut-out": {
         "amount": 23.6698717948718,
@@ -7003,7 +6985,7 @@
             "offshore"
         ],
         "sizes": [
-            100
+            500
         ],
         "year": 2000,
         "name": "cut-out",
@@ -7026,7 +7008,7 @@
             "offshore"
         ],
         "sizes": [
-            100
+            500
         ],
         "year": 2010,
         "name": "cut-out",
@@ -7049,7 +7031,7 @@
             "offshore"
         ],
         "sizes": [
-            100
+            500
         ],
         "year": 2020,
         "name": "cut-out",
@@ -7072,7 +7054,7 @@
             "offshore"
         ],
         "sizes": [
-            100
+            500
         ],
         "year": 2030,
         "name": "cut-out",
@@ -7095,7 +7077,7 @@
             "offshore"
         ],
         "sizes": [
-            100
+            500
         ],
         "year": 2040,
         "name": "cut-out",
@@ -7118,7 +7100,7 @@
             "offshore"
         ],
         "sizes": [
-            100
+            500
         ],
         "year": 2050,
         "name": "cut-out",
@@ -7134,144 +7116,6 @@
         "maximum": 30
     },
     "288-2000-cut-out": {
-        "amount": 23.6698717948718,
-        "category": "Operation",
-        "application": [
-            "onshore",
-            "offshore"
-        ],
-        "sizes": [
-            500
-        ],
-        "year": 2000,
-        "name": "cut-out",
-        "unit": "m/s",
-        "importance": "moderate",
-        "source": "",
-        "comment": "Cut-in wind speed. Source: WindTurbine power curves database.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 23.6698717948718,
-        "minimum": 14,
-        "maximum": 30
-    },
-    "289-2010-cut-out": {
-        "amount": 23.6698717948718,
-        "category": "Operation",
-        "application": [
-            "onshore",
-            "offshore"
-        ],
-        "sizes": [
-            500
-        ],
-        "year": 2010,
-        "name": "cut-out",
-        "unit": "m/s",
-        "importance": "moderate",
-        "source": "",
-        "comment": "Cut-in wind speed. Source: WindTurbine power curves database.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 23.6698717948718,
-        "minimum": 14,
-        "maximum": 30
-    },
-    "290-2020-cut-out": {
-        "amount": 23.6698717948718,
-        "category": "Operation",
-        "application": [
-            "onshore",
-            "offshore"
-        ],
-        "sizes": [
-            500
-        ],
-        "year": 2020,
-        "name": "cut-out",
-        "unit": "m/s",
-        "importance": "moderate",
-        "source": "",
-        "comment": "Cut-in wind speed. Source: WindTurbine power curves database.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 23.6698717948718,
-        "minimum": 14,
-        "maximum": 30
-    },
-    "291-2030-cut-out": {
-        "amount": 23.6698717948718,
-        "category": "Operation",
-        "application": [
-            "onshore",
-            "offshore"
-        ],
-        "sizes": [
-            500
-        ],
-        "year": 2030,
-        "name": "cut-out",
-        "unit": "m/s",
-        "importance": "moderate",
-        "source": "",
-        "comment": "Cut-in wind speed. Source: WindTurbine power curves database.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 23.6698717948718,
-        "minimum": 14,
-        "maximum": 30
-    },
-    "292-2040-cut-out": {
-        "amount": 23.6698717948718,
-        "category": "Operation",
-        "application": [
-            "onshore",
-            "offshore"
-        ],
-        "sizes": [
-            500
-        ],
-        "year": 2040,
-        "name": "cut-out",
-        "unit": "m/s",
-        "importance": "moderate",
-        "source": "",
-        "comment": "Cut-in wind speed. Source: WindTurbine power curves database.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 23.6698717948718,
-        "minimum": 14,
-        "maximum": 30
-    },
-    "293-2050-cut-out": {
-        "amount": 23.6698717948718,
-        "category": "Operation",
-        "application": [
-            "onshore",
-            "offshore"
-        ],
-        "sizes": [
-            500
-        ],
-        "year": 2050,
-        "name": "cut-out",
-        "unit": "m/s",
-        "importance": "moderate",
-        "source": "",
-        "comment": "Cut-in wind speed. Source: WindTurbine power curves database.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 23.6698717948718,
-        "minimum": 14,
-        "maximum": 30
-    },
-    "294-2000-cut-out": {
         "amount": 23.675,
         "category": "Operation",
         "application": [
@@ -7292,17 +7136,155 @@
         "uncertainty_type": 5,
         "loc": 23.675,
         "minimum": 15,
+        "maximum": 25
+    },
+    "289-2010-cut-out": {
+        "amount": 23.675,
+        "category": "Operation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            1000
+        ],
+        "year": 2010,
+        "name": "cut-out",
+        "unit": "m/s",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Cut-in wind speed. Source: WindTurbine power curves database.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 23.675,
+        "minimum": 15,
+        "maximum": 25
+    },
+    "290-2020-cut-out": {
+        "amount": 23.675,
+        "category": "Operation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            1000
+        ],
+        "year": 2020,
+        "name": "cut-out",
+        "unit": "m/s",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Cut-in wind speed. Source: WindTurbine power curves database.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 23.675,
+        "minimum": 15,
+        "maximum": 25
+    },
+    "291-2030-cut-out": {
+        "amount": 23.675,
+        "category": "Operation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            1000
+        ],
+        "year": 2030,
+        "name": "cut-out",
+        "unit": "m/s",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Cut-in wind speed. Source: WindTurbine power curves database.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 23.675,
+        "minimum": 15,
+        "maximum": 25
+    },
+    "292-2040-cut-out": {
+        "amount": 23.675,
+        "category": "Operation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            1000
+        ],
+        "year": 2040,
+        "name": "cut-out",
+        "unit": "m/s",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Cut-in wind speed. Source: WindTurbine power curves database.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 23.675,
+        "minimum": 15,
+        "maximum": 25
+    },
+    "293-2050-cut-out": {
+        "amount": 23.675,
+        "category": "Operation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            1000
+        ],
+        "year": 2050,
+        "name": "cut-out",
+        "unit": "m/s",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Cut-in wind speed. Source: WindTurbine power curves database.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 23.675,
+        "minimum": 15,
+        "maximum": 25
+    },
+    "294-2000-cut-out": {
+        "amount": 23.79,
+        "category": "Operation",
+        "application": [
+            "onshore",
+            "offshore"
+        ],
+        "sizes": [
+            3000
+        ],
+        "year": 2000,
+        "name": "cut-out",
+        "unit": "m/s",
+        "importance": "moderate",
+        "source": "",
+        "comment": "Cut-in wind speed. Source: WindTurbine power curves database.",
+        "status": "acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 23.79,
+        "minimum": 20,
         "maximum": 25
     },
     "295-2010-cut-out": {
-        "amount": 23.675,
+        "amount": 23.79,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            1000
+            3000
         ],
         "year": 2010,
         "name": "cut-out",
@@ -7313,19 +7295,19 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 23.675,
-        "minimum": 15,
+        "loc": 23.79,
+        "minimum": 20,
         "maximum": 25
     },
     "296-2020-cut-out": {
-        "amount": 23.675,
+        "amount": 23.79,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            1000
+            3000
         ],
         "year": 2020,
         "name": "cut-out",
@@ -7336,19 +7318,19 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 23.675,
-        "minimum": 15,
+        "loc": 23.79,
+        "minimum": 20,
         "maximum": 25
     },
     "297-2030-cut-out": {
-        "amount": 23.675,
+        "amount": 23.79,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            1000
+            3000
         ],
         "year": 2030,
         "name": "cut-out",
@@ -7359,19 +7341,19 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 23.675,
-        "minimum": 15,
+        "loc": 23.79,
+        "minimum": 20,
         "maximum": 25
     },
     "298-2040-cut-out": {
-        "amount": 23.675,
+        "amount": 23.79,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            1000
+            3000
         ],
         "year": 2040,
         "name": "cut-out",
@@ -7382,19 +7364,19 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 23.675,
-        "minimum": 15,
+        "loc": 23.79,
+        "minimum": 20,
         "maximum": 25
     },
     "299-2050-cut-out": {
-        "amount": 23.675,
+        "amount": 23.79,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            1000
+            3000
         ],
         "year": 2050,
         "name": "cut-out",
@@ -7405,19 +7387,19 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 23.675,
-        "minimum": 15,
+        "loc": 23.79,
+        "minimum": 20,
         "maximum": 25
     },
     "300-2000-cut-out": {
-        "amount": 23.79,
+        "amount": 24.875,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            3000
+            8000
         ],
         "year": 2000,
         "name": "cut-out",
@@ -7428,19 +7410,19 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 23.79,
-        "minimum": 20,
+        "loc": 24.875,
+        "minimum": 24,
         "maximum": 25
     },
     "301-2010-cut-out": {
-        "amount": 23.79,
+        "amount": 24.875,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            3000
+            8000
         ],
         "year": 2010,
         "name": "cut-out",
@@ -7451,19 +7433,19 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 23.79,
-        "minimum": 20,
+        "loc": 24.875,
+        "minimum": 24,
         "maximum": 25
     },
     "302-2020-cut-out": {
-        "amount": 23.79,
+        "amount": 24.875,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            3000
+            8000
         ],
         "year": 2020,
         "name": "cut-out",
@@ -7474,19 +7456,19 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 23.79,
-        "minimum": 20,
+        "loc": 24.875,
+        "minimum": 24,
         "maximum": 25
     },
     "303-2030-cut-out": {
-        "amount": 23.79,
+        "amount": 24.875,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            3000
+            8000
         ],
         "year": 2030,
         "name": "cut-out",
@@ -7497,19 +7479,19 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 23.79,
-        "minimum": 20,
+        "loc": 24.875,
+        "minimum": 24,
         "maximum": 25
     },
     "304-2040-cut-out": {
-        "amount": 23.79,
+        "amount": 24.875,
         "category": "Operation",
         "application": [
             "onshore",
             "offshore"
         ],
         "sizes": [
-            3000
+            8000
         ],
         "year": 2040,
         "name": "cut-out",
@@ -7520,149 +7502,11 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 23.79,
-        "minimum": 20,
+        "loc": 24.875,
+        "minimum": 24,
         "maximum": 25
     },
     "305-2050-cut-out": {
-        "amount": 23.79,
-        "category": "Operation",
-        "application": [
-            "onshore",
-            "offshore"
-        ],
-        "sizes": [
-            3000
-        ],
-        "year": 2050,
-        "name": "cut-out",
-        "unit": "m/s",
-        "importance": "moderate",
-        "source": "",
-        "comment": "Cut-in wind speed. Source: WindTurbine power curves database.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 23.79,
-        "minimum": 20,
-        "maximum": 25
-    },
-    "306-2000-cut-out": {
-        "amount": 24.875,
-        "category": "Operation",
-        "application": [
-            "onshore",
-            "offshore"
-        ],
-        "sizes": [
-            8000
-        ],
-        "year": 2000,
-        "name": "cut-out",
-        "unit": "m/s",
-        "importance": "moderate",
-        "source": "",
-        "comment": "Cut-in wind speed. Source: WindTurbine power curves database.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 24.875,
-        "minimum": 24,
-        "maximum": 25
-    },
-    "307-2010-cut-out": {
-        "amount": 24.875,
-        "category": "Operation",
-        "application": [
-            "onshore",
-            "offshore"
-        ],
-        "sizes": [
-            8000
-        ],
-        "year": 2010,
-        "name": "cut-out",
-        "unit": "m/s",
-        "importance": "moderate",
-        "source": "",
-        "comment": "Cut-in wind speed. Source: WindTurbine power curves database.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 24.875,
-        "minimum": 24,
-        "maximum": 25
-    },
-    "308-2020-cut-out": {
-        "amount": 24.875,
-        "category": "Operation",
-        "application": [
-            "onshore",
-            "offshore"
-        ],
-        "sizes": [
-            8000
-        ],
-        "year": 2020,
-        "name": "cut-out",
-        "unit": "m/s",
-        "importance": "moderate",
-        "source": "",
-        "comment": "Cut-in wind speed. Source: WindTurbine power curves database.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 24.875,
-        "minimum": 24,
-        "maximum": 25
-    },
-    "309-2030-cut-out": {
-        "amount": 24.875,
-        "category": "Operation",
-        "application": [
-            "onshore",
-            "offshore"
-        ],
-        "sizes": [
-            8000
-        ],
-        "year": 2030,
-        "name": "cut-out",
-        "unit": "m/s",
-        "importance": "moderate",
-        "source": "",
-        "comment": "Cut-in wind speed. Source: WindTurbine power curves database.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 24.875,
-        "minimum": 24,
-        "maximum": 25
-    },
-    "310-2040-cut-out": {
-        "amount": 24.875,
-        "category": "Operation",
-        "application": [
-            "onshore",
-            "offshore"
-        ],
-        "sizes": [
-            8000
-        ],
-        "year": 2040,
-        "name": "cut-out",
-        "unit": "m/s",
-        "importance": "moderate",
-        "source": "",
-        "comment": "Cut-in wind speed. Source: WindTurbine power curves database.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 24.875,
-        "minimum": 24,
-        "maximum": 25
-    },
-    "311-2050-cut-out": {
         "amount": 24.875,
         "category": "Operation",
         "application": [

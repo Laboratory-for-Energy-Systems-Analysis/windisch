@@ -6,8 +6,10 @@ and calculates dimensions and mass attributes.
 from typing import List, Tuple, Union
 
 import numpy as np
+import xarray as xr
 
-from .power_curve import GenericWindTurbinePowerCurve
+from windisch.power_curve import calculate_generic_power_curve
+from .wind_speed import fetch_wind_speed
 
 # material densities, in kg/m3
 COPPER_DENSITY = 8960
@@ -298,12 +300,37 @@ class WindTurbineModel:
 
     :ivar array: multidimensional numpy-like array that contains parameters' value(s)
     :vartype array: xarray.DataArray
+    :ivar country: Country where the wind turbines are located
+    :vartype country: str
+    :ivar location: Location of the wind turbines
+    :vartype location: Tuple[float, float]
 
     """
 
-    def __init__(self, array):
-        self.__cache = None
+    def __init__(
+            self,
+            array: xr.DataArray,
+            country: str = None,
+            location: Tuple[float, float] = None,
+    ):
+        self.terrain_vars = None
         self.array = array
+        self.power_curve = None
+        self.__cache = None
+        self.country = None
+        self.location = location or None
+
+        if self.location:
+            self.__fetch_terrain_variables()
+            if self.terrain_vars["LANDMASK"].max() == 1:
+                print("Onshore wind turbines")
+                if "offshore" in self.array.coords["application"]:
+                    self.array.loc[dict(application="offshore")] = 0
+            else:
+                print("Offshore wind turbines")
+                if "onshore" in self.array.coords["application"]:
+                    self.array.loc[dict(application="onshore")] = 0
+
 
     def __getitem__(self, key: Union[str, List[str]]):
         """
@@ -333,7 +360,8 @@ class WindTurbineModel:
 
     def set_all(self):
         """
-        This method runs a series of methods to size the wind turbines, evaluate material requirements, etc.
+        This method runs a series of methods to size the wind turbines,
+        evaluate material requirements, etc.
 
         :returns: Does not return anything. Modifies ``self.array`` in place.
 
@@ -361,24 +389,74 @@ class WindTurbineModel:
             ]
         ].sum(dim="parameter")
 
-        # we remove wind turbines that are unlikely to exist
-        self.array.loc[
-            dict(
-                size=[
-                    s
-                    for s in self.array.coords["size"].values
-                    if s in ["100kW", "500kW"]
-                ],
-                application="offshore",
-            )
-        ] = 0
+        # if location is given, fetch wind speeds and generate power curve
+        if self.location:
+            self.__fetch_power_curves()
+            self.__calculate_electricity_production()
+            self.__calculate_average_load_factor()
+        else:
+            # otherwise, fetch country-average load factors
+            if self.country:
+                pass
+                #self.__fetch_load_factor()
+        #self.__calculate_lifetime_electricity_production()
 
-        # we get the power curve
-        self.power_curve = GenericWindTurbinePowerCurve(
-            Vws=None,
-            Pnom=self["power"],
-            Drotor=self["rotor diameter"],
+    def __fetch_terrain_variables(self):
+        """
+        Fetch wind speeds and directions, turbulent kinetic energy,
+        land mask, and air density at the location of the wind turbines.
+        Values are fetched for heights of 50 and 150m.
+        :return:
+        """
+        terrain_vars = fetch_wind_speed(
+            latitude=self.location[0],
+            longitude=self.location[1],
         )
+        # we adjust values to the heights of the wind tubrines
+        self.terrain_vars = terrain_vars.interp(height=self["tower height"])
+
+        # for height inferior to 50 m, we fetch the value for 50 m
+        self.terrain_vars = self.terrain_vars.fillna(terrain_vars.sel(height=50))
+
+    def __fetch_power_curves(self):
+        # we get the power curve
+        power_curve = calculate_generic_power_curve(
+            vws=np.arange(0, 31, 1),
+            p_nom=self["power"],
+            d_rotor=self["rotor diameter"],
+            zhub=self["tower height"],
+            tke=self.terrain_vars[["TKE", "WS"]],
+            v_cutin=self["cut-in"],
+            v_cutoff=self["cut-out"],
+            air_density=self.terrain_vars["RHO"],
+        )
+
+        self.power_curve = xr.DataArray(
+            data=power_curve,
+            dims=[
+                "size",
+                "application",
+                "year",
+                "value",
+                "wind speed"
+            ],
+            coords={
+                "size": self.array.coords["size"],
+                "application": self.array.coords["application"],
+                "year": self.array.coords["year"],
+                "value": self.array.coords["value"],
+                "wind speed": np.arange(0, 31, 1)
+            },
+        )
+
+    def __calculate_electricity_production(self):
+        # we calculate the electricity production
+        self.electricity_production = self.power_curve.interp({"wind speed": self.terrain_vars["WS"]}, method="linear")
+        self["lifetime electricity production"] = self.electricity_production.sum(dim="time") * self["lifetime"]
+
+    def __calculate_average_load_factor(self):
+        # we calculate the average load factor
+        self["average load factor"] = self.electricity_production.sum(dim="time") / (8760 * self["power"])
 
     def __set_size_rotor(self):
         """
