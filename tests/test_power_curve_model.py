@@ -1,11 +1,13 @@
 import unittest
+
 import numpy as np
+
 from windisch.power_curve import (
-    calculate_cp,
-    calculate_raw_power_curve,
     apply_turbulence_effect,
-    calculate_rews,
+    calculate_cp,
     calculate_generic_power_curve,
+    calculate_raw_power_curve,
+    calculate_rews,
 )
 
 
@@ -29,13 +31,17 @@ class TestWindTurbineModel(unittest.TestCase):
         )
         self.assertEqual(power_curve.shape, vws.shape)
         self.assertTrue((power_curve >= 0).all())
-        self.assertTrue((power_curve <= p_nom).all())  # Power should not exceed nominal power
+        self.assertTrue(
+            (power_curve <= p_nom).all()
+        )  # Power should not exceed nominal power
 
     def test_apply_turbulence_effect(self):
         vws = np.array([5, 10, 15, 20])
         pwt = np.array([50, 200, 500, 1000])
         ti = 0.1  # Turbulence intensity
-        pwt_ti = apply_turbulence_effect(vws=vws, pwt=pwt, ti=ti, v_cutin=3, v_cutoff=25)
+        pwt_ti = apply_turbulence_effect(
+            vws=vws, pwt=pwt, ti=ti, v_cutin=3, v_cutoff=25
+        )
         self.assertEqual(pwt_ti.shape, vws.shape)
         self.assertTrue((pwt_ti >= 0).all())
 
@@ -45,7 +51,9 @@ class TestWindTurbineModel(unittest.TestCase):
         d_rotor = 126  # Rotor diameter in meters
         shear = 0.2
         veer = 5  # Wind veer angle in degrees
-        rews = calculate_rews(vws=vws, zhub=zhub, d_rotor=d_rotor, shear=shear, veer=veer)
+        rews = calculate_rews(
+            vws=vws, zhub=zhub, d_rotor=d_rotor, shear=shear, veer=veer
+        )
         self.assertEqual(rews.shape, vws.shape)
         self.assertTrue((rews > 0).all())
 
