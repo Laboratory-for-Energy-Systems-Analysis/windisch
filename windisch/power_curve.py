@@ -170,7 +170,7 @@ def calculate_raw_power_curve(
     # we will use the average value
     pin = (
         0.5
-        * air_density.mean(dim="time").values
+        * air_density.mean().values
         * a_rotor.values[..., None]
         * (vws**3)
         / 1000

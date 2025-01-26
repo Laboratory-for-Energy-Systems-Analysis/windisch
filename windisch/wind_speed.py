@@ -61,10 +61,19 @@ def fetch_wind_speed(latitude: float, longitude: float) -> xr.DataArray:
                 # the dataset has data points every 30 min
                 # resample it to every hour
                 ds = ds.resample(time="1h").mean()
-                # fill-in NaN values with zeroes
-                ds = ds.fillna(0)
+                # average over the years to get 8760 representative hours
+                # Convert time to 'hour of the year' (0 to 8759)
+                hour_of_year = (ds['time'].dt.dayofyear - 1) * 24 + ds['time'].dt.hour
 
-                return ds
+                # Group by hour_of_year and calculate the mean
+                representative_hours = ds.groupby(hour_of_year).mean(dim='time')
+
+                # Add a time coordinate for the 8760 hours (optional, for clarity)
+                representative_hours['time'] = xr.cftime_range(start="2000-01-01", periods=8760, freq="h")
+                representative_hours = representative_hours.set_coords('time')
+                representative_hours = representative_hours.fillna(0)
+
+                return representative_hours
 
             else:
                 raise Exception(

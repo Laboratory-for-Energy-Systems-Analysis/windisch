@@ -449,12 +449,12 @@ class WindTurbineModel:
             {"wind speed": self.terrain_vars["WS"]}, method="linear"
         )
         self["lifetime electricity production"] = (
-            self.electricity_production.sum(dim="time") * self["lifetime"]
+            self.electricity_production.sum(dim="group") * self["lifetime"]
         )
 
     def __calculate_average_load_factor(self):
         # we calculate the average load factor
-        self["average load factor"] = self.electricity_production.sum(dim="time") / (
+        self["average load factor"] = self.electricity_production.sum(dim="group") / (
             8760 * self["power"]
         )
 
