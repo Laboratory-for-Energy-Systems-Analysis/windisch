@@ -6,9 +6,11 @@ and calculates dimensions and mass attributes.
 from typing import List, Tuple, Union
 
 import numpy as np
+import pandas as pd
 import xarray as xr
 
 from windisch.power_curve import calculate_generic_power_curve
+from . import DATA_DIR
 
 from .wind_speed import fetch_terrain_variables, fetch_wind_speed
 from .sea_depth import get_sea_depth
@@ -410,10 +412,22 @@ class WindTurbineModel:
         else:
             # otherwise, fetch country-average load factors
             if self.country:
-                pass
-                # self.__fetch_load_factor()
-        # self.__calculate_lifetime_electricity_production()
+                self.__fetch_country_load_factor()
+            else:
+                raise ValueError("Location or country must be provided")
 
+    def __fetch_country_load_factor(self):
+
+        df = pd.read_csv(DATA_DIR / "wind_capacity_factors.csv")
+        if self.country in df.index:
+            if "onshore" in self.array.coords["application"].values:
+                self.array.loc[dict(application="onshore", parameter="average load factor")] = df.loc[self.country, "onshore"].values
+            if "offshore" in self.array.coords["application"].values:
+                if df.loc[self.country, "offshore"].values > 0:
+                    self.array.loc[dict(application="offshore", parameter="average load factor")] = df.loc[
+                        self.country, "offshore"].values
+        else:
+            ValueError(f"Country {self.country} not found in the database")
 
     def __fetch_sea_depth(self):
 
