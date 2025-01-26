@@ -505,17 +505,27 @@ class WindTurbineModel:
 
     def __calculate_electricity_production(self):
         # we calculate the electricity production
-        self.electricity_production = self.power_curve.interp(
-            {"wind speed": self.terrain_vars["WS"]}, method="linear"
-        )
+        if self.power_curve:
+            self.annual_electricity_production = self.power_curve.interp(
+                {"wind speed": self.terrain_vars["WS"]}, method="linear"
+            )
 
-        self["lifetime electricity production"] = (
-            self.electricity_production.sum(dim="time") * self["lifetime"]
-        )
+            self["lifetime electricity production"] = (
+                    self.annual_electricity_production.sum(dim="time") * self["lifetime"]
+            )
+        else:
+            if self.country:
+                self["lifetime electricity production"] = (
+                    self["average capacity factor"]
+                    * self["power"]
+                    * 24
+                    * 365
+                    * self["lifetime"]
+                )
 
     def __calculate_average_load_factor(self):
         # we calculate the average load factor
-        self["average load factor"] = self.electricity_production.sum(dim="time") / (
+        self["average load factor"] = self.annual_electricity_production.sum(dim="time") / (
             8760 * self["power"]
         )
 
