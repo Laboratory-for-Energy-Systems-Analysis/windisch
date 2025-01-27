@@ -4,7 +4,7 @@ import pandas as pd
 from numpy.f2py.crackfortran import skipfuncs
 
 # Loading the data
-file_path = "Power_Curves.csv"
+file_path = "Power_curves.csv"
 data = pd.read_csv(
     file_path,
     header=1,
