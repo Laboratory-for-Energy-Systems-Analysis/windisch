@@ -6,11 +6,14 @@ and calculates dimensions and mass attributes.
 from typing import List, Tuple, Union
 
 import numpy as np
+import pandas as pd
 import xarray as xr
 
 from windisch.power_curve import calculate_generic_power_curve
+from . import DATA_DIR
 
-from .wind_speed import fetch_wind_speed
+from .wind_speed import fetch_terrain_variables, fetch_wind_speed
+from .sea_depth import get_sea_depth
 
 # material densities, in kg/m3
 COPPER_DENSITY = 8960
@@ -313,24 +316,36 @@ class WindTurbineModel:
         array: xr.DataArray,
         country: str = None,
         location: Tuple[float, float] = None,
+        wind_data: xr.DataArray = None,
+        sea_depth_data: xr.DataArray = None,
+        power_curve_model="Dai et al. 2016"
     ):
         self.terrain_vars = None
         self.array = array
         self.power_curve = None
         self.__cache = None
-        self.country = None
+        self.country = country
         self.location = location or None
+        self.wind_data = wind_data
+        self.power_curve_model = power_curve_model
+        self.sea_depth_data = sea_depth_data
 
         if self.location:
-            self.__fetch_terrain_variables()
+            self.__fetch_terrain_variables(fetch_wind_data=True if not self.wind_data else False)
+
+            if self.wind_data:
+                self.__fetch_wind_speed()
+
             if self.terrain_vars["LANDMASK"].max() == 1:
                 print("Onshore wind turbines")
                 if "offshore" in self.array.coords["application"]:
-                    self.array.loc[dict(application="offshore")] = 0
+                    self.array.loc[dict(application="offshore", parameter="power")] = 0
             else:
                 print("Offshore wind turbines")
                 if "onshore" in self.array.coords["application"]:
-                    self.array.loc[dict(application="onshore")] = 0
+                    self.array.loc[dict(application="onshore", parameter="power")] = 0
+                if self.sea_depth_data:
+                    self.__fetch_sea_depth()
 
     def __getitem__(self, key: Union[str, List[str]]):
         """
@@ -397,28 +412,76 @@ class WindTurbineModel:
         else:
             # otherwise, fetch country-average load factors
             if self.country:
-                pass
-                # self.__fetch_load_factor()
-        # self.__calculate_lifetime_electricity_production()
+                self.__fetch_country_load_factor()
+                self.__calculate_electricity_production()
+            else:
+                raise ValueError("Location or country must be provided")
 
-    def __fetch_terrain_variables(self):
+    def __fetch_country_load_factor(self):
+
+        df = pd.read_csv(DATA_DIR / "wind_capacity_factors.csv", index_col=0)
+
+        if self.country in df.index:
+            if "onshore" in self.array.coords["application"].values:
+                self.array.loc[dict(application="onshore", parameter="average load factor")] = df.loc[self.country, "onshore"]
+
+            if "offshore" in self.array.coords["application"].values:
+                if df.loc[self.country, "offshore"] > 0:
+                    self.array.loc[dict(application="offshore", parameter="average load factor")] = df.loc[
+                        self.country, "offshore"]
+
+        else:
+            ValueError(f"Country {self.country} not found in the database")
+
+    def __fetch_sea_depth(self):
+
+        self["sea depth"] = get_sea_depth(
+            self.sea_depth_data,
+            self.location[0],
+            self.location[1]
+        )
+
+    def __fetch_wind_speed(self):
+
+        wind_speed = fetch_wind_speed(
+            self.wind_data.interp(
+                latitude=self.location[0],
+                longitude=self.location[1],
+                method="linear",
+            )
+        )
+
+        for var in self.terrain_vars.data_vars:
+            wind_speed[var] = self.terrain_vars[var]
+
+        for coord in self.terrain_vars.coords:
+            wind_speed[coord] = self.terrain_vars[coord]
+
+        self.terrain_vars = wind_speed
+        # rename "wind_speed" to "WS"
+        self.terrain_vars = self.terrain_vars.rename_vars({"wind_speed": "WS"})
+        # replace NaNs with zeros
+        self.terrain_vars = self.terrain_vars.fillna(0)
+
+    def __fetch_terrain_variables(self, fetch_wind_data: bool):
         """
         Fetch wind speeds and directions, turbulent kinetic energy,
         land mask, and air density at the location of the wind turbines.
         Values are fetched for heights of 50 and 150m.
         :return:
         """
-        terrain_vars = fetch_wind_speed(
+        terrain_vars = fetch_terrain_variables(
             latitude=self.location[0],
             longitude=self.location[1],
+            fetch_wind_data=fetch_wind_data,
         )
-        # we adjust values to the heights of the wind tubrines
-        self.terrain_vars = terrain_vars.interp(height=self["tower height"])
-
-        # for height inferior to 50 m, we fetch the value for 50 m
-        self.terrain_vars = self.terrain_vars.fillna(terrain_vars.sel(height=50))
+        self.terrain_vars = terrain_vars
 
     def __fetch_power_curves(self):
+
+        # we adjust values to the heights of the wind turbines
+        self.terrain_vars = self.terrain_vars.interp(height=self["tower height"], method="linear", kwargs={"fill_value": "extrapolate"})
+
         # we get the power curve
         power_curve = calculate_generic_power_curve(
             vws=np.arange(0, 31, 1),
@@ -429,6 +492,7 @@ class WindTurbineModel:
             v_cutin=self["cut-in"],
             v_cutoff=self["cut-out"],
             air_density=self.terrain_vars["RHO"],
+            model=self.power_curve_model
         )
 
         self.power_curve = xr.DataArray(
@@ -445,16 +509,30 @@ class WindTurbineModel:
 
     def __calculate_electricity_production(self):
         # we calculate the electricity production
-        self.electricity_production = self.power_curve.interp(
-            {"wind speed": self.terrain_vars["WS"]}, method="linear"
-        )
-        self["lifetime electricity production"] = (
-            self.electricity_production.sum(dim="time") * self["lifetime"]
-        )
+        if self.power_curve is not None:
+
+            self.annual_electricity_production = self.power_curve.interp(
+                {"wind speed": self.terrain_vars["WS"]}, method="linear"
+            )
+
+            self["lifetime electricity production"] = (
+                    self.annual_electricity_production.sum(dim="time")
+                    * self["lifetime"]
+            )
+        else:
+            if self.country:
+
+                self["lifetime electricity production"] = (
+                    self["average load factor"]
+                    * self["power"]
+                    * 24
+                    * 365
+                    * self["lifetime"]
+                )
 
     def __calculate_average_load_factor(self):
         # we calculate the average load factor
-        self["average load factor"] = self.electricity_production.sum(dim="time") / (
+        self["average load factor"] = self.annual_electricity_production.sum(dim="time") / (
             8760 * self["power"]
         )
 

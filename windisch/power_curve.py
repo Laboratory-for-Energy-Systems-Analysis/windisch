@@ -170,7 +170,7 @@ def calculate_raw_power_curve(
     # we will use the average value
     pin = (
         0.5
-        * air_density.mean(dim="time").values
+        * air_density.mean().values
         * a_rotor.values[..., None]
         * (vws**3)
         / 1000
@@ -201,8 +201,6 @@ def apply_turbulence_and_direction_effect(
     vws: xr.DataArray,
     pwt: xr.DataArray,
     tke: xr.DataArray,
-    wind_dir: xr.DataArray,
-    turbine_dir: xr.DataArray,
     v_cutin: float = 3,
     v_cutoff: float = 25,
 ) -> xr.DataArray:
@@ -220,24 +218,8 @@ def apply_turbulence_and_direction_effect(
     """
     # Calculate turbulence intensity (TI) from TKE
     # Cap vws to the range of mean_ws before interpolation
-    mean_tke = tke["TKE"].mean(
-        dim=[
-            "year",
-            "size",
-            "value",
-            "application",
-        ]
-    )
-    mean_ws = tke["WS"].mean(
-        dim=[
-            "year",
-            "size",
-            "value",
-            "application",
-        ]
-    )
-    vws_clipped = np.clip(vws, mean_ws.min().values, mean_ws.max().values)
-    interp_tke = np.interp(vws_clipped, mean_ws, mean_tke)
+    vws_clipped = np.clip(vws, tke["WS"].min().values, tke["WS"].max().values)
+    interp_tke = np.interp(vws_clipped, tke["WS"].mean().values[..., None], tke["TKE"].mean().values[..., None])
 
     # Avoid division by zero or invalid values
     ti = xr.apply_ufunc(
@@ -457,14 +439,12 @@ def calculate_generic_power_curve(
     # fill NaNs with zeroes
     power_curve = np.nan_to_num(power_curve, nan=0)
 
-    power_curve = apply_turbulence_and_direction_effect(
-        vws=rews,
-        pwt=power_curve,
-        tke=tke,
-        v_cutin=v_cutin,
-        v_cutoff=v_cutoff,
-        wind_dir=0,
-        turbine_dir=0,
-    )
+    #power_curve = apply_turbulence_and_direction_effect(
+    #    vws=rews,
+    #    pwt=power_curve,
+    #    tke=tke,
+    #    v_cutin=v_cutin,
+    #    v_cutoff=v_cutoff,
+    #)
 
     return power_curve

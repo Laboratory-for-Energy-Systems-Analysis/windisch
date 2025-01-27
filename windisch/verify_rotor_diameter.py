@@ -1,18 +1,20 @@
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
+
 
 # Define the regression function
 def func_rotor_diameter(power, coeff_a, coeff_b, coeff_c, coeff_d):
     return coeff_a - coeff_b * np.exp(-(power - coeff_d) / coeff_c)
 
+
 # Previous coefficients for onshore and offshore turbines
 coeff_onshore = [152.66, 136.57, 2478.03, 16.44]
 coeff_offshore = [191.84, 147.37, 5101.29, 376.63]
 
-#new coefficients after having found them in the script estimate_rotor_diameter.py
-#coeff_onshore = [179.23, 144.91, 3061.77, 371.14]
-#coeff_offshore = [335.36, 555.80, 14748.19, -9896.84]
+# new coefficients after having found them in the script estimate_rotor_diameter.py
+# coeff_onshore = [179.23, 144.91, 3061.77, 371.14]
+# coeff_offshore = [335.36, 555.80, 14748.19, -9896.84]
 
 # Load the data
 file_path = "/Users/kalenajonsson/Desktop/SemesterProject/Turbines_data.csv"
@@ -31,6 +33,7 @@ data = data.dropna(subset=["Rated power", "Rotor diameter"])
 # Filter data for offshore and onshore turbines
 data_offshore = data.loc[data["Offshore"] == "Yes"]
 data_onshore = data.loc[data["Offshore"] == "No"]
+
 
 # Function to plot the data and fit
 def plot_with_curve(data, coeffs, title, color):
@@ -70,6 +73,7 @@ def plot_with_curve(data, coeffs, title, color):
     plt.legend()
     plt.grid()
 
+
 # Create subplots
 plt.figure(figsize=(14, 10))
 
@@ -84,6 +88,3 @@ plot_with_curve(data_offshore, coeff_offshore, "Offshore Turbines", "green")
 # Adjust layout and show the plots
 plt.tight_layout()
 plt.show()
-
-
-
