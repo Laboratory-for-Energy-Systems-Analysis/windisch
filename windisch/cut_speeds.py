@@ -13,5 +13,6 @@ def load_cut_in_off_speeds(powers: list):
         data = csv.reader(file)
 
         return data
+        
 
 
