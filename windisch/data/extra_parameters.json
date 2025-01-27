@@ -26,5 +26,7 @@
   "installation transport, by sea",
   "installation transport, by rail",
   "access road",
-  "transport to assembly"
+  "transport to assembly",
+  "average load factor",
+  "lifetime electricity production"
 ]

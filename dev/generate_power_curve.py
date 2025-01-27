@@ -1,5 +1,5 @@
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 
 # Define parameters for each wind turbine
 nominal_powers = [500, 1000, 2000, 3000, 5000]  # Example nominal powers in kW
@@ -17,7 +17,9 @@ AirDensity = 1.225  # Air density in kg/m³
 # Plot the power curves for all turbines
 plt.figure(figsize=(12, 8))
 
-for i, (Pnom, Drotor, Vcutin, Vcutoff) in enumerate(zip(nominal_powers, rotor_diameters, cut_in_speeds, cut_out_speeds)):
+for i, (Pnom, Drotor, Vcutin, Vcutoff) in enumerate(
+    zip(nominal_powers, rotor_diameters, cut_in_speeds, cut_out_speeds)
+):
     # Generate power curve
     Pwt = GenericWindTurbinePowerCurve(
         Vws=Vws,

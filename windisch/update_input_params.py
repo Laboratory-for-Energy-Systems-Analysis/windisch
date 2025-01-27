@@ -4,10 +4,11 @@ and format that into the json file `default_parameters.json`.
 """
 
 import json
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
-from pathlib import Path
+
 DATA_DIR = Path(__file__).resolve().parent / "data"
 FILEPATH_TO_INPUT_DATA = DATA_DIR / "Input data.xlsx"
 
@@ -38,7 +39,7 @@ def update_input_parameters():
                 size = all_sizes
 
             else:
-                size = [x.strip() for x in str(row["sizes"]).split(",")]
+                size = [int(x.strip()) for x in str(row["sizes"]).split(",")]
 
             param = row["parameter"]
             unit = row["unit"]
