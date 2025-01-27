@@ -1,10 +1,12 @@
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
+
 
 # Define the regression function for rotor mass
 def func_rotor_mass(diameter, coeff_a, coeff_b):
     return coeff_a * diameter**2 + coeff_b * diameter
+
 
 # Coefficients for onshore and offshore turbines
 coeff_onshore = [0.00460956, 0.11199577]  # Example coefficients
@@ -18,8 +20,12 @@ data = pd.read_csv(file_path, encoding="latin-1")
 data = data.drop(index=1)
 
 # Convert relevant columns to numeric
-data["Rotor diameter"] = pd.to_numeric(data["Rotor diameter"].str.replace("m", "", regex=False), errors="coerce")
-data["Rotor weight"] = pd.to_numeric(data["Rotor weight"].str.replace("Tons", "", regex=False), errors="coerce")
+data["Rotor diameter"] = pd.to_numeric(
+    data["Rotor diameter"].str.replace("m", "", regex=False), errors="coerce"
+)
+data["Rotor weight"] = pd.to_numeric(
+    data["Rotor weight"].str.replace("Tons", "", regex=False), errors="coerce"
+)
 
 # Drop rows with missing values
 data = data.dropna(subset=["Rotor diameter", "Rotor weight", "Offshore"])
@@ -27,6 +33,7 @@ data = data.dropna(subset=["Rotor diameter", "Rotor weight", "Offshore"])
 # Filter data for offshore and onshore turbines
 data_offshore = data.loc[data["Offshore"] == "Yes"]
 data_onshore = data.loc[data["Offshore"] == "No"]
+
 
 # Function to plot the data and fit
 def plot_with_curve(data, coeffs, title, color):
@@ -65,6 +72,7 @@ def plot_with_curve(data, coeffs, title, color):
     plt.ylabel("Rotor Mass (tons)")
     plt.legend()
     plt.grid()
+
 
 # Create subplots
 plt.figure(figsize=(14, 10))
