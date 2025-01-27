@@ -324,7 +324,7 @@ class WindTurbineModel:
         self.array = array
         self.power_curve = None
         self.__cache = None
-        self.country = None
+        self.country = country
         self.location = location or None
         self.wind_data = wind_data
         self.power_curve_model = power_curve_model
@@ -413,19 +413,23 @@ class WindTurbineModel:
             # otherwise, fetch country-average load factors
             if self.country:
                 self.__fetch_country_load_factor()
+                self.__calculate_electricity_production()
             else:
                 raise ValueError("Location or country must be provided")
 
     def __fetch_country_load_factor(self):
 
-        df = pd.read_csv(DATA_DIR / "wind_capacity_factors.csv")
+        df = pd.read_csv(DATA_DIR / "wind_capacity_factors.csv", index_col=0)
+
         if self.country in df.index:
             if "onshore" in self.array.coords["application"].values:
-                self.array.loc[dict(application="onshore", parameter="average load factor")] = df.loc[self.country, "onshore"].values
+                self.array.loc[dict(application="onshore", parameter="average load factor")] = df.loc[self.country, "onshore"]
+
             if "offshore" in self.array.coords["application"].values:
-                if df.loc[self.country, "offshore"].values > 0:
+                if df.loc[self.country, "offshore"] > 0:
                     self.array.loc[dict(application="offshore", parameter="average load factor")] = df.loc[
-                        self.country, "offshore"].values
+                        self.country, "offshore"]
+
         else:
             ValueError(f"Country {self.country} not found in the database")
 
@@ -505,18 +509,21 @@ class WindTurbineModel:
 
     def __calculate_electricity_production(self):
         # we calculate the electricity production
-        if self.power_curve:
+        if self.power_curve is not None:
+
             self.annual_electricity_production = self.power_curve.interp(
                 {"wind speed": self.terrain_vars["WS"]}, method="linear"
             )
 
             self["lifetime electricity production"] = (
-                    self.annual_electricity_production.sum(dim="time") * self["lifetime"]
+                    self.annual_electricity_production.sum(dim="time")
+                    * self["lifetime"]
             )
         else:
             if self.country:
+
                 self["lifetime electricity production"] = (
-                    self["average capacity factor"]
+                    self["average load factor"]
                     * self["power"]
                     * 24
                     * 365

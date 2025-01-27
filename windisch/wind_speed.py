@@ -47,7 +47,7 @@ def fetch_wind_speed(data):
 
     return data
 
-def fetch_terrain_variables(latitude: float, longitude: float, fetch_wind_data: bool) -> xr.DataArray:
+def fetch_terrain_variables(latitude: float, longitude: float, fetch_wind_data: bool, cache_dir: str = "cache") -> xr.DataArray:
     """
     Fetch wind speed data for a specific location using the NEWA API.
 
@@ -55,14 +55,16 @@ def fetch_terrain_variables(latitude: float, longitude: float, fetch_wind_data: 
     :type latitude: float
     :param longitude: Longitude of the location.
     :type longitude: float
-    :param heights: Heights at which to interpolate the wind speed data.
-    :type heights: xr.DataArray
+    :param fetch_wind_data: Whether to fetch wind data or terrain data.
+    :type fetch_wind_data: bool
+    :param cache_dir: Directory to cache the API responses.
+    :type cache_dir: str
     :return: Simplified xarray.Dataset containing wind direction (WD10) and wind speed (WS10).
     :rtype: xr.DataArray
     """
 
     if not API_NEWA_TIME_SERIES:
-        raise EnvironmentError("API_NEWA environment variable is not set.")
+        raise EnvironmentError("API_NEWA_TIME_SERIES environment variable is not set.")
     if not API_NEWA:
         raise EnvironmentError("API_NEWA environment variable is not set.")
 
@@ -71,12 +73,31 @@ def fetch_terrain_variables(latitude: float, longitude: float, fetch_wind_data: 
         url = API_NEWA_TIME_SERIES.replace("longitude=X", f"longitude={longitude}").replace(
             "latitude=X", f"latitude={latitude}"
         )
-
     else:
         print("Fetching terrain data only.")
         url = API_NEWA.replace("longitude=X", f"longitude={longitude}").replace(
             "latitude=X", f"latitude={latitude}"
         )
+
+    # Ensure cache directory exists
+    os.makedirs(cache_dir, exist_ok=True)
+
+    # Create a cache file name based on coordinates and type of data
+    cache_file = os.path.join(cache_dir, f"{latitude}_{longitude}_{'wind' if fetch_wind_data else 'terrain'}.nc")
+
+    # Check if the data is already cached
+    if os.path.exists(cache_file):
+        print(f"Using cached data for location ({latitude}, {longitude})")
+        ds = xr.open_dataset(cache_file)
+
+        if fetch_wind_data is False:
+            # Rename landmask to LANDMASK, tke50_mean to TAKE, rho_mean to RHO
+            ds = ds.rename_vars({"landmask": "LANDMASK", "tke50_mean": "TKE", "rho_mean": "RHO"})
+
+            # Remove all coordinates except "time"
+            ds = ds.drop_vars([c for c in ds.coords if c != "time"])
+
+        return ds
 
     attempts = 0
     max_attempts = 10
@@ -93,28 +114,26 @@ def fetch_terrain_variables(latitude: float, longitude: float, fetch_wind_data: 
                     f"Downloaded {size_kb:.2f} kB for location ({latitude}, {longitude})"
                 )
 
-                # Write content to a temporary file
-                with tempfile.NamedTemporaryFile(
-                    suffix=".nc", delete=False
-                ) as tmp_file:
-                    tmp_file.write(response.content)
-                    tmp_file_path = tmp_file.name
+                # Write content to the cache file
+                with open(cache_file, "wb") as cache:
+                    cache.write(response.content)
 
                 # Open the dataset
-                ds = xr.open_dataset(tmp_file_path)
+                ds = xr.open_dataset(cache_file)
 
                 if fetch_wind_data is False:
-                    # rename landmask to LANDMASK, tke50_mean to TAKE, rho_mean to RHO
+                    # Rename landmask to LANDMASK, tke50_mean to TAKE, rho_mean to RHO
                     ds = ds.rename_vars({"landmask": "LANDMASK", "tke50_mean": "TKE", "rho_mean": "RHO"})
 
-                    # remove all coordinates except "time"
+                    # Remove all coordinates except "time"
                     ds = ds.drop_vars([c for c in ds.coords if c != "time"])
                     return ds
 
-                # the dataset has data points every 30 min
-                # resample it to every hour
+                # The dataset has data points every 30 min
+                # Resample it to every hour
                 ds = ds.resample(time="1h").mean()
-                # average over the years to get 8760 representative hours
+
+                # Average over the years to get 8760 representative hours
                 # Convert time to 'hour of the year' (0 to 8759)
                 hour_of_year = (ds['time'].dt.dayofyear - 1) * 24 + ds['time'].dt.hour
 
@@ -126,9 +145,10 @@ def fetch_terrain_variables(latitude: float, longitude: float, fetch_wind_data: 
                 representative_hours = representative_hours.set_coords('time')
                 representative_hours = representative_hours.fillna(0)
 
-                # remove "time" coordinate
+                # Remove "time" coordinate
                 representative_hours = representative_hours.drop_vars("time")
-                # and rename "group" to time
+
+                # Rename "group" to time
                 representative_hours = representative_hours.rename(group="time")
 
                 return representative_hours
@@ -146,5 +166,4 @@ def fetch_terrain_variables(latitude: float, longitude: float, fetch_wind_data: 
                 raise Exception(
                     f"Failed to fetch data for location ({latitude}, {longitude}) after {max_attempts} attempts."
                 )
-
 
