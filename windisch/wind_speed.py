@@ -15,33 +15,39 @@ API_NEWA = os.getenv("API_NEWA")
 
 
 def fetch_wind_speed(data):
-
-    # fill-in NaNs with nearest values
+    # Step 1: Ensure no NaNs in the original data by forward and backward filling
     data = data.ffill(dim="time").bfill(dim="time")
 
-    # Step 1: Create a time series for 8760 hours
+    # Step 2: Create a time series for 8760 hours in the year
     time_range = pd.date_range("2024-01-01", "2024-12-31 23:00", freq="h")
 
     # Extract corresponding month and hour values for the entire time range
     months = time_range.month
     hours = time_range.hour
 
-    # Step 2: Interpolate the data along the 'month' and 'hour' dimensions
-    # Align with the `time_range` sequence
-    # Step 2: Interpolate without fill_value and handle NaNs separately
-    data = data.interp(month=("time", months), hour=("time", hours), method="linear")
+    # Step 3: Align the interpolation grid with the data
+    if "month" not in data.dims or "hour" not in data.dims:
+        raise ValueError("Input data must have 'month' and 'hour' dimensions for interpolation.")
 
-    # Step 3: Fill NaNs (optional)
-    # Fill any remaining NaNs due to edge cases
+    data = data.interp(
+        month=("time", months),
+        hour=("time", hours),
+        method="linear",
+        kwargs={"fill_value": None},
+    )
+
+    # Step 4: Handle any remaining NaNs after interpolation
     data = data.ffill(dim="time").bfill(dim="time")
-    # Assign the time coordinate to the resulting DataArray
+
+    # Step 5: Assign the time coordinate to match the 8760-hour time range
     data = data.assign_coords(time=("time", time_range))
-    # Drop the now-unused 'month' and 'hour' dimensions if they remain
+
+    # Step 6: Clean up unused dimensions and coordinates
     data = data.drop_vars(["month", "hour"], errors="ignore")
-    # remove all coordinates except "time"
     data = data.drop_vars([c for c in data.coords if c not in ("time", "height")])
 
     return data
+
 
 
 def fetch_terrain_variables(

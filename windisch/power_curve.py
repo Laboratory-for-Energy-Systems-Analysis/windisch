@@ -289,10 +289,6 @@ def apply_turbulence_and_direction_effect(
         keep_attrs=True,
     )
 
-    # Set power to zero outside cut-in and cut-off wind speeds
-    pwt = np.where(
-        (vws >= v_cutin.values[..., None]) & (vws <= v_cutoff.values[..., None]), pwt, 0
-    )
 
     return pwt
 
@@ -413,8 +409,8 @@ def calculate_generic_power_curve(
     if isinstance(conv_eff, list) and not conv_eff:
         gear_loss_const = 0.01
         gear_loss_var = 0.014
-        generator_loss = 0.03
-        converter_loss = 0.03
+        generator_loss = 0.01
+        converter_loss = 0.01
         conv_eff = (
             (1 - gear_loss_const)
             * (1 - gear_loss_var)
@@ -439,12 +435,20 @@ def calculate_generic_power_curve(
     # fill NaNs with zeroes
     power_curve = np.nan_to_num(power_curve, nan=0)
 
-    # power_curve = apply_turbulence_and_direction_effect(
-    #    vws=rews,
-    #    pwt=power_curve,
-    #    tke=tke,
-    #    v_cutin=v_cutin,
-    #    v_cutoff=v_cutoff,
-    # )
+    power_curve = apply_turbulence_and_direction_effect(
+       vws=rews,
+       pwt=power_curve,
+       tke=tke,
+       v_cutin=v_cutin,
+       v_cutoff=v_cutoff,
+    )
+
+    # Set power to zero outside cut-in and cut-off wind speeds
+    power_curve = np.where(
+        (vws >= v_cutin.values[..., None])
+        & (vws <= v_cutoff.values[..., None]),
+        power_curve,
+        0
+    )
 
     return power_curve
