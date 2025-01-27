@@ -289,7 +289,6 @@ def apply_turbulence_and_direction_effect(
         keep_attrs=True,
     )
 
-
     return pwt
 
 
@@ -436,19 +435,18 @@ def calculate_generic_power_curve(
     power_curve = np.nan_to_num(power_curve, nan=0)
 
     power_curve = apply_turbulence_and_direction_effect(
-       vws=rews,
-       pwt=power_curve,
-       tke=tke,
-       v_cutin=v_cutin,
-       v_cutoff=v_cutoff,
+        vws=rews,
+        pwt=power_curve,
+        tke=tke,
+        v_cutin=v_cutin,
+        v_cutoff=v_cutoff,
     )
 
     # Set power to zero outside cut-in and cut-off wind speeds
     power_curve = np.where(
-        (vws >= v_cutin.values[..., None])
-        & (vws <= v_cutoff.values[..., None]),
+        (vws >= v_cutin.values[..., None]) & (vws <= v_cutoff.values[..., None]),
         power_curve,
-        0
+        0,
     )
 
     return power_curve

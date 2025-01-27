@@ -27,7 +27,9 @@ def fetch_wind_speed(data):
 
     # Step 3: Align the interpolation grid with the data
     if "month" not in data.dims or "hour" not in data.dims:
-        raise ValueError("Input data must have 'month' and 'hour' dimensions for interpolation.")
+        raise ValueError(
+            "Input data must have 'month' and 'hour' dimensions for interpolation."
+        )
 
     data = data.interp(
         month=("time", months),
@@ -47,7 +49,6 @@ def fetch_wind_speed(data):
     data = data.drop_vars([c for c in data.coords if c not in ("time", "height")])
 
     return data
-
 
 
 def fetch_terrain_variables(
