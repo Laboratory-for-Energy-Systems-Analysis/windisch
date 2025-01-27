@@ -10,10 +10,10 @@ import pandas as pd
 import xarray as xr
 
 from windisch.power_curve import calculate_generic_power_curve
-from . import DATA_DIR
 
-from .wind_speed import fetch_terrain_variables, fetch_wind_speed
+from . import DATA_DIR
 from .sea_depth import get_sea_depth
+from .wind_speed import fetch_terrain_variables, fetch_wind_speed
 
 # material densities, in kg/m3
 COPPER_DENSITY = 8960
@@ -318,7 +318,7 @@ class WindTurbineModel:
         location: Tuple[float, float] = None,
         wind_data: xr.DataArray = None,
         sea_depth_data: xr.DataArray = None,
-        power_curve_model="Dai et al. 2016"
+        power_curve_model="Dai et al. 2016",
     ):
         self.terrain_vars = None
         self.array = array
@@ -331,7 +331,9 @@ class WindTurbineModel:
         self.sea_depth_data = sea_depth_data
 
         if self.location:
-            self.__fetch_terrain_variables(fetch_wind_data=True if not self.wind_data else False)
+            self.__fetch_terrain_variables(
+                fetch_wind_data=True if not self.wind_data else False
+            )
 
             if self.wind_data:
                 self.__fetch_wind_speed()
@@ -423,12 +425,15 @@ class WindTurbineModel:
 
         if self.country in df.index:
             if "onshore" in self.array.coords["application"].values:
-                self.array.loc[dict(application="onshore", parameter="average load factor")] = df.loc[self.country, "onshore"]
+                self.array.loc[
+                    dict(application="onshore", parameter="average load factor")
+                ] = df.loc[self.country, "onshore"]
 
             if "offshore" in self.array.coords["application"].values:
                 if df.loc[self.country, "offshore"] > 0:
-                    self.array.loc[dict(application="offshore", parameter="average load factor")] = df.loc[
-                        self.country, "offshore"]
+                    self.array.loc[
+                        dict(application="offshore", parameter="average load factor")
+                    ] = df.loc[self.country, "offshore"]
 
         else:
             ValueError(f"Country {self.country} not found in the database")
@@ -436,9 +441,7 @@ class WindTurbineModel:
     def __fetch_sea_depth(self):
 
         self["sea depth"] = get_sea_depth(
-            self.sea_depth_data,
-            self.location[0],
-            self.location[1]
+            self.sea_depth_data, self.location[0], self.location[1]
         )
 
     def __fetch_wind_speed(self):
@@ -480,7 +483,11 @@ class WindTurbineModel:
     def __fetch_power_curves(self):
 
         # we adjust values to the heights of the wind turbines
-        self.terrain_vars = self.terrain_vars.interp(height=self["tower height"], method="linear", kwargs={"fill_value": "extrapolate"})
+        self.terrain_vars = self.terrain_vars.interp(
+            height=self["tower height"],
+            method="linear",
+            kwargs={"fill_value": "extrapolate"},
+        )
 
         # we get the power curve
         power_curve = calculate_generic_power_curve(
@@ -492,7 +499,7 @@ class WindTurbineModel:
             v_cutin=self["cut-in"],
             v_cutoff=self["cut-out"],
             air_density=self.terrain_vars["RHO"],
-            model=self.power_curve_model
+            model=self.power_curve_model,
         )
 
         self.power_curve = xr.DataArray(
@@ -516,8 +523,7 @@ class WindTurbineModel:
             )
 
             self["lifetime electricity production"] = (
-                    self.annual_electricity_production.sum(dim="time")
-                    * self["lifetime"]
+                self.annual_electricity_production.sum(dim="time") * self["lifetime"]
             )
         else:
             if self.country:
@@ -532,9 +538,9 @@ class WindTurbineModel:
 
     def __calculate_average_load_factor(self):
         # we calculate the average load factor
-        self["average load factor"] = self.annual_electricity_production.sum(dim="time") / (
-            8760 * self["power"]
-        )
+        self["average load factor"] = self.annual_electricity_production.sum(
+            dim="time"
+        ) / (8760 * self["power"])
 
     def __set_size_rotor(self):
         """

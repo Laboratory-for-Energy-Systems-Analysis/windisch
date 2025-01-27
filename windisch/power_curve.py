@@ -169,11 +169,7 @@ def calculate_raw_power_curve(
     # even though we have RHO per hour
     # we will use the average value
     pin = (
-        0.5
-        * air_density.mean().values
-        * a_rotor.values[..., None]
-        * (vws**3)
-        / 1000
+        0.5 * air_density.mean().values * a_rotor.values[..., None] * (vws**3) / 1000
     )  # Power input in kW (0.5 * rho * A * V^3)
 
     # Ensure pin is safe (avoid division by zero)
@@ -219,7 +215,11 @@ def apply_turbulence_and_direction_effect(
     # Calculate turbulence intensity (TI) from TKE
     # Cap vws to the range of mean_ws before interpolation
     vws_clipped = np.clip(vws, tke["WS"].min().values, tke["WS"].max().values)
-    interp_tke = np.interp(vws_clipped, tke["WS"].mean().values[..., None], tke["TKE"].mean().values[..., None])
+    interp_tke = np.interp(
+        vws_clipped,
+        tke["WS"].mean().values[..., None],
+        tke["TKE"].mean().values[..., None],
+    )
 
     # Avoid division by zero or invalid values
     ti = xr.apply_ufunc(
@@ -439,12 +439,12 @@ def calculate_generic_power_curve(
     # fill NaNs with zeroes
     power_curve = np.nan_to_num(power_curve, nan=0)
 
-    #power_curve = apply_turbulence_and_direction_effect(
+    # power_curve = apply_turbulence_and_direction_effect(
     #    vws=rews,
     #    pwt=power_curve,
     #    tke=tke,
     #    v_cutin=v_cutin,
     #    v_cutoff=v_cutoff,
-    #)
+    # )
 
     return power_curve
