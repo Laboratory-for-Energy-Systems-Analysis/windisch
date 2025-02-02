@@ -1,6 +1,8 @@
 import netCDF4
 import numpy as np
 
+from . import DATA_DIR
+
 
 def get_sea_depth(data, latitude, longitude):
     """
