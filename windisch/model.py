@@ -14,6 +14,7 @@ from windisch.power_curve import calculate_generic_power_curve
 from . import DATA_DIR
 from .sea_depth import get_sea_depth
 from .wind_speed import fetch_terrain_variables, fetch_wind_speed
+from .distance_to_coastline import find_nearest_coastline
 
 # material densities, in kg/m3
 COPPER_DENSITY = 8960
@@ -490,29 +491,10 @@ class WindTurbineModel:
         )
 
         # we get the power curve
-        power_curve = calculate_generic_power_curve(
-            vws=np.arange(0, 31, 1),
-            p_nom=self["power"],
-            d_rotor=self["rotor diameter"],
-            zhub=self["tower height"],
-            tke=self.terrain_vars[["TKE", "WS"]],
-            v_cutin=self["cut-in"],
-            v_cutoff=self["cut-out"],
-            air_density=self.terrain_vars["RHO"],
-            model=self.power_curve_model,
+        self.power_curve = calculate_generic_power_curve(
+            power=self["power"],
         )
 
-        self.power_curve = xr.DataArray(
-            data=power_curve,
-            dims=["size", "application", "year", "value", "wind speed"],
-            coords={
-                "size": self.array.coords["size"],
-                "application": self.array.coords["application"],
-                "year": self.array.coords["year"],
-                "value": self.array.coords["value"],
-                "wind speed": np.arange(0, 31, 1),
-            },
-        )
 
     def __calculate_electricity_production(self):
         # we calculate the electricity production
@@ -668,6 +650,10 @@ class WindTurbineModel:
         self["foundation mass"] += (self["pile mass"] + self["transition mass"]) * self[
             "offshore"
         ]
+
+        self["distance to coastline"] = find_nearest_coastline(
+            self.location[0], self.location[1]
+        )
 
         cable_mass, energy = set_cable_requirements(
             self["power"],
