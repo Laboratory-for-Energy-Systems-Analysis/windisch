@@ -12,9 +12,9 @@ import xarray as xr
 from windisch.power_curve import calculate_generic_power_curve
 
 from . import DATA_DIR
+from .distance_to_coastline import find_nearest_coastline
 from .sea_depth import get_sea_depth
 from .wind_speed import fetch_terrain_variables, fetch_wind_speed
-from .distance_to_coastline import find_nearest_coastline
 
 # material densities, in kg/m3
 COPPER_DENSITY = 8960
@@ -494,7 +494,6 @@ class WindTurbineModel:
         self.power_curve = calculate_generic_power_curve(
             power=self["power"],
         )
-
 
     def __calculate_electricity_production(self):
         # we calculate the electricity production

@@ -4,7 +4,8 @@ from shapely.geometry import Point
 from . import DATA_DIR
 
 # Path to the GSHHS coastline shapefile (low resolution)
-coastline_shapefile = DATA_DIR / 'gshhg-shp-2.3.7/GSHHS_shp/l/GSHHS_l_L1.shp'
+coastline_shapefile = DATA_DIR / "gshhg-shp-2.3.7/GSHHS_shp/l/GSHHS_l_L1.shp"
+
 
 def find_nearest_coastline(lat, lon):
     """
