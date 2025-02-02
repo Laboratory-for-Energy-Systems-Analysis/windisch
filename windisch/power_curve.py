@@ -1,6 +1,6 @@
+import numpy as np
 import pandas as pd
 import xarray as xr
-import numpy as np
 
 from . import DATA_DIR
 
@@ -42,9 +42,9 @@ def calculate_generic_power_curve(power: xr.DataArray):
     power_curve = power_curve.broadcast_like(power)
 
     # Between cut-in and rated speed - ramp-up phase
-    mask_ramp = (power_curve.coords["wind speed"] >= parameters["cut-in wind speed"]) & (
-        power_curve.coords["wind speed"] < parameters["rated power wind speed"]
-    )
+    mask_ramp = (
+        power_curve.coords["wind speed"] >= parameters["cut-in wind speed"]
+    ) & (power_curve.coords["wind speed"] < parameters["rated power wind speed"])
 
     power_curve = (
         power
@@ -56,9 +56,9 @@ def calculate_generic_power_curve(power: xr.DataArray):
     ) * mask_ramp
 
     # Between rated speed and cut-out - constant power output
-    mask_flat = (power_curve.coords["wind speed"] >= parameters["rated power wind speed"]) & (
-        power_curve.coords["wind speed"] <= parameters["cut-out wind speed"]
-    )
+    mask_flat = (
+        power_curve.coords["wind speed"] >= parameters["rated power wind speed"]
+    ) & (power_curve.coords["wind speed"] <= parameters["cut-out wind speed"])
     mask_flat = mask_flat.transpose(*power_curve.dims)
     power_curve = xr.where(mask_flat, power, power_curve)
 
