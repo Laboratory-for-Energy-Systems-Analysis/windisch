@@ -102,7 +102,7 @@ def fetch_terrain_variables(
         if fetch_wind_data is False:
             # Rename landmask to LANDMASK, tke50_mean to TAKE, rho_mean to RHO
             ds = ds.rename_vars(
-                {"landmask": "LANDMASK", "tke50_mean": "TKE", "rho_mean": "RHO"}
+                {"landmask": "LANDMASK", }
             )
 
             # Remove all coordinates except "time"
@@ -135,7 +135,7 @@ def fetch_terrain_variables(
                 if fetch_wind_data is False:
                     # Rename landmask to LANDMASK, tke50_mean to TAKE, rho_mean to RHO
                     ds = ds.rename_vars(
-                        {"landmask": "LANDMASK", "tke50_mean": "TKE", "rho_mean": "RHO"}
+                        {"landmask": "LANDMASK",}
                     )
 
                     # Remove all coordinates except "time"
