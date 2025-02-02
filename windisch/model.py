@@ -441,9 +441,11 @@ class WindTurbineModel:
 
     def __fetch_sea_depth(self):
 
-        self["sea depth"] = get_sea_depth(
-            self.sea_depth_data, self.location[0], self.location[1]
-        ) * -1 * (self["offshore"] == 1)
+        self["sea depth"] = (
+            get_sea_depth(self.sea_depth_data, self.location[0], self.location[1])
+            * -1
+            * (self["offshore"] == 1)
+        )
 
     def __fetch_wind_speed(self):
 
