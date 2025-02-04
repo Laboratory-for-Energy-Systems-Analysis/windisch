@@ -10,10 +10,11 @@ import pandas as pd
 import xarray as xr
 
 from windisch.power_curve import calculate_generic_power_curve
-from . import DATA_DIR
 
-from .wind_speed import fetch_terrain_variables, fetch_wind_speed
+from . import DATA_DIR
+from .distance_to_coastline import find_nearest_coastline
 from .sea_depth import get_sea_depth
+from .wind_speed import fetch_terrain_variables, fetch_wind_speed
 
 # material densities, in kg/m3
 COPPER_DENSITY = 8960
@@ -318,7 +319,7 @@ class WindTurbineModel:
         location: Tuple[float, float] = None,
         wind_data: xr.DataArray = None,
         sea_depth_data: xr.DataArray = None,
-        power_curve_model="Dai et al. 2016"
+        power_curve_model="Dai et al. 2016",
     ):
         self.terrain_vars = None
         self.array = array
@@ -331,7 +332,9 @@ class WindTurbineModel:
         self.sea_depth_data = sea_depth_data
 
         if self.location:
-            self.__fetch_terrain_variables(fetch_wind_data=True if not self.wind_data else False)
+            self.__fetch_terrain_variables(
+                fetch_wind_data=True if not self.wind_data else False
+            )
 
             if self.wind_data:
                 self.__fetch_wind_speed()
@@ -423,22 +426,25 @@ class WindTurbineModel:
 
         if self.country in df.index:
             if "onshore" in self.array.coords["application"].values:
-                self.array.loc[dict(application="onshore", parameter="average load factor")] = df.loc[self.country, "onshore"]
+                self.array.loc[
+                    dict(application="onshore", parameter="average load factor")
+                ] = df.loc[self.country, "onshore"]
 
             if "offshore" in self.array.coords["application"].values:
                 if df.loc[self.country, "offshore"] > 0:
-                    self.array.loc[dict(application="offshore", parameter="average load factor")] = df.loc[
-                        self.country, "offshore"]
+                    self.array.loc[
+                        dict(application="offshore", parameter="average load factor")
+                    ] = df.loc[self.country, "offshore"]
 
         else:
             ValueError(f"Country {self.country} not found in the database")
 
     def __fetch_sea_depth(self):
 
-        self["sea depth"] = get_sea_depth(
-            self.sea_depth_data,
-            self.location[0],
-            self.location[1]
+        self["sea depth"] = (
+            get_sea_depth(self.sea_depth_data, self.location[0], self.location[1])
+            * -1
+            * (self["offshore"] == 1)
         )
 
     def __fetch_wind_speed(self):
@@ -480,31 +486,15 @@ class WindTurbineModel:
     def __fetch_power_curves(self):
 
         # we adjust values to the heights of the wind turbines
-        self.terrain_vars = self.terrain_vars.interp(height=self["tower height"], method="linear", kwargs={"fill_value": "extrapolate"})
-
-        # we get the power curve
-        power_curve = calculate_generic_power_curve(
-            vws=np.arange(0, 31, 1),
-            p_nom=self["power"],
-            d_rotor=self["rotor diameter"],
-            zhub=self["tower height"],
-            tke=self.terrain_vars[["TKE", "WS"]],
-            v_cutin=self["cut-in"],
-            v_cutoff=self["cut-out"],
-            air_density=self.terrain_vars["RHO"],
-            model=self.power_curve_model
+        self.terrain_vars = self.terrain_vars.interp(
+            height=self["tower height"],
+            method="linear",
+            kwargs={"fill_value": "extrapolate"},
         )
 
-        self.power_curve = xr.DataArray(
-            data=power_curve,
-            dims=["size", "application", "year", "value", "wind speed"],
-            coords={
-                "size": self.array.coords["size"],
-                "application": self.array.coords["application"],
-                "year": self.array.coords["year"],
-                "value": self.array.coords["value"],
-                "wind speed": np.arange(0, 31, 1),
-            },
+        # we get the power curve
+        self.power_curve = calculate_generic_power_curve(
+            power=self["power"],
         )
 
     def __calculate_electricity_production(self):
@@ -516,8 +506,7 @@ class WindTurbineModel:
             )
 
             self["lifetime electricity production"] = (
-                    self.annual_electricity_production.sum(dim="time")
-                    * self["lifetime"]
+                self.annual_electricity_production.sum(dim="time") * self["lifetime"]
             )
         else:
             if self.country:
@@ -532,9 +521,9 @@ class WindTurbineModel:
 
     def __calculate_average_load_factor(self):
         # we calculate the average load factor
-        self["average load factor"] = self.annual_electricity_production.sum(dim="time") / (
-            8760 * self["power"]
-        )
+        self["average load factor"] = self.annual_electricity_production.sum(
+            dim="time"
+        ) / (8760 * self["power"])
 
     def __set_size_rotor(self):
         """
@@ -662,6 +651,10 @@ class WindTurbineModel:
         self["foundation mass"] += (self["pile mass"] + self["transition mass"]) * self[
             "offshore"
         ]
+
+        self["distance to coastline"] = find_nearest_coastline(
+            self.location[0], self.location[1]
+        )
 
         cable_mass, energy = set_cable_requirements(
             self["power"],
