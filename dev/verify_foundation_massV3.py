@@ -1,5 +1,5 @@
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 import xarray as xr
 from scipy.optimize import curve_fit
 
@@ -12,8 +12,8 @@ wind_data_file = "../era5_mean_2013-2022_month_by_hour_corrected.nc"
 ds = xr.open_dataset(wind_data_file)
 
 # User input: Location (latitude & longitude)
-latitude = 55   # Example: 55.602
-longitude = 12 # Example: 12.492
+latitude = 55  # Example: 55.602
+longitude = 12  # Example: 12.492
 
 # Interpolate wind speed for given location
 V = ds["wind_speed"].interp(latitude=latitude, longitude=longitude).values.item()
@@ -54,43 +54,108 @@ print(f"ULS Moment: {M_ULS_MN:.2f} MN·m")
 # 3️⃣ Regression Models for Bolt, Reinforcement, and Concrete Quantities
 # -------------------------------
 
+
 # Define fitting functions
 def linear(x, a, b):
     return a * x + b
 
+
 def polynomial(x, a, b, c):
     return a * x**2 + b * x + c
+
 
 def logarithmic(x, a, b):
     return a * np.log(x) + b
 
+
 def exponential(x, a, b):
     return a * np.exp(b * x)
 
+
 # Data
 m_uls_bolt = [
-    88.1, 91.9, 133.5, 123.6, 134.8, 134.0, 156.3, 186.9, 255.6,
+    88.1,
+    91.9,
+    133.5,
+    123.6,
+    134.8,
+    134.0,
+    156.3,
+    186.9,
+    255.6,
 ]
 bolt_mass = [
-    3.51, 5.31, 3.96, 7.27, 7.14, 7.64, 7.54, 10.64, 10.38,
+    3.51,
+    5.31,
+    3.96,
+    7.27,
+    7.14,
+    7.64,
+    7.54,
+    10.64,
+    10.38,
 ]
 
 m_uls_reinforcement = [
-    88.2, 88.3, 91.4, 123.8, 135.0, 135.1, 135.1, 132.4, 155.3,
-    186.9, 186.7, 255.2, 255.1,
+    88.2,
+    88.3,
+    91.4,
+    123.8,
+    135.0,
+    135.1,
+    135.1,
+    132.4,
+    155.3,
+    186.9,
+    186.7,
+    255.2,
+    255.1,
 ]
 reinforcement_mass = [
-    78.9, 62.3, 42.4, 56.6, 55.8, 63.1, 67.2, 84.3, 110.9,
-    88.6, 74.7, 153.5, 186.1,
+    78.9,
+    62.3,
+    42.4,
+    56.6,
+    55.8,
+    63.1,
+    67.2,
+    84.3,
+    110.9,
+    88.6,
+    74.7,
+    153.5,
+    186.1,
 ]
 
 m_uls_concrete = [
-    91.3, 87.6, 86.7, 123.2, 131.4, 132.9, 132.9, 132.5, 155.3,
-    186.0, 185.8, 255.4, 256.0,
+    91.3,
+    87.6,
+    86.7,
+    123.2,
+    131.4,
+    132.9,
+    132.9,
+    132.5,
+    155.3,
+    186.0,
+    185.8,
+    255.4,
+    256.0,
 ]
 concrete_volume = [
-    352.4, 553.6, 648.5, 443.6, 555.1, 609.0, 678.8, 767.5, 692.4,
-    669.1, 894.9, 940.2, 1166.5,
+    352.4,
+    553.6,
+    648.5,
+    443.6,
+    555.1,
+    609.0,
+    678.8,
+    767.5,
+    692.4,
+    669.1,
+    894.9,
+    940.2,
+    1166.5,
 ]
 
 # Organizing datasets
@@ -105,11 +170,21 @@ fig, axes = plt.subplots(3, 1, figsize=(6, 12))
 
 for ax, (name, (x_data, y_data)) in zip(axes, datasets.items()):
     x_fit = np.linspace(min(x_data), max(x_data), 100)
-    
+
     # Fit and plot each model
-    models = {"Linear": linear, "Polynomial": polynomial, "Logarithmic": logarithmic, "Exponential": exponential}
-    colors = {"Linear": "red", "Polynomial": "green", "Logarithmic": "blue", "Exponential": "purple"}
-    
+    models = {
+        "Linear": linear,
+        "Polynomial": polynomial,
+        "Logarithmic": logarithmic,
+        "Exponential": exponential,
+    }
+    colors = {
+        "Linear": "red",
+        "Polynomial": "green",
+        "Logarithmic": "blue",
+        "Exponential": "purple",
+    }
+
     for model_name, model_func in models.items():
         try:
             popt, _ = curve_fit(model_func, x_data, y_data)
@@ -117,7 +192,7 @@ for ax, (name, (x_data, y_data)) in zip(axes, datasets.items()):
             ax.plot(x_fit, y_fit, label=f"{model_name} Fit", color=colors[model_name])
         except RuntimeError:
             pass  # Skip if the model fails to fit
-    
+
     ax.scatter(x_data, y_data, label="Data", color="black")
     ax.set_xlabel("Design Moment ULS [MN·m]")
     ax.set_ylabel(name)
