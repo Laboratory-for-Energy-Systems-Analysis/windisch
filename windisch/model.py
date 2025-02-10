@@ -652,9 +652,10 @@ class WindTurbineModel:
             "offshore"
         ]
 
-        self["distance to coastline"] = find_nearest_coastline(
-            self.location[0], self.location[1]
-        )
+        if self.location:
+            self["distance to coastline"] = find_nearest_coastline(
+                self.location[0], self.location[1]
+            )
 
         cable_mass, energy = set_cable_requirements(
             self["power"],
