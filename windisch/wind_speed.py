@@ -100,10 +100,11 @@ def fetch_terrain_variables(
         ds = xr.open_dataset(cache_file)
 
         if fetch_wind_data is False:
-            # Rename landmask to LANDMASK, tke50_mean to TAKE, rho_mean to RHO
+            # Rename landmask to LANDMASK, rho_mean to RHO
             ds = ds.rename_vars(
                 {
                     "landmask": "LANDMASK",
+                    "rho_mean": "RHO",
                 }
             )
 
