@@ -8,16 +8,20 @@ from scipy.optimize import curve_fit
 # -------------------------------
 
 # Load wind data
-wind_data_file = "../era5_mean_2013-2022_month_by_hour_corrected.nc"
+wind_data_file = "/Users/kalenajonsson/Desktop/SemesterProject/Code/windisch_folder/dev/era5_mean_2013-2022_month_by_hour.nc"
 ds = xr.open_dataset(wind_data_file)
 
 # User input: Location (latitude & longitude)
-latitude = 55  # Example: 55.602
+latitude = 50  # Example: 55.602
 longitude = 12  # Example: 12.492
 
 # Interpolate wind speed for given location
-V = ds["wind_speed"].interp(latitude=latitude, longitude=longitude).values.item()
-print(f"Interpolated Wind Speed at ({latitude}, {longitude}): {V:.2f} m/s")
+
+#print(ds)
+
+V = ds["wind_speed"].interp(latitude=latitude, longitude=longitude, ).max()
+#print(V)
+print(f"Interpolated Wind Speed at ({latitude}, {longitude}): {float(V):.2f} m/s")
 
 # -------------------------------
 # 2️⃣ ULS Moment Calculation
@@ -174,9 +178,9 @@ for ax, (name, (x_data, y_data)) in zip(axes, datasets.items()):
     # Fit and plot each model
     models = {
         "Linear": linear,
-        "Polynomial": polynomial,
-        "Logarithmic": logarithmic,
-        "Exponential": exponential,
+        #"Polynomial": polynomial,
+        #"Logarithmic": logarithmic,
+        #"Exponential": exponential,
     }
     colors = {
         "Linear": "red",
@@ -188,6 +192,7 @@ for ax, (name, (x_data, y_data)) in zip(axes, datasets.items()):
     for model_name, model_func in models.items():
         try:
             popt, _ = curve_fit(model_func, x_data, y_data)
+            print(popt)
             y_fit = model_func(x_fit, *popt)
             ax.plot(x_fit, y_fit, label=f"{model_name} Fit", color=colors[model_name])
         except RuntimeError:

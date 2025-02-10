@@ -4,17 +4,25 @@ import pandas as pd
 
 
 # Define the regression function
-def func_rotor_diameter(power, coeff_a, coeff_b, coeff_c, coeff_d):
-    return coeff_a - coeff_b * np.exp(-(power - coeff_d) / coeff_c)
+def func_rotor_diameter(power, coeff_a, coeff_b, coeff_c, coeff_d, coeff_e):
+    return (
+        coeff_a
+        - coeff_b * np.exp(-(power - coeff_d) / coeff_c)
+        + coeff_e * np.log(power + 1)
+    )
 
 
 # Previous coefficients for onshore and offshore turbines
-coeff_onshore = [152.66, 136.57, 2478.03, 16.44]
-coeff_offshore = [191.84, 147.37, 5101.29, 376.63]
+#coeff_onshore = [152.66, 136.57, 2478.03, 16.44, 0.00]
+#coeff_offshore = [191.84, 147.37, 5101.29, 376.63, 0.00]
 
-# TO CHANGE : new coefficients after having found them in the script estimate_rotor_diameter.py
-# coeff_onshore = [179.23, 144.91, 3061.77, 371.14]
-# coeff_offshore = [16702.89, 10346.16, 2214138.00, -9896.84]
+# new coefficients after having found them in the script estimate_rotor_diameter_oldformulaforoffshore.py (what changed ? : the coeff changed so that it fits the new data)
+#coeff_onshore = [179.23, 164.92, 3061.77, -24.98, 0.00]
+#coeff_offshore = [335.36, 668.07, 14748.29, -12610.26, 0.00]
+
+# new FINAL coefficients after having found them in the script estimate_rotor_diameter.py (what changed ? : new formula for offshore)
+coeff_onshore = [179.23, 164.92, 3061.77, -24.98, 00.0]
+coeff_offshore = [15662.58, 9770.48, 2076442.81, 994711.94, 24.40]
 
 # Load the data
 file_path = "/Users/kalenajonsson/Desktop/SemesterProject/Turbines_data.csv"

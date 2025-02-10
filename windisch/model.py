@@ -21,18 +21,18 @@ COPPER_DENSITY = 8960
 STEEL_DENSITY = 8000
 
 
-def func_height_power(
-    power: int, coeff_a: float, coeff_b: float, coeff_c: float
+def func_height_diameter(
+    diameter: int, coeff_a: float, coeff_b: float, coeff_c: float
 ) -> float:
     """
-    Returns hub height, in m, based on rated power output (kW).
-    :param power: power output (kW)
+    Returns hub height, in m, based on rated diameter (m).
+    :param diameter: diameter (m)
     :param coeff_a: coefficient
     :param coeff_b: coefficient
     :param coeff_c: coefficient
     :return: hub height (m)
     """
-    return coeff_a - coeff_b * np.exp(-power / coeff_c)
+    return coeff_a - coeff_b * np.exp(-diameter / coeff_c)
 
 
 def func_rotor_weight_rotor_diameter(
@@ -60,9 +60,36 @@ def func_nacelle_weight_power(power: int, coeff_a: float, coeff_b: float) -> flo
     nacelle_mass = coeff_a * power**2 + coeff_b * power
     return 1e3 * nacelle_mass
 
+def __get_ultimate_limit_state():
+
+    # Given values
+    Cd = 1.2  # Drag coefficient
+    rho = 1.225  # Air density (kg/m³)
+    D = 100  # Rotor diameter (m)
+    A = (np.pi / 4) * D**2  # Rotor swept area (m²)
+
+    # Wind force calculation
+    F_wind = 0.5 * Cd * rho * A * V**2
+
+    # Gravity force calculation
+    mass_nacelle_rotor = 100000  # kg (100 t)
+    g = 9.81  # Gravity (m/s²)
+    F_gravity = mass_nacelle_rotor * g
+
+    # Heights
+    H_hub = 100 + D / 2  # Hub height (m)
+    H_CoM = 100 + D / 3  # Approximate center of mass height (m)
+
+    # ULS Moment calculation
+    M_ULS = (F_wind * H_hub) + (F_gravity * H_CoM)
+
+    # Convert to MN·m
+    M_ULS_MN = M_ULS / 1e6
+
+    return M_ULS_MN
 
 def func_rotor_diameter(
-    power: int, coeff_a: float, coeff_b: float, coeff_c: float, coeff_d: float
+    power: int, coeff_a: float, coeff_b: float, coeff_c: float, coeff_d: float, coeff_e: float
 ) -> float:
     """
     Returns rotor diameter, based on power output and given coefficients
@@ -71,9 +98,14 @@ def func_rotor_diameter(
     :param coeff_b: coefficient
     :param coeff_c: coefficient
     :param coeff_d: coefficient
+    :param coeff_e: coefficient
     :return: rotor diameter (m)
     """
-    return coeff_a - coeff_b * np.exp(-(power - coeff_d) / coeff_c)
+    return (
+        coeff_a
+        - coeff_b * np.exp(-(power - coeff_d) / coeff_c)
+        + coeff_e * np.log(power + 1)
+    )
 
 
 def func_mass_foundation_onshore(height: float, diameter: float) -> float:
@@ -83,8 +115,13 @@ def func_mass_foundation_onshore(height: float, diameter: float) -> float:
     :param diameter: rotor diameter (m)
     :return:
     """
-    return 1696e3 * height / 80 * diameter**2 / (100**2)
+    uls = __get_ultimate_limit_state()
 
+    bolt_mass = 0
+    concrete_vol = 0 
+    reinf_mass = 0
+
+    
 
 def func_mass_reinf_steel_onshore(power: int) -> float:
     """
@@ -532,12 +569,12 @@ class WindTurbineModel:
         """
 
         self["rotor diameter"] = func_rotor_diameter(
-            self["power"], 152.66222073, 136.56772435, 2478.03511414, 16.44042379
+            self["power"], 179.23, 164.92, 3061.77, -24.98, 00.0
         ) * (1 - self["offshore"])
 
         self["rotor diameter"] += (
             func_rotor_diameter(
-                self["power"], 191.83651588, 147.37205671, 5101.28555377, 376.62814798
+                self["power"], 15662.58, 9770.48, 2076442.81, 994711.94, 24.40
             )
             * self["offshore"]
         )
@@ -548,12 +585,12 @@ class WindTurbineModel:
         :return:
         """
 
-        self["tower height"] = func_height_power(
-            self["power"], 116.43035193, 91.64953366, 2391.88662558
+        self["tower height"] = func_height_diameter(
+            self["diameter"], -611916.49, -611936.55, -862547.53
         ) * (1 - self["offshore"])
 
         self["tower height"] += (
-            func_height_power(self["power"], 120.75491612, 82.75390577, 4177.56520433)
+            func_height_diameter(self["diameter"], 127.97, 127.08, 82.23)
             * self["offshore"]
         )
 
@@ -803,3 +840,5 @@ class WindTurbineModel:
         # assumed equivalent to 257'000 ton-km
         # by a ferry boat @ 2.95 kg/100 ton-km
         self["maintenance transport"] += (7575 * 100 / 2.95) * self["offshore"]
+
+    
