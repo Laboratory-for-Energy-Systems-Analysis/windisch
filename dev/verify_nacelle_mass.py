@@ -1,6 +1,7 @@
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
+
 
 # Define the regression function for nacelle mass calculation
 def func_nacelle_mass(power, coeff_a, coeff_b):
@@ -13,6 +14,7 @@ def func_nacelle_mass(power, coeff_a, coeff_b):
     """
     nacelle_mass = coeff_a * power**2 + coeff_b * power
     return 1e3 * nacelle_mass  # Convert to kg
+
 
 # Coefficients used in __set_nacelle_mass for onshore and offshore turbines
 coeff_onshore = [1.66691134e-06, 3.20700974e-02]
@@ -27,7 +29,7 @@ data = data.drop(index=1)
 
 # Convert relevant columns to numeric
 data["Rated power"] = pd.to_numeric(data["Rated power"], errors="coerce")
-data["Nacelle weight"] = pd.to_numeric(data["Nacelle weight"], errors="coerce")*1000
+data["Nacelle weight"] = pd.to_numeric(data["Nacelle weight"], errors="coerce") * 1000
 
 # Drop rows with missing values
 data = data.dropna(subset=["Rated power", "Nacelle weight"])
@@ -35,6 +37,7 @@ data = data.dropna(subset=["Rated power", "Nacelle weight"])
 # Filter data for offshore and onshore turbines
 data_offshore = data.loc[data["Offshore"] == "Yes"]
 data_onshore = data.loc[data["Offshore"] == "No"]
+
 
 # Function to plot the observed and predicted nacelle mass
 def plot_nacelle_mass(data, coeffs, title, color):
@@ -52,7 +55,9 @@ def plot_nacelle_mass(data, coeffs, title, color):
     curve = func_nacelle_mass(power_range, *coeffs)
 
     # Plot observed data
-    plt.scatter(rated_power, observed_mass, color=color, label="Observed Data", alpha=0.7)
+    plt.scatter(
+        rated_power, observed_mass, color=color, label="Observed Data", alpha=0.7
+    )
 
     # Plot the curve
     plt.plot(power_range, curve, color="red", label="Fitted Curve")
@@ -74,15 +79,20 @@ def plot_nacelle_mass(data, coeffs, title, color):
     plt.legend()
     plt.grid()
 
+
 # Create subplots
 plt.figure(figsize=(14, 10))
 
 
 # Plot for onshore turbines
 plt.subplot(2, 1, 1)
-plot_nacelle_mass(data_onshore, coeff_onshore, "Onshore Turbines - Nacelle Mass", "blue")
+plot_nacelle_mass(
+    data_onshore, coeff_onshore, "Onshore Turbines - Nacelle Mass", "blue"
+)
 
 # Plot for offshore turbines
 plt.subplot(2, 1, 2)
-plot_nacelle_mass(data_offshore, coeff_offshore, "Offshore Turbines - Nacelle Mass", "green")
+plot_nacelle_mass(
+    data_offshore, coeff_offshore, "Offshore Turbines - Nacelle Mass", "green"
+)
 plt.show()

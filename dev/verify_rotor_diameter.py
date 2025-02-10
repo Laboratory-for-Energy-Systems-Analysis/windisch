@@ -13,8 +13,8 @@ coeff_onshore = [152.66, 136.57, 2478.03, 16.44]
 coeff_offshore = [191.84, 147.37, 5101.29, 376.63]
 
 # TO CHANGE : new coefficients after having found them in the script estimate_rotor_diameter.py
-#coeff_onshore = [179.23, 144.91, 3061.77, 371.14]
-#coeff_offshore = [16702.89, 10346.16, 2214138.00, -9896.84]
+# coeff_onshore = [179.23, 144.91, 3061.77, 371.14]
+# coeff_offshore = [16702.89, 10346.16, 2214138.00, -9896.84]
 
 # Load the data
 file_path = "/Users/kalenajonsson/Desktop/SemesterProject/Turbines_data.csv"

@@ -1,6 +1,7 @@
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
+
 
 # Define functions for foundation mass calculations
 def func_mass_foundation_onshore(height, diameter):
@@ -12,6 +13,7 @@ def func_mass_foundation_onshore(height, diameter):
     """
     return 1696e3 * (height / 80) * (diameter**2 / (100**2))
 
+
 def func_mass_reinf_steel_onshore(power):
     """
     Returns mass of reinforcing steel in onshore turbine foundations (kg).
@@ -19,6 +21,7 @@ def func_mass_reinf_steel_onshore(power):
     :return: Mass of reinforcing steel (kg)
     """
     return np.interp(power, [750, 2000, 4500], [10210, 27000, 51900])
+
 
 # Load the dataset
 file_path = "/Users/kalenajonsson/Desktop/SemesterProject/Turbines_data.csv"
@@ -35,23 +38,36 @@ data["Rotor diameter"] = pd.to_numeric(data["Rotor diameter"], errors="coerce")
 data["Tower weight"] = pd.to_numeric(data["Tower weight"], errors="coerce")
 
 # Drop rows with missing values
-data = data.dropna(subset=["Rated power", "Minimum hub height", "Maximum hub height", "Rotor diameter", "Tower weight"])
+data = data.dropna(
+    subset=[
+        "Rated power",
+        "Minimum hub height",
+        "Maximum hub height",
+        "Rotor diameter",
+        "Tower weight",
+    ]
+)
 
 # Filter data for offshore and onshore turbines
 data_offshore = data.loc[data["Offshore"] == "Yes"]
 data_onshore = data.loc[data["Offshore"] == "No"]
 
+
 # Define function to plot foundation mass
 def plot_foundation_mass(data, title, color):
     rated_power = data["Rated power"].values
     rotor_diameter = data["Rotor diameter"].values
-    tower_height = (data["Minimum hub height"].values + data["Maximum hub height"].values) / 2
+    tower_height = (
+        data["Minimum hub height"].values + data["Maximum hub height"].values
+    ) / 2
 
     # Compute predicted foundation mass
     predicted_mass = func_mass_foundation_onshore(tower_height, rotor_diameter)
 
     # Compute RMSE
-    observed_mass = data["Tower weight"].values  # Assuming 'Tower weight' as proxy for foundation mass
+    observed_mass = data[
+        "Tower weight"
+    ].values  # Assuming 'Tower weight' as proxy for foundation mass
     rmse = np.sqrt(np.mean((observed_mass - predicted_mass) ** 2))
 
     # Generate smooth range for power-based foundation mass
@@ -61,7 +77,9 @@ def plot_foundation_mass(data, title, color):
     curve = func_mass_foundation_onshore(tower_height_range, rotor_diameter_range)
 
     # Plot observed data
-    plt.scatter(rated_power, observed_mass, color=color, label="Observed Data", alpha=0.7)
+    plt.scatter(
+        rated_power, observed_mass, color=color, label="Observed Data", alpha=0.7
+    )
 
     # Plot the curve
     plt.plot(power_range, curve, color="red", label="Fitted Curve")
@@ -82,6 +100,7 @@ def plot_foundation_mass(data, title, color):
     plt.ylabel("Foundation Mass (kg)")
     plt.legend()
     plt.grid()
+
 
 # Create subplots
 plt.figure(figsize=(14, 10))
