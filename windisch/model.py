@@ -465,7 +465,11 @@ class WindTurbineModel:
 
         self.terrain_vars = wind_speed
         # rename "wind_speed" to "WS"
-        self.terrain_vars = self.terrain_vars.rename_vars({"wind_speed": "WS", })
+        self.terrain_vars = self.terrain_vars.rename_vars(
+            {
+                "wind_speed": "WS",
+            }
+        )
         # replace NaNs with zeros
         self.terrain_vars = self.terrain_vars.fillna(0)
 
@@ -827,14 +831,14 @@ class WindTurbineModel:
             rho = 1.225
 
         D = self["rotor diameter"]  # Rotor diameter (m)
-        A = (np.pi / 4) * D ** 2  # Rotor swept area (m²)
+        A = (np.pi / 4) * D**2  # Rotor swept area (m²)
 
         # Maximum wind force calculation
         try:
             max_wind_speed = self.terrain_vars["WS"].max()
         except TypeError:
-            max_wind_speed = 13 # m/s, if not available
-        F_wind = 0.5 * Cd * rho * A * max_wind_speed ** 2
+            max_wind_speed = 13  # m/s, if not available
+        F_wind = 0.5 * Cd * rho * A * max_wind_speed**2
 
         # Gravity force calculation
         mass_nacelle_rotor = self["nacelle mass"]  # kg (100 t)
@@ -852,4 +856,3 @@ class WindTurbineModel:
         M_ULS_MN = M_ULS / 1e6
 
         return M_ULS_MN
-
