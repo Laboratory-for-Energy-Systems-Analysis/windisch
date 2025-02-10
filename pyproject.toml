@@ -1,0 +1,25 @@
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "windisch"  # Replace with actual name from setup.py if provided
+version = "0.0.1"  # Replace with the version from setup.py if defined
+description = "Wind turbine LCA model"  # Replace with actual description from setup.py if defined
+authors = [
+    { name = "Your Name", email = "your_email@example.com" },  # Replace with author details from setup.py if provided
+]
+license = { file = "LICENSE" }  # Ensure LICENSE file exists
+readme = "README.md"  # Ensure README.md file exists
+
+dependencies = ['bw2io', 'klausen', 'numpy', 'pandas', 'PyPrind', 'scipy', 'setuptools', 'stats_arrays', 'xarray', 'netcdf4', 'bottleneck', 'rasterio', 'geopandas']
+
+[tool.setuptools]
+package-dir = {"" = "src"}  # Adjust based on the directory structure in setup.py if specified
+
+[tool.setuptools.packages.find]
+where = ["src"]  # Adjust based on the directory structure in setup.py if specified
+
+[tool.setuptools.scripts]
+# Add script entries if defined in setup.py
