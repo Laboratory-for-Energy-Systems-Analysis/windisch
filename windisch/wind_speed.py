@@ -140,6 +140,7 @@ def fetch_terrain_variables(
                     ds = ds.rename_vars(
                         {
                             "landmask": "LANDMASK",
+                            "rho_mean": "RHO",
                         }
                     )
 
