@@ -91,7 +91,12 @@ for ax, (name, (x_data, y_data)) in zip(axes, datasets.items()):
     x_fit = np.linspace(min(x_data), max(x_data), 100)
     
     # Fit and plot each model
-    models = {"Linear": linear, "Polynomial": polynomial, "Logarithmic": logarithmic, "Exponential": exponential}
+    models = {
+        "Linear": linear, 
+        #"Polynomial": polynomial, 
+        #"Logarithmic": logarithmic, 
+        #"Exponential": exponential
+        }
     colors = {"Linear": "red", "Polynomial": "green", "Logarithmic": "blue", "Exponential": "purple"}
     
     for model_name, model_func in models.items():
@@ -107,6 +112,7 @@ for ax, (name, (x_data, y_data)) in zip(axes, datasets.items()):
     ax.set_ylabel(name)
     ax.legend()
     ax.set_title(f"Fits for {name}")
+    ax.set_ylim(0,)
 
 plt.tight_layout()
 plt.show()
