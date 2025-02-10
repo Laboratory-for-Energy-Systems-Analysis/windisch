@@ -13,12 +13,12 @@ def func_rotor_diameter(power, coeff_a, coeff_b, coeff_c, coeff_d, coeff_e):
 
 
 # Previous coefficients for onshore and offshore turbines
-#coeff_onshore = [152.66, 136.57, 2478.03, 16.44, 0.00]
-#coeff_offshore = [191.84, 147.37, 5101.29, 376.63, 0.00]
+# coeff_onshore = [152.66, 136.57, 2478.03, 16.44, 0.00]
+# coeff_offshore = [191.84, 147.37, 5101.29, 376.63, 0.00]
 
 # new coefficients after having found them in the script estimate_rotor_diameter_oldformulaforoffshore.py (what changed ? : the coeff changed so that it fits the new data)
-#coeff_onshore = [179.23, 164.92, 3061.77, -24.98, 0.00]
-#coeff_offshore = [335.36, 668.07, 14748.29, -12610.26, 0.00]
+# coeff_onshore = [179.23, 164.92, 3061.77, -24.98, 0.00]
+# coeff_offshore = [335.36, 668.07, 14748.29, -12610.26, 0.00]
 
 # new FINAL coefficients after having found them in the script estimate_rotor_diameter.py (what changed ? : new formula for offshore)
 coeff_onshore = [179.23, 164.92, 3061.77, -24.98, 00.0]

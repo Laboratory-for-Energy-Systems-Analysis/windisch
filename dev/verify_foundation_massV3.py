@@ -17,10 +17,17 @@ longitude = 12  # Example: 12.492
 
 # Interpolate wind speed for given location
 
-#print(ds)
+# print(ds)
 
-V = ds["wind_speed"].interp(latitude=latitude, longitude=longitude, ).max()
-#print(V)
+V = (
+    ds["wind_speed"]
+    .interp(
+        latitude=latitude,
+        longitude=longitude,
+    )
+    .max()
+)
+# print(V)
 print(f"Interpolated Wind Speed at ({latitude}, {longitude}): {float(V):.2f} m/s")
 
 # -------------------------------
@@ -178,9 +185,9 @@ for ax, (name, (x_data, y_data)) in zip(axes, datasets.items()):
     # Fit and plot each model
     models = {
         "Linear": linear,
-        #"Polynomial": polynomial,
-        #"Logarithmic": logarithmic,
-        #"Exponential": exponential,
+        # "Polynomial": polynomial,
+        # "Logarithmic": logarithmic,
+        # "Exponential": exponential,
     }
     colors = {
         "Linear": "red",
