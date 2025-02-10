@@ -11,7 +11,11 @@ def exponential_model(power, coeff_a, coeff_b, coeff_c, coeff_d):
 
 # Improved model with logarithmic term (for offshore turbines)
 def improved_exponential_model(power, coeff_a, coeff_b, coeff_c, coeff_d, coeff_e):
-    return coeff_a - coeff_b * np.exp(-(power - coeff_d) / coeff_c) + coeff_e * np.log(power + 1)
+    return (
+        coeff_a
+        - coeff_b * np.exp(-(power - coeff_d) / coeff_c)
+        + coeff_e * np.log(power + 1)
+    )
 
 
 # Load the dataset
@@ -43,7 +47,10 @@ def fit_model(data, title, model_func, initial_guess):
 
     # Print the estimated coefficients
     print(
-        f"{title} Coefficients: " + ", ".join([f"coeff_{chr(97+i)}={coeff:.2f}" for i, coeff in enumerate(coeffs)])
+        f"{title} Coefficients: "
+        + ", ".join(
+            [f"coeff_{chr(97+i)}={coeff:.2f}" for i, coeff in enumerate(coeffs)]
+        )
     )
 
     # Plot observed data and fitted curve
@@ -68,7 +75,7 @@ coeffs_onshore = fit_model(
     data_onshore,
     "Onshore Turbines",
     exponential_model,
-    [150, 130, 2000, 20]  # Original good initial guess
+    [150, 130, 2000, 20],  # Original good initial guess
 )
 
 # Fit the model for offshore turbines (improved exponential + log model)
@@ -81,6 +88,6 @@ coeffs_offshore = fit_model(
         np.ptp(data_offshore["Rotor diameter"]) / 2,  # coeff_b: Approx half the range
         np.median(data_offshore["Rated power"]),  # coeff_c: Median power
         np.min(data_offshore["Rated power"]),  # coeff_d: Smallest power
-        1  # coeff_e: Log term initial guess
-    ]
+        1,  # coeff_e: Log term initial guess
+    ],
 )
