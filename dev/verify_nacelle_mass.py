@@ -27,7 +27,7 @@ data = data.drop(index=1)
 
 # Convert relevant columns to numeric
 data["Rated power"] = pd.to_numeric(data["Rated power"], errors="coerce")
-data["Nacelle weight"] = pd.to_numeric(data["Nacelle weight"], errors="coerce")
+data["Nacelle weight"] = pd.to_numeric(data["Nacelle weight"], errors="coerce")*1000
 
 # Drop rows with missing values
 data = data.dropna(subset=["Rated power", "Nacelle weight"])
@@ -77,10 +77,12 @@ def plot_nacelle_mass(data, coeffs, title, color):
 # Create subplots
 plt.figure(figsize=(14, 10))
 
+
 # Plot for onshore turbines
 plt.subplot(2, 1, 1)
 plot_nacelle_mass(data_onshore, coeff_onshore, "Onshore Turbines - Nacelle Mass", "blue")
 
 # Plot for offshore turbines
 plt.subplot(2, 1, 2)
-plot_nacelle_mass(data_offshore, coeff_offshore, "Offshore Turbines - Nacelle Mass
+plot_nacelle_mass(data_offshore, coeff_offshore, "Offshore Turbines - Nacelle Mass", "green")
+plt.show()

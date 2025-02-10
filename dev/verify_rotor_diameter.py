@@ -12,9 +12,9 @@ def func_rotor_diameter(power, coeff_a, coeff_b, coeff_c, coeff_d):
 coeff_onshore = [152.66, 136.57, 2478.03, 16.44]
 coeff_offshore = [191.84, 147.37, 5101.29, 376.63]
 
-# new coefficients after having found them in the script estimate_rotor_diameter.py
-# coeff_onshore = [179.23, 144.91, 3061.77, 371.14]
-# coeff_offshore = [335.36, 555.80, 14748.19, -9896.84]
+# TO CHANGE : new coefficients after having found them in the script estimate_rotor_diameter.py
+#coeff_onshore = [179.23, 144.91, 3061.77, 371.14]
+#coeff_offshore = [16702.89, 10346.16, 2214138.00, -9896.84]
 
 # Load the data
 file_path = "/Users/kalenajonsson/Desktop/SemesterProject/Turbines_data.csv"
