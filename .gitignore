@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 *.xml
 *.iml
+.DS_store
 
 # C extensions
 *.so
@@ -131,3 +132,5 @@ venv.bak/
 
 # IntelliJ
 /out/
+era5_mean_2013-2022_month_by_hour.nc
+Turbines_20230629.xlsx

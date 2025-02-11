@@ -6,24 +6,33 @@ and calculates dimensions and mass attributes.
 from typing import List, Tuple, Union
 
 import numpy as np
+import pandas as pd
+import xarray as xr
+
+from windisch.power_curve import calculate_generic_power_curve
+
+from . import DATA_DIR
+from .distance_to_coastline import find_nearest_coastline
+from .sea_depth import get_sea_depth
+from .wind_speed import fetch_terrain_variables, fetch_wind_speed
 
 # material densities, in kg/m3
 COPPER_DENSITY = 8960
 STEEL_DENSITY = 8000
 
 
-def func_height_power(
-    power: int, coeff_a: float, coeff_b: float, coeff_c: float
+def func_height_diameter(
+    diameter: int, coeff_a: float, coeff_b: float, coeff_c: float
 ) -> float:
     """
-    Returns hub height, in m, based on rated power output (kW).
-    :param power: power output (kW)
+    Returns hub height, in m, based on rated diameter (m).
+    :param diameter: diameter (m)
     :param coeff_a: coefficient
     :param coeff_b: coefficient
     :param coeff_c: coefficient
     :return: hub height (m)
     """
-    return coeff_a - coeff_b * np.exp(-power / coeff_c)
+    return coeff_a - coeff_b * np.exp(-diameter / coeff_c)
 
 
 def func_rotor_weight_rotor_diameter(
@@ -53,7 +62,12 @@ def func_nacelle_weight_power(power: int, coeff_a: float, coeff_b: float) -> flo
 
 
 def func_rotor_diameter(
-    power: int, coeff_a: float, coeff_b: float, coeff_c: float, coeff_d: float
+    power: int,
+    coeff_a: float,
+    coeff_b: float,
+    coeff_c: float,
+    coeff_d: float,
+    coeff_e: float,
 ) -> float:
     """
     Returns rotor diameter, based on power output and given coefficients
@@ -62,19 +76,14 @@ def func_rotor_diameter(
     :param coeff_b: coefficient
     :param coeff_c: coefficient
     :param coeff_d: coefficient
+    :param coeff_e: coefficient
     :return: rotor diameter (m)
     """
-    return coeff_a - coeff_b * np.exp(-(power - coeff_d) / coeff_c)
-
-
-def func_mass_foundation_onshore(height: float, diameter: float) -> float:
-    """
-    Returns mass of onshore turbine foundations
-    :param height: tower height (m)
-    :param diameter: rotor diameter (m)
-    :return:
-    """
-    return 1696e3 * height / 80 * diameter**2 / (100**2)
+    return (
+        coeff_a
+        - coeff_b * np.exp(-(power - coeff_d) / coeff_c)
+        + coeff_e * np.log(power + 1)
+    )
 
 
 def func_mass_reinf_steel_onshore(power: int) -> float:
@@ -296,12 +305,50 @@ class WindTurbineModel:
 
     :ivar array: multidimensional numpy-like array that contains parameters' value(s)
     :vartype array: xarray.DataArray
+    :ivar country: Country where the wind turbines are located
+    :vartype country: str
+    :ivar location: Location of the wind turbines
+    :vartype location: Tuple[float, float]
 
     """
 
-    def __init__(self, array):
-        self.__cache = None
+    def __init__(
+        self,
+        array: xr.DataArray,
+        country: str = None,
+        location: Tuple[float, float] = None,
+        wind_data: xr.DataArray = None,
+        sea_depth_data: xr.DataArray = None,
+        power_curve_model="Dai et al. 2016",
+    ):
+        self.terrain_vars = None
         self.array = array
+        self.power_curve = None
+        self.__cache = None
+        self.country = country
+        self.location = location or None
+        self.wind_data = wind_data
+        self.power_curve_model = power_curve_model
+        self.sea_depth_data = sea_depth_data
+
+        if self.location:
+            self.__fetch_terrain_variables(
+                fetch_wind_data=True if not self.wind_data else False
+            )
+
+            if self.wind_data:
+                self.__fetch_wind_speed()
+
+            if self.terrain_vars["LANDMASK"].max() == 1:
+                print("Onshore wind turbines")
+                if "offshore" in self.array.coords["application"]:
+                    self.array.loc[dict(application="offshore", parameter="power")] = 0
+            else:
+                print("Offshore wind turbines")
+                if "onshore" in self.array.coords["application"]:
+                    self.array.loc[dict(application="onshore", parameter="power")] = 0
+                if self.sea_depth_data:
+                    self.__fetch_sea_depth()
 
     def __getitem__(self, key: Union[str, List[str]]):
         """
@@ -331,7 +378,8 @@ class WindTurbineModel:
 
     def set_all(self):
         """
-        This method runs a series of methods to size the wind turbines, evaluate material requirements, etc.
+        This method runs a series of methods to size the wind turbines,
+        evaluate material requirements, etc.
 
         :returns: Does not return anything. Modifies ``self.array`` in place.
 
@@ -359,17 +407,127 @@ class WindTurbineModel:
             ]
         ].sum(dim="parameter")
 
-        # we remove wind turbines that are unlikely to exist
-        self.array.loc[
-            dict(
-                size=[
-                    s
-                    for s in self.array.coords["size"].values
-                    if s in ["100kW", "500kW"]
-                ],
-                application="offshore",
+        # if location is given, fetch wind speeds and generate power curve
+        if self.location:
+            self.__fetch_power_curves()
+            self.__calculate_electricity_production()
+            self.__calculate_average_load_factor()
+        else:
+            # otherwise, fetch country-average load factors
+            if self.country:
+                self.__fetch_country_load_factor()
+                self.__calculate_electricity_production()
+            else:
+                raise ValueError("Location or country must be provided")
+
+    def __fetch_country_load_factor(self):
+
+        df = pd.read_csv(DATA_DIR / "wind_capacity_factors.csv", index_col=0)
+
+        if self.country in df.index:
+            if "onshore" in self.array.coords["application"].values:
+                self.array.loc[
+                    dict(application="onshore", parameter="average load factor")
+                ] = df.loc[self.country, "onshore"]
+
+            if "offshore" in self.array.coords["application"].values:
+                if df.loc[self.country, "offshore"] > 0:
+                    self.array.loc[
+                        dict(application="offshore", parameter="average load factor")
+                    ] = df.loc[self.country, "offshore"]
+
+        else:
+            ValueError(f"Country {self.country} not found in the database")
+
+    def __fetch_sea_depth(self):
+
+        self["sea depth"] = (
+            get_sea_depth(self.sea_depth_data, self.location[0], self.location[1])
+            * -1
+            * (self["offshore"] == 1)
+        )
+
+    def __fetch_wind_speed(self):
+
+        wind_speed = fetch_wind_speed(
+            self.wind_data.interp(
+                latitude=self.location[0],
+                longitude=self.location[1],
+                method="linear",
             )
-        ] = 0
+        )
+
+        for var in self.terrain_vars.data_vars:
+            wind_speed[var] = self.terrain_vars[var]
+
+        for coord in self.terrain_vars.coords:
+            wind_speed[coord] = self.terrain_vars[coord]
+
+        self.terrain_vars = wind_speed
+        # rename "wind_speed" to "WS"
+        self.terrain_vars = self.terrain_vars.rename_vars(
+            {
+                "wind_speed": "WS",
+            }
+        )
+        # replace NaNs with zeros
+        self.terrain_vars = self.terrain_vars.fillna(0)
+
+        # we adjust values to the heights of the wind turbines
+        self.terrain_vars = self.terrain_vars.interp(
+            height=self["tower height"],
+            method="linear",
+            kwargs={"fill_value": "extrapolate"},
+        )
+
+    def __fetch_terrain_variables(self, fetch_wind_data: bool):
+        """
+        Fetch wind speeds and directions, turbulent kinetic energy,
+        land mask, and air density at the location of the wind turbines.
+        Values are fetched for heights of 50 and 150m.
+        :return:
+        """
+        terrain_vars = fetch_terrain_variables(
+            latitude=self.location[0],
+            longitude=self.location[1],
+            fetch_wind_data=fetch_wind_data,
+        )
+        self.terrain_vars = terrain_vars
+
+    def __fetch_power_curves(self):
+
+        # we get the power curve
+        self.power_curve = calculate_generic_power_curve(
+            power=self["power"],
+        )
+
+    def __calculate_electricity_production(self):
+        # we calculate the electricity production
+        if self.power_curve is not None:
+
+            self.annual_electricity_production = self.power_curve.interp(
+                {"wind speed": self.terrain_vars["WS"]}, method="linear"
+            )
+
+            self["lifetime electricity production"] = (
+                self.annual_electricity_production.sum(dim="time") * self["lifetime"]
+            )
+        else:
+            if self.country:
+
+                self["lifetime electricity production"] = (
+                    self["average load factor"]
+                    * self["power"]
+                    * 24
+                    * 365
+                    * self["lifetime"]
+                )
+
+    def __calculate_average_load_factor(self):
+        # we calculate the average load factor
+        self["average load factor"] = self.annual_electricity_production.sum(
+            dim="time"
+        ) / (8760 * self["power"])
 
     def __set_size_rotor(self):
         """
@@ -378,12 +536,12 @@ class WindTurbineModel:
         """
 
         self["rotor diameter"] = func_rotor_diameter(
-            self["power"], 152.66222073, 136.56772435, 2478.03511414, 16.44042379
+            self["power"], 179.23, 164.92, 3061.77, -24.98, 00.0
         ) * (1 - self["offshore"])
 
         self["rotor diameter"] += (
             func_rotor_diameter(
-                self["power"], 191.83651588, 147.37205671, 5101.28555377, 376.62814798
+                self["power"], 15662.58, 9770.48, 2076442.81, 994711.94, 24.40
             )
             * self["offshore"]
         )
@@ -394,12 +552,12 @@ class WindTurbineModel:
         :return:
         """
 
-        self["tower height"] = func_height_power(
-            self["power"], 116.43035193, 91.64953366, 2391.88662558
+        self["tower height"] = func_height_diameter(
+            self["rotor diameter"], -611916.49, -611936.55, -862547.53
         ) * (1 - self["offshore"])
 
         self["tower height"] += (
-            func_height_power(self["power"], 120.75491612, 82.75390577, 4177.56520433)
+            func_height_diameter(self["rotor diameter"], 127.97, 127.08, 82.23)
             * self["offshore"]
         )
 
@@ -454,6 +612,8 @@ class WindTurbineModel:
             self["power"], [30, 150, 600, 800, 2000], [150, 300, 862, 1112, 3946]
         )
 
+    # this is another comment
+
     def __set_foundation_mass(self):
         """
         Define mass of foundation.
@@ -463,9 +623,8 @@ class WindTurbineModel:
         :return:
         """
 
-        self["foundation mass"] = func_mass_foundation_onshore(
-            self["tower height"], self["rotor diameter"]
-        ) * (1 - self["offshore"])
+        if "onshore" in self.array.coords["application"].values:
+            self.func_mass_foundation_onshore()
 
         self["reinforcing steel in foundation mass"] = func_mass_reinf_steel_onshore(
             self["power"]
@@ -495,6 +654,11 @@ class WindTurbineModel:
         self["foundation mass"] += (self["pile mass"] + self["transition mass"]) * self[
             "offshore"
         ]
+
+        if self.location:
+            self["distance to coastline"] = find_nearest_coastline(
+                self.location[0], self.location[1]
+            )
 
         cable_mass, energy = set_cable_requirements(
             self["power"],
@@ -642,3 +806,53 @@ class WindTurbineModel:
         # assumed equivalent to 257'000 ton-km
         # by a ferry boat @ 2.95 kg/100 ton-km
         self["maintenance transport"] += (7575 * 100 / 2.95) * self["offshore"]
+
+    def func_mass_foundation_onshore(self) -> None:
+        """
+        Returns mass of onshore turbine foundations
+        :param height: tower height (m)
+        :param diameter: rotor diameter (m)
+        :return:
+        """
+        uls = self.__get_ultimate_limit_state()
+
+        bolt_mass = 0
+        concrete_vol = 0
+        reinf_mass = 0
+
+    def __get_ultimate_limit_state(self):
+
+        # Given values
+        Cd = 1.2  # Drag coefficient
+        # Air density (kg/m³)
+        try:
+            rho = self.terrain_vars["RHO"]
+        except TypeError:
+            rho = 1.225
+
+        D = self["rotor diameter"]  # Rotor diameter (m)
+        A = (np.pi / 4) * D**2  # Rotor swept area (m²)
+
+        # Maximum wind force calculation
+        try:
+            max_wind_speed = self.terrain_vars["WS"].max()
+        except TypeError:
+            max_wind_speed = 13  # m/s, if not available
+        F_wind = 0.5 * Cd * rho * A * max_wind_speed**2
+
+        # Gravity force calculation
+        mass_nacelle_rotor = self["nacelle mass"]  # kg (100 t)
+        g = 9.81  # Gravity (m/s²)
+        F_gravity = mass_nacelle_rotor * g
+
+        # Heights
+        H_hub = 100 + D / 2  # Hub height (m)
+        H_CoM = 100 + D / 3  # Approximate center of mass height (m)
+
+        # ULS Moment calculation
+        M_ULS = (F_wind * H_hub) + (F_gravity * H_CoM)
+
+        # Convert to MN·m
+        M_ULS_MN = M_ULS / 1e6
+
+        return M_ULS_MN

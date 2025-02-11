@@ -7,3 +7,7 @@ scipy
 setuptools
 stats_arrays
 xarray
+netcdf4
+bottleneck
+rasterio
+geopandas
