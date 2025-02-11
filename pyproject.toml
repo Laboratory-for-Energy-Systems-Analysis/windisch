@@ -6,9 +6,10 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "windisch"  # Replace with actual name from setup.py if provided
 version = "0.0.1"  # Replace with the version from setup.py if defined
-description = "Your project description"  # Replace with actual description from setup.py if defined
+description = "Parameterized LCA model for wind turbines"  # Replace with actual description from setup.py if defined
 authors = [
-    { name = "Your Name", email = "your_email@example.com" },  # Replace with author details from setup.py if provided
+    { name = "Romain Sacchi", email = "romain.sacchi@psi.ch" },
+    { name = "Kalena Jonsson", email = "kjonsson@student.ethz.ch" },
 ]
 license = { file = "LICENSE" }  # Ensure LICENSE file exists
 readme = "README.md"  # Ensure README.md file exists
