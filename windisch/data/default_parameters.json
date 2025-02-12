@@ -5694,7 +5694,7 @@
         "maximum": 5.5
     },
     "228-2000-distance to transformer": {
-        "amount": 50,
+        "amount": 1,
         "category": "Installation",
         "application": [
             "offshore"
@@ -5715,12 +5715,12 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 50,
-        "minimum": 45,
-        "maximum": 55.00000000000001
+        "loc": 1,
+        "minimum": 0.9,
+        "maximum": 1.1
     },
     "229-2010-distance to transformer": {
-        "amount": 50,
+        "amount": 1,
         "category": "Installation",
         "application": [
             "offshore"
@@ -5741,12 +5741,12 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 50,
-        "minimum": 45,
-        "maximum": 55.00000000000001
+        "loc": 1,
+        "minimum": 0.9,
+        "maximum": 1.1
     },
     "230-2020-distance to transformer": {
-        "amount": 50,
+        "amount": 1,
         "category": "Installation",
         "application": [
             "offshore"
@@ -5767,12 +5767,12 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 50,
-        "minimum": 45,
-        "maximum": 55.00000000000001
+        "loc": 1,
+        "minimum": 0.9,
+        "maximum": 1.1
     },
     "231-2030-distance to transformer": {
-        "amount": 50,
+        "amount": 1,
         "category": "Installation",
         "application": [
             "offshore"
@@ -5793,12 +5793,12 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 50,
-        "minimum": 45,
-        "maximum": 55.00000000000001
+        "loc": 1,
+        "minimum": 0.9,
+        "maximum": 1.1
     },
     "232-2040-distance to transformer": {
-        "amount": 50,
+        "amount": 1,
         "category": "Installation",
         "application": [
             "offshore"
@@ -5819,12 +5819,12 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 50,
-        "minimum": 45,
-        "maximum": 55.00000000000001
+        "loc": 1,
+        "minimum": 0.9,
+        "maximum": 1.1
     },
     "233-2050-distance to transformer": {
-        "amount": 50,
+        "amount": 1,
         "category": "Installation",
         "application": [
             "offshore"
@@ -5845,12 +5845,12 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 50,
-        "minimum": 45,
-        "maximum": 55.00000000000001
+        "loc": 1,
+        "minimum": 0.9,
+        "maximum": 1.1
     },
     "234-2000-distance to coastline": {
-        "amount": 500,
+        "amount": 30,
         "category": "Installation",
         "application": [
             "offshore"
@@ -5871,12 +5871,12 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 500,
-        "minimum": 450,
-        "maximum": 550
+        "loc": 30,
+        "minimum": 27,
+        "maximum": 33
     },
     "235-2010-distance to coastline": {
-        "amount": 500,
+        "amount": 30,
         "category": "Installation",
         "application": [
             "offshore"
@@ -5897,12 +5897,12 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 500,
-        "minimum": 450,
-        "maximum": 550
+        "loc": 30,
+        "minimum": 27,
+        "maximum": 33
     },
     "236-2020-distance to coastline": {
-        "amount": 500,
+        "amount": 30,
         "category": "Installation",
         "application": [
             "offshore"
@@ -5923,12 +5923,12 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 500,
-        "minimum": 450,
-        "maximum": 550
+        "loc": 30,
+        "minimum": 27,
+        "maximum": 33
     },
     "237-2030-distance to coastline": {
-        "amount": 500,
+        "amount": 30,
         "category": "Installation",
         "application": [
             "offshore"
@@ -5949,12 +5949,12 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 500,
-        "minimum": 450,
-        "maximum": 550
+        "loc": 30,
+        "minimum": 27,
+        "maximum": 33
     },
     "238-2040-distance to coastline": {
-        "amount": 500,
+        "amount": 30,
         "category": "Installation",
         "application": [
             "offshore"
@@ -5975,12 +5975,12 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 500,
-        "minimum": 450,
-        "maximum": 550
+        "loc": 30,
+        "minimum": 27,
+        "maximum": 33
     },
     "239-2050-distance to coastline": {
-        "amount": 500,
+        "amount": 30,
         "category": "Installation",
         "application": [
             "offshore"
@@ -6001,9 +6001,9 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 500,
-        "minimum": 450,
-        "maximum": 550
+        "loc": 30,
+        "minimum": 27,
+        "maximum": 33
     },
     "240-2000-offshore": {
         "amount": 1,
