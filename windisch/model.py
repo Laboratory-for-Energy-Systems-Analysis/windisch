@@ -79,11 +79,12 @@ def func_rotor_diameter(
     :param coeff_e: coefficient
     :return: rotor diameter (m)
     """
-    return (
+    return np.clip((
         coeff_a
         - coeff_b * np.exp(-(power - coeff_d) / coeff_c)
         + coeff_e * np.log(power + 1)
-    )
+    ),
+        25, 300)
 
 
 def func_mass_reinf_steel_onshore(power: int) -> float:
@@ -180,24 +181,22 @@ def get_transition_height() -> np.poly1d:
     transition piece (in m), based on pile height (in m).
     :return:
     """
-    pile_length = [35, 55, 35, 60, 40, 65, 50, 70, 50, 80]
-    transition_length = [15, 20, 15, 20, 15, 24, 20, 30, 20, 31]
+    pile_length = [35, 50, 65, 70, 80]
+    transition_length = [15, 20, 24, 30, 31]
     fit_transition_length = np.polyfit(pile_length, transition_length, 1)
     return np.poly1d(fit_transition_length)
 
 
-def get_transition_mass(pile_height: float) -> float:
+def get_transition_mass(transition_length: float) -> float:
     """
     Returns the mass of transition piece (in kg).
     :return:
     """
-    transition_length = [15, 20, 15, 20, 15, 24, 20, 30, 20, 31]
-    transition_weight = [150, 250, 150, 250, 160, 260, 200, 370, 250, 420]
-    fit_transition_weight = np.polyfit(transition_length, transition_weight, 1)
+    transition_lengths = [15, 20, 24, 30]
+    transition_weight = [150, 200, 260, 370]
+    fit_transition_weight = np.polyfit(transition_lengths, transition_weight, 1)
 
-    trans_height = get_transition_height()
-
-    return np.poly1d(fit_transition_weight)(trans_height(pile_height)) * 1000
+    return np.poly1d(fit_transition_weight)(transition_length) * 1000
 
 
 def get_grout_volume(trans_length: float) -> float:
@@ -239,8 +238,55 @@ def func_tower_weight_d2h(
     tower_mass = coeff_a * diameter**2 * height + coeff_b
     return 1e3 * tower_mass
 
+def set_onshore_cable_requirements(
+    power,
+    tower_height,
+    distance_m = 550,
+    voltage_kv = 33,
+    power_factor=0.95,
+    resistivity_copper=1.68e-8,
+    max_voltage_drop_percent=3
+):
+    """
+    Calculate the required cross-sectional area of a copper cable for a wind turbine connection.
 
-def set_cable_requirements(
+    :param power: Power output of the wind turbine in MW
+    :param distance_m: Distance from the wind turbine to the transformer in meters
+    :param voltage_kv: Voltage of the cable in kV
+    :param power_factor: Power factor of the wind turbine
+    :param resistivity_copper: Resistivity of copper in ohm-meters
+    :param max_voltage_drop_percent: Maximum allowable voltage drop as a percentage of the voltage
+    :return: Copper mass in kg
+
+    """
+    # Convert input parameters to standard units
+    power *= 1e3  # Convert kW to W
+    voltage_v = voltage_kv * 1e3  # Convert kV to V
+    max_voltage_drop = (max_voltage_drop_percent / 100) * voltage_v  # Maximum voltage drop in volts
+
+    # Calculate current (I) using the formula: I = P / (sqrt(3) * V * PF)
+    current_a = power / (3 ** 0.5 * voltage_v * power_factor)
+
+    # Calculate the total cable length (round trip)
+    total_length_m = 2 * distance_m
+
+    # Calculate the required resistance per meter to stay within the voltage drop limit
+    max_resistance_per_meter = max_voltage_drop / (current_a * total_length_m)
+
+    # Calculate the required cross-sectional area using R = rho / A
+    cross_section_area_m2 = resistivity_copper / max_resistance_per_meter
+
+    # Convert cross-sectional area to mm²
+    cross_section_area_mm2 = cross_section_area_m2 * 1e6
+
+    copper_mass = cross_section_area_mm2 * total_length_m * 1e-6 * COPPER_DENSITY
+
+    # Also, add the cable inside the wind turbine, which has a 640 mm2 cross-section
+    copper_mass += 640 * 1e-6 * tower_height * COPPER_DENSITY
+
+    return copper_mass
+
+def set_offshore_cable_requirements(
     power: int,
     cross_section: float,
     dist_transfo: float,
@@ -257,7 +303,7 @@ def set_cable_requirements(
     :return:
     """
 
-    m_copper = (cross_section * 1e-6 * (dist_transfo * 1e3)) * COPPER_DENSITY
+    m_copper = (cross_section * 1e-6 * dist_transfo) * COPPER_DENSITY
 
     # 450 l diesel/hour for the ship that lays the cable at sea bottom
     # 39 MJ/liter, 15 km/h as speed of laying the cable
@@ -292,9 +338,7 @@ def set_cable_requirements(
     # 39 MJ/liter, 15 km/h as speed of laying the cable
     energy_cable_laying_ship += 450 * 39 / 15 * dist_coast / park_size
 
-    m_cable = m_copper * 617 / 220
-    # FIXME: why * 0.5 ???
-    return m_cable * 0.5, energy_cable_laying_ship * 0.5
+    return m_copper, energy_cable_laying_ship * 0.5
 
 
 class WindTurbineModel:
@@ -385,6 +429,7 @@ class WindTurbineModel:
 
         """
 
+        self.disable_unavailable_models()
         self.__set_size_rotor()
         self.__set_tower_height()
         self.__set_nacelle_mass()
@@ -644,7 +689,9 @@ class WindTurbineModel:
             get_transition_height()(self["pile height"]) * self["offshore"]
         )
         self["transition mass"] = (
-            get_transition_mass(self["pile height"]) * self["offshore"]
+            get_transition_mass(
+                self["transition length"]
+            ) * self["offshore"]
         )
         self["grout volume"] = (
             get_grout_volume(self["transition length"]) * self["offshore"]
@@ -660,7 +707,7 @@ class WindTurbineModel:
                 self.location[0], self.location[1]
             )
 
-        cable_mass, energy = set_cable_requirements(
+        cable_mass, energy = set_offshore_cable_requirements(
             self["power"],
             self["offshore farm cable cross-section"],
             self["distance to transformer"],
@@ -669,6 +716,9 @@ class WindTurbineModel:
         )
         self["cable mass"] = cable_mass * self["offshore"]
         self["energy for cable lay-up"] = energy * self["offshore"]
+
+        cable_mass = set_onshore_cable_requirements(self["power"], self["tower height"])
+        self["cable mass"] += cable_mass * (1 - self["offshore"])
 
     def __set_assembly_requirements(self):
         """
@@ -856,3 +906,17 @@ class WindTurbineModel:
         M_ULS_MN = M_ULS / 1e6
 
         return M_ULS_MN
+
+    def disable_unavailable_models(self):
+        # disable offshore wind turbines with a rated power output inferior to 1'000 kW
+        if "offshore" in self.array.coords["application"]:
+            self.array.loc[
+                dict(
+                    application="offshore",
+                    parameter="power",
+                    size=[
+                        s for s in self.array.coords["size"] if s < 1000
+                        ]
+                )
+            ] = 0
+
