@@ -433,7 +433,6 @@ class WindTurbineModel:
 
         """
 
-
         self.__set_size_rotor()
         self.__set_tower_height()
         self.__set_nacelle_mass()
@@ -525,7 +524,6 @@ class WindTurbineModel:
         # replace NaNs with zeros
         self.terrain_vars = self.terrain_vars.fillna(0)
 
-
     def __fetch_terrain_variables(self, fetch_wind_data: bool):
         """
         Fetch wind speeds and directions, turbulent kinetic energy,
@@ -539,7 +537,6 @@ class WindTurbineModel:
             fetch_wind_data=fetch_wind_data,
         )
         self.terrain_vars = terrain_vars
-
 
     def __fetch_power_curves(self):
 
@@ -573,7 +570,11 @@ class WindTurbineModel:
                 self.annual_electricity_production.loc[
                     dict(application=application)
                 ] = self.power_curve.sel(application=application).interp(
-                    {"wind speed": self.terrain_vars.sel(application=application)["WS"]},
+                    {
+                        "wind speed": self.terrain_vars.sel(application=application)[
+                            "WS"
+                        ]
+                    },
                     method="linear",
                 )
 
@@ -724,9 +725,9 @@ class WindTurbineModel:
         ]
 
         if self.location:
-            self["distance to coastline"] = find_nearest_coastline(
-                self.location[0], self.location[1]
-            ) / 1000
+            self["distance to coastline"] = (
+                find_nearest_coastline(self.location[0], self.location[1]) / 1000
+            )
 
         cable_mass, energy = set_offshore_cable_requirements(
             self["power"],
@@ -738,10 +739,9 @@ class WindTurbineModel:
         self["cable mass"] = cable_mass * self["offshore"]
         self["energy for cable lay-up"] = energy * self["offshore"]
 
-        self["cable mass"] += (
-            set_onshore_cable_requirements(self["power"], self["tower height"])
-            * (1 - self["offshore"])
-        )
+        self["cable mass"] += set_onshore_cable_requirements(
+            self["power"], self["tower height"]
+        ) * (1 - self["offshore"])
 
     def __set_assembly_requirements(self):
         """
@@ -940,4 +940,3 @@ class WindTurbineModel:
                     size=[s for s in self.array.coords["size"] if s < 1000],
                 )
             ] = 0
-

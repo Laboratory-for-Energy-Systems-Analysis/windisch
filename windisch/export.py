@@ -163,9 +163,7 @@ class ExportInventory:
 
     """
 
-    def __init__(
-        self, array, model, indices, db_name="carculator_utils export"
-    ):
+    def __init__(self, array, model, indices, db_name="carculator_utils export"):
         self.array: xr.DataArray = array
         self.indices: Dict[int, Tuple[str, str, str, str]] = indices
         self.vm = model
@@ -296,16 +294,24 @@ class ExportInventory:
             if tuple_output[0] in self.references:
                 source = self.references[tuple_output[0]].get("source")
                 comment = self.references[tuple_output[0]].get("comment")
-            elif any(x in tuple_output[0].lower() for x in ("wind turbine production", "electricity production, wind")):
+            elif any(
+                x in tuple_output[0].lower()
+                for x in ("wind turbine production", "electricity production, wind")
+            ):
                 pass
             else:
                 print(f"Missing reference for {tuple_output[0]}")
 
             string = ""
 
-            if any(x in tuple_output[0].lower() for x in ("wind turbine production", "electricity production, wind")):
+            if any(
+                x in tuple_output[0].lower()
+                for x in ("wind turbine production", "electricity production, wind")
+            ):
                 available_applications = self.vm.array.application.values.tolist()
-                available_sizes = [str(s) for s in self.vm.array.coords["size"].values.tolist()]
+                available_sizes = [
+                    str(s) for s in self.vm.array.coords["size"].values.tolist()
+                ]
 
                 if any([w in tuple_output[0] for w in available_applications]) and any(
                     [w in tuple_output[0] for w in available_sizes]
@@ -1041,9 +1047,7 @@ class ExportInventory:
         importers = []
 
         for year in self.vm.array.coords["year"].values:
-            file = filename or safe_filename(
-                f"windisch_export_{datetime.date.today()}"
-            )
+            file = filename or safe_filename(f"windisch_export_{datetime.date.today()}")
             file += f"_{year}_bw2.xlsx"
 
             filepath_export = self.get_export_filepath(file, directory)

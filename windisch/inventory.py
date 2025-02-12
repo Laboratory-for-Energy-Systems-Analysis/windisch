@@ -330,7 +330,6 @@ class Inventory:
             if y[0].startswith(f"wind turbine production, ")
         ]
 
-
         idx_others = [
             i
             for i in self.inputs.values()
@@ -438,7 +437,9 @@ class Inventory:
                 for year in self.scope["year"]:
                     unit = "kilowatt hour"
 
-                    name = f"electricity production, wind, {application}, {size}kW, {year}"
+                    name = (
+                        f"electricity production, wind, {application}, {size}kW, {year}"
+                    )
                     ref = f"electricity, high voltage"
 
                     # add electricity production activity
