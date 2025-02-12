@@ -79,12 +79,15 @@ def func_rotor_diameter(
     :param coeff_e: coefficient
     :return: rotor diameter (m)
     """
-    return np.clip((
-        coeff_a
-        - coeff_b * np.exp(-(power - coeff_d) / coeff_c)
-        + coeff_e * np.log(power + 1)
-    ),
-        25, 300)
+    return np.clip(
+        (
+            coeff_a
+            - coeff_b * np.exp(-(power - coeff_d) / coeff_c)
+            + coeff_e * np.log(power + 1)
+        ),
+        25,
+        300,
+    )
 
 
 def func_mass_reinf_steel_onshore(power: int) -> float:
@@ -238,14 +241,15 @@ def func_tower_weight_d2h(
     tower_mass = coeff_a * diameter**2 * height + coeff_b
     return 1e3 * tower_mass
 
+
 def set_onshore_cable_requirements(
     power,
     tower_height,
-    distance_m = 550,
-    voltage_kv = 33,
+    distance_m=550,
+    voltage_kv=33,
     power_factor=0.95,
     resistivity_copper=1.68e-8,
-    max_voltage_drop_percent=3
+    max_voltage_drop_percent=3,
 ):
     """
     Calculate the required cross-sectional area of a copper cable for a wind turbine connection.
@@ -262,10 +266,12 @@ def set_onshore_cable_requirements(
     # Convert input parameters to standard units
     power *= 1e3  # Convert kW to W
     voltage_v = voltage_kv * 1e3  # Convert kV to V
-    max_voltage_drop = (max_voltage_drop_percent / 100) * voltage_v  # Maximum voltage drop in volts
+    max_voltage_drop = (
+        max_voltage_drop_percent / 100
+    ) * voltage_v  # Maximum voltage drop in volts
 
     # Calculate current (I) using the formula: I = P / (sqrt(3) * V * PF)
-    current_a = power / (3 ** 0.5 * voltage_v * power_factor)
+    current_a = power / (3**0.5 * voltage_v * power_factor)
 
     # Calculate the total cable length (round trip)
     total_length_m = 2 * distance_m
@@ -285,6 +291,7 @@ def set_onshore_cable_requirements(
     copper_mass += 640 * 1e-6 * tower_height * COPPER_DENSITY
 
     return copper_mass
+
 
 def set_offshore_cable_requirements(
     power: int,
@@ -689,9 +696,7 @@ class WindTurbineModel:
             get_transition_height()(self["pile height"]) * self["offshore"]
         )
         self["transition mass"] = (
-            get_transition_mass(
-                self["transition length"]
-            ) * self["offshore"]
+            get_transition_mass(self["transition length"]) * self["offshore"]
         )
         self["grout volume"] = (
             get_grout_volume(self["transition length"]) * self["offshore"]
@@ -914,9 +919,6 @@ class WindTurbineModel:
                 dict(
                     application="offshore",
                     parameter="power",
-                    size=[
-                        s for s in self.array.coords["size"] if s < 1000
-                        ]
+                    size=[s for s in self.array.coords["size"] if s < 1000],
                 )
             ] = 0
-
