@@ -86,7 +86,7 @@ def func_rotor_diameter(
             + coeff_e * np.log(power + 1)
         ),
         25,
-        300,
+        None,
     )
 
 
@@ -264,14 +264,13 @@ def set_onshore_cable_requirements(
 
     """
     # Convert input parameters to standard units
-    power *= 1e3  # Convert kW to W
     voltage_v = voltage_kv * 1e3  # Convert kV to V
     max_voltage_drop = (
         max_voltage_drop_percent / 100
     ) * voltage_v  # Maximum voltage drop in volts
 
     # Calculate current (I) using the formula: I = P / (sqrt(3) * V * PF)
-    current_a = power / (3**0.5 * voltage_v * power_factor)
+    current_a = (power * 1000) / (3**0.5 * voltage_v * power_factor)
 
     # Calculate the total cable length (round trip)
     total_length_m = 2 * distance_m
@@ -310,7 +309,7 @@ def set_offshore_cable_requirements(
     :return:
     """
 
-    m_copper = (cross_section * 1e-6 * dist_transfo) * COPPER_DENSITY
+    m_copper = (cross_section * 1e-6 * dist_transfo * 1000) * COPPER_DENSITY
 
     # 450 l diesel/hour for the ship that lays the cable at sea bottom
     # 39 MJ/liter, 15 km/h as speed of laying the cable
@@ -376,7 +375,7 @@ class WindTurbineModel:
         self.array = array
         self.power_curve = None
         self.__cache = None
-        self.country = country
+        self.country = country or "CH"
         self.location = location or None
         self.wind_data = wind_data
         self.power_curve_model = power_curve_model
@@ -392,12 +391,10 @@ class WindTurbineModel:
 
             if self.terrain_vars["LANDMASK"].max() == 1:
                 print("Onshore wind turbines")
-                if "offshore" in self.array.coords["application"]:
-                    self.array.loc[dict(application="offshore", parameter="power")] = 0
+                self.array.loc[dict(application="offshore", parameter="power")] = 0
             else:
                 print("Offshore wind turbines")
-                if "onshore" in self.array.coords["application"]:
-                    self.array.loc[dict(application="onshore", parameter="power")] = 0
+                self.array.loc[dict(application="onshore", parameter="power")] = 0
                 if self.sea_depth_data:
                     self.__fetch_sea_depth()
 
@@ -436,7 +433,7 @@ class WindTurbineModel:
 
         """
 
-        self.disable_unavailable_models()
+
         self.__set_size_rotor()
         self.__set_tower_height()
         self.__set_nacelle_mass()
@@ -447,6 +444,7 @@ class WindTurbineModel:
         self.__set_assembly_requirements()
         self.__set_installation_requirements()
         self.__set_maintenance_energy()
+        self.disable_unavailable_models()
 
         self["total mass"] = self[
             [
@@ -522,15 +520,11 @@ class WindTurbineModel:
                 "wind_speed": "WS",
             }
         )
+        self.terrain_vars["WS"] = self.terrain_vars["WS"].astype(float)
+
         # replace NaNs with zeros
         self.terrain_vars = self.terrain_vars.fillna(0)
 
-        # we adjust values to the heights of the wind turbines
-        self.terrain_vars = self.terrain_vars.interp(
-            height=self["tower height"],
-            method="linear",
-            kwargs={"fill_value": "extrapolate"},
-        )
 
     def __fetch_terrain_variables(self, fetch_wind_data: bool):
         """
@@ -546,6 +540,7 @@ class WindTurbineModel:
         )
         self.terrain_vars = terrain_vars
 
+
     def __fetch_power_curves(self):
 
         # we get the power curve
@@ -553,13 +548,34 @@ class WindTurbineModel:
             power=self["power"],
         )
 
+        self.power_curve = self.power_curve.drop_vars("power")
+        self.power_curve = self.power_curve.drop_vars("parameter")
+
     def __calculate_electricity_production(self):
         # we calculate the electricity production
         if self.power_curve is not None:
 
-            self.annual_electricity_production = self.power_curve.interp(
-                {"wind speed": self.terrain_vars["WS"]}, method="linear"
+            # we adjust values to the heights of the wind turbines
+            self.terrain_vars = self.terrain_vars.interp(
+                height=self["tower height"],
+                method="linear",
+                kwargs={"fill_value": "extrapolate"},
             )
+
+            self.terrain_vars = self.terrain_vars.drop_vars("height")
+            self.terrain_vars = self.terrain_vars.drop_vars("parameter")
+
+            self["average wind speed"] = self.terrain_vars["WS"].mean(dim="time")
+
+            self.annual_electricity_production = xr.zeros_like(self.terrain_vars["WS"])
+
+            for application in self.array.coords["application"].values:
+                self.annual_electricity_production.loc[
+                    dict(application=application)
+                ] = self.power_curve.sel(application=application).interp(
+                    {"wind speed": self.terrain_vars.sel(application=application)["WS"]},
+                    method="linear",
+                )
 
             self["lifetime electricity production"] = (
                 self.annual_electricity_production.sum(dim="time") * self["lifetime"]
@@ -710,7 +726,7 @@ class WindTurbineModel:
         if self.location:
             self["distance to coastline"] = find_nearest_coastline(
                 self.location[0], self.location[1]
-            )
+            ) / 1000
 
         cable_mass, energy = set_offshore_cable_requirements(
             self["power"],
@@ -722,8 +738,10 @@ class WindTurbineModel:
         self["cable mass"] = cable_mass * self["offshore"]
         self["energy for cable lay-up"] = energy * self["offshore"]
 
-        cable_mass = set_onshore_cable_requirements(self["power"], self["tower height"])
-        self["cable mass"] += cable_mass * (1 - self["offshore"])
+        self["cable mass"] += (
+            set_onshore_cable_requirements(self["power"], self["tower height"])
+            * (1 - self["offshore"])
+        )
 
     def __set_assembly_requirements(self):
         """
@@ -922,3 +940,4 @@ class WindTurbineModel:
                     size=[s for s in self.array.coords["size"] if s < 1000],
                 )
             ] = 0
+

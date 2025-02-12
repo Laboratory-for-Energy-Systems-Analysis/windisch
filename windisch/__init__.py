@@ -24,10 +24,14 @@ __all__ = (
     "modify_xarray_from_custom_parameters",
     "WindTurbineModel",
     "update_input_parameters",
+    "Inventory",
+    "ExportInventory",
 )
 __version__ = (0, 0, 1)
 
+from .export import ExportInventory
 from .model import WindTurbineModel
+from .inventory import Inventory
 from .turbines_input_parameters import TurbinesInputParameters
 from .update_input_params import update_input_parameters
 from .wind_array import (

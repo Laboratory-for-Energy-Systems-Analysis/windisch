@@ -1,0 +1,27 @@
+rotor:
+  - rotor production, for onshore wind turbine
+  - rotor production, for offshore wind turbine
+
+nacelle:
+  - nacelle production, for onshore wind turbine
+  - nacelle production, for offshore wind turbine
+
+tower:
+  - tower production
+  - electronic cabinet
+
+foundation:
+  - market for concrete
+  - platform production
+
+grid connection:
+  - medium-voltage transformer
+  - high-voltage transformer
+  - grid connector
+
+maintenance:
+  - market for lubricating oil
+
+EoL:
+  - treatment of
+
