@@ -1,6 +1,6 @@
 bw2io
 klausen
-numpy
+numpy<2.0.0
 pandas
 PyPrind
 scipy
