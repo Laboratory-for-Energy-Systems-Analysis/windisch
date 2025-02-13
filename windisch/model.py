@@ -443,7 +443,7 @@ class WindTurbineModel:
         self.__set_assembly_requirements()
         self.__set_installation_requirements()
         self.__set_maintenance_energy()
-        self.disable_unavailable_models()
+        #self.disable_unavailable_models()
 
         self["total mass"] = self[
             [
@@ -863,9 +863,6 @@ class WindTurbineModel:
             self["distance to coastline"] * self["total mass"] / 1000  # kg/ton
         ) * self["offshore"]
 
-        self["access road"] = np.interp(self["power"], [0, 2000], [0, 8000]) * (
-            1 - self["offshore"]
-        )
 
     def __set_maintenance_energy(self):
         """
