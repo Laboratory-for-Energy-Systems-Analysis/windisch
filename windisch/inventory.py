@@ -814,90 +814,95 @@ class Inventory:
         ]
 
         self.A[
-        :,
-        self.find_input_indices(
-            (f"market group for electricity, medium voltage",)
-        ),
-        input_indices,
-        ] = self.array.sel(
-            parameter="assembly electricity",
-        ) * -1
+            :,
+            self.find_input_indices((f"market group for electricity, medium voltage",)),
+            input_indices,
+        ] = (
+            self.array.sel(
+                parameter="assembly electricity",
+            )
+            * -1
+        )
 
         # transport to assembly site and transport to use site
         self.A[
-        :,
-        self.find_input_indices(
-            (f"market for transport, freight, lorry, unspecified",)
-        ),
-        input_indices,
-        ] = self.array.sel(
-            parameter=[
-                "transport to assembly",
-                "installation transport, by truck",
-            ]
-        ).sum(dim="parameter") * -1
+            :,
+            self.find_input_indices(
+                (f"market for transport, freight, lorry, unspecified",)
+            ),
+            input_indices,
+        ] = (
+            self.array.sel(
+                parameter=[
+                    "transport to assembly",
+                    "installation transport, by truck",
+                ]
+            ).sum(dim="parameter")
+            * -1
+        )
 
         self.A[
-        :,
-        self.find_input_indices(
-            ("market for transport, freight train",)
-        ),
-        input_indices,
-        ] = self.array.sel(
-            parameter="installation transport, by rail",
-        ) * -1
+            :,
+            self.find_input_indices(("market for transport, freight train",)),
+            input_indices,
+        ] = (
+            self.array.sel(
+                parameter="installation transport, by rail",
+            )
+            * -1
+        )
 
         self.A[
-        :,
-        self.find_input_indices(
-            (f"market for transport, freight, sea, container ship",)
-        ),
-        input_indices,
-        ] = self.array.sel(
-            parameter="installation transport, by sea",
-        ) * -1
+            :,
+            self.find_input_indices(
+                (f"market for transport, freight, sea, container ship",)
+            ),
+            input_indices,
+        ] = (
+            self.array.sel(
+                parameter="installation transport, by sea",
+            )
+            * -1
+        )
 
         # access road construction
         input_indices = [
             j
             for i, j in self.inputs.items()
-            if i[0].startswith("wind turbine production, ")
-            and "onshore" in i[0]
+            if i[0].startswith("wind turbine production, ") and "onshore" in i[0]
         ]
         self.A[
-        :,
-        self.find_input_indices(
-            (f"market for road",)
-        ),
-        input_indices,
+            :,
+            self.find_input_indices((f"market for road",)),
+            input_indices,
         ] = (
-                (
-                    self.array.sel(
-                        parameter="access road",
-                        combined_dim=[
-                            d
-                            for d in self.array.coords["combined_dim"].values
-                            if "onshore" in d
-                        ],
-                    )
-                    * self.array.sel(
-                        parameter="lifetime",
-                        combined_dim=[
-                            d
-                            for d in self.array.coords["combined_dim"].values
-                            if "onshore" in d
-                        ],
-                    )
-                )
-            / self.array.sel(
-                    parameter="turbines per farm",
+            (
+                self.array.sel(
+                    parameter="access road",
                     combined_dim=[
                         d
                         for d in self.array.coords["combined_dim"].values
                         if "onshore" in d
                     ],
                 )
-            ) * -1
+                * self.array.sel(
+                    parameter="lifetime",
+                    combined_dim=[
+                        d
+                        for d in self.array.coords["combined_dim"].values
+                        if "onshore" in d
+                    ],
+                )
+            )
+            / self.array.sel(
+                parameter="turbines per farm",
+                combined_dim=[
+                    d
+                    for d in self.array.coords["combined_dim"].values
+                    if "onshore" in d
+                ],
+            )
+        ) * -1
 
         # installation energy
         input_indices = [
@@ -906,14 +911,17 @@ class Inventory:
             if i[0].startswith("wind turbine production, ")
         ]
         self.A[
-        :,
-        self.find_input_indices(
-            (f"market for diesel, burned in building machine",)
-        ),
-        input_indices,
-        ] = self.array.sel(
-            parameter="installation energy",
-        ) * -1
+            :,
+            self.find_input_indices(
+                (f"market for diesel, burned in building machine",)
+            ),
+            input_indices,
+        ] = (
+            self.array.sel(
+                parameter="installation energy",
+            )
+            * -1
+        )
 
         # maintenance
         input_indices = [
@@ -943,49 +951,52 @@ class Inventory:
         input_indices = [
             j
             for i, j in self.inputs.items()
-            if i[0].startswith("electricity production, wind, ")
-            and "onshore" in i[0]
+            if i[0].startswith("electricity production, wind, ") and "onshore" in i[0]
         ]
 
         self.A[
-        :,
-        self.find_input_indices(
-            (f"market for transport, passenger car",)),
-        input_indices,
-        ] = self.array.sel(
-            parameter="maintenance transport",
-            combined_dim=[
-                d
-                for d in self.array.coords["combined_dim"].values
-                if "onshore" in d
-            ],
-        ) / self.array.sel(
+            :,
+            self.find_input_indices((f"market for transport, passenger car",)),
+            input_indices,
+        ] = (
+            self.array.sel(
+                parameter="maintenance transport",
+                combined_dim=[
+                    d
+                    for d in self.array.coords["combined_dim"].values
+                    if "onshore" in d
+                ],
+            )
+            / self.array.sel(
                 parameter="lifetime electricity production",
-            ) * -1
+            )
+            * -1
+        )
 
         input_indices = [
             j
             for i, j in self.inputs.items()
-            if i[0].startswith("electricity production, wind, ")
-               and "offshore" in i[0]
+            if i[0].startswith("electricity production, wind, ") and "offshore" in i[0]
         ]
 
         self.A[
-        :,
-        self.find_input_indices(
-            (f"market for transport, freight, sea, ferry",)),
-        input_indices,
-        ] = self.array.sel(
-            parameter="maintenance transport",
-            combined_dim=[
-                d
-                for d in self.array.coords["combined_dim"].values
-                if "offshore" in d
-            ],
-        ) / self.array.sel(
+            :,
+            self.find_input_indices((f"market for transport, freight, sea, ferry",)),
+            input_indices,
+        ] = (
+            self.array.sel(
+                parameter="maintenance transport",
+                combined_dim=[
+                    d
+                    for d in self.array.coords["combined_dim"].values
+                    if "offshore" in d
+                ],
+            )
+            / self.array.sel(
                 parameter="lifetime electricity production",
-            ) * -1
-
+            )
+            * -1
+        )
 
         # onshore foundation
 
@@ -993,50 +1004,51 @@ class Inventory:
         input_indices = [
             j
             for i, j in self.inputs.items()
-            if i[0].startswith("wind turbine production, ")
-               and "offshore" in i[0]
+            if i[0].startswith("wind turbine production, ") and "offshore" in i[0]
         ]
 
-
         self.A[
-        :,
-        self.find_input_indices(
-            ("market for steel, low-alloyed, hot rolled",)
-        ),
-        input_indices,
-        ] = self.array.sel(
-            parameter="pile mass",
-            combined_dim=[
-                d
-                for d in self.array.coords["combined_dim"].values
-                if "offshore" in d
-            ],
-        ) * -1
+            :,
+            self.find_input_indices(("market for steel, low-alloyed, hot rolled",)),
+            input_indices,
+        ] = (
+            self.array.sel(
+                parameter="pile mass",
+                combined_dim=[
+                    d
+                    for d in self.array.coords["combined_dim"].values
+                    if "offshore" in d
+                ],
+            )
+            * -1
+        )
 
         # offshore foundation - grout
         input_indices = [
             j
             for i, j in self.inputs.items()
-            if i[0].startswith("wind turbine production, ")
-            and "offshore" in i[0]
+            if i[0].startswith("wind turbine production, ") and "offshore" in i[0]
         ]
 
         self.A[
-        :,
-        self.find_input_indices(
-            (f"market for concrete, normal strength",), excludes=("RoW",), excludes_in=1
-        ),
-        input_indices,
-        ] = self.array.sel(
-            parameter="grout volume",
-            combined_dim=[
-                d
-                for d in self.array.coords["combined_dim"].values
-                if "offshore" in d
-            ],
-        ) * -1
-
-
+            :,
+            self.find_input_indices(
+                (f"market for concrete, normal strength",),
+                excludes=("RoW",),
+                excludes_in=1,
+            ),
+            input_indices,
+        ] = (
+            self.array.sel(
+                parameter="grout volume",
+                combined_dim=[
+                    d
+                    for d in self.array.coords["combined_dim"].values
+                    if "offshore" in d
+                ],
+            )
+            * -1
+        )
 
     def add_wind_turbines_to_electricity_production_dataset(self):
         self.A[
