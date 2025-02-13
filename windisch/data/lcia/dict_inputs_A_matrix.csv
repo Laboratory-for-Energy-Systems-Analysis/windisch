@@ -1,0 +1,74 @@
+treatment of high-voltage transformer, for wind turbine;GLO;megavolt-ampere;high-voltage transformer, for wind turbine
+grid connector production, per kg of copper, for wind turbine;GLO;kilogram;grid connector, per kg of copper, for wind turbine
+treatment of platform, for offshore wind turbine;GLO;kilogram;platform, for offshore wind turbine
+electronic cabinet production, for wind turbine;GLO;unit;electronic cabinet, for wind turbine
+tower production, for onshore wind turbine;GLO;kilogram;tower, for onshore wind turbine
+platform production, for onshore wind turbine;GLO;kilogram;platform, for onshore wind turbine
+treatment of tower, for onshore wind turbine;GLO;kilogram;tower, for onshore wind turbine
+high-voltage transformer production, for wind turbine;GLO;megavolt-ampere;high-voltage transformer, for wind turbine
+treatment of platform, for onshore wind turbine;GLO;kilogram;platform, for onshore wind turbine
+platform production, for offshore wind turbine;GLO;kilogram;platform, for offshore wind turbine
+treatment of grid connector, for wind turbine;GLO;kilogram;grid connector, for wind turbine
+treatment of electronic cabinet, for wind turbine;GLO;unit;electronic cabinet, for wind turbine
+treatment of medium-voltage transformer, for wind turbine;GLO;megavolt-ampere;medium-voltage transformer, for wind turbine
+treatment of rotor, for onshore wind turbine;GLO;kilogram;rotor, for onshore wind turbine
+nacelle production, for onshore wind turbine;GLO;kilogram;nacelle, for onshore wind turbine
+rotor production, for offshore wind turbine;GLO;kilogram;rotor, for offshore wind turbine
+medium-voltage transformer production, for wind turbine;GLO;megavolt-ampere;medium-voltage transformer, for wind turbine
+treatment of nacelle, for offshore wind turbine;GLO;kilogram;nacelle, for offshore wind turbine
+treatment of nacelle, for onshore wind turbine;GLO;kilogram;nacelle, for onshore wind turbine
+treatment of tower, for offshore wind turbine;GLO;kilogram;tower, for offshore wind turbine
+treatment of rotor, for offshore wind turbine;GLO;kilogram;rotor, for offshore wind turbine
+tower production, for offshore wind turbine;GLO;kilogram;tower, for offshore wind turbine
+rotor production, for onshore wind turbine;GLO;kilogram;rotor, for onshore wind turbine
+nacelle production, for offshore wind turbine;GLO;kilogram;nacelle, for offshore wind turbine
+market for concrete, normal strength;CH;cubic meter;concrete, normal strength
+market group for electricity, medium voltage;RER;kilowatt hour;electricity, medium voltage
+market for reinforcing steel;GLO;kilogram;reinforcing steel
+chromium steel removed by milling, small parts;RER;kilogram;chromium steel milling, small parts
+market for steel, chromium steel 18/8;GLO;kilogram;steel, chromium steel 18/8
+market for transport, freight, lorry, unspecified;RER;ton kilometer;transport, freight, lorry, unspecified
+market for lubricating oil;RoW;kilogram;lubricating oil
+market for scrap copper;CH;kilogram;scrap copper
+market for waste mineral oil;Europe without Switzerland;kilogram;waste mineral oil
+market for scrap steel;Europe without Switzerland;kilogram;scrap steel
+market group for waste plastic, mixture;RER;kilogram;waste plastic, mixture
+market for sheet rolling, chromium steel;GLO;kilogram;sheet rolling, chromium steel
+market for steel, chromium steel 18/8, hot rolled;GLO;kilogram;steel, chromium steel 18/8, hot rolled
+market for section bar rolling, steel;GLO;kilogram;section bar rolling, steel
+market for glass fibre reinforced plastic, polyamide, injection moulded;GLO;kilogram;glass fibre reinforced plastic, polyamide, injection moulded
+market for cast iron;GLO;kilogram;cast iron
+market for steel, low-alloyed, hot rolled;GLO;kilogram;steel, low-alloyed, hot rolled
+market for copper, cathode;GLO;kilogram;copper, cathode
+market for wire drawing, copper;GLO;kilogram;wire drawing, copper
+market for aluminium, wrought alloy;GLO;kilogram;aluminium, wrought alloy
+market for sheet rolling, aluminium;GLO;kilogram;sheet rolling, aluminium
+market for lubricating oil;RER;kilogram;lubricating oil
+market for synthetic rubber;GLO;kilogram;synthetic rubber
+market for polyurethane, flexible foam;RER;kilogram;polyurethane, flexible foam
+market for structural timber;RER;cubic meter;structural timber
+market for sanitary ceramics;GLO;kilogram;sanitary ceramics
+market for alkyd paint, white, without solvent, in 60% solution state;RER;kilogram;alkyd paint, white, without solvent, in 60% solution state
+market for heat, district or industrial, natural gas;Europe without Switzerland;megajoule;heat, district or industrial, natural gas
+market for tap water;Europe without Switzerland;kilogram;tap water
+treatment of wastewater, average, wastewater treatment;Europe without Switzerland;cubic meter;wastewater, average
+market for sheet rolling, steel;GLO;kilogram;sheet rolling, steel
+market for epoxy resin, liquid;RoW;kilogram;epoxy resin, liquid
+market for welding, arc, steel;GLO;meter;welding, arc, steel
+market for epoxy resin, liquid;RER;kilogram;epoxy resin, liquid
+market for diesel, burned in building machine;GLO;megajoule;diesel, burned in building machine
+market for silver;GLO;kilogram;silver
+aluminium scrap, new, Recycled Content cut-off;GLO;kilogram;aluminium scrap, new
+iron scrap, unsorted, Recycled Content cut-off;GLO;kilogram;iron scrap, unsorted
+market for scrap copper;Europe without Switzerland;kilogram;scrap copper
+market group for waste glass;RER;kilogram;waste glass
+market for waste mineral oil;RoW;kilogram;waste mineral oil
+market group for waste polypropylene;RER;kilogram;waste polypropylene
+market group for waste polyvinylchloride;RER;kilogram;waste polyvinylchloride
+market group for waste polyethylene;RER;kilogram;waste polyethylene
+market for polyethylene, high density, granulate;GLO;kilogram;polyethylene, high density, granulate
+market for polyvinylchloride, bulk polymerised;GLO;kilogram;polyvinylchloride, bulk polymerised
+market for lead;GLO;kilogram;lead
+market for tin;GLO;kilogram;tin
+market for polypropylene, granulate;GLO;kilogram;polypropylene, granulate
+oxygen;('air',);kilogram
