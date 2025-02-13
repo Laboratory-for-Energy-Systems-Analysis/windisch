@@ -14,7 +14,21 @@ authors = [
 license = { file = "LICENSE" }  # Ensure LICENSE file exists
 readme = "README.md"  # Ensure README.md file exists
 
-dependencies = ['bw2io', 'klausen', 'numpy', 'pandas', 'PyPrind', 'scipy', 'setuptools', 'stats_arrays', 'xarray', 'netcdf4', 'bottleneck', 'rasterio', 'geopandas']
+dependencies = [
+    'bw2io',
+    'klausen',
+    'numpy<2.0.0',
+    'pandas',
+    'PyPrind',
+    'scipy',
+    'setuptools',
+    'stats_arrays',
+    'xarray',
+    'netcdf4',
+    'bottleneck',
+    'rasterio',
+    'geopandas'
+]
 
 [tool.setuptools.packages.find]
 where = ["windisch"]  # Reflect that "windisch" contains the library's modules
