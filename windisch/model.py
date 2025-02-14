@@ -60,6 +60,7 @@ def func_nacelle_weight_power(power: int, coeff_a: float, coeff_b: float) -> flo
     nacelle_mass = coeff_a * power**2 + coeff_b * power
     return 1e3 * nacelle_mass
 
+
 def __get_ultimate_limit_state():
 
     # Given values
@@ -87,6 +88,7 @@ def __get_ultimate_limit_state():
     M_ULS_MN = M_ULS / 1e6
 
     return M_ULS_MN
+
 
 def func_rotor_diameter(
     power: int,
@@ -123,10 +125,9 @@ def func_mass_foundation_onshore(height: float, diameter: float) -> float:
     uls = __get_ultimate_limit_state()
 
     bolt_mass = 0
-    concrete_vol = 0 
+    concrete_vol = 0
     reinf_mass = 0
 
-    
 
 def func_mass_reinf_steel_onshore(power: int) -> float:
     """
