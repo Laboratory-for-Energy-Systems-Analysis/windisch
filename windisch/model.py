@@ -43,13 +43,13 @@ def func_rotor_weight_rotor_diameter(
     :param power: power output (kW)
     :param coeff_a: coefficient a
     :param coeff_b: coefficient b
-    :return: nacelle weight (in kg)
+    :return: rotor weight (in kg)
     """
     rotor_mass = coeff_a * power**2 + coeff_b * power
     return 1e3 * rotor_mass
 
 
-def __get_ultimate_limit_state(diameter: float, wind_speed: float, nacelle_mass: float) -> float:
+def func_nacelle_weight_power(power: int, coeff_a: float, coeff_b: float) -> float:
     """
     Returns nacelle weight, in kg.
     :param power: power output (kW)
@@ -61,7 +61,17 @@ def __get_ultimate_limit_state(diameter: float, wind_speed: float, nacelle_mass:
     return 1e3 * nacelle_mass
 
 
-def __get_ultimate_limit_state():
+
+def __get_ultimate_limit_state(diameter: float, wind_speed: float, power: float, coeff_a: float, coeff_b: float) -> float:
+    """
+    Returns ultimate limit state of onshore turbine foundations
+    :param wind_speed : wind speed at a specific location (m/s)
+    :param diameter: rotor diameter (m)
+    :param nacelle_mass: mass of nacelle (kg)
+    :return: ULS moment (MN·m)
+    """
+
+    nacelle_mass = func_nacelle_weight_power(power, coeff_a, coeff_b)
 
     # Given values
     Cd = 1.2  # Drag coefficient
@@ -86,6 +96,8 @@ def __get_ultimate_limit_state():
     M_ULS_MN = M_ULS / 1e6
 
     return M_ULS_MN
+
+
 
 
 def func_rotor_diameter(
@@ -113,18 +125,33 @@ def func_rotor_diameter(
     )
 
 
-def func_mass_foundation_onshore(height: float, diameter: float, wind_speed: float, nacelle_,mass: float) -> float:
+def func_mass_foundation_onshore(height: float, diameter: float, wind_speed: float, power: float, coeff_a: float, coeff_b: float) -> float:
     """
     Returns mass of onshore turbine foundations
     :param height: tower height (m)
     :param diameter: rotor diameter (m)
     :return: total mass of foundation (kg)
     """
+
+    nacelle_mass = func_nacelle_weight_power(power, coeff_a, coeff_b)
+
     uls = __get_ultimate_limit_state(diameter, wind_speed, nacelle_mass)
 
-    bolt_mass = 0
-    concrete_vol = 0
-    reinf_mass = 0
+    bolt_mass = (0.04009378 * uls) + 1.23107196  # in tons # coeff found in verify_foundation_massV3.py
+    bolt_mass *= 1000  # Convert to kg
+
+    reinf_mass = (0.63267732 * uls) - 9.30963858  # in tons
+    reinf_mass *= 1000  # Convert to kg
+
+    # Formula: concrete_vol = a * ULS + b
+    concrete_vol = (3.23575233 * uls) + 203.0179  # in cubic meters
+    concrete_mass = concrete_vol * 2400  # Convert to kg (density of concrete = 2400 kg/m³)
+
+    # Total Foundation Mass
+    total_mass = bolt_mass + reinf_mass + concrete_mass  # kg
+
+    return total_mass
+
 
 
 def func_mass_reinf_steel_onshore(power: int) -> float:
