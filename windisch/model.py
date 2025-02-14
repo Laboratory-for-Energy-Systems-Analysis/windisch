@@ -60,30 +60,25 @@ def func_nacelle_weight_power(power: int, coeff_a: float, coeff_b: float) -> flo
     nacelle_mass = coeff_a * power**2 + coeff_b * power
     return 1e3 * nacelle_mass
 
-def __get_ultimate_limit_state(diameter: float, wind_speed: float, nacelle_mass: float) -> float:
-    """
-    Returns ultimate limit state of onshore turbine foundations
-    :param wind_speed : wind speed at a specific location (m/s)
-    :param diameter: rotor diameter (m)
-    :param nacelle_mass: mass of nacelle (kg)
-    :return: ULS moment (MN·m)
-    """
+def __get_ultimate_limit_state():
 
     # Given values
     Cd = 1.2  # Drag coefficient
     rho = 1.225  # Air density (kg/m³)
-    A = (np.pi / 4) * diameter**2  # Rotor swept area (m²)
+    D = 100  # Rotor diameter (m)
+    A = (np.pi / 4) * D**2  # Rotor swept area (m²)
 
     # Wind force calculation
-    F_wind = 0.5 * Cd * rho * A * wind_speed**2
+    F_wind = 0.5 * Cd * rho * A * V**2
 
     # Gravity force calculation
+    mass_nacelle_rotor = 100000  # kg (100 t)
     g = 9.81  # Gravity (m/s²)
-    F_gravity = nacelle_mass * g # nacelle_mass needs to be in kg
+    F_gravity = mass_nacelle_rotor * g
 
     # Heights
-    H_hub = 100 + diameter / 2  # Hub height (m)
-    H_CoM = 100 + diameter / 3  # Approximate center of mass height (m)
+    H_hub = 100 + D / 2  # Hub height (m)
+    H_CoM = 100 + D / 3  # Approximate center of mass height (m)
 
     # ULS Moment calculation
     M_ULS = (F_wind * H_hub) + (F_gravity * H_CoM)
@@ -94,7 +89,12 @@ def __get_ultimate_limit_state(diameter: float, wind_speed: float, nacelle_mass:
     return M_ULS_MN
 
 def func_rotor_diameter(
-    power: int, coeff_a: float, coeff_b: float, coeff_c: float, coeff_d: float, coeff_e: float
+    power: int,
+    coeff_a: float,
+    coeff_b: float,
+    coeff_c: float,
+    coeff_d: float,
+    coeff_e: float,
 ) -> float:
     """
     Returns rotor diameter, based on power output and given coefficients
@@ -113,30 +113,18 @@ def func_rotor_diameter(
     )
 
 
-def func_mass_foundation_onshore(height: float, diameter: float, wind_speed: float, nacelle_,mass: float) -> float:
+def func_mass_foundation_onshore(height: float, diameter: float) -> float:
     """
     Returns mass of onshore turbine foundations
     :param height: tower height (m)
     :param diameter: rotor diameter (m)
-    :return: total mass of foundation (kg)
+    :return:
     """
-    uls = __get_ultimate_limit_state(diameter, wind_speed, nacelle_mass)
+    uls = __get_ultimate_limit_state()
 
-    bolt_mass = (0.04009378 * uls) + 1.23107196  # in tons # coeff found in verify_foundation_massV3.py
-    bolt_mass *= 1000  # Convert to kg
-
-    reinf_mass = (0.63267732 * uls) - 9.30963858  # in tons
-    reinf_mass *= 1000  # Convert to kg
-
-    # Formula: concrete_vol = a * ULS + b
-    concrete_vol = (3.23575233 * uls) + 203.0179  # in cubic meters
-    concrete_mass = concrete_vol * 2400  # Convert to kg (density of concrete = 2400 kg/m³)
-
-    # Total Foundation Mass
-    total_mass = bolt_mass + reinf_mass + concrete_mass  # kg
-
-    return total_mass
-
+    bolt_mass = 0
+    concrete_vol = 0 
+    reinf_mass = 0
 
     
 
@@ -234,24 +222,22 @@ def get_transition_height() -> np.poly1d:
     transition piece (in m), based on pile height (in m).
     :return:
     """
-    pile_length = [35, 55, 35, 60, 40, 65, 50, 70, 50, 80]
-    transition_length = [15, 20, 15, 20, 15, 24, 20, 30, 20, 31]
+    pile_length = [35, 50, 65, 70, 80]
+    transition_length = [15, 20, 24, 30, 31]
     fit_transition_length = np.polyfit(pile_length, transition_length, 1)
     return np.poly1d(fit_transition_length)
 
 
-def get_transition_mass(pile_height: float) -> float:
+def get_transition_mass(transition_length: float) -> float:
     """
     Returns the mass of transition piece (in kg).
     :return:
     """
-    transition_length = [15, 20, 15, 20, 15, 24, 20, 30, 20, 31]
-    transition_weight = [150, 250, 150, 250, 160, 260, 200, 370, 250, 420]
-    fit_transition_weight = np.polyfit(transition_length, transition_weight, 1)
+    transition_lengths = [15, 20, 24, 30]
+    transition_weight = [150, 200, 260, 370]
+    fit_transition_weight = np.polyfit(transition_lengths, transition_weight, 1)
 
-    trans_height = get_transition_height()
-
-    return np.poly1d(fit_transition_weight)(trans_height(pile_height)) * 1000
+    return np.poly1d(fit_transition_weight)(transition_length) * 1000
 
 
 def get_grout_volume(trans_length: float) -> float:
@@ -294,7 +280,57 @@ def func_tower_weight_d2h(
     return 1e3 * tower_mass
 
 
-def set_cable_requirements(
+def set_onshore_cable_requirements(
+    power,
+    tower_height,
+    distance_m=550,
+    voltage_kv=33,
+    power_factor=0.95,
+    resistivity_copper=1.68e-8,
+    max_voltage_drop_percent=3,
+):
+    """
+    Calculate the required cross-sectional area of a copper cable for a wind turbine connection.
+
+    :param power: Power output of the wind turbine in MW
+    :param distance_m: Distance from the wind turbine to the transformer in meters
+    :param voltage_kv: Voltage of the cable in kV
+    :param power_factor: Power factor of the wind turbine
+    :param resistivity_copper: Resistivity of copper in ohm-meters
+    :param max_voltage_drop_percent: Maximum allowable voltage drop as a percentage of the voltage
+    :return: Copper mass in kg
+
+    """
+    # Convert input parameters to standard units
+    voltage_v = voltage_kv * 1e3  # Convert kV to V
+    max_voltage_drop = (
+        max_voltage_drop_percent / 100
+    ) * voltage_v  # Maximum voltage drop in volts
+
+    # Calculate current (I) using the formula: I = P / (sqrt(3) * V * PF)
+    current_a = (power * 1000) / (3**0.5 * voltage_v * power_factor)
+
+    # Calculate the total cable length (round trip)
+    total_length_m = 2 * distance_m
+
+    # Calculate the required resistance per meter to stay within the voltage drop limit
+    max_resistance_per_meter = max_voltage_drop / (current_a * total_length_m)
+
+    # Calculate the required cross-sectional area using R = rho / A
+    cross_section_area_m2 = resistivity_copper / max_resistance_per_meter
+
+    # Convert cross-sectional area to mm²
+    cross_section_area_mm2 = cross_section_area_m2 * 1e6
+
+    copper_mass = cross_section_area_mm2 * total_length_m * 1e-6 * COPPER_DENSITY
+
+    # Also, add the cable inside the wind turbine, which has a 640 mm2 cross-section
+    copper_mass += 640 * 1e-6 * tower_height * COPPER_DENSITY
+
+    return copper_mass
+
+
+def set_offshore_cable_requirements(
     power: int,
     cross_section: float,
     dist_transfo: float,
@@ -311,7 +347,7 @@ def set_cable_requirements(
     :return:
     """
 
-    m_copper = (cross_section * 1e-6 * (dist_transfo * 1e3)) * COPPER_DENSITY
+    m_copper = (cross_section * 1e-6 * dist_transfo * 1000) * COPPER_DENSITY
 
     # 450 l diesel/hour for the ship that lays the cable at sea bottom
     # 39 MJ/liter, 15 km/h as speed of laying the cable
@@ -346,9 +382,7 @@ def set_cable_requirements(
     # 39 MJ/liter, 15 km/h as speed of laying the cable
     energy_cable_laying_ship += 450 * 39 / 15 * dist_coast / park_size
 
-    m_cable = m_copper * 617 / 220
-    # FIXME: why * 0.5 ???
-    return m_cable * 0.5, energy_cable_laying_ship * 0.5
+    return m_copper, energy_cable_laying_ship * 0.5
 
 
 class WindTurbineModel:
@@ -379,7 +413,7 @@ class WindTurbineModel:
         self.array = array
         self.power_curve = None
         self.__cache = None
-        self.country = country
+        self.country = country or "CH"
         self.location = location or None
         self.wind_data = wind_data
         self.power_curve_model = power_curve_model
@@ -395,12 +429,10 @@ class WindTurbineModel:
 
             if self.terrain_vars["LANDMASK"].max() == 1:
                 print("Onshore wind turbines")
-                if "offshore" in self.array.coords["application"]:
-                    self.array.loc[dict(application="offshore", parameter="power")] = 0
+                self.array.loc[dict(application="offshore", parameter="power")] = 0
             else:
                 print("Offshore wind turbines")
-                if "onshore" in self.array.coords["application"]:
-                    self.array.loc[dict(application="onshore", parameter="power")] = 0
+                self.array.loc[dict(application="onshore", parameter="power")] = 0
                 if self.sea_depth_data:
                     self.__fetch_sea_depth()
 
@@ -449,6 +481,7 @@ class WindTurbineModel:
         self.__set_assembly_requirements()
         self.__set_installation_requirements()
         self.__set_maintenance_energy()
+        # self.disable_unavailable_models()
 
         self["total mass"] = self[
             [
@@ -519,7 +552,13 @@ class WindTurbineModel:
 
         self.terrain_vars = wind_speed
         # rename "wind_speed" to "WS"
-        self.terrain_vars = self.terrain_vars.rename_vars({"wind_speed": "WS"})
+        self.terrain_vars = self.terrain_vars.rename_vars(
+            {
+                "wind_speed": "WS",
+            }
+        )
+        self.terrain_vars["WS"] = self.terrain_vars["WS"].astype(float)
+
         # replace NaNs with zeros
         self.terrain_vars = self.terrain_vars.fillna(0)
 
@@ -539,25 +578,43 @@ class WindTurbineModel:
 
     def __fetch_power_curves(self):
 
-        # we adjust values to the heights of the wind turbines
-        self.terrain_vars = self.terrain_vars.interp(
-            height=self["tower height"],
-            method="linear",
-            kwargs={"fill_value": "extrapolate"},
-        )
-
         # we get the power curve
         self.power_curve = calculate_generic_power_curve(
             power=self["power"],
         )
 
+        self.power_curve = self.power_curve.drop_vars("power")
+        self.power_curve = self.power_curve.drop_vars("parameter")
+
     def __calculate_electricity_production(self):
         # we calculate the electricity production
         if self.power_curve is not None:
 
-            self.annual_electricity_production = self.power_curve.interp(
-                {"wind speed": self.terrain_vars["WS"]}, method="linear"
+            # we adjust values to the heights of the wind turbines
+            self.terrain_vars = self.terrain_vars.interp(
+                height=self["tower height"],
+                method="linear",
+                kwargs={"fill_value": "extrapolate"},
             )
+
+            self.terrain_vars = self.terrain_vars.drop_vars("height")
+            self.terrain_vars = self.terrain_vars.drop_vars("parameter")
+
+            self["average wind speed"] = self.terrain_vars["WS"].mean(dim="time")
+
+            self.annual_electricity_production = xr.zeros_like(self.terrain_vars["WS"])
+
+            for application in self.array.coords["application"].values:
+                self.annual_electricity_production.loc[
+                    dict(application=application)
+                ] = self.power_curve.sel(application=application).interp(
+                    {
+                        "wind speed": self.terrain_vars.sel(application=application)[
+                            "WS"
+                        ]
+                    },
+                    method="linear",
+                )
 
             self["lifetime electricity production"] = (
                 self.annual_electricity_production.sum(dim="time") * self["lifetime"]
@@ -603,11 +660,11 @@ class WindTurbineModel:
         """
 
         self["tower height"] = func_height_diameter(
-            self["diameter"], -611916.49, -611936.55, -862547.53
+            self["rotor diameter"], -611916.49, -611936.55, -862547.53
         ) * (1 - self["offshore"])
 
         self["tower height"] += (
-            func_height_diameter(self["diameter"], 127.97, 127.08, 82.23)
+            func_height_diameter(self["rotor diameter"], 127.97, 127.08, 82.23)
             * self["offshore"]
         )
 
@@ -673,9 +730,8 @@ class WindTurbineModel:
         :return:
         """
 
-        self["foundation mass"] = func_mass_foundation_onshore(
-            self["tower height"], self["rotor diameter"]
-        ) * (1 - self["offshore"])
+        if "onshore" in self.array.coords["application"].values:
+            self.func_mass_foundation_onshore()
 
         self["reinforcing steel in foundation mass"] = func_mass_reinf_steel_onshore(
             self["power"]
@@ -695,7 +751,7 @@ class WindTurbineModel:
             get_transition_height()(self["pile height"]) * self["offshore"]
         )
         self["transition mass"] = (
-            get_transition_mass(self["pile height"]) * self["offshore"]
+            get_transition_mass(self["transition length"]) * self["offshore"]
         )
         self["grout volume"] = (
             get_grout_volume(self["transition length"]) * self["offshore"]
@@ -707,11 +763,11 @@ class WindTurbineModel:
         ]
 
         if self.location:
-            self["distance to coastline"] = find_nearest_coastline(
-                self.location[0], self.location[1]
+            self["distance to coastline"] = (
+                find_nearest_coastline(self.location[0], self.location[1]) / 1000
             )
 
-        cable_mass, energy = set_cable_requirements(
+        cable_mass, energy = set_offshore_cable_requirements(
             self["power"],
             self["offshore farm cable cross-section"],
             self["distance to transformer"],
@@ -720,6 +776,10 @@ class WindTurbineModel:
         )
         self["cable mass"] = cable_mass * self["offshore"]
         self["energy for cable lay-up"] = energy * self["offshore"]
+
+        self["cable mass"] += set_onshore_cable_requirements(
+            self["power"], self["tower height"]
+        ) * (1 - self["offshore"])
 
     def __set_assembly_requirements(self):
         """
@@ -841,10 +901,6 @@ class WindTurbineModel:
             self["distance to coastline"] * self["total mass"] / 1000  # kg/ton
         ) * self["offshore"]
 
-        self["access road"] = np.interp(self["power"], [0, 2000], [0, 8000]) * (
-            1 - self["offshore"]
-        )
-
     def __set_maintenance_energy(self):
         """
         An amount of transport per wind turbine per year is given.
@@ -858,4 +914,63 @@ class WindTurbineModel:
         # by a ferry boat @ 2.95 kg/100 ton-km
         self["maintenance transport"] += (7575 * 100 / 2.95) * self["offshore"]
 
-    
+    def func_mass_foundation_onshore(self) -> None:
+        """
+        Returns mass of onshore turbine foundations
+        :param height: tower height (m)
+        :param diameter: rotor diameter (m)
+        :return:
+        """
+        uls = self.__get_ultimate_limit_state()
+
+        bolt_mass = 0
+        concrete_vol = 0
+        reinf_mass = 0
+
+    def __get_ultimate_limit_state(self):
+
+        # Given values
+        Cd = 1.2  # Drag coefficient
+        # Air density (kg/m³)
+        try:
+            rho = self.terrain_vars["RHO"]
+        except TypeError:
+            rho = 1.225
+
+        D = self["rotor diameter"]  # Rotor diameter (m)
+        A = (np.pi / 4) * D**2  # Rotor swept area (m²)
+
+        # Maximum wind force calculation
+        try:
+            max_wind_speed = self.terrain_vars["WS"].max()
+        except TypeError:
+            max_wind_speed = 13  # m/s, if not available
+        F_wind = 0.5 * Cd * rho * A * max_wind_speed**2
+
+        # Gravity force calculation
+        mass_nacelle_rotor = self["nacelle mass"]  # kg (100 t)
+        g = 9.81  # Gravity (m/s²)
+        F_gravity = mass_nacelle_rotor * g
+
+        # Heights
+        H_hub = 100 + D / 2  # Hub height (m)
+        H_CoM = 100 + D / 3  # Approximate center of mass height (m)
+
+        # ULS Moment calculation
+        M_ULS = (F_wind * H_hub) + (F_gravity * H_CoM)
+
+        # Convert to MN·m
+        M_ULS_MN = M_ULS / 1e6
+
+        return M_ULS_MN
+
+    def disable_unavailable_models(self):
+        # disable offshore wind turbines with a rated power output inferior to 1'000 kW
+        if "offshore" in self.array.coords["application"]:
+            self.array.loc[
+                dict(
+                    application="offshore",
+                    parameter="power",
+                    size=[s for s in self.array.coords["size"] if s < 1000],
+                )
+            ] = 0

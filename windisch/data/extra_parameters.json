@@ -25,9 +25,9 @@
   "installation transport, by truck",
   "installation transport, by sea",
   "installation transport, by rail",
-  "access road",
   "transport to assembly",
   "average load factor",
   "lifetime electricity production",
-  "ultimate limit state"
+  "ultimate limit state",
+  "average wind speed"
 ]

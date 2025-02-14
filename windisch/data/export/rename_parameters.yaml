@@ -1,0 +1,98 @@
+power:
+    unit: kW
+    name: Power
+
+lifetime:
+  unit: year
+  name: Lifetime
+
+average load factor:
+  unit: pct
+  name: Average load factor
+  percentage: True
+
+average wind speed:
+  unit: m/s
+  name: Average wind speed
+
+lifetime electricity production:
+  unit: GWh
+  name: Production over lifetime
+
+cut-in:
+    unit: m/s
+    name: Cut-in wind speed
+cut-out:
+    unit: m/s
+    name: Cut-out wind speed
+
+cable mass:
+  unit: kg
+  name: Cable mass
+electronics mass:
+    unit: kg
+    name: Electronics mass
+foundation mass:
+    unit: kg
+    name: Foundation mass
+nacelle mass:
+    unit: kg
+    name: Nacelle mass
+pile mass:
+    unit: kg
+    name: Pile mass
+rotor mass:
+    unit: kg
+    name: Rotor mass
+transition mass:
+    unit: kg
+    name: Transition mass
+tower mass:
+    unit: kg
+    name: Tower mass
+total mass:
+    unit: kg
+    name: Total mass
+
+hub height:
+    unit: m
+    name: Hub height
+tower height:
+    unit: m
+    name: Tower height
+pile height:
+    unit: m
+    name: Pile height
+transition length:
+    unit: m
+    name: Transition length
+rotor diameter:
+    unit: m
+    name: Rotor diameter
+sea depth:
+    unit: m
+    name: Sea depth
+grout volume:
+    unit: m3
+    name: Grout volume
+
+scour volume:
+    unit: m3
+    name: Scour volume
+
+distance to assembly plant:
+    unit: km
+    name: Distance to assembly plant
+distance to coastline:
+    unit: km
+    name: Distance to coastline
+distance to transformer:
+    unit: km
+    name: Distance to high-voltage transformer
+
+turbines per farm:
+    unit:
+    name: Number of turbines per farm
+ultimate limit state:
+    unit: MNm
+    name: Ultimate limit state

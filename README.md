@@ -45,10 +45,15 @@ Do not hesitate to contact the development team at [romain.sacchi@psi.ch](mailto
 
 * [Romain Sacchi](https://github.com/romainsacchi)
 
+## Contributers
+
+* [Romain Sacchi](mailto:romain.sacchi@psi.ch)
+* [Kalena Jonsson](mailto:kjonsson@student.ethz.ch)
+
 ## Contributing
 
 See [contributing](https://github.com/romainsacchi/windisch/blob/master/CONTRIBUTING.md).
 
 ## License
 
-[BSD-3-Clause](https://github.com/romainsacchi/windisch/blob/master/LICENSE). Copyright 2021 Paul Scherrer Institut.
+[BSD-3-Clause](https://github.com/romainsacchi/windisch/blob/master/LICENSE). Copyright 2025 Paul Scherrer Institut.
