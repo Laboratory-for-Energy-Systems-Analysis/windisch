@@ -49,7 +49,7 @@ def func_rotor_weight_rotor_diameter(
     return 1e3 * rotor_mass
 
 
-def func_nacelle_weight_power(power: int, coeff_a: float, coeff_b: float) -> float:
+def __get_ultimate_limit_state(diameter: float, wind_speed: float, nacelle_mass: float) -> float:
     """
     Returns nacelle weight, in kg.
     :param power: power output (kW)
@@ -66,20 +66,18 @@ def __get_ultimate_limit_state():
     # Given values
     Cd = 1.2  # Drag coefficient
     rho = 1.225  # Air density (kg/m³)
-    D = 100  # Rotor diameter (m)
-    A = (np.pi / 4) * D**2  # Rotor swept area (m²)
+    A = (np.pi / 4) * diameter**2  # Rotor swept area (m²)
 
     # Wind force calculation
-    F_wind = 0.5 * Cd * rho * A * V**2
+    F_wind = 0.5 * Cd * rho * A * wind_speed**2
 
     # Gravity force calculation
-    mass_nacelle_rotor = 100000  # kg (100 t)
     g = 9.81  # Gravity (m/s²)
-    F_gravity = mass_nacelle_rotor * g
+    F_gravity = nacelle_mass * g # nacelle_mass needs to be in kg
 
     # Heights
-    H_hub = 100 + D / 2  # Hub height (m)
-    H_CoM = 100 + D / 3  # Approximate center of mass height (m)
+    H_hub = 100 + diameter / 2  # Hub height (m)
+    H_CoM = 100 + diameter / 3  # Approximate center of mass height (m)
 
     # ULS Moment calculation
     M_ULS = (F_wind * H_hub) + (F_gravity * H_CoM)
@@ -115,14 +113,14 @@ def func_rotor_diameter(
     )
 
 
-def func_mass_foundation_onshore(height: float, diameter: float) -> float:
+def func_mass_foundation_onshore(height: float, diameter: float, wind_speed: float, nacelle_,mass: float) -> float:
     """
     Returns mass of onshore turbine foundations
     :param height: tower height (m)
     :param diameter: rotor diameter (m)
-    :return:
+    :return: total mass of foundation (kg)
     """
-    uls = __get_ultimate_limit_state()
+    uls = __get_ultimate_limit_state(diameter, wind_speed, nacelle_mass)
 
     bolt_mass = 0
     concrete_vol = 0
