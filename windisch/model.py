@@ -61,7 +61,6 @@ def func_nacelle_weight_power(power: int, coeff_a: float, coeff_b: float) -> flo
     return 1e3 * nacelle_mass
 
 
-
 def func_rotor_diameter(
     power: int,
     coeff_a: float,
@@ -85,7 +84,6 @@ def func_rotor_diameter(
         - coeff_b * np.exp(-(power - coeff_d) / coeff_c)
         + coeff_e * np.log(power + 1)
     )
-
 
 
 def func_mass_reinf_steel_onshore(power: int) -> float:
@@ -873,15 +871,14 @@ class WindTurbineModel:
         # assumed equivalent to 257'000 ton-km
         # by a ferry boat @ 2.95 kg/100 ton-km
         self["maintenance transport"] += (7575 * 100 / 2.95) * self["offshore"]
-        
 
     def func_mass_foundation_onshore(self) -> None:
         """
         Calculates and sets the total mass of onshore wind turbine foundations.
 
-        The function estimates the total foundation mass based on the wind turbine's 
+        The function estimates the total foundation mass based on the wind turbine's
         ultimate limit state (ULS), which considers forces from wind loading and gravity.
-        It calculates the mass of bolts, reinforcing steel, and concrete, and stores 
+        It calculates the mass of bolts, reinforcing steel, and concrete, and stores
         only the total mass in `self["foundation mass"]`.
 
         :return: None. The total foundation mass is stored in `self["foundation mass"]`.
@@ -899,7 +896,9 @@ class WindTurbineModel:
 
         # Calculate concrete volume and mass
         concrete_vol = (3.23575233 * uls) + 203.0179  # in cubic meters
-        concrete_mass = concrete_vol * 2400  # Convert to kg (density of concrete = 2400 kg/m³)
+        concrete_mass = (
+            concrete_vol * 2400
+        )  # Convert to kg (density of concrete = 2400 kg/m³)
 
         # Store only the total foundation mass in `self["foundation mass"]`
         self["foundation mass"] = bolt_mass + reinf_mass + concrete_mass  # kg
@@ -908,8 +907,8 @@ class WindTurbineModel:
         """
         Calculates the Ultimate Limit State (ULS) moment for the wind turbine foundation.
 
-        The function estimates the ULS moment by computing the forces acting on the wind turbine 
-        due to wind loading and gravitational forces. The wind force is based on the drag coefficient, 
+        The function estimates the ULS moment by computing the forces acting on the wind turbine
+        due to wind loading and gravitational forces. The wind force is based on the drag coefficient,
         air density, and rotor swept area, while the gravitational force is based on the nacelle and rotor mass.
 
         :return: The ultimate limit state (ULS) moment in MN·m (Meganewton-meters).
