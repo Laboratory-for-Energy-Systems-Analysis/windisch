@@ -29,5 +29,7 @@
   "average load factor",
   "lifetime electricity production",
   "ultimate limit state",
-  "average wind speed"
+  "average wind speed",
+  "foundation mass steel",
+  "foundation mass concrete"
 ]

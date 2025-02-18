@@ -43,7 +43,7 @@ def func_rotor_weight_rotor_diameter(
     :param power: power output (kW)
     :param coeff_a: coefficient a
     :param coeff_b: coefficient b
-    :return: nacelle weight (in kg)
+    :return: rotor weight (in kg)
     """
     rotor_mass = coeff_a * power**2 + coeff_b * power
     return 1e3 * rotor_mass
@@ -79,14 +79,10 @@ def func_rotor_diameter(
     :param coeff_e: coefficient
     :return: rotor diameter (m)
     """
-    return np.clip(
-        (
-            coeff_a
-            - coeff_b * np.exp(-(power - coeff_d) / coeff_c)
-            + coeff_e * np.log(power + 1)
-        ),
-        25,
-        None,
+    return (
+        coeff_a
+        - coeff_b * np.exp(-(power - coeff_d) / coeff_c)
+        + coeff_e * np.log(power + 1)
     )
 
 
@@ -878,19 +874,48 @@ class WindTurbineModel:
 
     def func_mass_foundation_onshore(self) -> None:
         """
-        Returns mass of onshore turbine foundations
-        :param height: tower height (m)
-        :param diameter: rotor diameter (m)
-        :return:
+        Calculates and sets the total mass of onshore wind turbine foundations.
+
+        The function estimates the total foundation mass based on the wind turbine's
+        ultimate limit state (ULS), which considers forces from wind loading and gravity.
+        It calculates the mass of bolts, reinforcing steel, and concrete, and stores
+        only the total mass in `self["foundation mass"]`.
+
+        :return: None. The total foundation mass is stored in `self["foundation mass"]`.
         """
+
+        # Compute the ultimate limit state (ULS) moment
         uls = self.__get_ultimate_limit_state()
 
-        bolt_mass = 0
-        concrete_vol = 0
-        reinf_mass = 0
+        # Calculate masses based on ULS
+        bolt_mass = (0.04009378 * uls) + 1.23107196  # in tons
+        bolt_mass *= 1000  # Convert to kg
+
+        reinf_mass = (0.63267732 * uls) - 9.30963858  # in tons
+        reinf_mass *= 1000  # Convert to kg
+
+        # Calculate concrete volume and mass
+        concrete_vol = (3.23575233 * uls) + 203.0179  # in cubic meters
+        concrete_mass = (
+            concrete_vol * 2400
+        )  # Convert to kg (density of concrete = 2400 kg/m³)
+
+        # Store only the total foundation mass in `self["foundation mass"]`
+        self["foundation mass concrete"] = concrete_mass  # kg
+        self["foundation mass steel"] = reinf_mass + bolt_mass  # kg
+        self["foundation mass"] = reinf_mass + bolt_mass + concrete_mass  # kg
 
     def __get_ultimate_limit_state(self):
+        """
+        Calculates the Ultimate Limit State (ULS) moment for the wind turbine foundation.
 
+        The function estimates the ULS moment by computing the forces acting on the wind turbine
+        due to wind loading and gravitational forces. The wind force is based on the drag coefficient,
+        air density, and rotor swept area, while the gravitational force is based on the nacelle and rotor mass.
+
+        :return: The ultimate limit state (ULS) moment in MN·m (Meganewton-meters).
+        :rtype: float
+        """
         # Given values
         Cd = 1.2  # Drag coefficient
         # Air density (kg/m³)
