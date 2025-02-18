@@ -13,6 +13,7 @@ tower:
 foundation:
   - market for concrete
   - market for steel, low-alloyed
+  - market for steel, chromium steel 18/8
   - platform production
 
 grid connection:
