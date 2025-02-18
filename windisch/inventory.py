@@ -1006,35 +1006,39 @@ class Inventory:
         ]
 
         self.A[
-        :,
-        self.find_input_indices(("market for concrete, normal strength",)),
-        input_indices,
+            :,
+            self.find_input_indices(("market for concrete, normal strength",)),
+            input_indices,
         ] = (
-                self.array.sel(
-                    parameter="foundation volume concrete",
-                    combined_dim=[
-                        d
-                        for d in self.array.coords["combined_dim"].values
-                        if "onshore" in d
-                    ],
-                )
-                * -1
+            self.array.sel(
+                parameter="foundation volume concrete",
+                combined_dim=[
+                    d
+                    for d in self.array.coords["combined_dim"].values
+                    if "onshore" in d
+                ],
+            )
+            * -1
         )
 
         self.A[
-        :,
-        self.find_input_indices(("market for steel, chromium steel 18/8",), excludes=("hot rolled",), excludes_in=0),
-        input_indices,
+            :,
+            self.find_input_indices(
+                ("market for steel, chromium steel 18/8",),
+                excludes=("hot rolled",),
+                excludes_in=0,
+            ),
+            input_indices,
         ] = (
-                self.array.sel(
-                    parameter="foundation mass steel",
-                    combined_dim=[
-                        d
-                        for d in self.array.coords["combined_dim"].values
-                        if "onshore" in d
-                    ],
-                )
-                * -1
+            self.array.sel(
+                parameter="foundation mass steel",
+                combined_dim=[
+                    d
+                    for d in self.array.coords["combined_dim"].values
+                    if "onshore" in d
+                ],
+            )
+            * -1
         )
 
         # offshore foundation - steel monopile
