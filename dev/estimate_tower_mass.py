@@ -19,8 +19,10 @@ for col in required_columns:
         raise ValueError(f"Column '{col}' not found in dataset. Check file structure.")
 
 # Compute estimated tower height as the average of max and min hub heights
-data["Tower height"] = (pd.to_numeric(data["Maximum hub height"], errors="coerce") +
-                        pd.to_numeric(data["Minimum hub height"], errors="coerce")) / 2
+data["Tower height"] = (
+    pd.to_numeric(data["Maximum hub height"], errors="coerce")
+    + pd.to_numeric(data["Minimum hub height"], errors="coerce")
+) / 2
 
 # Drop rows with missing tower weight
 data.dropna(subset=["Tower weight"], inplace=True)
@@ -28,7 +30,8 @@ data.dropna(subset=["Tower weight"], inplace=True)
 # Convert relevant columns to numeric
 data["Tower height"] = pd.to_numeric(data["Tower height"], errors="coerce")
 data["Tower weight"] = pd.to_numeric(
-    data["Tower weight"].astype(str).str.replace("Tons", "", regex=False), errors="coerce"
+    data["Tower weight"].astype(str).str.replace("Tons", "", regex=False),
+    errors="coerce",
 )
 
 # Drop rows with missing values
@@ -50,31 +53,44 @@ height_range = np.linspace(min_height, np.max(tower_height), 500)
 print(f"🔹 Minimum Tower Height: {min_height:.2f} m")
 print(f"🔹 Minimum Tower Mass: {min_mass:.2f} tons")
 
+
 ### **Corrected Logarithmic Model (Starts at Smallest Turbine)**
 def corrected_log_model(height, a, b, c):
     """
     Logarithmic model forced to start at the smallest turbine mass.
     """
-    return np.maximum(a * np.log(height - min_height + 1) + b + c * height, min_mass)  # Ensures no values below min_mass
+    return np.maximum(
+        a * np.log(height - min_height + 1) + b + c * height, min_mass
+    )  # Ensures no values below min_mass
+
 
 ### **Polynomial Model (With Constraints)**
 def poly_model(height, a, b, c, d):
-    return np.maximum(a * height**3 + b * height**2 + c * height + d, min_mass)  # Ensures no negatives
+    return np.maximum(
+        a * height**3 + b * height**2 + c * height + d, min_mass
+    )  # Ensures no negatives
+
 
 # **Initial Guesses for the Log Model**
 log_init_guess = [1000, min_mass, 0.1]  # Ensure b starts at min_mass
 poly_init_guess = [1e-6, 1e-3, 1, min_mass]  # Standard cubic polynomial fit
 
 # **Fit Models**
-log_params, _ = curve_fit(corrected_log_model, tower_height, tower_mass, p0=log_init_guess, maxfev=50000)
-poly_params, _ = curve_fit(poly_model, tower_height, tower_mass, p0=poly_init_guess, maxfev=50000)
+log_params, _ = curve_fit(
+    corrected_log_model, tower_height, tower_mass, p0=log_init_guess, maxfev=50000
+)
+poly_params, _ = curve_fit(
+    poly_model, tower_height, tower_mass, p0=poly_init_guess, maxfev=50000
+)
 
 # **Generate Predicted Values**
 mass_log_pred = corrected_log_model(height_range, *log_params)
 mass_poly_pred = poly_model(height_range, *poly_params)
 
 # **Calculate RMSE**
-rmse_log = np.sqrt(np.mean((tower_mass - corrected_log_model(tower_height, *log_params)) ** 2))
+rmse_log = np.sqrt(
+    np.mean((tower_mass - corrected_log_model(tower_height, *log_params)) ** 2)
+)
 rmse_poly = np.sqrt(np.mean((tower_mass - poly_model(tower_height, *poly_params)) ** 2))
 
 # **Print Results**
@@ -100,10 +116,16 @@ plt.figure(figsize=(10, 6))
 plt.scatter(tower_height, tower_mass, label="Observed Data", color="blue", alpha=0.6)
 
 # Logarithmic model plot
-plt.plot(height_range, mass_log_pred, label=f"Corrected Log Model (RMSE={rmse_log:.2f})", color="red", linestyle="dashed")
+plt.plot(
+    height_range,
+    mass_log_pred,
+    label=f"Corrected Log Model (RMSE={rmse_log:.2f})",
+    color="red",
+    linestyle="dashed",
+)
 
 # Polynomial model plot
-#plt.plot(height_range, mass_poly_pred, label=f"Polynomial Model (RMSE={rmse_poly:.2f})", color="green")
+# plt.plot(height_range, mass_poly_pred, label=f"Polynomial Model (RMSE={rmse_poly:.2f})", color="green")
 
 plt.xlabel("Tower Height (m)")
 plt.ylabel("Tower Mass (tons)")

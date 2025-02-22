@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+
 # Define the regression function for nacelle mass calculation
 def func_nacelle_mass(power, coeff_a, coeff_b):
     """
@@ -13,6 +14,7 @@ def func_nacelle_mass(power, coeff_a, coeff_b):
     """
     nacelle_mass = coeff_a * power**2 + coeff_b * power
     return 1e3 * nacelle_mass  # Convert to kg
+
 
 # Coefficients for nacelle mass estimation (onshore & offshore)
 coeff_onshore = [1.66691134e-06, 3.20700974e-02]
@@ -51,6 +53,7 @@ data = data.dropna(subset=["Rated power", "Nacelle weight"])
 # Filter data for offshore and onshore turbines
 data_offshore = data.loc[data["Offshore"] == "Yes"]
 data_onshore = data.loc[data["Offshore"] == "No"]
+
 
 # Function to plot observed vs. predicted nacelle mass
 def plot_nacelle_mass(data, coeffs, title, color):
@@ -91,6 +94,7 @@ def plot_nacelle_mass(data, coeffs, title, color):
     plt.ylabel("Nacelle Mass (kg)")
     plt.legend()
     plt.grid()
+
 
 # Create subplots
 plt.figure(figsize=(14, 10))

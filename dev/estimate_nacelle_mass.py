@@ -1,6 +1,6 @@
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 
 # Load dataset
@@ -14,7 +14,9 @@ data.replace("#ND", np.nan, inplace=True)  # Replace missing values
 data.dropna(subset=["Nacelle weight"], inplace=True)  # Remove missing nacelle weights
 
 # Convert columns to numeric
-data["Nacelle weight"] = pd.to_numeric(data["Nacelle weight"], errors="coerce") * 1000  # Convert tons to kg
+data["Nacelle weight"] = (
+    pd.to_numeric(data["Nacelle weight"], errors="coerce") * 1000
+)  # Convert tons to kg
 data["Rated power"] = pd.to_numeric(data["Rated power"], errors="coerce")
 
 # Drop any remaining NaN values
@@ -30,13 +32,20 @@ mass = data_offshore["Nacelle weight"].values
 # Normalize power to improve numerical stability
 power_norm = power / np.max(power)
 
+
 ### **Improved Logarithmic Model**
 def log_model(power, a, b, c, d):
-    return a * np.log(np.maximum(power + c, 1e-2)) + b + d * power  # Ensure positive log input
+    return (
+        a * np.log(np.maximum(power + c, 1e-2)) + b + d * power
+    )  # Ensure positive log input
+
 
 ### **Improved Polynomial Model**
 def poly_model(power, a, b, c, d):
-    return np.maximum(a * power**3 + b * power**2 + c * power + d, 0)  # No negative values
+    return np.maximum(
+        a * power**3 + b * power**2 + c * power + d, 0
+    )  # No negative values
+
 
 # Smarter Initial Guesses
 log_init_guess = [np.max(mass), np.min(mass), np.min(power) * 0.5, 0.01]
@@ -85,10 +94,21 @@ plt.figure(figsize=(10, 6))
 plt.scatter(power, mass, label="Observed Data", color="blue", alpha=0.6)
 
 # Logarithmic model plot
-plt.plot(power_range, mass_log_pred, label=f"Log Model (RMSE={rmse_log:.2f})", color="red", linestyle="dashed")
+plt.plot(
+    power_range,
+    mass_log_pred,
+    label=f"Log Model (RMSE={rmse_log:.2f})",
+    color="red",
+    linestyle="dashed",
+)
 
 # Polynomial model plot
-plt.plot(power_range, mass_poly_pred, label=f"Cubic Poly Model (RMSE={rmse_poly:.2f})", color="green")
+plt.plot(
+    power_range,
+    mass_poly_pred,
+    label=f"Cubic Poly Model (RMSE={rmse_poly:.2f})",
+    color="green",
+)
 
 plt.xlabel("Rated Power (kW)")
 plt.ylabel("Nacelle Mass (kg)")
