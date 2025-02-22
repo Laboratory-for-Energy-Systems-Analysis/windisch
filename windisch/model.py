@@ -35,30 +35,57 @@ def func_height_diameter(
     return coeff_a - coeff_b * np.exp(-diameter / coeff_c)
 
 
-def func_rotor_weight_rotor_diameter(
-    power: int, coeff_a: float, coeff_b: float
-) -> float:
-    """
-    Returns rotor weight, in kg, based on rotor diameter.
-    :param power: power output (kW)
-    :param coeff_a: coefficient a
-    :param coeff_b: coefficient b
-    :return: rotor weight (in kg)
-    """
-    rotor_mass = coeff_a * power**2 + coeff_b * power
-    return 1e3 * rotor_mass
+#def func_rotor_weight_rotor_diameter(
+#    power: int, coeff_a: float, coeff_b: float
+#) -> float:
+#    """
+#    Returns rotor weight, in kg, based on rotor diameter.
+#    :param power: power output (kW)
+#    :param coeff_a: coefficient a
+#    :param coeff_b: coefficient b
+#    :return: rotor weight (in kg)
+#    """
+#    rotor_mass = coeff_a * power**2 + coeff_b * power
+#    return 1e3 * rotor_mass
 
+def func_rotor_weight_rotor_diameter(diameter: float, coeff_a: float, coeff_b: float, coeff_c: float, coeff_d: float) -> float:
+    """
+    Returns rotor weight (kg) based on rotor diameter (m) using a cubic polynomial model.
 
-def func_nacelle_weight_power(power: int, coeff_a: float, coeff_b: float) -> float:
+    :param diameter: Rotor diameter (m)
+    :param coeff_a: Cubic coefficient
+    :param coeff_b: Quadratic coefficient
+    :param coeff_c: Linear coefficient
+    :param coeff_d: Constant term
+    :return: Rotor weight (kg)
     """
-    Returns nacelle weight, in kg.
-    :param power: power output (kW)
-    :param coeff_a: coefficient a
-    :param coeff_b: coefficient b
-    :return: nacelle weight (in kg)
+    rotor_mass = coeff_a * diameter**3 + coeff_b * diameter**2 + coeff_c * diameter + coeff_d
+    return max(0, rotor_mass)  # Ensure non-negative mass
+
+#def func_nacelle_weight_power(power: int, coeff_a: float, coeff_b: float) -> float:
+#    """
+#    Returns nacelle weight, in kg.
+#    :param power: power output (kW)
+#    :param coeff_a: coefficient a
+#    :param coeff_b: coefficient b
+#    :return: nacelle weight (in kg)
+#    """
+#    nacelle_mass = coeff_a * power**2 + coeff_b * power
+#    return 1e3 * nacelle_mass
+
+def func_nacelle_weight_power(power: int, coeff_a: float, coeff_b: float, coeff_c: float, coeff_d: float) -> float:
     """
-    nacelle_mass = coeff_a * power**2 + coeff_b * power
-    return 1e3 * nacelle_mass
+    Returns nacelle weight, in kg, based on rated power.
+    
+    :param power: Power output (kW)
+    :param coeff_a: Cubic coefficient
+    :param coeff_b: Quadratic coefficient
+    :param coeff_c: Linear coefficient
+    :param coeff_d: Constant term
+    :return: Nacelle weight (in kg)
+    """
+    nacelle_mass = coeff_a * power**3 + coeff_b * power**2 + coeff_c * power + coeff_d
+    return max(0, nacelle_mass)  # Ensure non-negative mass  
 
 
 def func_rotor_diameter(
@@ -236,6 +263,22 @@ def func_tower_weight_d2h(
     """
     tower_mass = coeff_a * diameter**2 * height + coeff_b
     return 1e3 * tower_mass
+
+def func_tower_weight_log(
+    height: float, coeff_a: float, coeff_b: float, coeff_c: float, min_height: float, min_mass: float
+) -> float:
+    """
+    Returns tower mass (kg) based on tower height using a logarithmic model (for offshore turbines).
+    
+    :param height: tower height (m)
+    :param coeff_a: coefficient a (logarithmic model for offshore)
+    :param coeff_b: coefficient b (logarithmic model for offshore)
+    :param coeff_c: coefficient c (logarithmic model for offshore)
+    :param min_height: fixed minimum tower height in dataset (ensures proper log scaling)
+    :param min_mass: fixed minimum tower mass in dataset (ensures no negative values)
+    :return: tower mass (kg)
+    """
+    return np.maximum(coeff_a * np.log(height - min_height + 1) + coeff_b + coeff_c * height, min_mass)
 
 
 def set_onshore_cable_requirements(
@@ -633,40 +676,93 @@ class WindTurbineModel:
         """
 
         self["nacelle mass"] = func_nacelle_weight_power(
-            self["power"], 1.66691134e-06, 3.20700974e-02
+            self["power"], 1.66691134e-06, 3.20700974e-02, 0, 0
         ) * (1 - self["offshore"])
 
-        self["nacelle mass"] += (
-            func_nacelle_weight_power(self["power"], 2.15668283e-06, 3.24712680e-02)
-            * self["offshore"]
-        )
+        self["nacelle mass"] += func_nacelle_weight_power(
+            self["power"], 
+            -0.000000323,  
+            0.006014822,  
+            21.251620,        
+            2265.25           
+        ) * self["offshore"]
+
+    #def __set_rotor_mass(self):
+    #    """
+    #    This method defines the mass of the rotor based on its diameter.
+    #    :return:
+    #    """
+    #
+    #    self["rotor mass"] = func_rotor_weight_rotor_diameter(
+    #        self["rotor diameter"], 0.00460956, 0.11199577
+    #    ) * (1 - self["offshore"])
+    #
+    #    self["rotor mass"] += (
+    #        func_rotor_weight_rotor_diameter(
+    #            self["rotor diameter"], 0.0088365, -0.16435292
+    #        )
+    #        * self["offshore"]
+    #    )
 
     def __set_rotor_mass(self):
         """
         This method defines the mass of the rotor based on its diameter.
-        :return:
+        Uses different models for onshore and offshore wind turbines.
+        :return: None
         """
 
+        # Onshore turbine mass calculation (old quadratic model)
         self["rotor mass"] = func_rotor_weight_rotor_diameter(
-            self["rotor diameter"], 0.00460956, 0.11199577
+            self["rotor diameter"], 0.00460956, 0.11199577, 0, 0
         ) * (1 - self["offshore"])
 
-        self["rotor mass"] += (
-            func_rotor_weight_rotor_diameter(
-                self["rotor diameter"], 0.0088365, -0.16435292
-            )
-            * self["offshore"]
-        )
+        # Offshore turbine mass calculation (new polynomial model)
+        self["rotor mass"] += func_rotor_weight_rotor_diameter(
+            self["rotor diameter"], 
+            -0.00008445,  
+            0.030281,  
+            -1.8606,        
+            37.51              
+        ) * self["offshore"]
+
+    #def __set_tower_mass(self):
+    #    """
+    #    This method defines the mass of the tower (kg) based on the rotor diameter (m) and tower height (m).
+    #    :return:
+    #    """
+    #
+    #    self["tower mass"] = func_tower_weight_d2h(
+    #        self["rotor diameter"], self["tower height"], 3.03584782e-04, 9.68652909e00
+    #    )
 
     def __set_tower_mass(self):
         """
-        This method defines the mass of the tower (kg) based on the rotor diameter (m) and tower height (m).
-        :return:
+        This method defines the mass of the tower (kg) based on tower height (m).
         """
 
+        ### **Onshore Turbines (Quadratic Model)**
+        coeff_a_onshore = 3.03584782e-04  # Keep the existing onshore coefficient
+        coeff_b_onshore = 9.68652909e00  # Keep the existing onshore coefficient
+
+        # Compute onshore tower mass using the quadratic model
         self["tower mass"] = func_tower_weight_d2h(
-            self["rotor diameter"], self["tower height"], 3.03584782e-04, 9.68652909e00
-        )
+            self["rotor diameter"], self["tower height"], coeff_a_onshore, coeff_b_onshore
+        ) * (1 - self["offshore"])  # Apply only for onshore turbines
+
+        ### **Offshore Turbines (Logarithmic Model)**
+        # Replace these with actual optimized coefficients from your curve fitting
+        coeff_a_offshore = 1287.34  # Example: Replace with actual value
+        coeff_b_offshore = 10.78  # Example: Replace with actual value
+        coeff_c_offshore = 1.27  # Example: Replace with actual value
+
+        # **Fixed Min Values (Ensure Consistency with Dataset)**
+        min_height = 31.00  # Fixed minimum tower height (m)
+        min_mass = 13.50 * 1000  # Fixed minimum tower mass (converted to kg)
+
+        # Compute offshore tower mass using the logarithmic model
+        self["tower mass"] += func_tower_weight_log(
+            self["tower height"], coeff_a_offshore, coeff_b_offshore, coeff_c_offshore, min_height, min_mass
+        ) * self["offshore"]  # Apply only for offshore turbines
 
     def __set_electronics_mass(self):
         """
