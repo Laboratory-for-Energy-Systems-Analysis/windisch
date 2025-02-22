@@ -992,15 +992,11 @@ class WindTurbineModel:
 
         # Calculate concrete volume and mass
         concrete_vol = (3.23575233 * uls) + 203.0179  # in cubic meters
-        concrete_mass = (
-            concrete_vol * 2400
-        )  # Convert to kg (density of concrete = 2400 kg/m³)
 
         # Store only the total foundation mass in `self["foundation mass"]`
-        self["foundation mass concrete"] = concrete_mass  # kg
+        self["foundation volume concrete"] = concrete_vol  # in m3
         self["foundation mass steel"] = reinf_mass + bolt_mass  # kg
-        self["foundation mass"] = reinf_mass + bolt_mass + concrete_mass # kg
-
+        self["foundation mass"] = reinf_mass + bolt_mass + (concrete_vol * 2400)  # kg
 
     def __get_ultimate_limit_state(self):
         """
