@@ -65,7 +65,8 @@ def func_rotor_weight_rotor_diameter(
     rotor_mass = (
         coeff_a * diameter**3 + coeff_b * diameter**2 + coeff_c * diameter + coeff_d
     )
-    return max(0, rotor_mass)  # Ensure non-negative mass
+    #return max(0, rotor_mass)  # Ensure non-negative mass
+    return rotor_mass
 
 
 # def func_nacelle_weight_power(power: int, coeff_a: float, coeff_b: float) -> float:
@@ -94,7 +95,8 @@ def func_nacelle_weight_power(
     :return: Nacelle weight (in kg)
     """
     nacelle_mass = coeff_a * power**3 + coeff_b * power**2 + coeff_c * power + coeff_d
-    return max(0, nacelle_mass)  # Ensure non-negative mass
+    #return max(0, nacelle_mass)  # Ensure non-negative mass
+    return nacelle_mass
 
 
 def func_rotor_diameter(
@@ -693,7 +695,7 @@ class WindTurbineModel:
         """
 
         self["nacelle mass"] = func_nacelle_weight_power(
-            self["power"], 1.66691134e-06, 3.20700974e-02, 0, 0
+            self["power"], -0.000000323, 0.006014822, 21.251620, 2265.25
         ) * (1 - self["offshore"])
 
         self["nacelle mass"] += (
