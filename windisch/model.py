@@ -739,7 +739,8 @@ class WindTurbineModel:
             func_rotor_weight_rotor_diameter(
                 self["rotor diameter"], -0.00008445, 0.030281, -1.8606, 37.51
             )
-            * self["offshore"] * 1000
+            * self["offshore"]
+            * 1000
         )
 
     # def __set_tower_mass(self):
@@ -792,7 +793,7 @@ class WindTurbineModel:
                 min_mass,
             )
             * self["offshore"]
-        )  * 1000 # Apply only for offshore turbines
+        ) * 1000  # Apply only for offshore turbines
 
     def __set_electronics_mass(self):
         """
