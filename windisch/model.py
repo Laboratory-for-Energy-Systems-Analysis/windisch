@@ -773,9 +773,9 @@ class WindTurbineModel:
 
         ### **Offshore Turbines (Logarithmic Model)**
         # Replace these with actual optimized coefficients from your curve fitting
-        coeff_a_offshore = 109.2542  
-        coeff_b_offshore = -415.1326  
-        coeff_c_offshore = 2.4099 
+        coeff_a_offshore = 109.2542
+        coeff_b_offshore = -415.1326
+        coeff_c_offshore = 2.4099
 
         # **Fixed Min Values (Ensure Consistency with Dataset)**
         min_height = 31.00  # Fixed minimum tower height (m)
