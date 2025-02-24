@@ -695,7 +695,7 @@ class WindTurbineModel:
         """
 
         self["nacelle mass"] = func_nacelle_weight_power(
-            self["power"], -0.000000323, 0.006014822, 21.251620, 2265.25
+            self["power"], 0.000000000, 0.00166691134, 32.0700974, 0.000000000
         ) * (1 - self["offshore"])
 
         self["nacelle mass"] += (
@@ -731,7 +731,7 @@ class WindTurbineModel:
 
         # Onshore turbine mass calculation (old quadratic model)
         self["rotor mass"] = func_rotor_weight_rotor_diameter(
-            self["rotor diameter"], 0.00460956, 0.11199577, 0, 0
+            self["rotor diameter"], 0.00000, 4.60956, 111.99577, 0.00000
         ) * (1 - self["offshore"])
 
         # Offshore turbine mass calculation (new polynomial model)
@@ -773,9 +773,9 @@ class WindTurbineModel:
 
         ### **Offshore Turbines (Logarithmic Model)**
         # Replace these with actual optimized coefficients from your curve fitting
-        coeff_a_offshore = 1287.34  # Example: Replace with actual value
-        coeff_b_offshore = 10.78  # Example: Replace with actual value
-        coeff_c_offshore = 1.27  # Example: Replace with actual value
+        coeff_a_offshore = 109.2542  
+        coeff_b_offshore = -415.1326  
+        coeff_c_offshore = 2.4099 
 
         # **Fixed Min Values (Ensure Consistency with Dataset)**
         min_height = 31.00  # Fixed minimum tower height (m)

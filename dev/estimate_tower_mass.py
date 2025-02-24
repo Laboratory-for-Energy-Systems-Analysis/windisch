@@ -64,50 +64,30 @@ def corrected_log_model(height, a, b, c):
     )  # Ensures no values below min_mass
 
 
-### **Polynomial Model (With Constraints)**
-def poly_model(height, a, b, c, d):
-    return np.maximum(
-        a * height**3 + b * height**2 + c * height + d, min_mass
-    )  # Ensures no negatives
-
-
 # **Initial Guesses for the Log Model**
 log_init_guess = [1000, min_mass, 0.1]  # Ensure b starts at min_mass
-poly_init_guess = [1e-6, 1e-3, 1, min_mass]  # Standard cubic polynomial fit
 
-# **Fit Models**
+# **Fit Model**
 log_params, _ = curve_fit(
     corrected_log_model, tower_height, tower_mass, p0=log_init_guess, maxfev=50000
-)
-poly_params, _ = curve_fit(
-    poly_model, tower_height, tower_mass, p0=poly_init_guess, maxfev=50000
 )
 
 # **Generate Predicted Values**
 mass_log_pred = corrected_log_model(height_range, *log_params)
-mass_poly_pred = poly_model(height_range, *poly_params)
 
 # **Calculate RMSE**
 rmse_log = np.sqrt(
     np.mean((tower_mass - corrected_log_model(tower_height, *log_params)) ** 2)
 )
-rmse_poly = np.sqrt(np.mean((tower_mass - poly_model(tower_height, *poly_params)) ** 2))
 
 # **Print Results**
 print(f"RMSE (Corrected Logarithmic Model): {rmse_log:.2f}")
-print(f"RMSE (Polynomial Model): {rmse_poly:.2f}")
 
 # **Display Model Coefficients**
 print("\nCorrected Logarithmic Model Coefficients:")
 print(f"a = {log_params[0]:.4f}")
 print(f"b = {log_params[1]:.4f} (Forced to start at min_mass)")
 print(f"c = {log_params[2]:.4f}")
-
-print("\nPolynomial Model Coefficients:")
-print(f"a = {poly_params[0]:.8f}")
-print(f"b = {poly_params[1]:.6f}")
-print(f"c = {poly_params[2]:.4f}")
-print(f"d = {poly_params[3]:.2f}")
 
 # **Plot Results**
 plt.figure(figsize=(10, 6))
@@ -123,9 +103,6 @@ plt.plot(
     color="red",
     linestyle="dashed",
 )
-
-# Polynomial model plot
-# plt.plot(height_range, mass_poly_pred, label=f"Polynomial Model (RMSE={rmse_poly:.2f})", color="green")
 
 plt.xlabel("Tower Height (m)")
 plt.ylabel("Tower Mass (tons)")
