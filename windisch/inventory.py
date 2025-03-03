@@ -437,9 +437,7 @@ class Inventory:
                 for year in self.scope["year"]:
                     unit = "kilowatt hour"
 
-                    name = (
-                        f"electricity production, wind, {application}, {size}kW"
-                    )
+                    name = f"electricity production, wind, {application}, {size}kW"
                     ref = f"electricity, high voltage"
 
                     # add electricity production activity
@@ -619,14 +617,12 @@ class Inventory:
         for component in ["rotor", "nacelle", "tower"]:
             for location in ["onshore", "offshore"]:
                 combined_dim_filter = [
-                    d for d in self.array.coords["combined_dim"].values
-                    if location in d
+                    d for d in self.array.coords["combined_dim"].values if location in d
                 ]
                 input_indices = [
                     j
                     for i, j in self.inputs.items()
-                    if i[0].startswith("wind turbine production, ")
-                       and location in i[0]
+                    if i[0].startswith("wind turbine production, ") and location in i[0]
                 ]
 
                 self.A[
@@ -650,7 +646,8 @@ class Inventory:
                     ),
                     input_indices,
                 ] = self.array.sel(
-                    parameter=f"{component} mass", combined_dim=combined_dim_filter,
+                    parameter=f"{component} mass",
+                    combined_dim=combined_dim_filter,
                 )
 
         # add electronic cabinet
