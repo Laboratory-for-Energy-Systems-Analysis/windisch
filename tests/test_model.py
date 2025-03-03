@@ -1,5 +1,7 @@
-from windisch import *
 import numpy as np
+
+from windisch import *
+
 
 def test_attributes():
     """
@@ -13,14 +15,13 @@ def test_attributes():
         tip,
         scope={
             "year": [2020, 2050],
-            "size": [1000, ],
-        }
+            "size": [
+                1000,
+            ],
+        },
     )
 
-    wt = WindTurbineModel(
-        array,
-        country="DK"
-    )
+    wt = WindTurbineModel(array, country="DK")
     wt.set_all()
 
     # make sure that no mass is equal to zero
@@ -38,8 +39,14 @@ def test_attributes():
 
     # make sure that electricity production is superior to
     # a production using a capacity factor of 0.1
-    assert np.all(wt.array.sel(parameter="lifetime electricity production") >= wt.array.sel(parameter="power") * 0.1 * 24 * 365 * 20)
+    assert np.all(
+        wt.array.sel(parameter="lifetime electricity production")
+        >= wt.array.sel(parameter="power") * 0.1 * 24 * 365 * 20
+    )
 
     # make sure that electricity production is inferior to a production
     # using a capacity factor of 1
-    assert np.all(wt.array.sel(parameter="lifetime electricity production") <= wt.array.sel(parameter="power") * 24 * 365 * 20)
+    assert np.all(
+        wt.array.sel(parameter="lifetime electricity production")
+        <= wt.array.sel(parameter="power") * 24 * 365 * 20
+    )
