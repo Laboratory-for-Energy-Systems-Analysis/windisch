@@ -20,12 +20,12 @@ def test_output_format():
     with open(DATA_DIR / "default_parameters.json", encoding="utf-8") as file:
         data = json.load(file)
 
-    # the original value is 25
-    assert data["216-2000-lifetime"]["amount"] == 25
+    # the original value is 20
+    assert data["198-2000-lifetime"]["amount"] == 20
 
     # we modify it to 30
-    data["216-2000-lifetime"]["amount"] = 30
-    assert data["216-2000-lifetime"]["amount"] == 30
+    data["198-2000-lifetime"]["amount"] = 30
+    assert data["198-2000-lifetime"]["amount"] == 30
 
     # we save the json file
     with open(DATA_DIR / "default_parameters.json", "w", encoding="utf-8") as filepath:
@@ -39,4 +39,4 @@ def test_output_format():
         data = json.load(file)
 
     # we check that the value is overwritten and back to 20
-    assert data["216-2000-lifetime"]["amount"] == 25
+    assert data["198-2000-lifetime"]["amount"] == 20

@@ -41,7 +41,7 @@ def test_modify_array():
     assert (
         array.sel(
             application="onshore",
-            size="100kW",
+            size=100,
             year=2020,
             parameter="lifetime",
             value=0,
@@ -72,8 +72,8 @@ def test_scope():
     """Test that the use of scope dictionary works as intended"""
     cip = TurbinesInputParameters()
     cip.static()
-    scope = {"application": ["offshore"], "size": ["1000kW"]}
+    scope = {"application": ["offshore"], "size": [1000,]}
     _, array = fill_xarray_from_input_parameters(cip, scope=scope)
 
     assert "onshore" not in array.coords["application"].values
-    assert "500kW" not in array.coords["size"].values
+    assert 500 not in array.coords["size"].values

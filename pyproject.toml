@@ -31,4 +31,4 @@ dependencies = [
 ]
 
 [tool.setuptools.packages.find]
-where = ["windisch"]  # Reflect that "windisch" contains the library's modules
+where = ["windisch*"]  # Reflect that "windisch" contains the library's modules
