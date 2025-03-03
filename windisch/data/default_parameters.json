@@ -1549,7 +1549,7 @@
         "maximum": 60
     },
     "65-2050-foundation transport to site": {
-        "amount": 1025,
+        "amount": 50,
         "category": "Installation",
         "application": [
             "onshore",
@@ -1573,9 +1573,9 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1025,
-        "minimum": 820,
-        "maximum": 1230
+        "loc": 50,
+        "minimum": 40,
+        "maximum": 60
     },
     "66-2000-nacelle transport to site": {
         "amount": 1025,
@@ -1723,7 +1723,7 @@
         "maximum": 1230
     },
     "71-2050-nacelle transport to site": {
-        "amount": 600,
+        "amount": 1025,
         "category": "Installation",
         "application": [
             "onshore",
@@ -1747,9 +1747,9 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 600,
-        "minimum": 480,
-        "maximum": 720
+        "loc": 1025,
+        "minimum": 820,
+        "maximum": 1230
     },
     "72-2000-rotor transport to site": {
         "amount": 600,
@@ -1897,7 +1897,7 @@
         "maximum": 720
     },
     "77-2050-rotor transport to site": {
-        "amount": 9150,
+        "amount": 600,
         "category": "Installation",
         "application": [
             "onshore",
@@ -1921,9 +1921,9 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 9150,
-        "minimum": 7320,
-        "maximum": 10980
+        "loc": 600,
+        "minimum": 480,
+        "maximum": 720
     },
     "78-2000-share foundation transport by rail": {
         "amount": 0,
@@ -2061,7 +2061,7 @@
         "loc": 0
     },
     "83-2050-share foundation transport by rail": {
-        "amount": 50,
+        "amount": 0,
         "category": "Installation",
         "application": [
             "onshore",
@@ -2084,10 +2084,8 @@
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 50,
-        "minimum": 40,
-        "maximum": 60
+        "uncertainty_type": 1,
+        "loc": 0
     },
     "84-2000-share foundation transport by sea": {
         "amount": 0,
@@ -2387,7 +2385,7 @@
         "loc": 1
     },
     "95-2050-share foundation transport by truck": {
-        "amount": 0,
+        "amount": 1,
         "category": "Installation",
         "application": [
             "onshore",
@@ -2411,633 +2409,9 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
-    },
-    "96-2000-share maintenance transport by rail": {
-        "amount": 0,
-        "category": "Maintenance",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2000,
-        "name": "share maintenance transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "97-2010-share maintenance transport by rail": {
-        "amount": 0,
-        "category": "Maintenance",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2010,
-        "name": "share maintenance transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "98-2020-share maintenance transport by rail": {
-        "amount": 0,
-        "category": "Maintenance",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2020,
-        "name": "share maintenance transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "99-2030-share maintenance transport by rail": {
-        "amount": 0,
-        "category": "Maintenance",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2030,
-        "name": "share maintenance transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "100-2040-share maintenance transport by rail": {
-        "amount": 0,
-        "category": "Maintenance",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2040,
-        "name": "share maintenance transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "101-2050-share maintenance transport by rail": {
-        "amount": 1,
-        "category": "Maintenance",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2050,
-        "name": "share maintenance transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
         "loc": 1
     },
-    "102-2000-share maintenance transport by rail": {
-        "amount": 0,
-        "category": "Maintenance",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2000,
-        "name": "share maintenance transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "103-2010-share maintenance transport by rail": {
-        "amount": 0,
-        "category": "Maintenance",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2010,
-        "name": "share maintenance transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "104-2020-share maintenance transport by rail": {
-        "amount": 0,
-        "category": "Maintenance",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2020,
-        "name": "share maintenance transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "105-2030-share maintenance transport by rail": {
-        "amount": 0,
-        "category": "Maintenance",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2030,
-        "name": "share maintenance transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "106-2040-share maintenance transport by rail": {
-        "amount": 0,
-        "category": "Maintenance",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2040,
-        "name": "share maintenance transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "107-2050-share maintenance transport by rail": {
-        "amount": 1,
-        "category": "Maintenance",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2050,
-        "name": "share maintenance transport by rail",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 1
-    },
-    "108-2000-share maintenance transport by sea": {
-        "amount": 0,
-        "category": "Maintenance",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2000,
-        "name": "share maintenance transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "109-2010-share maintenance transport by sea": {
-        "amount": 0,
-        "category": "Maintenance",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2010,
-        "name": "share maintenance transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "110-2020-share maintenance transport by sea": {
-        "amount": 0,
-        "category": "Maintenance",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2020,
-        "name": "share maintenance transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "111-2030-share maintenance transport by sea": {
-        "amount": 0,
-        "category": "Maintenance",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2030,
-        "name": "share maintenance transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "112-2040-share maintenance transport by sea": {
-        "amount": 0,
-        "category": "Maintenance",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2040,
-        "name": "share maintenance transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "113-2050-share maintenance transport by sea": {
-        "amount": 0,
-        "category": "Maintenance",
-        "application": [
-            "onshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2050,
-        "name": "share maintenance transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 0
-    },
-    "114-2000-share maintenance transport by sea": {
-        "amount": 1,
-        "category": "Maintenance",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2000,
-        "name": "share maintenance transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 1
-    },
-    "115-2010-share maintenance transport by sea": {
-        "amount": 1,
-        "category": "Maintenance",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2010,
-        "name": "share maintenance transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 1
-    },
-    "116-2020-share maintenance transport by sea": {
-        "amount": 1,
-        "category": "Maintenance",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2020,
-        "name": "share maintenance transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 1
-    },
-    "117-2030-share maintenance transport by sea": {
-        "amount": 1,
-        "category": "Maintenance",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2030,
-        "name": "share maintenance transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 1
-    },
-    "118-2040-share maintenance transport by sea": {
-        "amount": 1,
-        "category": "Maintenance",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2040,
-        "name": "share maintenance transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 1
-    },
-    "119-2050-share maintenance transport by sea": {
-        "amount": 1,
-        "category": "Maintenance",
-        "application": [
-            "offshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2050,
-        "name": "share maintenance transport by sea",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 1
-    },
-    "120-2000-share nacelle transport by rail": {
+    "96-2000-share nacelle transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
@@ -3064,7 +2438,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "121-2010-share nacelle transport by rail": {
+    "97-2010-share nacelle transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
@@ -3091,7 +2465,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "122-2020-share nacelle transport by rail": {
+    "98-2020-share nacelle transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
@@ -3118,7 +2492,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "123-2030-share nacelle transport by rail": {
+    "99-2030-share nacelle transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
@@ -3145,7 +2519,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "124-2040-share nacelle transport by rail": {
+    "100-2040-share nacelle transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
@@ -3172,8 +2546,8 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "125-2050-share nacelle transport by rail": {
-        "amount": 1,
+    "101-2050-share nacelle transport by rail": {
+        "amount": 0,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3197,9 +2571,9 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0
     },
-    "126-2000-share nacelle transport by sea": {
+    "102-2000-share nacelle transport by sea": {
         "amount": 1,
         "category": "Installation",
         "application": [
@@ -3226,7 +2600,7 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "127-2010-share nacelle transport by sea": {
+    "103-2010-share nacelle transport by sea": {
         "amount": 1,
         "category": "Installation",
         "application": [
@@ -3253,7 +2627,7 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "128-2020-share nacelle transport by sea": {
+    "104-2020-share nacelle transport by sea": {
         "amount": 1,
         "category": "Installation",
         "application": [
@@ -3280,7 +2654,7 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "129-2030-share nacelle transport by sea": {
+    "105-2030-share nacelle transport by sea": {
         "amount": 1,
         "category": "Installation",
         "application": [
@@ -3307,7 +2681,7 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "130-2040-share nacelle transport by sea": {
+    "106-2040-share nacelle transport by sea": {
         "amount": 1,
         "category": "Installation",
         "application": [
@@ -3334,8 +2708,8 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "131-2050-share nacelle transport by sea": {
-        "amount": 0,
+    "107-2050-share nacelle transport by sea": {
+        "amount": 1,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3359,9 +2733,9 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 1
     },
-    "132-2000-share nacelle transport by truck": {
+    "108-2000-share nacelle transport by truck": {
         "amount": 0,
         "category": "Installation",
         "application": [
@@ -3388,7 +2762,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "133-2010-share nacelle transport by truck": {
+    "109-2010-share nacelle transport by truck": {
         "amount": 0,
         "category": "Installation",
         "application": [
@@ -3415,7 +2789,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "134-2020-share nacelle transport by truck": {
+    "110-2020-share nacelle transport by truck": {
         "amount": 0,
         "category": "Installation",
         "application": [
@@ -3442,7 +2816,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "135-2030-share nacelle transport by truck": {
+    "111-2030-share nacelle transport by truck": {
         "amount": 0,
         "category": "Installation",
         "application": [
@@ -3469,7 +2843,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "136-2040-share nacelle transport by truck": {
+    "112-2040-share nacelle transport by truck": {
         "amount": 0,
         "category": "Installation",
         "application": [
@@ -3496,8 +2870,8 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "137-2050-share nacelle transport by truck": {
-        "amount": 1,
+    "113-2050-share nacelle transport by truck": {
+        "amount": 0,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3521,171 +2895,9 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0
     },
-    "138-2000-share nacelle transport by truck": {
-        "amount": 1,
-        "category": "Installation",
-        "application": [
-            "onshore",
-            "offshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2000,
-        "name": "share nacelle transport by truck",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 1
-    },
-    "139-2010-share nacelle transport by truck": {
-        "amount": 1,
-        "category": "Installation",
-        "application": [
-            "onshore",
-            "offshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2010,
-        "name": "share nacelle transport by truck",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 1
-    },
-    "140-2020-share nacelle transport by truck": {
-        "amount": 1,
-        "category": "Installation",
-        "application": [
-            "onshore",
-            "offshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2020,
-        "name": "share nacelle transport by truck",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 1
-    },
-    "141-2030-share nacelle transport by truck": {
-        "amount": 1,
-        "category": "Installation",
-        "application": [
-            "onshore",
-            "offshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2030,
-        "name": "share nacelle transport by truck",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 1
-    },
-    "142-2040-share nacelle transport by truck": {
-        "amount": 1,
-        "category": "Installation",
-        "application": [
-            "onshore",
-            "offshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2040,
-        "name": "share nacelle transport by truck",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 1
-    },
-    "143-2050-share nacelle transport by truck": {
-        "amount": 1,
-        "category": "Installation",
-        "application": [
-            "onshore",
-            "offshore"
-        ],
-        "sizes": [
-            100,
-            500,
-            1000,
-            3000,
-            8000,
-            12000,
-            16000
-        ],
-        "year": 2050,
-        "name": "share nacelle transport by truck",
-        "unit": "%",
-        "importance": "moderate",
-        "source": "",
-        "comment": "The share of road transport is 100% - share of sea and rail transport.",
-        "status": "acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 1
-    },
-    "144-2000-share rotor transport by rail": {
+    "114-2000-share rotor transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
@@ -3712,7 +2924,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "145-2010-share rotor transport by rail": {
+    "115-2010-share rotor transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
@@ -3739,7 +2951,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "146-2020-share rotor transport by rail": {
+    "116-2020-share rotor transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
@@ -3766,7 +2978,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "147-2030-share rotor transport by rail": {
+    "117-2030-share rotor transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
@@ -3793,7 +3005,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "148-2040-share rotor transport by rail": {
+    "118-2040-share rotor transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
@@ -3820,8 +3032,8 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "149-2050-share rotor transport by rail": {
-        "amount": 1,
+    "119-2050-share rotor transport by rail": {
+        "amount": 0,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3845,9 +3057,9 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0
     },
-    "150-2000-share rotor transport by sea": {
+    "120-2000-share rotor transport by sea": {
         "amount": 1,
         "category": "Installation",
         "application": [
@@ -3874,7 +3086,7 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "151-2010-share rotor transport by sea": {
+    "121-2010-share rotor transport by sea": {
         "amount": 1,
         "category": "Installation",
         "application": [
@@ -3901,7 +3113,7 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "152-2020-share rotor transport by sea": {
+    "122-2020-share rotor transport by sea": {
         "amount": 1,
         "category": "Installation",
         "application": [
@@ -3928,7 +3140,7 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "153-2030-share rotor transport by sea": {
+    "123-2030-share rotor transport by sea": {
         "amount": 1,
         "category": "Installation",
         "application": [
@@ -3955,7 +3167,7 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "154-2040-share rotor transport by sea": {
+    "124-2040-share rotor transport by sea": {
         "amount": 1,
         "category": "Installation",
         "application": [
@@ -3982,8 +3194,8 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "155-2050-share rotor transport by sea": {
-        "amount": 0,
+    "125-2050-share rotor transport by sea": {
+        "amount": 1,
         "category": "Installation",
         "application": [
             "onshore",
@@ -4007,10 +3219,10 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 1
     },
-    "156-2000-share rotor transport by truck": {
-        "amount": 1,
+    "126-2000-share rotor transport by truck": {
+        "amount": 0,
         "category": "Installation",
         "application": [
             "onshore",
@@ -4034,10 +3246,10 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0
     },
-    "157-2010-share rotor transport by truck": {
-        "amount": 1,
+    "127-2010-share rotor transport by truck": {
+        "amount": 0,
         "category": "Installation",
         "application": [
             "onshore",
@@ -4061,10 +3273,10 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0
     },
-    "158-2020-share rotor transport by truck": {
-        "amount": 1,
+    "128-2020-share rotor transport by truck": {
+        "amount": 0,
         "category": "Installation",
         "application": [
             "onshore",
@@ -4088,10 +3300,10 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0
     },
-    "159-2030-share rotor transport by truck": {
-        "amount": 1,
+    "129-2030-share rotor transport by truck": {
+        "amount": 0,
         "category": "Installation",
         "application": [
             "onshore",
@@ -4115,10 +3327,10 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0
     },
-    "160-2040-share rotor transport by truck": {
-        "amount": 1,
+    "130-2040-share rotor transport by truck": {
+        "amount": 0,
         "category": "Installation",
         "application": [
             "onshore",
@@ -4142,9 +3354,9 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0
     },
-    "161-2050-share rotor transport by truck": {
+    "131-2050-share rotor transport by truck": {
         "amount": 0,
         "category": "Installation",
         "application": [
@@ -4171,7 +3383,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "162-2000-share tower transport by rail": {
+    "132-2000-share tower transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
@@ -4198,7 +3410,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "163-2010-share tower transport by rail": {
+    "133-2010-share tower transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
@@ -4225,7 +3437,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "164-2020-share tower transport by rail": {
+    "134-2020-share tower transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
@@ -4252,7 +3464,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "165-2030-share tower transport by rail": {
+    "135-2030-share tower transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
@@ -4279,7 +3491,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "166-2040-share tower transport by rail": {
+    "136-2040-share tower transport by rail": {
         "amount": 0,
         "category": "Installation",
         "application": [
@@ -4306,8 +3518,8 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "167-2050-share tower transport by rail": {
-        "amount": 50,
+    "137-2050-share tower transport by rail": {
+        "amount": 0,
         "category": "Installation",
         "application": [
             "onshore",
@@ -4330,12 +3542,10 @@
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 50,
-        "minimum": 40,
-        "maximum": 60
+        "uncertainty_type": 1,
+        "loc": 0
     },
-    "168-2000-share tower transport by sea": {
+    "138-2000-share tower transport by sea": {
         "amount": 1,
         "category": "Installation",
         "application": [
@@ -4362,7 +3572,7 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "169-2010-share tower transport by sea": {
+    "139-2010-share tower transport by sea": {
         "amount": 1,
         "category": "Installation",
         "application": [
@@ -4389,7 +3599,7 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "170-2020-share tower transport by sea": {
+    "140-2020-share tower transport by sea": {
         "amount": 1,
         "category": "Installation",
         "application": [
@@ -4416,7 +3626,7 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "171-2030-share tower transport by sea": {
+    "141-2030-share tower transport by sea": {
         "amount": 1,
         "category": "Installation",
         "application": [
@@ -4443,7 +3653,7 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "172-2040-share tower transport by sea": {
+    "142-2040-share tower transport by sea": {
         "amount": 1,
         "category": "Installation",
         "application": [
@@ -4470,8 +3680,8 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "173-2050-share tower transport by sea": {
-        "amount": 50,
+    "143-2050-share tower transport by sea": {
+        "amount": 1,
         "category": "Installation",
         "application": [
             "onshore",
@@ -4494,13 +3704,11 @@
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 50,
-        "minimum": 40,
-        "maximum": 60
+        "uncertainty_type": 1,
+        "loc": 1
     },
-    "174-2000-share tower transport by truck": {
-        "amount": 1,
+    "144-2000-share tower transport by truck": {
+        "amount": 0,
         "category": "Installation",
         "application": [
             "onshore",
@@ -4524,10 +3732,10 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0
     },
-    "175-2010-share tower transport by truck": {
-        "amount": 1,
+    "145-2010-share tower transport by truck": {
+        "amount": 0,
         "category": "Installation",
         "application": [
             "onshore",
@@ -4551,10 +3759,10 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0
     },
-    "176-2020-share tower transport by truck": {
-        "amount": 1,
+    "146-2020-share tower transport by truck": {
+        "amount": 0,
         "category": "Installation",
         "application": [
             "onshore",
@@ -4578,10 +3786,10 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0
     },
-    "177-2030-share tower transport by truck": {
-        "amount": 1,
+    "147-2030-share tower transport by truck": {
+        "amount": 0,
         "category": "Installation",
         "application": [
             "onshore",
@@ -4605,10 +3813,10 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0
     },
-    "178-2040-share tower transport by truck": {
-        "amount": 1,
+    "148-2040-share tower transport by truck": {
+        "amount": 0,
         "category": "Installation",
         "application": [
             "onshore",
@@ -4632,10 +3840,10 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0
     },
-    "179-2050-share tower transport by truck": {
-        "amount": 72,
+    "149-2050-share tower transport by truck": {
+        "amount": 0,
         "category": "Installation",
         "application": [
             "onshore",
@@ -4658,12 +3866,10 @@
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 72,
-        "minimum": 57.6,
-        "maximum": 86.39999999999999
+        "uncertainty_type": 1,
+        "loc": 0
     },
-    "180-2000-tower transport to site": {
+    "150-2000-tower transport to site": {
         "amount": 9150,
         "category": "Installation",
         "application": [
@@ -4692,7 +3898,7 @@
         "minimum": 7320,
         "maximum": 10980
     },
-    "181-2010-tower transport to site": {
+    "151-2010-tower transport to site": {
         "amount": 9150,
         "category": "Installation",
         "application": [
@@ -4721,7 +3927,7 @@
         "minimum": 7320,
         "maximum": 10980
     },
-    "182-2020-tower transport to site": {
+    "152-2020-tower transport to site": {
         "amount": 9150,
         "category": "Installation",
         "application": [
@@ -4750,7 +3956,7 @@
         "minimum": 7320,
         "maximum": 10980
     },
-    "183-2030-tower transport to site": {
+    "153-2030-tower transport to site": {
         "amount": 9150,
         "category": "Installation",
         "application": [
@@ -4779,7 +3985,7 @@
         "minimum": 7320,
         "maximum": 10980
     },
-    "184-2040-tower transport to site": {
+    "154-2040-tower transport to site": {
         "amount": 9150,
         "category": "Installation",
         "application": [
@@ -4808,8 +4014,8 @@
         "minimum": 7320,
         "maximum": 10980
     },
-    "185-2050-tower transport to site": {
-        "amount": 2160,
+    "155-2050-tower transport to site": {
+        "amount": 9150,
         "category": "Installation",
         "application": [
             "onshore",
@@ -4833,11 +4039,11 @@
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 2160,
-        "minimum": 1728,
-        "maximum": 2592
+        "loc": 9150,
+        "minimum": 7320,
+        "maximum": 10980
     },
-    "186-2000-transport for maintenance per year": {
+    "156-2000-transport for maintenance per year": {
         "amount": 72,
         "category": "Maintenance",
         "application": [
@@ -4865,7 +4071,7 @@
         "minimum": 57.6,
         "maximum": 86.39999999999999
     },
-    "187-2010-transport for maintenance per year": {
+    "157-2010-transport for maintenance per year": {
         "amount": 72,
         "category": "Maintenance",
         "application": [
@@ -4893,7 +4099,7 @@
         "minimum": 57.6,
         "maximum": 86.39999999999999
     },
-    "188-2020-transport for maintenance per year": {
+    "158-2020-transport for maintenance per year": {
         "amount": 72,
         "category": "Maintenance",
         "application": [
@@ -4921,7 +4127,7 @@
         "minimum": 57.6,
         "maximum": 86.39999999999999
     },
-    "189-2030-transport for maintenance per year": {
+    "159-2030-transport for maintenance per year": {
         "amount": 72,
         "category": "Maintenance",
         "application": [
@@ -4949,7 +4155,7 @@
         "minimum": 57.6,
         "maximum": 86.39999999999999
     },
-    "190-2040-transport for maintenance per year": {
+    "160-2040-transport for maintenance per year": {
         "amount": 72,
         "category": "Maintenance",
         "application": [
@@ -4977,7 +4183,7 @@
         "minimum": 57.6,
         "maximum": 86.39999999999999
     },
-    "191-2050-transport for maintenance per year": {
+    "161-2050-transport for maintenance per year": {
         "amount": 0,
         "category": "Maintenance",
         "application": [
@@ -5003,7 +4209,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "192-2000-transport for maintenance per year": {
+    "162-2000-transport for maintenance per year": {
         "amount": 600,
         "category": "Maintenance",
         "application": [
@@ -5031,7 +4237,7 @@
         "minimum": 480,
         "maximum": 720
     },
-    "193-2010-transport for maintenance per year": {
+    "163-2010-transport for maintenance per year": {
         "amount": 2160,
         "category": "Maintenance",
         "application": [
@@ -5059,7 +4265,7 @@
         "minimum": 1728,
         "maximum": 2592
     },
-    "194-2020-transport for maintenance per year": {
+    "164-2020-transport for maintenance per year": {
         "amount": 2160,
         "category": "Maintenance",
         "application": [
@@ -5087,7 +4293,7 @@
         "minimum": 1728,
         "maximum": 2592
     },
-    "195-2030-transport for maintenance per year": {
+    "165-2030-transport for maintenance per year": {
         "amount": 2160,
         "category": "Maintenance",
         "application": [
@@ -5115,7 +4321,7 @@
         "minimum": 1728,
         "maximum": 2592
     },
-    "196-2040-transport for maintenance per year": {
+    "166-2040-transport for maintenance per year": {
         "amount": 2160,
         "category": "Maintenance",
         "application": [
@@ -5143,7 +4349,7 @@
         "minimum": 1728,
         "maximum": 2592
     },
-    "197-2050-transport for maintenance per year": {
+    "167-2050-transport for maintenance per year": {
         "amount": 0,
         "category": "Maintenance",
         "application": [
@@ -5169,7 +4375,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "198-2000-transport to waste facility": {
+    "168-2000-transport to waste facility": {
         "amount": 50,
         "category": "Disposal",
         "application": [
@@ -5197,7 +4403,7 @@
         "minimum": 40,
         "maximum": 60
     },
-    "199-2010-transport to waste facility": {
+    "169-2010-transport to waste facility": {
         "amount": 50,
         "category": "Disposal",
         "application": [
@@ -5225,7 +4431,7 @@
         "minimum": 40,
         "maximum": 60
     },
-    "200-2020-transport to waste facility": {
+    "170-2020-transport to waste facility": {
         "amount": 50,
         "category": "Disposal",
         "application": [
@@ -5253,7 +4459,7 @@
         "minimum": 40,
         "maximum": 60
     },
-    "201-2030-transport to waste facility": {
+    "171-2030-transport to waste facility": {
         "amount": 50,
         "category": "Disposal",
         "application": [
@@ -5281,7 +4487,7 @@
         "minimum": 40,
         "maximum": 60
     },
-    "202-2040-transport to waste facility": {
+    "172-2040-transport to waste facility": {
         "amount": 50,
         "category": "Disposal",
         "application": [
@@ -5309,7 +4515,7 @@
         "minimum": 40,
         "maximum": 60
     },
-    "203-2050-transport to waste facility": {
+    "173-2050-transport to waste facility": {
         "amount": 0,
         "category": "Disposal",
         "application": [
@@ -5335,7 +4541,7 @@
         "uncertainty_type": 1,
         "loc": 0
     },
-    "204-2000-transport to waste facility": {
+    "174-2000-transport to waste facility": {
         "amount": 50,
         "category": "Disposal",
         "application": [
@@ -5363,7 +4569,7 @@
         "minimum": 40,
         "maximum": 60
     },
-    "205-2010-transport to waste facility": {
+    "175-2010-transport to waste facility": {
         "amount": 50,
         "category": "Disposal",
         "application": [
@@ -5391,7 +4597,7 @@
         "minimum": 40,
         "maximum": 60
     },
-    "206-2020-transport to waste facility": {
+    "176-2020-transport to waste facility": {
         "amount": 50,
         "category": "Disposal",
         "application": [
@@ -5419,7 +4625,7 @@
         "minimum": 40,
         "maximum": 60
     },
-    "207-2030-transport to waste facility": {
+    "177-2030-transport to waste facility": {
         "amount": 50,
         "category": "Disposal",
         "application": [
@@ -5447,7 +4653,7 @@
         "minimum": 40,
         "maximum": 60
     },
-    "208-2040-transport to waste facility": {
+    "178-2040-transport to waste facility": {
         "amount": 50,
         "category": "Disposal",
         "application": [
@@ -5475,7 +4681,7 @@
         "minimum": 40,
         "maximum": 60
     },
-    "209-2050-transport to waste facility": {
+    "179-2050-transport to waste facility": {
         "amount": 1,
         "category": "Disposal",
         "application": [
@@ -5501,7 +4707,7 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "210-2000-concrete density": {
+    "180-2000-concrete density": {
         "amount": 2400,
         "category": "Components",
         "application": [
@@ -5530,7 +4736,7 @@
         "minimum": 2160,
         "maximum": 2640
     },
-    "211-2010-concrete density": {
+    "181-2010-concrete density": {
         "amount": 2400,
         "category": "Components",
         "application": [
@@ -5559,7 +4765,7 @@
         "minimum": 2160,
         "maximum": 2640
     },
-    "212-2020-concrete density": {
+    "182-2020-concrete density": {
         "amount": 2400,
         "category": "Components",
         "application": [
@@ -5588,7 +4794,7 @@
         "minimum": 2160,
         "maximum": 2640
     },
-    "213-2030-concrete density": {
+    "183-2030-concrete density": {
         "amount": 2400,
         "category": "Components",
         "application": [
@@ -5617,7 +4823,7 @@
         "minimum": 2160,
         "maximum": 2640
     },
-    "214-2040-concrete density": {
+    "184-2040-concrete density": {
         "amount": 2400,
         "category": "Components",
         "application": [
@@ -5646,7 +4852,7 @@
         "minimum": 2160,
         "maximum": 2640
     },
-    "215-2050-concrete density": {
+    "185-2050-concrete density": {
         "amount": 2400,
         "category": "Components",
         "application": [
@@ -5675,7 +4881,7 @@
         "minimum": 2160,
         "maximum": 2640
     },
-    "216-2000-offshore farm cable cross-section": {
+    "186-2000-offshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -5703,7 +4909,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "217-2010-offshore farm cable cross-section": {
+    "187-2010-offshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -5731,7 +4937,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "218-2020-offshore farm cable cross-section": {
+    "188-2020-offshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -5759,7 +4965,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "219-2030-offshore farm cable cross-section": {
+    "189-2030-offshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -5787,7 +4993,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "220-2040-offshore farm cable cross-section": {
+    "190-2040-offshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -5815,7 +5021,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "221-2050-offshore farm cable cross-section": {
+    "191-2050-offshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -5843,7 +5049,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "222-2000-onshore farm cable cross-section": {
+    "192-2000-onshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -5871,7 +5077,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "223-2010-onshore farm cable cross-section": {
+    "193-2010-onshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -5899,7 +5105,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "224-2020-onshore farm cable cross-section": {
+    "194-2020-onshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -5927,7 +5133,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "225-2030-onshore farm cable cross-section": {
+    "195-2030-onshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -5955,7 +5161,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "226-2040-onshore farm cable cross-section": {
+    "196-2040-onshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -5983,7 +5189,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "227-2050-onshore farm cable cross-section": {
+    "197-2050-onshore farm cable cross-section": {
         "amount": 300,
         "category": "Components",
         "application": [
@@ -6011,7 +5217,7 @@
         "minimum": 270,
         "maximum": 330
     },
-    "228-2000-lifetime": {
+    "198-2000-lifetime": {
         "amount": 20,
         "category": "Operation",
         "application": [
@@ -6039,7 +5245,7 @@
         "minimum": 18,
         "maximum": 22
     },
-    "229-2010-lifetime": {
+    "199-2010-lifetime": {
         "amount": 20,
         "category": "Operation",
         "application": [
@@ -6067,7 +5273,7 @@
         "minimum": 18,
         "maximum": 22
     },
-    "230-2020-lifetime": {
+    "200-2020-lifetime": {
         "amount": 20,
         "category": "Operation",
         "application": [
@@ -6095,7 +5301,7 @@
         "minimum": 18,
         "maximum": 22
     },
-    "231-2030-lifetime": {
+    "201-2030-lifetime": {
         "amount": 20,
         "category": "Operation",
         "application": [
@@ -6123,7 +5329,7 @@
         "minimum": 18,
         "maximum": 22
     },
-    "232-2040-lifetime": {
+    "202-2040-lifetime": {
         "amount": 20,
         "category": "Operation",
         "application": [
@@ -6151,7 +5357,7 @@
         "minimum": 18,
         "maximum": 22
     },
-    "233-2050-lifetime": {
+    "203-2050-lifetime": {
         "amount": 20,
         "category": "Operation",
         "application": [
@@ -6179,7 +5385,7 @@
         "minimum": 18,
         "maximum": 22
     },
-    "234-2000-lifetime": {
+    "204-2000-lifetime": {
         "amount": 25,
         "category": "Operation",
         "application": [
@@ -6207,7 +5413,7 @@
         "minimum": 22.5,
         "maximum": 27.500000000000004
     },
-    "235-2010-lifetime": {
+    "205-2010-lifetime": {
         "amount": 25,
         "category": "Operation",
         "application": [
@@ -6235,7 +5441,7 @@
         "minimum": 22.5,
         "maximum": 27.500000000000004
     },
-    "236-2020-lifetime": {
+    "206-2020-lifetime": {
         "amount": 25,
         "category": "Operation",
         "application": [
@@ -6263,7 +5469,7 @@
         "minimum": 22.5,
         "maximum": 27.500000000000004
     },
-    "237-2030-lifetime": {
+    "207-2030-lifetime": {
         "amount": 25,
         "category": "Operation",
         "application": [
@@ -6291,7 +5497,7 @@
         "minimum": 22.5,
         "maximum": 27.500000000000004
     },
-    "238-2040-lifetime": {
+    "208-2040-lifetime": {
         "amount": 25,
         "category": "Operation",
         "application": [
@@ -6319,7 +5525,7 @@
         "minimum": 22.5,
         "maximum": 27.500000000000004
     },
-    "239-2050-lifetime": {
+    "209-2050-lifetime": {
         "amount": 25,
         "category": "Operation",
         "application": [
@@ -6347,7 +5553,7 @@
         "minimum": 22.5,
         "maximum": 27.500000000000004
     },
-    "240-2000-sea depth": {
+    "210-2000-sea depth": {
         "amount": 5,
         "category": "Installation",
         "application": [
@@ -6375,7 +5581,7 @@
         "minimum": 4.5,
         "maximum": 5.5
     },
-    "241-2010-sea depth": {
+    "211-2010-sea depth": {
         "amount": 5,
         "category": "Installation",
         "application": [
@@ -6403,7 +5609,7 @@
         "minimum": 4.5,
         "maximum": 5.5
     },
-    "242-2020-sea depth": {
+    "212-2020-sea depth": {
         "amount": 5,
         "category": "Installation",
         "application": [
@@ -6431,7 +5637,7 @@
         "minimum": 4.5,
         "maximum": 5.5
     },
-    "243-2030-sea depth": {
+    "213-2030-sea depth": {
         "amount": 5,
         "category": "Installation",
         "application": [
@@ -6459,7 +5665,7 @@
         "minimum": 4.5,
         "maximum": 5.5
     },
-    "244-2040-sea depth": {
+    "214-2040-sea depth": {
         "amount": 5,
         "category": "Installation",
         "application": [
@@ -6487,7 +5693,7 @@
         "minimum": 4.5,
         "maximum": 5.5
     },
-    "245-2050-sea depth": {
+    "215-2050-sea depth": {
         "amount": 5,
         "category": "Installation",
         "application": [
@@ -6515,7 +5721,7 @@
         "minimum": 4.5,
         "maximum": 5.5
     },
-    "246-2000-distance to transformer": {
+    "216-2000-distance to transformer": {
         "amount": 1,
         "category": "Installation",
         "application": [
@@ -6543,7 +5749,7 @@
         "minimum": 0.9,
         "maximum": 1.1
     },
-    "247-2010-distance to transformer": {
+    "217-2010-distance to transformer": {
         "amount": 1,
         "category": "Installation",
         "application": [
@@ -6571,7 +5777,7 @@
         "minimum": 0.9,
         "maximum": 1.1
     },
-    "248-2020-distance to transformer": {
+    "218-2020-distance to transformer": {
         "amount": 1,
         "category": "Installation",
         "application": [
@@ -6599,7 +5805,7 @@
         "minimum": 0.9,
         "maximum": 1.1
     },
-    "249-2030-distance to transformer": {
+    "219-2030-distance to transformer": {
         "amount": 1,
         "category": "Installation",
         "application": [
@@ -6627,7 +5833,7 @@
         "minimum": 0.9,
         "maximum": 1.1
     },
-    "250-2040-distance to transformer": {
+    "220-2040-distance to transformer": {
         "amount": 1,
         "category": "Installation",
         "application": [
@@ -6655,7 +5861,7 @@
         "minimum": 0.9,
         "maximum": 1.1
     },
-    "251-2050-distance to transformer": {
+    "221-2050-distance to transformer": {
         "amount": 1,
         "category": "Installation",
         "application": [
@@ -6683,7 +5889,7 @@
         "minimum": 0.9,
         "maximum": 1.1
     },
-    "252-2000-distance to coastline": {
+    "222-2000-distance to coastline": {
         "amount": 30,
         "category": "Installation",
         "application": [
@@ -6711,7 +5917,7 @@
         "minimum": 27,
         "maximum": 33
     },
-    "253-2010-distance to coastline": {
+    "223-2010-distance to coastline": {
         "amount": 30,
         "category": "Installation",
         "application": [
@@ -6739,7 +5945,7 @@
         "minimum": 27,
         "maximum": 33
     },
-    "254-2020-distance to coastline": {
+    "224-2020-distance to coastline": {
         "amount": 30,
         "category": "Installation",
         "application": [
@@ -6767,7 +5973,7 @@
         "minimum": 27,
         "maximum": 33
     },
-    "255-2030-distance to coastline": {
+    "225-2030-distance to coastline": {
         "amount": 30,
         "category": "Installation",
         "application": [
@@ -6795,7 +6001,7 @@
         "minimum": 27,
         "maximum": 33
     },
-    "256-2040-distance to coastline": {
+    "226-2040-distance to coastline": {
         "amount": 30,
         "category": "Installation",
         "application": [
@@ -6823,7 +6029,7 @@
         "minimum": 27,
         "maximum": 33
     },
-    "257-2050-distance to coastline": {
+    "227-2050-distance to coastline": {
         "amount": 30,
         "category": "Installation",
         "application": [
@@ -6851,7 +6057,7 @@
         "minimum": 27,
         "maximum": 33
     },
-    "258-2000-offshore": {
+    "228-2000-offshore": {
         "amount": 1,
         "category": "Installation",
         "application": [
@@ -6877,7 +6083,7 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "259-2010-offshore": {
+    "229-2010-offshore": {
         "amount": 1,
         "category": "Installation",
         "application": [
@@ -6903,7 +6109,7 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "260-2020-offshore": {
+    "230-2020-offshore": {
         "amount": 1,
         "category": "Installation",
         "application": [
@@ -6929,7 +6135,7 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "261-2030-offshore": {
+    "231-2030-offshore": {
         "amount": 1,
         "category": "Installation",
         "application": [
@@ -6955,7 +6161,7 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "262-2040-offshore": {
+    "232-2040-offshore": {
         "amount": 1,
         "category": "Installation",
         "application": [
@@ -6981,7 +6187,7 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "263-2050-offshore": {
+    "233-2050-offshore": {
         "amount": 1,
         "category": "Installation",
         "application": [
