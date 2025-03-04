@@ -23,6 +23,7 @@ STEEL_DENSITY = 8000
 
 import numpy as np
 
+
 def func_height_diameter(
     diameter: float, coeff_a: float, coeff_b: float, coeff_c: float
 ) -> float:
@@ -37,7 +38,6 @@ def func_height_diameter(
     """
     hub_height = coeff_a * diameter**2 + coeff_b * diameter + coeff_c
     return hub_height
-
 
 
 def func_rotor_weight_rotor_diameter(
@@ -58,7 +58,9 @@ def func_rotor_weight_rotor_diameter(
 
 
 def func_nacelle_weight_power(
-    power: int, coeff_a: float, coeff_b: float,
+    power: int,
+    coeff_a: float,
+    coeff_b: float,
 ) -> float:
     """
     Returns nacelle weight, in kg, based on rated power.
@@ -69,7 +71,6 @@ def func_nacelle_weight_power(
     """
     nacelle_mass = coeff_a * power + coeff_b
     return nacelle_mass
-
 
 
 def func_rotor_diameter(
@@ -85,7 +86,7 @@ def func_rotor_diameter(
     :param coeff_b: Exponent (determined from data)
     :return: Rotor diameter (m)
     """
-    rotor_diameter = coeff_a * power ** coeff_b
+    rotor_diameter = coeff_a * power**coeff_b
     return rotor_diameter
 
 
@@ -226,9 +227,7 @@ def get_scour_volume(power: int) -> float:
     return np.poly1d(fit_scour)(power)
 
 
-def func_tower_weight(
-    height: float, coeff_a: float, coeff_b: float
-) -> float:
+def func_tower_weight(height: float, coeff_a: float, coeff_b: float) -> float:
     """
     Returns tower mass (kg) based on tower height (m) using a constrained power law model.
 
@@ -237,7 +236,7 @@ def func_tower_weight(
     :param coeff_b: Exponent (determined from data)
     :return: Tower mass (kg)
     """
-    tower_mass = coeff_a * height ** coeff_b
+    tower_mass = coeff_a * height**coeff_b
     return tower_mass
 
 
@@ -603,10 +602,7 @@ class WindTurbineModel:
         :return:
         """
 
-        self["rotor diameter"] = func_rotor_diameter(
-            self["power"], 2.208, 0.49
-        )
-
+        self["rotor diameter"] = func_rotor_diameter(self["power"], 2.208, 0.49)
 
     def __set_tower_height(self):
         """
@@ -618,17 +614,15 @@ class WindTurbineModel:
             self["rotor diameter"], -0.000679, 0.824, 15.87
         )
 
-
     def __set_nacelle_mass(self):
         """
         This method defines the mass of the nacelle on the power output.
         :return:
         """
 
-        self["nacelle mass"] = func_nacelle_weight_power(
-            self["power"], 0.04128314, 0
-        ) * 1000
-
+        self["nacelle mass"] = (
+            func_nacelle_weight_power(self["power"], 0.04128314, 0) * 1000
+        )
 
     def __set_rotor_mass(self):
         """
@@ -638,14 +632,16 @@ class WindTurbineModel:
         """
 
         # Onshore turbine mass calculation (old quadratic model)
-        self["rotor mass"] = func_rotor_weight_rotor_diameter(
-            self["rotor diameter"],
-            2.16831068e+02,
-            1.32140866e+02,
-            2.85420202e-02,
-            -3.75684800e+00
-        )  * 1000
-
+        self["rotor mass"] = (
+            func_rotor_weight_rotor_diameter(
+                self["rotor diameter"],
+                2.16831068e02,
+                1.32140866e02,
+                2.85420202e-02,
+                -3.75684800e00,
+            )
+            * 1000
+        )
 
     def __set_tower_mass(self):
         """
@@ -653,11 +649,14 @@ class WindTurbineModel:
         """
 
         # Compute onshore tower mass using the quadratic model
-        self["tower mass"] = func_tower_weight(
-            self["power"],
-            0.164,
-            0.891,
-        ) * 1000
+        self["tower mass"] = (
+            func_tower_weight(
+                self["power"],
+                0.164,
+                0.891,
+            )
+            * 1000
+        )
 
     def __set_electronics_mass(self):
         """
@@ -871,26 +870,22 @@ class WindTurbineModel:
         self["ultimate limit state"] = self.__get_ultimate_limit_state()
 
         # Calculate masses based on ULS, using a reciprocal relation
-        bolt_mass = (-2984.78 / (self["power"] + 112.21)) + 19.02 # in tons
+        bolt_mass = (-2984.78 / (self["power"] + 112.21)) + 19.02  # in tons
         bolt_mass *= 1000  # Convert to kg
         # minimum 1000 kg of bolts
-        bolt_mass = np.clip(
-            bolt_mass, 1000, None
-        )
+        bolt_mass = np.clip(bolt_mass, 1000, None)
 
         reinf_mass = (0.63267732 * self["ultimate limit state"]) - 9.30963858  # in tons
         reinf_mass *= 1000  # Convert to kg
         # minimum 10000 kg of reinforcing steel
-        reinf_mass = np.clip(
-            reinf_mass, 10000, None
-        )
+        reinf_mass = np.clip(reinf_mass, 10000, None)
 
         # Calculate concrete volume and mass
-        concrete_vol = (3.23575233 * self["ultimate limit state"]) + 203.0179  # in cubic meters
+        concrete_vol = (
+            3.23575233 * self["ultimate limit state"]
+        ) + 203.0179  # in cubic meters
         # minimum 50 m3 of concrete
-        concrete_vol = np.clip(
-            concrete_vol, 50, None
-        )
+        concrete_vol = np.clip(concrete_vol, 50, None)
 
         # Store only the total foundation mass in `self["foundation mass"]`
         self["foundation volume concrete"] = concrete_vol  # in m3
