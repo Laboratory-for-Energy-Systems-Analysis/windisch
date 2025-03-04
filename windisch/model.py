@@ -21,68 +21,44 @@ COPPER_DENSITY = 8960
 STEEL_DENSITY = 8000
 
 
+import numpy as np
+
 def func_height_diameter(
-    diameter: int, coeff_a: float, coeff_b: float, coeff_c: float
+    diameter: float, coeff_a: float, coeff_b: float, coeff_c: float
 ) -> float:
     """
-    Returns hub height, in m, based on rated diameter (m).
-    :param diameter: diameter (m)
-    :param coeff_a: coefficient
-    :param coeff_b: coefficient
-    :param coeff_c: coefficient
-    :return: hub height (m)
+    Returns hub height (m) based on rotor diameter (m) using a polynomial model.
+
+    :param diameter: Rotor diameter (m)
+    :param coeff_a: Quadratic coefficient
+    :param coeff_b: Linear coefficient
+    :param coeff_c: Constant term
+    :return: Hub height (m)
     """
-    return coeff_a - coeff_b * np.exp(-diameter / coeff_c)
+    hub_height = coeff_a * diameter**2 + coeff_b * diameter + coeff_c
+    return hub_height
 
-
-# def func_rotor_weight_rotor_diameter(
-#    power: int, coeff_a: float, coeff_b: float
-# ) -> float:
-#    """
-#    Returns rotor weight, in kg, based on rotor diameter.
-#    :param power: power output (kW)
-#    :param coeff_a: coefficient a
-#    :param coeff_b: coefficient b
-#    :return: rotor weight (in kg)
-#    """
-#    rotor_mass = coeff_a * power**2 + coeff_b * power
-#    return 1e3 * rotor_mass
 
 
 def func_rotor_weight_rotor_diameter(
-    diameter: float, coeff_a: float, coeff_b: float, coeff_c: float, coeff_d: float
+    diameter: float, coeff_L: float, coeff_x0: float, coeff_k: float, coeff_b: float
 ) -> float:
     """
-    Returns rotor weight (kg) based on rotor diameter (m) using a cubic polynomial model.
+    Returns rotor weight (kg) based on rotor diameter (m) using an S-shaped sigmoid model.
 
     :param diameter: Rotor diameter (m)
-    :param coeff_a: Cubic coefficient
-    :param coeff_b: Quadratic coefficient
-    :param coeff_c: Linear coefficient
-    :param coeff_d: Constant term
+    :param coeff_L: Maximum rotor weight range
+    :param coeff_x0: Midpoint (diameter at which weight growth shifts)
+    :param coeff_k: Growth rate of rotor weight
+    :param coeff_b: Baseline shift (starting weight)
     :return: Rotor weight (kg)
     """
-    rotor_mass = (
-        coeff_a * diameter**3 + coeff_b * diameter**2 + coeff_c * diameter + coeff_d
-    )
-    # return max(0, rotor_mass)  # Ensure non-negative mass
+    rotor_mass = coeff_L / (1 + np.exp(-coeff_k * (diameter - coeff_x0))) + coeff_b
     return rotor_mass
 
 
-# def func_nacelle_weight_power(power: int, coeff_a: float, coeff_b: float) -> float:
-#    """
-#    Returns nacelle weight, in kg.
-#    :param power: power output (kW)
-#    :param coeff_a: coefficient a
-#    :param coeff_b: coefficient b
-#    :return: nacelle weight (in kg)
-#    """
-#    nacelle_mass = coeff_a * power**2 + coeff_b * power
-#    return 1e3 * nacelle_mass
-
-
 def func_nacelle_weight_power(
-    power: int, coeff_a: float, coeff_b: float, coeff_c: float, coeff_d: float
+    power: int, coeff_a: float, coeff_b: float,
 ) -> float:
     """
     Returns nacelle weight, in kg, based on rated power.
@@ -90,38 +66,27 @@ def func_nacelle_weight_power(
     :param power: Power output (kW)
     :param coeff_a: Cubic coefficient
     :param coeff_b: Quadratic coefficient
-    :param coeff_c: Linear coefficient
-    :param coeff_d: Constant term
-    :return: Nacelle weight (in kg)
     """
-    nacelle_mass = coeff_a * power**3 + coeff_b * power**2 + coeff_c * power + coeff_d
-    # return max(0, nacelle_mass)  # Ensure non-negative mass
+    nacelle_mass = coeff_a * power + coeff_b
     return nacelle_mass
 
 
+
 def func_rotor_diameter(
-    power: int,
+    power: float,
     coeff_a: float,
     coeff_b: float,
-    coeff_c: float,
-    coeff_d: float,
-    coeff_e: float,
 ) -> float:
     """
-    Returns rotor diameter, based on power output and given coefficients
-    :param power: power output (kW)
-    :param coeff_a: coefficient
-    :param coeff_b: coefficient
-    :param coeff_c: coefficient
-    :param coeff_d: coefficient
-    :param coeff_e: coefficient
-    :return: rotor diameter (m)
+    Returns rotor diameter (m) based on power output (kW) using a constrained power law model.
+
+    :param power: Power output (kW)
+    :param coeff_a: Scaling factor (determined from data)
+    :param coeff_b: Exponent (determined from data)
+    :return: Rotor diameter (m)
     """
-    return (
-        coeff_a
-        - coeff_b * np.exp(-(power - coeff_d) / coeff_c)
-        + coeff_e * np.log(power + 1)
-    )
+    rotor_diameter = coeff_a * power ** coeff_b
+    return rotor_diameter
 
 
 def func_mass_reinf_steel_onshore(power: int) -> float:
@@ -261,43 +226,19 @@ def get_scour_volume(power: int) -> float:
     return np.poly1d(fit_scour)(power)
 
 
-def func_tower_weight_d2h(
-    diameter: float, height: float, coeff_a: float, coeff_b: float
+def func_tower_weight(
+    height: float, coeff_a: float, coeff_b: float
 ) -> float:
     """
-    Returns tower mass, in kg, based on tower diameter and height.
-    :param diameter: tower diameter (m)
-    :param height: tower height (m)
-    :param coeff_a: coefficient a
-    :param coeff_b: coefficient b
-    :return: tower mass (in kg)
-    """
-    tower_mass = coeff_a * diameter**2 * height + coeff_b
-    return 1e3 * tower_mass
+    Returns tower mass (kg) based on tower height (m) using a constrained power law model.
 
-
-def func_tower_weight_log(
-    height: float,
-    coeff_a: float,
-    coeff_b: float,
-    coeff_c: float,
-    min_height: float,
-    min_mass: float,
-) -> float:
+    :param height: Tower height (m)
+    :param coeff_a: Scaling factor (determined from data)
+    :param coeff_b: Exponent (determined from data)
+    :return: Tower mass (kg)
     """
-    Returns tower mass (kg) based on tower height using a logarithmic model (for offshore turbines).
-
-    :param height: tower height (m)
-    :param coeff_a: coefficient a (logarithmic model for offshore)
-    :param coeff_b: coefficient b (logarithmic model for offshore)
-    :param coeff_c: coefficient c (logarithmic model for offshore)
-    :param min_height: fixed minimum tower height in dataset (ensures proper log scaling)
-    :param min_mass: fixed minimum tower mass in dataset (ensures no negative values)
-    :return: tower mass (kg)
-    """
-    return np.maximum(
-        coeff_a * np.log(height - min_height + 1) + coeff_b + coeff_c * height, min_mass
-    )
+    tower_mass = coeff_a * height ** coeff_b
+    return tower_mass
 
 
 def set_onshore_cable_requirements(
@@ -663,15 +604,9 @@ class WindTurbineModel:
         """
 
         self["rotor diameter"] = func_rotor_diameter(
-            self["power"], 179.23, 164.92, 3061.77, -24.98, 00.0
-        ) * (1 - self["offshore"])
-
-        self["rotor diameter"] += (
-            func_rotor_diameter(
-                self["power"], 15662.58, 9770.48, 2076442.81, 994711.94, 24.40
-            )
-            * self["offshore"]
+            self["power"], 2.208, 0.49
         )
+
 
     def __set_tower_height(self):
         """
@@ -680,13 +615,9 @@ class WindTurbineModel:
         """
 
         self["tower height"] = func_height_diameter(
-            self["rotor diameter"], -611916.49, -611936.55, -862547.53
-        ) * (1 - self["offshore"])
-
-        self["tower height"] += (
-            func_height_diameter(self["rotor diameter"], 127.97, 127.08, 82.23)
-            * self["offshore"]
+            self["rotor diameter"], -0.000679, 0.824, 15.87
         )
+
 
     def __set_nacelle_mass(self):
         """
@@ -695,32 +626,9 @@ class WindTurbineModel:
         """
 
         self["nacelle mass"] = func_nacelle_weight_power(
-            self["power"], 0.000000000, 0.00166691134, 32.0700974, 0.000000000
-        ) * (1 - self["offshore"])
+            self["power"], 0.04128314, 0
+        ) * 1000
 
-        self["nacelle mass"] += (
-            func_nacelle_weight_power(
-                self["power"], -0.000000323, 0.006014822, 21.251620, 2265.25
-            )
-            * self["offshore"]
-        )
-
-    # def __set_rotor_mass(self):
-    #    """
-    #    This method defines the mass of the rotor based on its diameter.
-    #    :return:
-    #    """
-    #
-    #    self["rotor mass"] = func_rotor_weight_rotor_diameter(
-    #        self["rotor diameter"], 0.00460956, 0.11199577
-    #    ) * (1 - self["offshore"])
-    #
-    #    self["rotor mass"] += (
-    #        func_rotor_weight_rotor_diameter(
-    #            self["rotor diameter"], 0.0088365, -0.16435292
-    #        )
-    #        * self["offshore"]
-    #    )
 
     def __set_rotor_mass(self):
         """
@@ -731,69 +639,25 @@ class WindTurbineModel:
 
         # Onshore turbine mass calculation (old quadratic model)
         self["rotor mass"] = func_rotor_weight_rotor_diameter(
-            self["rotor diameter"], 0.00000, 4.60956, 111.99577, 0.00000
-        ) * (1 - self["offshore"])
+            self["rotor diameter"],
+            2.16831068e+02,
+            1.32140866e+02,
+            2.85420202e-02,
+            -3.75684800e+00
+        )  * 1000
 
-        # Offshore turbine mass calculation (new polynomial model)
-        self["rotor mass"] += (
-            func_rotor_weight_rotor_diameter(
-                self["rotor diameter"], -0.00008445, 0.030281, -1.8606, 37.51
-            )
-            * self["offshore"]
-            * 1000
-        )
-
-    # def __set_tower_mass(self):
-    #    """
-    #    This method defines the mass of the tower (kg) based on the rotor diameter (m) and tower height (m).
-    #    :return:
-    #    """
-    #
-    #    self["tower mass"] = func_tower_weight_d2h(
-    #        self["rotor diameter"], self["tower height"], 3.03584782e-04, 9.68652909e00
-    #    )
 
     def __set_tower_mass(self):
         """
         This method defines the mass of the tower (kg) based on tower height (m).
         """
 
-        ### **Onshore Turbines (Quadratic Model)**
-        coeff_a_onshore = 3.03584782e-04  # Keep the existing onshore coefficient
-        coeff_b_onshore = 9.68652909e00  # Keep the existing onshore coefficient
-
         # Compute onshore tower mass using the quadratic model
-        self["tower mass"] = func_tower_weight_d2h(
-            self["rotor diameter"],
-            self["tower height"],
-            coeff_a_onshore,
-            coeff_b_onshore,
-        ) * (
-            1 - self["offshore"]
-        )  # Apply only for onshore turbines
-
-        ### **Offshore Turbines (Logarithmic Model)**
-        # Replace these with actual optimized coefficients from your curve fitting
-        coeff_a_offshore = 109.2542
-        coeff_b_offshore = -415.1326
-        coeff_c_offshore = 2.4099
-
-        # **Fixed Min Values (Ensure Consistency with Dataset)**
-        min_height = 31.00  # Fixed minimum tower height (m)
-        min_mass = 13.50  # Fixed minimum tower mass (converted to kg)
-
-        # Compute offshore tower mass using the logarithmic model
-        self["tower mass"] += (
-            func_tower_weight_log(
-                self["tower height"],
-                coeff_a_offshore,
-                coeff_b_offshore,
-                coeff_c_offshore,
-                min_height,
-                min_mass,
-            )
-            * self["offshore"]
-        ) * 1000  # Apply only for offshore turbines
+        self["tower mass"] = func_tower_weight(
+            self["power"],
+            0.164,
+            0.891,
+        ) * 1000
 
     def __set_electronics_mass(self):
         """
@@ -817,14 +681,6 @@ class WindTurbineModel:
 
         if "onshore" in self.array.coords["application"].values:
             self.func_mass_foundation_onshore()
-
-        self["reinforcing steel in foundation mass"] = func_mass_reinf_steel_onshore(
-            self["power"]
-        ) * (1 - self["offshore"])
-
-        self["concrete in foundation mass"] = (
-            self["foundation mass"] - self["reinforcing steel in foundation mass"]
-        ) * (1 - self["offshore"])
 
         self["pile height"] = (
             get_pile_height(self["power"], self["sea depth"]) * self["offshore"]
@@ -1012,17 +868,29 @@ class WindTurbineModel:
         """
 
         # Compute the ultimate limit state (ULS) moment
-        uls = self.__get_ultimate_limit_state()
+        self["ultimate limit state"] = self.__get_ultimate_limit_state()
 
-        # Calculate masses based on ULS
-        bolt_mass = (0.04009378 * uls) + 1.23107196  # in tons
+        # Calculate masses based on ULS, using a reciprocal relation
+        bolt_mass = (-2984.78 / (self["power"] + 112.21)) + 19.02 # in tons
         bolt_mass *= 1000  # Convert to kg
+        # minimum 1000 kg of bolts
+        bolt_mass = np.clip(
+            bolt_mass, 1000, None
+        )
 
-        reinf_mass = (0.63267732 * uls) - 9.30963858  # in tons
+        reinf_mass = (0.63267732 * self["ultimate limit state"]) - 9.30963858  # in tons
         reinf_mass *= 1000  # Convert to kg
+        # minimum 10000 kg of reinforcing steel
+        reinf_mass = np.clip(
+            reinf_mass, 10000, None
+        )
 
         # Calculate concrete volume and mass
-        concrete_vol = (3.23575233 * uls) + 203.0179  # in cubic meters
+        concrete_vol = (3.23575233 * self["ultimate limit state"]) + 203.0179  # in cubic meters
+        # minimum 50 m3 of concrete
+        concrete_vol = np.clip(
+            concrete_vol, 50, None
+        )
 
         # Store only the total foundation mass in `self["foundation mass"]`
         self["foundation volume concrete"] = concrete_vol  # in m3
@@ -1037,41 +905,18 @@ class WindTurbineModel:
         due to wind loading and gravitational forces. The wind force is based on the drag coefficient,
         air density, and rotor swept area, while the gravitational force is based on the nacelle and rotor mass.
 
+
+        ULS values for 0, 3 and 6.25 MW are from: https://research.chalmers.se/publication/530584/file/530584_Fulltext.pdf
+        ULS value for 15 MW is from: https://www.mdpi.com/1996-1073/17/9/2189
+
         :return: The ultimate limit state (ULS) moment in MN·m (Meganewton-meters).
         :rtype: float
         """
-        # Given values
-        Cd = 1.2  # Drag coefficient
-        # Air density (kg/m³)
-        try:
-            rho = self.terrain_vars["RHO"]
-        except TypeError:
-            rho = 1.225
+        power_x = [0, 3000, 6250, 15000]
+        uls = [0, 100, 250, 1073]
 
-        D = self["rotor diameter"]  # Rotor diameter (m)
-        A = (np.pi / 4) * D**2  # Rotor swept area (m²)
-
-        # Maximum wind force calculation
-        try:
-            max_wind_speed = self.terrain_vars["WS"].max()
-        except TypeError:
-            max_wind_speed = 13  # m/s, if not available
-        F_wind = 0.5 * Cd * rho * A * max_wind_speed**2
-
-        # Gravity force calculation
-        mass_nacelle_rotor = self["nacelle mass"]  # kg (100 t)
-        g = 9.81  # Gravity (m/s²)
-        F_gravity = mass_nacelle_rotor * g
-
-        # Heights
-        H_hub = 100 + D / 2  # Hub height (m)
-        H_CoM = 100 + D / 3  # Approximate center of mass height (m)
-
-        # ULS Moment calculation
-        M_ULS = (F_wind * H_hub) + (F_gravity * H_CoM)
-
-        # Convert to MN·m
-        M_ULS_MN = M_ULS / 1e6
+        # linear interopolator
+        M_ULS_MN = np.interp(self["power"], power_x, uls)
 
         return M_ULS_MN
 
