@@ -334,9 +334,7 @@ def set_offshore_cable_requirements(
         ),
     )
 
-    m_copper += (
-        cross_section_ * 1e-6 * (dist_coast / park_size)
-    ) * COPPER_DENSITY
+    m_copper += (cross_section_ * 1e-6 * (dist_coast / park_size)) * COPPER_DENSITY
 
     # 450 l diesel/hour for the ship that lays the cable at sea bottom
     # 39 MJ/liter, 15 km/h as speed of laying the cable
@@ -870,7 +868,9 @@ class WindTurbineModel:
         self["ultimate limit state"] = self.__get_ultimate_limit_state()
 
         # Calculate masses based on ULS, using a reciprocal relation
-        bolt_mass = (-2984.78 / (self["ultimate limit state"] + 112.21)) + 19.02  # in tons
+        bolt_mass = (
+            -2984.78 / (self["ultimate limit state"] + 112.21)
+        ) + 19.02  # in tons
         bolt_mass *= 1000  # Convert to kg
         # minimum 1000 kg of bolts
         bolt_mass = np.clip(bolt_mass, 1000, None)
