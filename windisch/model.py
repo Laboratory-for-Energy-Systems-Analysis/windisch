@@ -36,8 +36,7 @@ def func_height_diameter(
     :param coeff_c: Constant term
     :return: Hub height (m)
     """
-    hub_height = coeff_a * diameter**2 + coeff_b * diameter + coeff_c
-    return hub_height
+    return 3.79 * np.power(diameter, 0.69)
 
 
 def func_rotor_weight_rotor_diameter(
@@ -53,8 +52,7 @@ def func_rotor_weight_rotor_diameter(
     :param coeff_b: Baseline shift (starting weight)
     :return: Rotor weight (kg)
     """
-    rotor_mass = coeff_L / (1 + np.exp(-coeff_k * (diameter - coeff_x0))) + coeff_b
-    return rotor_mass
+    return 0.02 * np.power(diameter, 1.73)
 
 
 def func_nacelle_weight_power(
@@ -69,8 +67,7 @@ def func_nacelle_weight_power(
     :param coeff_a: Cubic coefficient
     :param coeff_b: Quadratic coefficient
     """
-    nacelle_mass = coeff_a * power + coeff_b
-    return nacelle_mass
+    return 0.0249 * np.power(power, 1.0529)
 
 
 def func_rotor_diameter(
@@ -86,8 +83,7 @@ def func_rotor_diameter(
     :param coeff_b: Exponent (determined from data)
     :return: Rotor diameter (m)
     """
-    rotor_diameter = coeff_a * power**coeff_b
-    return rotor_diameter
+    return 2.18 * np.power(power, 0.49)
 
 
 def func_mass_reinf_steel_onshore(power: int) -> float:
