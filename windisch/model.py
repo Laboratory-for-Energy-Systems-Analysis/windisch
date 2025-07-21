@@ -612,9 +612,7 @@ class WindTurbineModel:
         :return:
         """
 
-        self["nacelle mass"] = (
-                func_nacelle_weight_hub_height(self["tower height"])
-        )
+        self["nacelle mass"] = func_nacelle_weight_hub_height(self["tower height"])
 
     def __set_rotor_mass(self):
         """
@@ -641,9 +639,7 @@ class WindTurbineModel:
         """
 
         # Compute onshore tower mass using the quadratic model
-        self["tower mass"] = 0.15 * np.power(
-            self["rotor diameter"], 1.59
-        ) * 1000
+        self["tower mass"] = 0.15 * np.power(self["rotor diameter"], 1.59) * 1000
 
     def __set_electronics_mass(self):
         """
