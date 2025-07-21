@@ -55,19 +55,17 @@ def func_rotor_weight_rotor_diameter(
     return 0.02 * np.power(diameter, 1.73)
 
 
-def func_nacelle_weight_power(
-    power: int,
-    coeff_a: float,
-    coeff_b: float,
+def func_nacelle_weight_hub_height(
+    hub_height: int,
 ) -> float:
     """
     Returns nacelle weight, in kg, based on rated power.
 
-    :param power: Power output (kW)
+    :param hub_height: Power output (kW)
     :param coeff_a: Cubic coefficient
     :param coeff_b: Quadratic coefficient
     """
-    return 0.0249 * np.power(power, 1.0529)
+    return 0.02 * np.power(hub_height, 1.83)
 
 
 def func_rotor_diameter(
@@ -429,7 +427,7 @@ class WindTurbineModel:
         self.__set_tower_height()
         self.__set_nacelle_mass()
         self.__set_rotor_mass()
-        self.__set_tower_mass()
+        self.__set_tower_mass_from_rotor_diameter()
         self.__set_electronics_mass()
         self.__set_foundation_mass()
         self.__set_assembly_requirements()
@@ -614,9 +612,7 @@ class WindTurbineModel:
         :return:
         """
 
-        self["nacelle mass"] = (
-            func_nacelle_weight_power(self["power"], 0.04128314, 0) * 1000
-        )
+        self["nacelle mass"] = func_nacelle_weight_hub_height(self["tower height"])
 
     def __set_rotor_mass(self):
         """
@@ -637,20 +633,13 @@ class WindTurbineModel:
             * 1000
         )
 
-    def __set_tower_mass(self):
+    def __set_tower_mass_from_rotor_diameter(self):
         """
         This method defines the mass of the tower (kg) based on tower height (m).
         """
 
         # Compute onshore tower mass using the quadratic model
-        self["tower mass"] = (
-            func_tower_weight(
-                self["power"],
-                0.164,
-                0.891,
-            )
-            * 1000
-        )
+        self["tower mass"] = 0.15 * np.power(self["rotor diameter"], 1.59) * 1000
 
     def __set_electronics_mass(self):
         """
