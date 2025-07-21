@@ -1578,7 +1578,7 @@
         "maximum": 60
     },
     "66-2000-nacelle transport to site": {
-        "amount": 1025,
+        "amount": 9360,
         "category": "Installation",
         "application": [
             "onshore",
@@ -1597,17 +1597,17 @@
         "name": "nacelle transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1025,
-        "minimum": 820,
-        "maximum": 1230
+        "loc": 9360,
+        "minimum": 7488,
+        "maximum": 11232
     },
     "67-2010-nacelle transport to site": {
-        "amount": 1025,
+        "amount": 9360,
         "category": "Installation",
         "application": [
             "onshore",
@@ -1626,17 +1626,17 @@
         "name": "nacelle transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1025,
-        "minimum": 820,
-        "maximum": 1230
+        "loc": 9360,
+        "minimum": 7488,
+        "maximum": 11232
     },
     "68-2020-nacelle transport to site": {
-        "amount": 1025,
+        "amount": 9360,
         "category": "Installation",
         "application": [
             "onshore",
@@ -1655,17 +1655,17 @@
         "name": "nacelle transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1025,
-        "minimum": 820,
-        "maximum": 1230
+        "loc": 9360,
+        "minimum": 7488,
+        "maximum": 11232
     },
     "69-2030-nacelle transport to site": {
-        "amount": 1025,
+        "amount": 9360,
         "category": "Installation",
         "application": [
             "onshore",
@@ -1684,17 +1684,17 @@
         "name": "nacelle transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1025,
-        "minimum": 820,
-        "maximum": 1230
+        "loc": 9360,
+        "minimum": 7488,
+        "maximum": 11232
     },
     "70-2040-nacelle transport to site": {
-        "amount": 1025,
+        "amount": 9360,
         "category": "Installation",
         "application": [
             "onshore",
@@ -1713,17 +1713,17 @@
         "name": "nacelle transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1025,
-        "minimum": 820,
-        "maximum": 1230
+        "loc": 9360,
+        "minimum": 7488,
+        "maximum": 11232
     },
     "71-2050-nacelle transport to site": {
-        "amount": 1025,
+        "amount": 9360,
         "category": "Installation",
         "application": [
             "onshore",
@@ -1742,17 +1742,17 @@
         "name": "nacelle transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1025,
-        "minimum": 820,
-        "maximum": 1230
+        "loc": 9360,
+        "minimum": 7488,
+        "maximum": 11232
     },
     "72-2000-rotor transport to site": {
-        "amount": 600,
+        "amount": 3770,
         "category": "Installation",
         "application": [
             "onshore",
@@ -1771,17 +1771,17 @@
         "name": "rotor transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 600,
-        "minimum": 480,
-        "maximum": 720
+        "loc": 3770,
+        "minimum": 3016,
+        "maximum": 4524
     },
     "73-2010-rotor transport to site": {
-        "amount": 600,
+        "amount": 3770,
         "category": "Installation",
         "application": [
             "onshore",
@@ -1800,17 +1800,17 @@
         "name": "rotor transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 600,
-        "minimum": 480,
-        "maximum": 720
+        "loc": 3770,
+        "minimum": 3016,
+        "maximum": 4524
     },
     "74-2020-rotor transport to site": {
-        "amount": 600,
+        "amount": 3770,
         "category": "Installation",
         "application": [
             "onshore",
@@ -1829,17 +1829,17 @@
         "name": "rotor transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 600,
-        "minimum": 480,
-        "maximum": 720
+        "loc": 3770,
+        "minimum": 3016,
+        "maximum": 4524
     },
     "75-2030-rotor transport to site": {
-        "amount": 600,
+        "amount": 3770,
         "category": "Installation",
         "application": [
             "onshore",
@@ -1858,17 +1858,17 @@
         "name": "rotor transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 600,
-        "minimum": 480,
-        "maximum": 720
+        "loc": 3770,
+        "minimum": 3016,
+        "maximum": 4524
     },
     "76-2040-rotor transport to site": {
-        "amount": 600,
+        "amount": 3770,
         "category": "Installation",
         "application": [
             "onshore",
@@ -1887,17 +1887,17 @@
         "name": "rotor transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 600,
-        "minimum": 480,
-        "maximum": 720
+        "loc": 3770,
+        "minimum": 3016,
+        "maximum": 4524
     },
     "77-2050-rotor transport to site": {
-        "amount": 600,
+        "amount": 3770,
         "category": "Installation",
         "application": [
             "onshore",
@@ -1916,14 +1916,14 @@
         "name": "rotor transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 600,
-        "minimum": 480,
-        "maximum": 720
+        "loc": 3770,
+        "minimum": 3016,
+        "maximum": 4524
     },
     "78-2000-share foundation transport by rail": {
         "amount": 0,
@@ -2431,7 +2431,7 @@
         "name": "share nacelle transport by rail",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
@@ -2458,7 +2458,7 @@
         "name": "share nacelle transport by rail",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
@@ -2485,7 +2485,7 @@
         "name": "share nacelle transport by rail",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
@@ -2512,7 +2512,7 @@
         "name": "share nacelle transport by rail",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
@@ -2539,7 +2539,7 @@
         "name": "share nacelle transport by rail",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
@@ -2566,7 +2566,7 @@
         "name": "share nacelle transport by rail",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
@@ -2574,7 +2574,7 @@
         "loc": 0
     },
     "102-2000-share nacelle transport by sea": {
-        "amount": 1,
+        "amount": 0.916,
         "category": "Installation",
         "application": [
             "onshore",
@@ -2593,15 +2593,15 @@
         "name": "share nacelle transport by sea",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0.916
     },
     "103-2010-share nacelle transport by sea": {
-        "amount": 1,
+        "amount": 0.916,
         "category": "Installation",
         "application": [
             "onshore",
@@ -2620,15 +2620,15 @@
         "name": "share nacelle transport by sea",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0.916
     },
     "104-2020-share nacelle transport by sea": {
-        "amount": 1,
+        "amount": 0.916,
         "category": "Installation",
         "application": [
             "onshore",
@@ -2647,15 +2647,15 @@
         "name": "share nacelle transport by sea",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0.916
     },
     "105-2030-share nacelle transport by sea": {
-        "amount": 1,
+        "amount": 0.916,
         "category": "Installation",
         "application": [
             "onshore",
@@ -2674,15 +2674,15 @@
         "name": "share nacelle transport by sea",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0.916
     },
     "106-2040-share nacelle transport by sea": {
-        "amount": 1,
+        "amount": 0.916,
         "category": "Installation",
         "application": [
             "onshore",
@@ -2701,15 +2701,15 @@
         "name": "share nacelle transport by sea",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0.916
     },
     "107-2050-share nacelle transport by sea": {
-        "amount": 1,
+        "amount": 0.916,
         "category": "Installation",
         "application": [
             "onshore",
@@ -2728,15 +2728,15 @@
         "name": "share nacelle transport by sea",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0.916
     },
     "108-2000-share nacelle transport by truck": {
-        "amount": 0,
+        "amount": 0.084,
         "category": "Installation",
         "application": [
             "onshore",
@@ -2755,15 +2755,15 @@
         "name": "share nacelle transport by truck",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 0.084
     },
     "109-2010-share nacelle transport by truck": {
-        "amount": 0,
+        "amount": 0.084,
         "category": "Installation",
         "application": [
             "onshore",
@@ -2782,15 +2782,15 @@
         "name": "share nacelle transport by truck",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 0.084
     },
     "110-2020-share nacelle transport by truck": {
-        "amount": 0,
+        "amount": 0.084,
         "category": "Installation",
         "application": [
             "onshore",
@@ -2809,15 +2809,15 @@
         "name": "share nacelle transport by truck",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 0.084
     },
     "111-2030-share nacelle transport by truck": {
-        "amount": 0,
+        "amount": 0.084,
         "category": "Installation",
         "application": [
             "onshore",
@@ -2836,15 +2836,15 @@
         "name": "share nacelle transport by truck",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 0.084
     },
     "112-2040-share nacelle transport by truck": {
-        "amount": 0,
+        "amount": 0.084,
         "category": "Installation",
         "application": [
             "onshore",
@@ -2863,15 +2863,15 @@
         "name": "share nacelle transport by truck",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 0.084
     },
     "113-2050-share nacelle transport by truck": {
-        "amount": 0,
+        "amount": 0.084,
         "category": "Installation",
         "application": [
             "onshore",
@@ -2890,12 +2890,12 @@
         "name": "share nacelle transport by truck",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 0.084
     },
     "114-2000-share rotor transport by rail": {
         "amount": 0,
@@ -2917,7 +2917,7 @@
         "name": "share rotor transport by rail",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
@@ -2944,7 +2944,7 @@
         "name": "share rotor transport by rail",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
@@ -2971,7 +2971,7 @@
         "name": "share rotor transport by rail",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
@@ -2998,7 +2998,7 @@
         "name": "share rotor transport by rail",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
@@ -3025,7 +3025,7 @@
         "name": "share rotor transport by rail",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
@@ -3052,7 +3052,7 @@
         "name": "share rotor transport by rail",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
@@ -3060,7 +3060,7 @@
         "loc": 0
     },
     "120-2000-share rotor transport by sea": {
-        "amount": 1,
+        "amount": 0.42000000000000004,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3079,15 +3079,15 @@
         "name": "share rotor transport by sea",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0.42000000000000004
     },
     "121-2010-share rotor transport by sea": {
-        "amount": 1,
+        "amount": 0.42000000000000004,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3106,15 +3106,15 @@
         "name": "share rotor transport by sea",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0.42000000000000004
     },
     "122-2020-share rotor transport by sea": {
-        "amount": 1,
+        "amount": 0.42000000000000004,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3133,15 +3133,15 @@
         "name": "share rotor transport by sea",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0.42000000000000004
     },
     "123-2030-share rotor transport by sea": {
-        "amount": 1,
+        "amount": 0.42000000000000004,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3160,15 +3160,15 @@
         "name": "share rotor transport by sea",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0.42000000000000004
     },
     "124-2040-share rotor transport by sea": {
-        "amount": 1,
+        "amount": 0.42000000000000004,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3187,15 +3187,15 @@
         "name": "share rotor transport by sea",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0.42000000000000004
     },
     "125-2050-share rotor transport by sea": {
-        "amount": 1,
+        "amount": 0.42000000000000004,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3214,15 +3214,15 @@
         "name": "share rotor transport by sea",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0.42000000000000004
     },
     "126-2000-share rotor transport by truck": {
-        "amount": 0,
+        "amount": 0.58,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3241,15 +3241,15 @@
         "name": "share rotor transport by truck",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 0.58
     },
     "127-2010-share rotor transport by truck": {
-        "amount": 0,
+        "amount": 0.58,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3268,15 +3268,15 @@
         "name": "share rotor transport by truck",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 0.58
     },
     "128-2020-share rotor transport by truck": {
-        "amount": 0,
+        "amount": 0.58,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3295,15 +3295,15 @@
         "name": "share rotor transport by truck",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 0.58
     },
     "129-2030-share rotor transport by truck": {
-        "amount": 0,
+        "amount": 0.58,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3322,15 +3322,15 @@
         "name": "share rotor transport by truck",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 0.58
     },
     "130-2040-share rotor transport by truck": {
-        "amount": 0,
+        "amount": 0.58,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3349,15 +3349,15 @@
         "name": "share rotor transport by truck",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 0.58
     },
     "131-2050-share rotor transport by truck": {
-        "amount": 0,
+        "amount": 0.58,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3376,12 +3376,12 @@
         "name": "share rotor transport by truck",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 0.58
     },
     "132-2000-share tower transport by rail": {
         "amount": 0,
@@ -3403,7 +3403,7 @@
         "name": "share tower transport by rail",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
@@ -3430,7 +3430,7 @@
         "name": "share tower transport by rail",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
@@ -3457,7 +3457,7 @@
         "name": "share tower transport by rail",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
@@ -3484,7 +3484,7 @@
         "name": "share tower transport by rail",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
@@ -3511,7 +3511,7 @@
         "name": "share tower transport by rail",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
@@ -3538,7 +3538,7 @@
         "name": "share tower transport by rail",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
@@ -3546,7 +3546,7 @@
         "loc": 0
     },
     "138-2000-share tower transport by sea": {
-        "amount": 1,
+        "amount": 0.51,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3565,15 +3565,15 @@
         "name": "share tower transport by sea",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0.51
     },
     "139-2010-share tower transport by sea": {
-        "amount": 1,
+        "amount": 0.51,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3592,15 +3592,15 @@
         "name": "share tower transport by sea",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0.51
     },
     "140-2020-share tower transport by sea": {
-        "amount": 1,
+        "amount": 0.51,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3619,15 +3619,15 @@
         "name": "share tower transport by sea",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0.51
     },
     "141-2030-share tower transport by sea": {
-        "amount": 1,
+        "amount": 0.51,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3646,15 +3646,15 @@
         "name": "share tower transport by sea",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0.51
     },
     "142-2040-share tower transport by sea": {
-        "amount": 1,
+        "amount": 0.51,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3673,15 +3673,15 @@
         "name": "share tower transport by sea",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0.51
     },
     "143-2050-share tower transport by sea": {
-        "amount": 1,
+        "amount": 0.51,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3700,15 +3700,15 @@
         "name": "share tower transport by sea",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 1
+        "loc": 0.51
     },
     "144-2000-share tower transport by truck": {
-        "amount": 0,
+        "amount": 0.49,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3727,15 +3727,15 @@
         "name": "share tower transport by truck",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 0.49
     },
     "145-2010-share tower transport by truck": {
-        "amount": 0,
+        "amount": 0.49,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3754,15 +3754,15 @@
         "name": "share tower transport by truck",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 0.49
     },
     "146-2020-share tower transport by truck": {
-        "amount": 0,
+        "amount": 0.49,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3781,15 +3781,15 @@
         "name": "share tower transport by truck",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 0.49
     },
     "147-2030-share tower transport by truck": {
-        "amount": 0,
+        "amount": 0.49,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3808,15 +3808,15 @@
         "name": "share tower transport by truck",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 0.49
     },
     "148-2040-share tower transport by truck": {
-        "amount": 0,
+        "amount": 0.49,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3835,15 +3835,15 @@
         "name": "share tower transport by truck",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 0.49
     },
     "149-2050-share tower transport by truck": {
-        "amount": 0,
+        "amount": 0.49,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3862,15 +3862,15 @@
         "name": "share tower transport by truck",
         "unit": "%",
         "importance": "moderate",
-        "source": "",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "The share of road transport is 100% - share of sea and rail transport.",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
-        "loc": 0
+        "loc": 0.49
     },
     "150-2000-tower transport to site": {
-        "amount": 9150,
+        "amount": 4190,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3889,17 +3889,17 @@
         "name": "tower transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 9150,
-        "minimum": 7320,
-        "maximum": 10980
+        "loc": 4190,
+        "minimum": 3352,
+        "maximum": 5028
     },
     "151-2010-tower transport to site": {
-        "amount": 9150,
+        "amount": 4190,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3918,17 +3918,17 @@
         "name": "tower transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 9150,
-        "minimum": 7320,
-        "maximum": 10980
+        "loc": 4190,
+        "minimum": 3352,
+        "maximum": 5028
     },
     "152-2020-tower transport to site": {
-        "amount": 9150,
+        "amount": 4190,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3947,17 +3947,17 @@
         "name": "tower transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 9150,
-        "minimum": 7320,
-        "maximum": 10980
+        "loc": 4190,
+        "minimum": 3352,
+        "maximum": 5028
     },
     "153-2030-tower transport to site": {
-        "amount": 9150,
+        "amount": 4190,
         "category": "Installation",
         "application": [
             "onshore",
@@ -3976,17 +3976,17 @@
         "name": "tower transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 9150,
-        "minimum": 7320,
-        "maximum": 10980
+        "loc": 4190,
+        "minimum": 3352,
+        "maximum": 5028
     },
     "154-2040-tower transport to site": {
-        "amount": 9150,
+        "amount": 4190,
         "category": "Installation",
         "application": [
             "onshore",
@@ -4005,17 +4005,17 @@
         "name": "tower transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 9150,
-        "minimum": 7320,
-        "maximum": 10980
+        "loc": 4190,
+        "minimum": 3352,
+        "maximum": 5028
     },
     "155-2050-tower transport to site": {
-        "amount": 9150,
+        "amount": 4190,
         "category": "Installation",
         "application": [
             "onshore",
@@ -4034,14 +4034,14 @@
         "name": "tower transport to site",
         "unit": "km",
         "importance": "moderate",
-        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCA_V1002_6MW_version_1_1.pdf.coredownload.inline.pdf",
+        "source": "https://www.vestas.com/content/dam/vestas-com/global/en/sustainability/reports-and-ratings/lcas/LCAV11020MW181215.pdf.coredownload.inline.pdf",
         "comment": "",
         "status": "acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 9150,
-        "minimum": 7320,
-        "maximum": 10980
+        "loc": 4190,
+        "minimum": 3352,
+        "maximum": 5028
     },
     "156-2000-transport for maintenance per year": {
         "amount": 72,
@@ -5722,7 +5722,7 @@
         "maximum": 5.5
     },
     "216-2000-distance to transformer": {
-        "amount": 1,
+        "amount": 30,
         "category": "Installation",
         "application": [
             "offshore"
@@ -5745,12 +5745,12 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1,
-        "minimum": 0.9,
-        "maximum": 1.1
+        "loc": 30,
+        "minimum": 27,
+        "maximum": 33
     },
     "217-2010-distance to transformer": {
-        "amount": 1,
+        "amount": 30,
         "category": "Installation",
         "application": [
             "offshore"
@@ -5773,12 +5773,12 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1,
-        "minimum": 0.9,
-        "maximum": 1.1
+        "loc": 30,
+        "minimum": 27,
+        "maximum": 33
     },
     "218-2020-distance to transformer": {
-        "amount": 1,
+        "amount": 30,
         "category": "Installation",
         "application": [
             "offshore"
@@ -5801,12 +5801,12 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1,
-        "minimum": 0.9,
-        "maximum": 1.1
+        "loc": 30,
+        "minimum": 27,
+        "maximum": 33
     },
     "219-2030-distance to transformer": {
-        "amount": 1,
+        "amount": 30,
         "category": "Installation",
         "application": [
             "offshore"
@@ -5829,12 +5829,12 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1,
-        "minimum": 0.9,
-        "maximum": 1.1
+        "loc": 30,
+        "minimum": 27,
+        "maximum": 33
     },
     "220-2040-distance to transformer": {
-        "amount": 1,
+        "amount": 30,
         "category": "Installation",
         "application": [
             "offshore"
@@ -5857,12 +5857,12 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1,
-        "minimum": 0.9,
-        "maximum": 1.1
+        "loc": 30,
+        "minimum": 27,
+        "maximum": 33
     },
     "221-2050-distance to transformer": {
-        "amount": 1,
+        "amount": 30,
         "category": "Installation",
         "application": [
             "offshore"
@@ -5885,12 +5885,12 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1,
-        "minimum": 0.9,
-        "maximum": 1.1
+        "loc": 30,
+        "minimum": 27,
+        "maximum": 33
     },
     "222-2000-distance to coastline": {
-        "amount": 30,
+        "amount": 2000,
         "category": "Installation",
         "application": [
             "offshore"
@@ -5913,12 +5913,12 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 30,
-        "minimum": 27,
-        "maximum": 33
+        "loc": 2000,
+        "minimum": 1800,
+        "maximum": 2200
     },
     "223-2010-distance to coastline": {
-        "amount": 30,
+        "amount": 2000,
         "category": "Installation",
         "application": [
             "offshore"
@@ -5941,12 +5941,12 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 30,
-        "minimum": 27,
-        "maximum": 33
+        "loc": 2000,
+        "minimum": 1800,
+        "maximum": 2200
     },
     "224-2020-distance to coastline": {
-        "amount": 30,
+        "amount": 2000,
         "category": "Installation",
         "application": [
             "offshore"
@@ -5969,12 +5969,12 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 30,
-        "minimum": 27,
-        "maximum": 33
+        "loc": 2000,
+        "minimum": 1800,
+        "maximum": 2200
     },
     "225-2030-distance to coastline": {
-        "amount": 30,
+        "amount": 2000,
         "category": "Installation",
         "application": [
             "offshore"
@@ -5997,12 +5997,12 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 30,
-        "minimum": 27,
-        "maximum": 33
+        "loc": 2000,
+        "minimum": 1800,
+        "maximum": 2200
     },
     "226-2040-distance to coastline": {
-        "amount": 30,
+        "amount": 2000,
         "category": "Installation",
         "application": [
             "offshore"
@@ -6025,12 +6025,12 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 30,
-        "minimum": 27,
-        "maximum": 33
+        "loc": 2000,
+        "minimum": 1800,
+        "maximum": 2200
     },
     "227-2050-distance to coastline": {
-        "amount": 30,
+        "amount": 2000,
         "category": "Installation",
         "application": [
             "offshore"
@@ -6053,9 +6053,9 @@
         "status": "to be improved",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 30,
-        "minimum": 27,
-        "maximum": 33
+        "loc": 2000,
+        "minimum": 1800,
+        "maximum": 2200
     },
     "228-2000-offshore": {
         "amount": 1,
